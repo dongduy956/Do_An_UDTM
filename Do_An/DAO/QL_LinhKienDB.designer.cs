@@ -1883,7 +1883,7 @@ namespace DAO
 		
 		private System.DateTime _NGAYVL;
 		
-		private System.Nullable<decimal> _LUONG;
+		private System.Nullable<double> _LUONG;
 		
 		private string _HINHANH;
 		
@@ -1915,7 +1915,7 @@ namespace DAO
     partial void OnGIOITINHChanged();
     partial void OnNGAYVLChanging(System.DateTime value);
     partial void OnNGAYVLChanged();
-    partial void OnLUONGChanging(System.Nullable<decimal> value);
+    partial void OnLUONGChanging(System.Nullable<double> value);
     partial void OnLUONGChanged();
     partial void OnHINHANHChanging(string value);
     partial void OnHINHANHChanged();
@@ -2055,8 +2055,8 @@ namespace DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LUONG", DbType="Money")]
-		public System.Nullable<decimal> LUONG
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LUONG", DbType="Float")]
+		public System.Nullable<double> LUONG
 		{
 			get
 			{

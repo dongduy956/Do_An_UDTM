@@ -60,5 +60,11 @@ namespace GUI
             openUC(typeof(uc_staff));
 
         }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            openUC(typeof(uc_product));
+
+        }
     }
 }

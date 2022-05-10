@@ -91,7 +91,7 @@
       <Column Name="SDT" Type="System.String" DbType="Char(12)" CanBeNull="true" />
       <Column Name="GIOITINH" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="NGAYVL" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="LUONG" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="LUONG" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="HINHANH" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="taikhoan" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
       <Column Name="MATKHAU" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />

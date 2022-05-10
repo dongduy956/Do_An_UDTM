@@ -33,12 +33,12 @@
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnLogin = new DevExpress.XtraBars.BarButtonItem();
             this.btnConnect = new DevExpress.XtraBars.BarButtonItem();
+            this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -58,7 +58,7 @@
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbon.Size = new System.Drawing.Size(946, 203);
+            this.ribbon.Size = new System.Drawing.Size(956, 203);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // btnLogin
@@ -78,6 +78,12 @@
             this.btnConnect.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnConnect.ImageOptions.LargeImage")));
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnConnect_ItemClick);
+            // 
+            // barHeaderItem1
+            // 
+            this.barHeaderItem1.Caption = "Trạng thái";
+            this.barHeaderItem1.Id = 3;
+            this.barHeaderItem1.Name = "barHeaderItem1";
             // 
             // ribbonPage1
             // 
@@ -99,7 +105,7 @@
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 701);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(946, 37);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(956, 37);
             // 
             // documentManager1
             // 
@@ -109,17 +115,11 @@
             this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView1});
             // 
-            // barHeaderItem1
-            // 
-            this.barHeaderItem1.Caption = "Trạng thái";
-            this.barHeaderItem1.Id = 3;
-            this.barHeaderItem1.Name = "barHeaderItem1";
-            // 
             // frmSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(946, 738);
+            this.ClientSize = new System.Drawing.Size(956, 738);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IsMdiContainer = true;

@@ -95,23 +95,23 @@
             // 
             // separatorControl1
             // 
-            this.separatorControl1.Location = new System.Drawing.Point(12, 218);
+            this.separatorControl1.Location = new System.Drawing.Point(12, 229);
             this.separatorControl1.Name = "separatorControl1";
-            this.separatorControl1.Size = new System.Drawing.Size(500, 72);
+            this.separatorControl1.Size = new System.Drawing.Size(500, 61);
             this.separatorControl1.TabIndex = 8;
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(12, 165);
+            this.simpleButton1.Location = new System.Drawing.Point(12, 189);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(500, 49);
+            this.simpleButton1.Size = new System.Drawing.Size(500, 36);
             this.simpleButton1.StyleController = this.layoutControl1;
             this.simpleButton1.TabIndex = 7;
             this.simpleButton1.Text = "Đăng nhập";
             // 
             // checkEdit1
             // 
-            this.checkEdit1.Location = new System.Drawing.Point(12, 122);
+            this.checkEdit1.Location = new System.Drawing.Point(12, 136);
             this.checkEdit1.Name = "checkEdit1";
             this.checkEdit1.Properties.Caption = "Nhớ mật khẩu";
             this.checkEdit1.Size = new System.Drawing.Size(500, 33);
@@ -120,7 +120,7 @@
             // 
             // textEdit2
             // 
-            this.textEdit2.Location = new System.Drawing.Point(12, 89);
+            this.textEdit2.Location = new System.Drawing.Point(12, 96);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Size = new System.Drawing.Size(500, 36);
             this.textEdit2.StyleController = this.layoutControl1;
@@ -152,9 +152,9 @@
             // 
             this.layoutControlItem1.Control = this.textEdit1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.MinSize = new System.Drawing.Size(141, 55);
+            this.layoutControlItem1.MinSize = new System.Drawing.Size(79, 62);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(504, 55);
+            this.layoutControlItem1.Size = new System.Drawing.Size(504, 62);
             this.layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem1.Text = "Tài khoản";
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
@@ -163,10 +163,10 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.textEdit2;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 55);
-            this.layoutControlItem2.MinSize = new System.Drawing.Size(141, 55);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 62);
+            this.layoutControlItem2.MinSize = new System.Drawing.Size(79, 62);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(504, 55);
+            this.layoutControlItem2.Size = new System.Drawing.Size(504, 62);
             this.layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem2.Text = "Mật khẩu";
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
@@ -175,10 +175,10 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.checkEdit1;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 110);
-            this.layoutControlItem3.MinSize = new System.Drawing.Size(132, 29);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 124);
+            this.layoutControlItem3.MinSize = new System.Drawing.Size(165, 37);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(504, 43);
+            this.layoutControlItem3.Size = new System.Drawing.Size(504, 53);
             this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
@@ -186,10 +186,10 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.simpleButton1;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 153);
-            this.layoutControlItem4.MinSize = new System.Drawing.Size(94, 36);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 177);
+            this.layoutControlItem4.MinSize = new System.Drawing.Size(121, 40);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(504, 53);
+            this.layoutControlItem4.Size = new System.Drawing.Size(504, 40);
             this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
@@ -197,10 +197,10 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.separatorControl1;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 206);
-            this.layoutControlItem5.MinSize = new System.Drawing.Size(245, 24);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 217);
+            this.layoutControlItem5.MinSize = new System.Drawing.Size(104, 24);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(504, 76);
+            this.layoutControlItem5.Size = new System.Drawing.Size(504, 65);
             this.layoutControlItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;

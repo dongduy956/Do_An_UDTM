@@ -4,3 +4,9 @@ E:\Phát triển ứng dụng thông minh\Do_An\DAO\obj\Debug\DAO.csprojResolveA
 E:\Phát triển ứng dụng thông minh\Do_An\DAO\obj\Debug\DAO.dll
 E:\Phát triển ứng dụng thông minh\Do_An\DAO\obj\Debug\DAO.pdb
 E:\Phát triển ứng dụng thông minh\Do_An\DAO\bin\Debug\DAO.dll.config
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\bin\Debug\DAO.dll.config
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\bin\Debug\DAO.dll
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\bin\Debug\DAO.pdb
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\obj\Debug\DAO.dll
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\obj\Debug\DAO.pdb

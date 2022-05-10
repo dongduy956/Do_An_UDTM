@@ -75,7 +75,7 @@
             this.mainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainContainer.Location = new System.Drawing.Point(260, 76);
             this.mainContainer.Name = "mainContainer";
-            this.mainContainer.Size = new System.Drawing.Size(792, 554);
+            this.mainContainer.Size = new System.Drawing.Size(772, 544);
             this.mainContainer.TabIndex = 0;
             // 
             // accordionControl1
@@ -92,7 +92,7 @@
             this.accordionControl1.Location = new System.Drawing.Point(0, 76);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(260, 554);
+            this.accordionControl1.Size = new System.Drawing.Size(260, 544);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -120,6 +120,7 @@
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnProduct.Text = "Linh kiện";
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
             // btnNhanVien
             // 
@@ -213,7 +214,7 @@
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1052, 36);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1032, 36);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.lbTieuDe);
@@ -339,15 +340,15 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 36);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1052, 40);
+            this.barDockControlTop.Size = new System.Drawing.Size(1032, 40);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 630);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 620);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1052, 40);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1032, 40);
             // 
             // barDockControlLeft
             // 
@@ -355,15 +356,15 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 76);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 554);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 544);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1052, 76);
+            this.barDockControlRight.Location = new System.Drawing.Point(1032, 76);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 554);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 544);
             // 
             // repositoryItemPictureEdit1
             // 
@@ -381,7 +382,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1052, 670);
+            this.ClientSize = new System.Drawing.Size(1032, 660);
             this.ControlContainer = this.mainContainer;
             this.Controls.Add(this.mainContainer);
             this.Controls.Add(this.accordionControl1);
