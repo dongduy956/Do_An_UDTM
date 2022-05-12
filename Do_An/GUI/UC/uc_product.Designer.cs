@@ -34,13 +34,20 @@
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
             this.btnClose = new DevExpress.XtraBars.BarButtonItem();
+            this.btnExcel = new DevExpress.XtraBars.BarButtonItem();
+            this.btnWord = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPdf = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.btnDelete = new DevExpress.XtraBars.BarButtonItem();
+            this.repositoryItemImageEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
+            this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.repositoryItemImageComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gcProduct = new DevExpress.XtraGrid.GridControl();
             this.gvProduct = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -49,19 +56,30 @@
             this.lkLoaiLK = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.imgHinhAnh = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.pictureImage = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.repositoryItemPictureEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.gcTypeProduct = new DevExpress.XtraGrid.GridControl();
             this.gvTypeProduct = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkLoaiLK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgHinhAnh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit2)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcTypeProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTypeProduct)).BeginInit();
@@ -79,9 +97,16 @@
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.btnClose,
             this.btnDelete,
-            this.btnXoa});
+            this.btnXoa,
+            this.btnExcel,
+            this.btnWord,
+            this.btnPdf});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 6;
+            this.barManager1.MaxItemId = 15;
+            this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemImageEdit1,
+            this.repositoryItemPictureEdit1,
+            this.repositoryItemImageComboBox1});
             // 
             // bar2
             // 
@@ -91,6 +116,9 @@
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnXoa),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnExcel, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnWord, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnPdf, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnClose, true)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
@@ -115,6 +143,36 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnClose.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnClose_ItemClick);
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Caption = "Xuất excel";
+            this.btnExcel.Id = 12;
+            this.btnExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.ImageOptions.Image")));
+            this.btnExcel.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnExcel.ImageOptions.LargeImage")));
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnExcel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnExcel_ItemClick);
+            // 
+            // btnWord
+            // 
+            this.btnWord.Caption = "Xuất word";
+            this.btnWord.Id = 13;
+            this.btnWord.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnWord.ImageOptions.Image")));
+            this.btnWord.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnWord.ImageOptions.LargeImage")));
+            this.btnWord.Name = "btnWord";
+            this.btnWord.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnWord.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnWord_ItemClick);
+            // 
+            // btnPdf
+            // 
+            this.btnPdf.Caption = "Xuất pdf";
+            this.btnPdf.Id = 14;
+            this.btnPdf.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPdf.ImageOptions.Image")));
+            this.btnPdf.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPdf.ImageOptions.LargeImage")));
+            this.btnPdf.Name = "btnPdf";
+            this.btnPdf.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnPdf.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPdf_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -156,6 +214,24 @@
             this.btnDelete.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.LargeImage")));
             this.btnDelete.Name = "btnDelete";
             // 
+            // repositoryItemImageEdit1
+            // 
+            this.repositoryItemImageEdit1.AutoHeight = false;
+            this.repositoryItemImageEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemImageEdit1.Name = "repositoryItemImageEdit1";
+            // 
+            // repositoryItemPictureEdit1
+            // 
+            this.repositoryItemPictureEdit1.Name = "repositoryItemPictureEdit1";
+            // 
+            // repositoryItemImageComboBox1
+            // 
+            this.repositoryItemImageComboBox1.AutoHeight = false;
+            this.repositoryItemImageComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemImageComboBox1.Name = "repositoryItemImageComboBox1";
+            // 
             // xtraTabControl1
             // 
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -170,10 +246,20 @@
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.pictureBox1);
             this.xtraTabPage1.Controls.Add(this.gcProduct);
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(929, 491);
             this.xtraTabPage1.Text = "Linh kiện";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(916, 214);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(10, 10);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
             // 
             // gcProduct
             // 
@@ -183,11 +269,15 @@
             this.gcProduct.MenuManager = this.barManager1;
             this.gcProduct.Name = "gcProduct";
             this.gcProduct.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.lkLoaiLK});
+            this.lkLoaiLK,
+            this.pictureImage,
+            this.repositoryItemPictureEdit2,
+            this.imgHinhAnh});
             this.gcProduct.Size = new System.Drawing.Size(929, 491);
             this.gcProduct.TabIndex = 0;
             this.gcProduct.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvProduct});
+            this.gcProduct.ProcessGridKey += new System.Windows.Forms.KeyEventHandler(this.gcProduct_ProcessGridKey);
             // 
             // gvProduct
             // 
@@ -197,11 +287,20 @@
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn5,
+            this.gridColumn9,
             this.gridColumn6});
             this.gvProduct.GridControl = this.gcProduct;
             this.gvProduct.Name = "gvProduct";
+            this.gvProduct.OptionsFind.AlwaysVisible = true;
+            this.gvProduct.OptionsFind.Condition = DevExpress.Data.Filtering.FilterCondition.Contains;
+            this.gvProduct.OptionsFind.FindDelay = 100;
+            this.gvProduct.OptionsFind.FindNullPrompt = "Tìm kiếm tại đây...";
+            this.gvProduct.OptionsFind.SearchInPreview = true;
+            this.gvProduct.OptionsFind.ShowFindButton = false;
             this.gvProduct.OptionsView.ShowGroupPanel = false;
-            this.gvProduct.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gvProduct_RowUpdated);
+            this.gvProduct.CustomDrawCell += new DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventHandler(this.gvProduct_CustomDrawCell);
+            this.gvProduct.InvalidRowException += new DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventHandler(this.gvProduct_InvalidRowException);
+            this.gvProduct.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gvProduct_ValidateRow);
             // 
             // gridColumn1
             // 
@@ -209,6 +308,8 @@
             this.gridColumn1.FieldName = "MALINHKIEN";
             this.gridColumn1.MinWidth = 30;
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
+            this.gridColumn1.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
             this.gridColumn1.Width = 112;
@@ -264,6 +365,25 @@
             this.gridColumn5.VisibleIndex = 4;
             this.gridColumn5.Width = 112;
             // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "Hình ảnh";
+            this.gridColumn9.ColumnEdit = this.imgHinhAnh;
+            this.gridColumn9.FieldName = "HINHANH";
+            this.gridColumn9.MinWidth = 30;
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 5;
+            this.gridColumn9.Width = 112;
+            // 
+            // imgHinhAnh
+            // 
+            this.imgHinhAnh.AutoHeight = false;
+            this.imgHinhAnh.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.imgHinhAnh.Name = "imgHinhAnh";
+            this.imgHinhAnh.Click += new System.EventHandler(this.imgHinhAnh_Click);
+            // 
             // gridColumn6
             // 
             this.gridColumn6.Caption = "Số lượng còn";
@@ -271,8 +391,18 @@
             this.gridColumn6.MinWidth = 30;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
+            this.gridColumn6.VisibleIndex = 6;
             this.gridColumn6.Width = 112;
+            // 
+            // pictureImage
+            // 
+            this.pictureImage.InitialImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("pictureImage.InitialImageOptions.Image")));
+            this.pictureImage.Name = "pictureImage";
+            // 
+            // repositoryItemPictureEdit2
+            // 
+            this.repositoryItemPictureEdit2.InitialImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("repositoryItemPictureEdit2.InitialImageOptions.Image")));
+            this.repositoryItemPictureEdit2.Name = "repositoryItemPictureEdit2";
             // 
             // xtraTabPage2
             // 
@@ -292,6 +422,7 @@
             this.gcTypeProduct.TabIndex = 0;
             this.gcTypeProduct.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTypeProduct});
+            this.gcTypeProduct.ProcessGridKey += new System.Windows.Forms.KeyEventHandler(this.gcTypeProduct_ProcessGridKey);
             // 
             // gvTypeProduct
             // 
@@ -300,8 +431,15 @@
             this.gridColumn8});
             this.gvTypeProduct.GridControl = this.gcTypeProduct;
             this.gvTypeProduct.Name = "gvTypeProduct";
+            this.gvTypeProduct.OptionsFind.AlwaysVisible = true;
+            this.gvTypeProduct.OptionsFind.Condition = DevExpress.Data.Filtering.FilterCondition.Contains;
+            this.gvTypeProduct.OptionsFind.FindDelay = 100;
+            this.gvTypeProduct.OptionsFind.FindNullPrompt = "Tìm kiếm tại đây...";
+            this.gvTypeProduct.OptionsFind.SearchInPreview = true;
+            this.gvTypeProduct.OptionsFind.ShowFindButton = false;
             this.gvTypeProduct.OptionsView.ShowGroupPanel = false;
-            this.gvTypeProduct.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gvTypeProduct_RowUpdated);
+            this.gvTypeProduct.InvalidRowException += new DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventHandler(this.gvTypeProduct_InvalidRowException);
+            this.gvTypeProduct.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gvTypeProduct_ValidateRow);
             // 
             // gridColumn7
             // 
@@ -309,6 +447,7 @@
             this.gridColumn7.FieldName = "MALOAI";
             this.gridColumn7.MinWidth = 30;
             this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 0;
             this.gridColumn7.Width = 112;
@@ -337,12 +476,19 @@
             this.Tag = "Linh kiện";
             this.Load += new System.EventHandler(this.uc_product_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkLoaiLK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgHinhAnh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit2)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcTypeProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTypeProduct)).EndInit();
@@ -378,5 +524,16 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gvTypeProduct;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit pictureImage;
+        private DevExpress.XtraEditors.Repository.RepositoryItemImageEdit repositoryItemImageEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox repositoryItemImageComboBox1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraEditors.Repository.RepositoryItemImageEdit imgHinhAnh;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private DevExpress.XtraBars.BarButtonItem btnExcel;
+        private DevExpress.XtraBars.BarButtonItem btnWord;
+        private DevExpress.XtraBars.BarButtonItem btnPdf;
     }
 }

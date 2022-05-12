@@ -1,4 +1,5 @@
 ﻿using DAO;
+using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid;
 using System;
 using System.Collections.Generic;
@@ -30,11 +31,10 @@ namespace BUS
         {
 
             var lst = (from lk in db.LINHKIENs select lk).ToList();
-
             gv.DataSource = Support.ToDataTable<LINHKIEN>(lst);
 
         }
-        public int insert(string tenLK, int maLoai, string hangSX, decimal donGia, string hinhAnh, int soLuongCon)
+        public int insert(string tenLK, int maLoai, string hangSX, double donGia, string hinhAnh, int soLuongCon)
         {
             try
             {
@@ -57,7 +57,7 @@ namespace BUS
             }
 
         }
-        public int update(string tenLK, int maLoai, string hangSX, decimal donGia, string hinhAnh, int soLuongCon, int maLK)
+        public int update(string tenLK, int maLoai, string hangSX, double donGia, string hinhAnh, int soLuongCon, int maLK)
         {
             var lk = db.LINHKIENs.FirstOrDefault(x => x.MALINHKIEN == maLK);
 

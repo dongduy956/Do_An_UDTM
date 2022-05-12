@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using BUS;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.Utils;
+using DevExpress.XtraEditors.Controls;
 
 namespace GUI.UC
 {
@@ -22,9 +23,7 @@ namespace GUI.UC
         {
             InitializeComponent();
             this.frm = frm;
-
         }
-
         private void uc_customer_Load(object sender, EventArgs e)
         {
             KhachHangBUS.Instances.getDataGV(gcCustomer);
@@ -34,16 +33,11 @@ namespace GUI.UC
             LoaiKHBUS.Instances.getDataGV(gcTypeCustomer);
             gvTypeCustomer.OptionsView.NewItemRowPosition = NewItemRowPosition.Top;
         }
-
         private void btnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             frm._close();
         }
-        bool validateDataRow(object obj)
-        {
-            return (obj == null || obj.ToString().Trim().Length == 0);
-        }
-
+        //xoá 1 dòng trong bảng khách hàng hoặc loại khách hàng
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (xtraTabControl1.SelectedTabPageIndex == 0)
@@ -64,7 +58,121 @@ namespace GUI.UC
                 DataRow dr = gvTypeCustomer.GetFocusedDataRow();
                 if (dr != null)
                 {
-                    if (XtraMessageBox.Show("Bạn có muốn xoá loai khách hàng " + dr["TENLOAIKH"].ToString() + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    if (XtraMessageBox.Show("Bạn có muốn xoá loại khách hàng " + dr["TENLOAIKH"].ToString() + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    {
+                        LoaiKHBUS.Instances.delete(int.Parse(dr["MALOAIKH"].ToString()));
+                        XtraMessageBox.Show("Xoá thành công", "Thông báo");
+                        LoaiKHBUS.Instances.getDataGV(gcTypeCustomer);
+                    }
+                }
+            }
+        }        
+        //xoá bằng nút delete 1 dòng trong bảng khách hàng
+        private void gcCustomer_ProcessGridKey(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete && gvCustomer.State != GridState.Editing)
+            {
+                DataRow dr = gvCustomer.GetFocusedDataRow();
+                if (dr != null)
+                {
+                    if (XtraMessageBox.Show("Bạn có muốn xoá khách hàng " + dr["TENKH"].ToString() + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    {
+                        KhachHangBUS.Instances.delete(int.Parse(dr["MAKH"].ToString()));
+                        XtraMessageBox.Show("Xoá thành công", "Thông báo");
+                        KhachHangBUS.Instances.getDataGV(gcCustomer);
+                    }
+                }
+            }
+        }
+        //ngăn chặn không cho chuyển dòng khi thêm sửa khách hàng dữ liệu không hợp lệ
+        private void gvCustomer_InvalidRowException(object sender, DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventArgs e)
+        {
+            e.ExceptionMode = ExceptionMode.NoAction;
+
+        }
+        //thêm sửa bẳng khách hàng
+        private void gvCustomer_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
+        {
+            string sErr = "";
+            bool bVali = true;
+            if (gvCustomer.GetRowCellValue(e.RowHandle, "TENKH").ToString().Trim() == "")
+            {
+                bVali = false;
+                sErr = "Vui lòng điền tên khách hàng.\n";
+            }
+            if (gvCustomer.GetRowCellValue(e.RowHandle, "DIACHI").ToString().Trim() == "")
+            {
+                bVali = false;
+                sErr += "Vui lòng điền địa chỉ.\n";
+            }
+            if (gvCustomer.GetRowCellValue(e.RowHandle, "SDT").ToString().Trim() == "")
+            {
+                bVali = false;
+                sErr += "Vui lòng điền số điện thoại.\n";
+            }
+            if (gvCustomer.GetRowCellValue(e.RowHandle, "maloaikh").ToString().Trim() == "")
+            {
+                bVali = false;
+                sErr += "Vui lòng chọn loại khách hàng.\n";
+            }
+            if (bVali)
+            {
+
+                //thêm mới
+                if (e.RowHandle < 0)
+                {
+                    try
+                    {
+                        KhachHangBUS.Instances.insert(gvCustomer.GetRowCellValue(e.RowHandle, "TENKH").ToString().Trim()
+                            , bool.Parse(gvCustomer.GetRowCellValue(e.RowHandle, "GIOITINH").ToString().Trim())
+                            , gvCustomer.GetRowCellValue(e.RowHandle, "DIACHI").ToString()
+                            , gvCustomer.GetRowCellValue(e.RowHandle, "SDT").ToString()
+                            , int.Parse(gvCustomer.GetRowCellValue(e.RowHandle, "maloaikh").ToString().Trim()));
+                        XtraMessageBox.Show("Thêm thành công", "Thông báo", DevExpress.Utils.DefaultBoolean.True);
+                        KhachHangBUS.Instances.getDataGV(gcCustomer);
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+                }
+                //sửa 
+                else
+                {
+                    try
+                    {
+                        KhachHangBUS.Instances.update(gvCustomer.GetRowCellValue(e.RowHandle,"TENKH").ToString().Trim()
+                            , bool.Parse(gvCustomer.GetRowCellValue(e.RowHandle, "GIOITINH").ToString().Trim())
+                            , gvCustomer.GetRowCellValue(e.RowHandle, "DIACHI").ToString()
+                            , gvCustomer.GetRowCellValue(e.RowHandle, "SDT").ToString()
+                            , int.Parse(gvCustomer.GetRowCellValue(e.RowHandle, "maloaikh").ToString().Trim())
+                            , int.Parse(gvCustomer.GetRowCellValue(e.RowHandle, "Makh").ToString().Trim()));
+                        KhachHangBUS.Instances.getDataGV(gcCustomer);
+
+                    }
+                    catch (Exception)
+                    {
+
+                    }
+
+                }
+            }
+            else
+            {
+                e.Valid = false;
+                XtraMessageBox.Show(sErr, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //xoá bằng nút delete 1 dòng trong bảng loại khách hàng
+        private void gcTypeCustomer_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete && gvCustomer.State != GridState.Editing)
+            {
+                DataRow dr = gvTypeCustomer.GetFocusedDataRow();
+                if (dr != null)
+                {
+                    if (XtraMessageBox.Show("Bạn có muốn xoá loại khách hàng " + dr["TENLOAIKH"].ToString() + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
                         LoaiKHBUS.Instances.delete(int.Parse(dr["MALOAIKH"].ToString()));
                         XtraMessageBox.Show("Xoá thành công", "Thông báo");
@@ -73,98 +181,124 @@ namespace GUI.UC
                 }
             }
         }
-
-        private void gvCustomer_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
+        //ngăn chặn không cho chuyển dòng khi thêm sửa loại khách hàng dữ liệu không hợp lệ
+        private void gvTypeCustomer_InvalidRowException(object sender, DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventArgs e)
         {
-            DataRow dr;
-            if (e.RowHandle >= 0)
+            e.ExceptionMode = ExceptionMode.NoAction;
+
+        }
+        //thêm sửa bẳng khách hàng
+        private void gvTypeCustomer_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
+        {
+            string sErr = "";
+            bool bVali = true;
+            if (gvTypeCustomer.GetRowCellValue(e.RowHandle, "TENLOAIKH").ToString().Trim() == "")
             {
-                dr = gvCustomer.GetDataRow(e.RowHandle);
-                if (validateDataRow(dr["TENKH"]) || validateDataRow(dr["DIACHI"]) || validateDataRow(dr["SDT"]) || validateDataRow(dr["maloaikh"]))
+                bVali = false;
+                sErr = "Vui lòng điền tên loại.\n";
+            }
+            if (gvTypeCustomer.GetRowCellValue(e.RowHandle, "GIAMGIA").ToString().Trim() == "")
+            {
+                bVali = false;
+                sErr += "Vui lòng điền giảm giá.\n";
+            }
+            if (bVali)
+            {
+
+                //thêm mới
+                if (e.RowHandle < 0)
                 {
-                    KhachHangBUS.Instances.getDataGV(gcCustomer);
-                    return;
+                    try
+                    {
+                        LoaiKHBUS.Instances.insert(gvTypeCustomer.GetRowCellValue(e.RowHandle, "TENLOAIKH").ToString().Trim()
+                           , double.Parse(gvTypeCustomer.GetRowCellValue(e.RowHandle, "GIAMGIA").ToString().Trim()));
+                        XtraMessageBox.Show("Thêm thành công", "Thông báo", DefaultBoolean.True);
+                        LoaiKHBUS.Instances.getDataGV(gcTypeCustomer);
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
                 }
+                //sửa 
                 else
                 {
                     try
                     {
-                        KhachHangBUS.Instances.update(dr["TENKH"].ToString(), bool.Parse(dr["GIOITINH"].ToString()), dr["DIACHI"].ToString(), dr["SDT"].ToString(), int.Parse(dr["maloaikh"].ToString().Trim()), int.Parse(dr["makh"].ToString().Trim()));
+                        LoaiKHBUS.Instances.update(gvTypeCustomer.GetRowCellValue(e.RowHandle,"TENLOAIKH").ToString().Trim()
+                            , double.Parse(gvTypeCustomer.GetRowCellValue(e.RowHandle, "GIAMGIA").ToString().Trim())
+                            , int.Parse(gvTypeCustomer.GetRowCellValue(e.RowHandle, "MALOAIKH").ToString().Trim()));
+                        LoaiKHBUS.Instances.getDataGV(gcTypeCustomer);
+
                     }
                     catch (Exception)
                     {
 
                     }
+
                 }
-                KhachHangBUS.Instances.getDataGV(gcCustomer);
             }
             else
             {
-                dr = gvCustomer.GetDataRow(gvCustomer.RowCount - 1);
-                if (validateDataRow(dr["TENKH"]) || validateDataRow(dr["DIACHI"]) || validateDataRow(dr["SDT"]) || validateDataRow(dr["maloaikh"]))
-                {
-                    KhachHangBUS.Instances.getDataGV(gcCustomer);
-
-                    return;
-                }
-                try
-                {
-                    int row = KhachHangBUS.Instances.insert(dr["TENKH"].ToString(), dr["GIOITINH"] == null || dr["GIOITINH"].ToString() == "" ? false : bool.Parse(dr["GIOITINH"].ToString()), dr["DIACHI"].ToString(), dr["SDT"].ToString(), int.Parse(dr["maloaikh"].ToString()));
-                    XtraMessageBox.Show("Thêm thành công", "Thông báo", DevExpress.Utils.DefaultBoolean.True);
-                }
-                catch (Exception ex)
-                {
-
-                }
-                KhachHangBUS.Instances.getDataGV(gcCustomer);
-
-
+                e.Valid = false;
+                XtraMessageBox.Show(sErr, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void gvTypeCustomer_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
+        //xuất ra file excel khách hàng hoặc loại khách hàng
+        private void btnExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            DataRow dr;
-            if (e.RowHandle >= 0)
+            SaveFileDialog sf = new SaveFileDialog();
+            sf.Filter = "Excel Files (*.xlsx)|*.xls";
+            sf.Title = "Xuất ra file excel";
+            if (sf.ShowDialog() == DialogResult.OK)
             {
-                dr = gvTypeCustomer.GetDataRow(e.RowHandle);
-                if (validateDataRow(dr["TENLOAIKH"]) || validateDataRow(dr["GIAMGIA"]))
-                {
-                    LoaiKHBUS.Instances.getDataGV(gcTypeCustomer);
-                    return;
-                }
+                string str = "khách hàng";
+                if (xtraTabControl1.SelectedTabPageIndex == 0)
+                    gvCustomer.ExportToXls(sf.FileName);
                 else
                 {
-                    try
-                    {
-                        LoaiKHBUS.Instances.update(dr["TENLOAIKH"].ToString(),double.Parse(dr["GIAMGIA"].ToString().Trim()),int.Parse(dr["MALOAIKH"].ToString().Trim()));
-                    }
-                    catch (Exception)
-                    {
-
-                    }
+                    gvTypeCustomer.ExportToXls(sf.FileName);
+                    str = "loại khách hàng";
                 }
-                LoaiKHBUS.Instances.getDataGV(gcTypeCustomer);
+                XtraMessageBox.Show("Xuất file excel " + str + " thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
-            else
+        }
+        //xuất ra file word khách hàng hoặc loại khách hàng
+        private void btnWord_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            SaveFileDialog sf = new SaveFileDialog();
+            sf.Filter = "Word Files (*.docx)|*.docx";
+            sf.Title = "Xuất ra file word";
+            if (sf.ShowDialog() == DialogResult.OK)
             {
-                dr = gvTypeCustomer.GetDataRow(gvTypeCustomer.RowCount - 1);
-                if (validateDataRow(dr["TENLOAIKH"]) || validateDataRow(dr["GIAMGIA"]))
+                string str = "khách hàng";
+                if (xtraTabControl1.SelectedTabPageIndex == 0)
+                    gvCustomer.ExportToDocx(sf.FileName);
+                else
                 {
-                    LoaiKHBUS.Instances.getDataGV(gcTypeCustomer);
-                    return;
+                    gvTypeCustomer.ExportToDocx(sf.FileName);
+                    str = "loại khách hàng";
                 }
-                try
+                XtraMessageBox.Show("Xuất file word " + str + " thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+        }
+        //xuất ra file Pdf khách hàng hoặc loại khách hàng
+        private void btnPdf_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            SaveFileDialog sf = new SaveFileDialog();
+            sf.Filter = "Pdf Files (*.pdf)|*.pdf";
+            sf.Title = "Xuất ra file pdf";
+            if (sf.ShowDialog() == DialogResult.OK)
+            {
+                string str = "khách hàng";
+                if (xtraTabControl1.SelectedTabPageIndex == 0)
+                    gvCustomer.ExportToPdf(sf.FileName);
+                else
                 {
-                    LoaiKHBUS.Instances.insert(dr["TENLOAIKH"].ToString(), double.Parse(dr["GIAMGIA"].ToString().Trim()));
-
-                    XtraMessageBox.Show("Thêm thành công", "Thông báo", DefaultBoolean.True);
+                    gvTypeCustomer.ExportToPdf(sf.FileName);
+                    str = "loại khách hàng";
                 }
-                catch (Exception ex)
-                {
-
-                }
-                LoaiKHBUS.Instances.getDataGV(gcTypeCustomer);
+                XtraMessageBox.Show("Xuất file pdf " + str + " thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
     }

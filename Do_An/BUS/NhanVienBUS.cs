@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 using DAO;
 using System.Data;
 using DevExpress.XtraGrid;
-
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraEditors.Repository;
+using DevExpress.XtraEditors.Controls;
+using static System.Net.Mime.MediaTypeNames;
+using DevExpress.Utils;
 namespace BUS
 {
     public class NhanVienBUS
@@ -30,7 +36,6 @@ namespace BUS
         public void getDataGV(GridControl gv)
         {
             var lst = (from nv in db.NHANVIENs select nv).ToList();
-
             gv.DataSource = Support.ToDataTable<NHANVIEN>(lst);
         }
         public int insert(string tennv, string diachi, string sdt, bool gioiTinh, DateTime ngayVL
@@ -123,6 +128,13 @@ namespace BUS
 
                 return -1;
             }
+
+        }
+
+        private void loadImageGV(GridView gvStaff)
+        {
+
+
 
         }
     }

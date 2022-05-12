@@ -1324,7 +1324,7 @@ namespace DAO
 		
 		private string _HANGSX;
 		
-		private System.Nullable<decimal> _DONGIA;
+		private System.Nullable<double> _DONGIA;
 		
 		private string _HINHANH;
 		
@@ -1348,7 +1348,7 @@ namespace DAO
     partial void OnMALOAIChanged();
     partial void OnHANGSXChanging(string value);
     partial void OnHANGSXChanged();
-    partial void OnDONGIAChanging(System.Nullable<decimal> value);
+    partial void OnDONGIAChanging(System.Nullable<double> value);
     partial void OnDONGIAChanged();
     partial void OnHINHANHChanging(string value);
     partial void OnHINHANHChanged();
@@ -1448,8 +1448,8 @@ namespace DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DONGIA", DbType="Money")]
-		public System.Nullable<decimal> DONGIA
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DONGIA", DbType="Float")]
+		public System.Nullable<double> DONGIA
 		{
 			get
 			{

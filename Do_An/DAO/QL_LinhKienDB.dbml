@@ -60,7 +60,7 @@
       <Column Name="TENLINHKIEN" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
       <Column Name="MALOAI" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="HANGSX" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
-      <Column Name="DONGIA" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DONGIA" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="HINHANH" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="SOLUONGCON" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="LINHKIEN_CHITIETHD" Member="CHITIETHDs" ThisKey="MALINHKIEN" OtherKey="MALINHKIEN" Type="CHITIETHD" />

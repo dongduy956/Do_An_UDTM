@@ -33,6 +33,9 @@
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
+            this.btnExcel = new DevExpress.XtraBars.BarButtonItem();
+            this.btnWord = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPdf = new DevExpress.XtraBars.BarButtonItem();
             this.btnClose = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -41,7 +44,6 @@
             this.btnDelete = new DevExpress.XtraBars.BarButtonItem();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.gcCustomer = new DevExpress.XtraGrid.GridControl();
             this.gvCustomer = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -51,6 +53,7 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lkLoaiKH = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.gcTypeCustomer = new DevExpress.XtraGrid.GridControl();
             this.gvTypeCustomer = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -60,10 +63,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
-            this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkLoaiKH)).BeginInit();
+            this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcTypeCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTypeCustomer)).BeginInit();
             this.SuspendLayout();
@@ -80,9 +83,12 @@
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.btnClose,
             this.btnDelete,
-            this.btnXoa});
+            this.btnXoa,
+            this.btnExcel,
+            this.btnWord,
+            this.btnPdf});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 6;
+            this.barManager1.MaxItemId = 9;
             // 
             // bar2
             // 
@@ -92,6 +98,9 @@
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnXoa),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnExcel, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnWord, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnPdf, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnClose, true)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
@@ -106,6 +115,36 @@
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnXoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXoa_ItemClick);
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Caption = "Xuất excel";
+            this.btnExcel.Id = 6;
+            this.btnExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.btnExcel.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnExcel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnExcel_ItemClick);
+            // 
+            // btnWord
+            // 
+            this.btnWord.Caption = "Xuất word";
+            this.btnWord.Id = 7;
+            this.btnWord.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.btnWord.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.btnWord.Name = "btnWord";
+            this.btnWord.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnWord.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnWord_ItemClick);
+            // 
+            // btnPdf
+            // 
+            this.btnPdf.Caption = "Xuất pdf";
+            this.btnPdf.Id = 8;
+            this.btnPdf.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
+            this.btnPdf.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.btnPdf.Name = "btnPdf";
+            this.btnPdf.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnPdf.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPdf_ItemClick);
             // 
             // btnClose
             // 
@@ -176,13 +215,6 @@
             this.xtraTabPage1.Size = new System.Drawing.Size(943, 435);
             this.xtraTabPage1.Text = "Khách hàng";
             // 
-            // xtraTabPage2
-            // 
-            this.xtraTabPage2.Controls.Add(this.gcTypeCustomer);
-            this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(943, 435);
-            this.xtraTabPage2.Text = "Loại khách hàng";
-            // 
             // gcCustomer
             // 
             this.gcCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -196,6 +228,7 @@
             this.gcCustomer.TabIndex = 10;
             this.gcCustomer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvCustomer});
+            this.gcCustomer.ProcessGridKey += new System.Windows.Forms.KeyEventHandler(this.gcCustomer_ProcessGridKey);
             // 
             // gvCustomer
             // 
@@ -208,8 +241,15 @@
             this.gridColumn6});
             this.gvCustomer.GridControl = this.gcCustomer;
             this.gvCustomer.Name = "gvCustomer";
+            this.gvCustomer.OptionsFind.AlwaysVisible = true;
+            this.gvCustomer.OptionsFind.Condition = DevExpress.Data.Filtering.FilterCondition.Contains;
+            this.gvCustomer.OptionsFind.FindDelay = 100;
+            this.gvCustomer.OptionsFind.FindNullPrompt = "Tìm kiếm tại đây...";
+            this.gvCustomer.OptionsFind.SearchInPreview = true;
+            this.gvCustomer.OptionsFind.ShowFindButton = false;
             this.gvCustomer.OptionsView.ShowGroupPanel = false;
-            this.gvCustomer.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gvCustomer_RowUpdated);
+            this.gvCustomer.InvalidRowException += new DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventHandler(this.gvCustomer_InvalidRowException);
+            this.gvCustomer.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gvCustomer_ValidateRow);
             // 
             // gridColumn1
             // 
@@ -217,6 +257,7 @@
             this.gridColumn1.FieldName = "Makh";
             this.gridColumn1.MinWidth = 30;
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
             this.gridColumn1.Width = 112;
@@ -283,6 +324,13 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("GIAMGIA", "Giảm giá")});
             this.lkLoaiKH.Name = "lkLoaiKH";
             // 
+            // xtraTabPage2
+            // 
+            this.xtraTabPage2.Controls.Add(this.gcTypeCustomer);
+            this.xtraTabPage2.Name = "xtraTabPage2";
+            this.xtraTabPage2.Size = new System.Drawing.Size(943, 435);
+            this.xtraTabPage2.Text = "Loại khách hàng";
+            // 
             // gcTypeCustomer
             // 
             this.gcTypeCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -294,6 +342,7 @@
             this.gcTypeCustomer.TabIndex = 0;
             this.gcTypeCustomer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTypeCustomer});
+            this.gcTypeCustomer.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.gcTypeCustomer_PreviewKeyDown);
             // 
             // gvTypeCustomer
             // 
@@ -303,8 +352,15 @@
             this.gridColumn9});
             this.gvTypeCustomer.GridControl = this.gcTypeCustomer;
             this.gvTypeCustomer.Name = "gvTypeCustomer";
+            this.gvTypeCustomer.OptionsFind.AlwaysVisible = true;
+            this.gvTypeCustomer.OptionsFind.Condition = DevExpress.Data.Filtering.FilterCondition.Contains;
+            this.gvTypeCustomer.OptionsFind.FindDelay = 100;
+            this.gvTypeCustomer.OptionsFind.FindNullPrompt = "Tìm kiếm tại đây...";
+            this.gvTypeCustomer.OptionsFind.SearchInPreview = true;
+            this.gvTypeCustomer.OptionsFind.ShowFindButton = false;
             this.gvTypeCustomer.OptionsView.ShowGroupPanel = false;
-            this.gvTypeCustomer.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gvTypeCustomer_RowUpdated);
+            this.gvTypeCustomer.InvalidRowException += new DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventHandler(this.gvTypeCustomer_InvalidRowException);
+            this.gvTypeCustomer.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gvTypeCustomer_ValidateRow);
             // 
             // gridColumn7
             // 
@@ -312,6 +368,7 @@
             this.gridColumn7.FieldName = "MALOAIKH";
             this.gridColumn7.MinWidth = 30;
             this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 0;
             this.gridColumn7.Width = 112;
@@ -353,10 +410,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
-            this.xtraTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkLoaiKH)).EndInit();
+            this.xtraTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcTypeCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTypeCustomer)).EndInit();
             this.ResumeLayout(false);
@@ -392,5 +449,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraBars.BarButtonItem btnExcel;
+        private DevExpress.XtraBars.BarButtonItem btnWord;
+        private DevExpress.XtraBars.BarButtonItem btnPdf;
     }
 }
