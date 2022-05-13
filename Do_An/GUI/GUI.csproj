@@ -157,6 +157,10 @@
       <Project>{19b5192f-0a43-4b94-8cec-683bf4597e54}</Project>
       <Name>BUS</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{EF61C53B-7A37-4DBF-AE06-17E5901DB742}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ecommerce.png" />

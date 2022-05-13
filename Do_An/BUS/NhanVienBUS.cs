@@ -13,6 +13,10 @@ using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraEditors.Controls;
 using static System.Net.Mime.MediaTypeNames;
 using DevExpress.Utils;
+using System.Data.SqlClient;
+using DevExpress.XtraEditors;
+using System.Windows.Forms;
+
 namespace BUS
 {
     public class NhanVienBUS
@@ -130,12 +134,24 @@ namespace BUS
             }
 
         }
-
-        private void loadImageGV(GridView gvStaff)
+        public long login(string userName,string passWord)
         {
+            passWord = Support.EndCodeMD5(passWord.Trim());
+            int manv = -1;
+            var nv=new NHANVIEN();
+            try
+            {
+                nv = db.NHANVIENs.FirstOrDefault(x => x.taikhoan.Trim().Equals(userName.Trim()) && x.MATKHAU.Equals(passWord));
 
-
-
+            }
+            catch (SqlException ex)
+            {
+                return ex.ErrorCode;
+            }
+            if (nv != null)
+                manv = nv.MANV;
+            return manv;
         }
+       
     }
 }

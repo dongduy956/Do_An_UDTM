@@ -6,6 +6,15 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Data.Sql;
 
 namespace DAO
 {
@@ -37,6 +46,69 @@ namespace DAO
                 table.Rows.Add(row);
             }
             return table;
+        }
+        public static bool SaveConnection(string connectionString)
+        {
+            if (TestConnection(connectionString))
+            {
+                try
+                {
+                    Properties.Settings.Default.QL_LINHKIENMAYTINHConnectionString = connectionString;
+                    Properties.Settings.Default.Save();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+            }
+            return false;
+        }
+        public static bool TestConnection(string connectionString)
+        {
+            SqlConnection con = new SqlConnection(connectionString);
+            try
+            {
+                con.Open();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            return true;
+        }
+        public static DataTable GetServerName()
+        {
+            DataTable dt = new DataTable();
+            dt = SqlDataSourceEnumerator.Instance.GetDataSources();
+            if (dt.Rows.Count == 0)
+            {
+                dt = new DataTable();
+                dt.Columns.Add("ServerName");
+                DataRow r = dt.NewRow();
+                r[0] = ".";
+                dt.Rows.Add(r);
+            }
+            return dt;
+        }
+        public static DataTable GetDBName(string pServer, string pUser, string pPass)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter();
+                da = new SqlDataAdapter("select name from sys.Databases",
+                    "Data Source=" + pServer + ";Initial Catalog=master;User ID=" + pUser + ";pwd = " +
+                    pPass + "");
+                da.Fill(dt);
+            }
+            catch (Exception)
+            {
+
+            }
+
+            return dt;
         }
     }
 }

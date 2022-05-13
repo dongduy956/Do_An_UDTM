@@ -23,13 +23,15 @@ namespace DAO.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=QL_LINHKIENMAYTINH;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.f;Initial Catalog=QL_LINHKIENMAYTINH;Integrated Security=True")]
         public string QL_LINHKIENMAYTINHConnectionString {
             get {
                 return ((string)(this["QL_LINHKIENMAYTINHConnectionString"]));
+            }
+            set {
+                this["QL_LINHKIENMAYTINHConnectionString"] = value;
             }
         }
     }

@@ -16,6 +16,7 @@ namespace GUI
         public frmSystem()
         {
             InitializeComponent();
+            lbStatus.Caption = "";
         }
         void openForm(Type typeForm)
         {
@@ -27,11 +28,15 @@ namespace GUI
                     return;
                 }
             }
-            Form f = (Form)Activator.CreateInstance(typeForm);
+            Form f = (Form)Activator.CreateInstance(typeForm, this);
             f.MdiParent = this;
             f.Show();
         }
-      
+        public void setStatus(string status,Color cl)
+        {
+            lbStatus.Caption = status;
+            lbStatus.ItemAppearance.Normal.ForeColor = cl;
+        }
 
         private void btnConnect_ItemClick(object sender, ItemClickEventArgs e)
         {
