@@ -167,6 +167,7 @@
             this.accordionControlElement3.Name = "accordionControlElement3";
             this.accordionControlElement3.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement3.Text = "Mua hàng";
+            this.accordionControlElement3.Click += new System.EventHandler(this.accordionControlElement3_Click);
             // 
             // accordionControlElement4
             // 

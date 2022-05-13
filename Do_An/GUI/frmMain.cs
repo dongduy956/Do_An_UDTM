@@ -66,5 +66,10 @@ namespace GUI
             openUC(typeof(uc_product));
 
         }
+
+        private void accordionControlElement3_Click(object sender, EventArgs e)
+        {
+            openUC(typeof(uc_order));
+        }
     }
 }

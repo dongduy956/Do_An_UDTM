@@ -377,3 +377,12 @@ E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.UC.
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.exe.licenses
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.UC.uc_product.resources
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\DevExpress.Pdf.v19.2.Drawing.dll
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\DevExpress.XtraPdfViewer.v19.2.dll
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\DevExpress.Pdf.v19.2.Drawing.xml
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\DevExpress.XtraPdfViewer.v19.2.xml
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\de\DevExpress.XtraPdfViewer.v19.2.resources.dll
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\es\DevExpress.XtraPdfViewer.v19.2.resources.dll
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\ja\DevExpress.XtraPdfViewer.v19.2.resources.dll
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\ru\DevExpress.XtraPdfViewer.v19.2.resources.dll
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.UC.uc_order.resources
