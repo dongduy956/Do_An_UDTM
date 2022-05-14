@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_LINHKIENMAYTINH" Class="QL_LinhKienDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=QL_LINHKIENMAYTINH;Integrated Security=True" SettingsObjectName="DAO.Properties.Settings" SettingsPropertyName="QL_LINHKIENMAYTINHConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CHITIETHD" Member="CHITIETHDs">
     <Type Name="CHITIETHD">
       <Column Name="MAHD" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -7,7 +6,7 @@
       <Column Name="SOLUONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="DONGIA" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="THANHTIEN" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Association Name="HOADON_CHITIETHD" Member="HOADON" ThisKey="MAHD" OtherKey="MAHD" Type="HOADON" IsForeignKey="true" />
+      <Association Name="HOADON_CHITIETHD" Member="HOADON" ThisKey="MAHD" OtherKey="MAHD" Type="HOADON" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="LINHKIEN_CHITIETHD" Member="LINHKIEN" ThisKey="MALINHKIEN" OtherKey="MALINHKIEN" Type="LINHKIEN" IsForeignKey="true" />
     </Type>
   </Table>
@@ -26,17 +25,18 @@
       <Column Name="DONGIA" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="THANHTIEN" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Association Name="LINHKIEN_CHITIETNK" Member="LINHKIEN" ThisKey="MALINHKIEN" OtherKey="MALINHKIEN" Type="LINHKIEN" IsForeignKey="true" />
-      <Association Name="NHAPKHO_CHITIETNK" Member="NHAPKHO" ThisKey="MAPN" OtherKey="MAPN" Type="NHAPKHO" IsForeignKey="true" />
+      <Association Name="NHAPKHO_CHITIETNK" Member="NHAPKHO" ThisKey="MAPN" OtherKey="MAPN" Type="NHAPKHO" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.HOADON" Member="HOADONs">
     <Type Name="HOADON">
       <Column Name="MAHD" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="NGAYLAP" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="tongtien" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="tongtien" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="MANV" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MAKH" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="giamgia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ispay" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Association Name="HOADON_CHITIETHD" Member="CHITIETHDs" ThisKey="MAHD" OtherKey="MAHD" Type="CHITIETHD" />
       <Association Name="KHACHHANG_HOADON" Member="KHACHHANG" ThisKey="MAKH" OtherKey="Makh" Type="KHACHHANG" IsForeignKey="true" />
       <Association Name="NHANVIEN_HOADON" Member="NHANVIEN" ThisKey="MANV" OtherKey="MANV" Type="NHANVIEN" IsForeignKey="true" />
@@ -107,6 +107,7 @@
       <Column Name="NGAYNHAP" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="tongtien" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="MANV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ispay" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Association Name="NHAPKHO_CHITIETNK" Member="CHITIETNKs" ThisKey="MAPN" OtherKey="MAPN" Type="CHITIETNK" />
       <Association Name="NHANVIEN_NHAPKHO" Member="NHANVIEN" ThisKey="MANV" OtherKey="MANV" Type="NHANVIEN" IsForeignKey="true" />
     </Type>

@@ -11,13 +11,15 @@ using DevExpress.XtraEditors;
 
 namespace GUI.UC
 {
-    public partial class uc_order : DevExpress.XtraEditors.XtraUserControl
+    public partial class uc_import_employee : DevExpress.XtraEditors.XtraUserControl
     {
         frmMain frm;
-        public uc_order(frmMain frm)
+        public uc_import_employee(frmMain frm)
         {
             InitializeComponent();
             this.frm = frm;
         }
+
+
     }
 }

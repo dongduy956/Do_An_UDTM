@@ -223,7 +223,7 @@ namespace GUI.UC
                         NhanVienBUS.Instances.insert(gvStaff.GetRowCellValue(e.RowHandle, "TENNV").ToString().Trim()
                             , gvStaff.GetRowCellValue(e.RowHandle, "DIACHI").ToString().Trim()
                          , gvStaff.GetRowCellValue(e.RowHandle, "SDT").ToString().Trim()
-                         , bool.Parse(gvStaff.GetRowCellValue(e.RowHandle, "GIOITINH").ToString().Trim())
+                         , gvStaff.GetRowCellValue(e.RowHandle, "GIOITINH") == null || gvStaff.GetRowCellValue(e.RowHandle, "GIOITINH").ToString() == "" ? false: bool.Parse(gvStaff.GetRowCellValue(e.RowHandle, "GIOITINH").ToString().Trim())
                          , DateTime.Parse(gvStaff.GetRowCellValue(e.RowHandle, "NGAYVL").ToString().Trim())
                          , double.Parse(gvStaff.GetRowCellValue(e.RowHandle, "LUONG").ToString().Trim())
                          , open == null || open.SafeFileName == null ? gvStaff.GetRowCellValue(e.RowHandle, "HINHANH").ToString() : open.SafeFileName

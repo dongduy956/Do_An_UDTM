@@ -1,4 +1,5 @@
 ﻿using DAO;
+using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid;
 using System;
@@ -99,6 +100,17 @@ namespace BUS
                 return -1;
             }
 
+        }
+        public void getDataLkLK(RepositoryItemLookUpEdit lk)
+        {
+            lk.DataSource = from lkk in db.LINHKIENs where lkk.SOLUONGCON>0 select lkk;
+            lk.DisplayMember = "TENLINHKIEN";
+            lk.ValueMember = "MALINHKIEN";
+
+        }
+        public LINHKIEN timTheoMa(int malk)
+        {
+            return db.LINHKIENs.FirstOrDefault(x => x.MALINHKIEN == malk);
         }
     }
 }

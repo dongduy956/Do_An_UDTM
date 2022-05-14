@@ -39,8 +39,8 @@
             this.btnReceipt = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnOrder = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnBanHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnNhapHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -155,26 +155,27 @@
             // accordionControlElement2
             // 
             this.accordionControlElement2.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement3,
-            this.accordionControlElement4});
+            this.btnBanHang,
+            this.btnNhapHang});
             this.accordionControlElement2.Expanded = true;
             this.accordionControlElement2.Name = "accordionControlElement2";
-            this.accordionControlElement2.Text = "Bán hàng";
+            this.accordionControlElement2.Text = "Khách hàng";
             // 
-            // accordionControlElement3
+            // btnBanHang
             // 
-            this.accordionControlElement3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement3.ImageOptions.Image")));
-            this.accordionControlElement3.Name = "accordionControlElement3";
-            this.accordionControlElement3.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement3.Text = "Mua hàng";
-            this.accordionControlElement3.Click += new System.EventHandler(this.accordionControlElement3_Click);
+            this.btnBanHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement3.ImageOptions.Image")));
+            this.btnBanHang.Name = "btnBanHang";
+            this.btnBanHang.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnBanHang.Text = "Bán hàng";
+            this.btnBanHang.Click += new System.EventHandler(this.btnBanHang_Click);
             // 
-            // accordionControlElement4
+            // btnNhapHang
             // 
-            this.accordionControlElement4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement4.ImageOptions.Image")));
-            this.accordionControlElement4.Name = "accordionControlElement4";
-            this.accordionControlElement4.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement4.Text = "Nhập hàng";
+            this.btnNhapHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement4.ImageOptions.Image")));
+            this.btnNhapHang.Name = "btnNhapHang";
+            this.btnNhapHang.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnNhapHang.Text = "Nhập hàng";
+            this.btnNhapHang.Click += new System.EventHandler(this.btnNhapHang_Click);
             // 
             // accordionControlElement5
             // 
@@ -432,8 +433,8 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnReceipt;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnOrder;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement3;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement4;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnBanHang;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnNhapHang;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem1;

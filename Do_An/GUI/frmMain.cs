@@ -13,7 +13,7 @@ namespace GUI
 {
     public partial class frmMain : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
-        public  void _close()
+        public void _close()
         {
             mainContainer.Controls.Remove(uc);
             mainContainer.BringToFront();
@@ -26,7 +26,7 @@ namespace GUI
             InitializeComponent();
             lbTieuDe.Caption = "Trang chủ";
         }
-        void openUC(Type typeUC)
+       private void openUC(Type typeUC)
         {
             bool check = false;
             foreach (UserControl _uc in mainContainer.Controls)
@@ -44,7 +44,7 @@ namespace GUI
             }
             if (check)
                 return;
-             uc = (UserControl)Activator.CreateInstance(typeUC,this);
+            uc = (UserControl)Activator.CreateInstance(typeUC, this);
             uc.Dock = DockStyle.Fill;
             mainContainer.Controls.Add(uc);
             uc.BringToFront();
@@ -54,22 +54,22 @@ namespace GUI
         {
             openUC(typeof(uc_customer));
         }
-
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
             openUC(typeof(uc_staff));
-
         }
-
         private void btnProduct_Click(object sender, EventArgs e)
         {
             openUC(typeof(uc_product));
+        }
+        private void btnBanHang_Click(object sender, EventArgs e)
+        {
+            openUC(typeof(uc_order_employee));
 
         }
-
-        private void accordionControlElement3_Click(object sender, EventArgs e)
+        private void btnNhapHang_Click(object sender, EventArgs e)
         {
-            openUC(typeof(uc_order));
+            openUC(typeof(uc_import_employee));
         }
     }
 }

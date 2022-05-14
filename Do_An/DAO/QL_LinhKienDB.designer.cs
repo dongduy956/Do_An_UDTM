@@ -63,13 +63,7 @@ namespace DAO
     #endregion
 		
 		public QL_LinhKienDBDataContext() : 
-				base(global::DAO.Properties.Settings.Default.QL_LINHKIENMAYTINHConnectionString, mappingSource)
-		{
-			OnCreated();
-		}
-		
-		public QL_LinhKienDBDataContext(string connection) : 
-				base(connection, mappingSource)
+				base(Properties.Settings.Default.QL_LINHKIENMAYTINHConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -324,7 +318,7 @@ namespace DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="HOADON_CHITIETHD", Storage="_HOADON", ThisKey="MAHD", OtherKey="MAHD", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="HOADON_CHITIETHD", Storage="_HOADON", ThisKey="MAHD", OtherKey="MAHD", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
 		public HOADON HOADON
 		{
 			get
@@ -712,7 +706,7 @@ namespace DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NHAPKHO_CHITIETNK", Storage="_NHAPKHO", ThisKey="MAPN", OtherKey="MAPN", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NHAPKHO_CHITIETNK", Storage="_NHAPKHO", ThisKey="MAPN", OtherKey="MAPN", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
 		public NHAPKHO NHAPKHO
 		{
 			get
@@ -777,13 +771,15 @@ namespace DAO
 		
 		private System.DateTime _NGAYLAP;
 		
-		private System.Nullable<decimal> _tongtien;
+		private System.Nullable<double> _tongtien;
 		
 		private System.Nullable<int> _MANV;
 		
 		private System.Nullable<int> _MAKH;
 		
 		private System.Nullable<double> _giamgia;
+		
+		private System.Nullable<bool> _ispay;
 		
 		private EntitySet<CHITIETHD> _CHITIETHDs;
 		
@@ -799,7 +795,7 @@ namespace DAO
     partial void OnMAHDChanged();
     partial void OnNGAYLAPChanging(System.DateTime value);
     partial void OnNGAYLAPChanged();
-    partial void OntongtienChanging(System.Nullable<decimal> value);
+    partial void OntongtienChanging(System.Nullable<double> value);
     partial void OntongtienChanged();
     partial void OnMANVChanging(System.Nullable<int> value);
     partial void OnMANVChanged();
@@ -807,6 +803,8 @@ namespace DAO
     partial void OnMAKHChanged();
     partial void OngiamgiaChanging(System.Nullable<double> value);
     partial void OngiamgiaChanged();
+    partial void OnispayChanging(System.Nullable<bool> value);
+    partial void OnispayChanged();
     #endregion
 		
 		public HOADON()
@@ -857,8 +855,8 @@ namespace DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tongtien", DbType="Money")]
-		public System.Nullable<decimal> tongtien
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tongtien", DbType="Float")]
+		public System.Nullable<double> tongtien
 		{
 			get
 			{
@@ -941,6 +939,26 @@ namespace DAO
 					this._giamgia = value;
 					this.SendPropertyChanged("giamgia");
 					this.OngiamgiaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ispay", DbType="Bit")]
+		public System.Nullable<bool> ispay
+		{
+			get
+			{
+				return this._ispay;
+			}
+			set
+			{
+				if ((this._ispay != value))
+				{
+					this.OnispayChanging(value);
+					this.SendPropertyChanging();
+					this._ispay = value;
+					this.SendPropertyChanged("ispay");
+					this.OnispayChanged();
 				}
 			}
 		}
@@ -2278,6 +2296,8 @@ namespace DAO
 		
 		private System.Nullable<int> _MANV;
 		
+		private System.Nullable<bool> _ispay;
+		
 		private EntitySet<CHITIETNK> _CHITIETNKs;
 		
 		private EntityRef<NHANVIEN> _NHANVIEN;
@@ -2294,6 +2314,8 @@ namespace DAO
     partial void OntongtienChanged();
     partial void OnMANVChanging(System.Nullable<int> value);
     partial void OnMANVChanged();
+    partial void OnispayChanging(System.Nullable<bool> value);
+    partial void OnispayChanged();
     #endregion
 		
 		public NHAPKHO()
@@ -2383,6 +2405,26 @@ namespace DAO
 					this._MANV = value;
 					this.SendPropertyChanged("MANV");
 					this.OnMANVChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ispay", DbType="Bit")]
+		public System.Nullable<bool> ispay
+		{
+			get
+			{
+				return this._ispay;
+			}
+			set
+			{
+				if ((this._ispay != value))
+				{
+					this.OnispayChanging(value);
+					this.SendPropertyChanging();
+					this._ispay = value;
+					this.SendPropertyChanged("ispay");
+					this.OnispayChanged();
 				}
 			}
 		}

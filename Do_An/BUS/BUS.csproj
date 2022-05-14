@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietHDBUS.cs" />
+    <Compile Include="HoaDonBUS.cs" />
     <Compile Include="LinhKienBUS.cs" />
     <Compile Include="LoaiKHBUS.cs" />
     <Compile Include="LoaiLKBUS.cs" />

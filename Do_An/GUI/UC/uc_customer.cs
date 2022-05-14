@@ -124,7 +124,7 @@ namespace GUI.UC
                     try
                     {
                         KhachHangBUS.Instances.insert(gvCustomer.GetRowCellValue(e.RowHandle, "TENKH").ToString().Trim()
-                            , bool.Parse(gvCustomer.GetRowCellValue(e.RowHandle, "GIOITINH").ToString().Trim())
+                            , gvCustomer.GetRowCellValue(e.RowHandle, "GIOITINH")==null|| gvCustomer.GetRowCellValue(e.RowHandle, "GIOITINH").ToString()==""? false: bool.Parse(gvCustomer.GetRowCellValue(e.RowHandle, "GIOITINH").ToString().Trim())
                             , gvCustomer.GetRowCellValue(e.RowHandle, "DIACHI").ToString()
                             , gvCustomer.GetRowCellValue(e.RowHandle, "SDT").ToString()
                             , int.Parse(gvCustomer.GetRowCellValue(e.RowHandle, "maloaikh").ToString().Trim()));
@@ -142,7 +142,7 @@ namespace GUI.UC
                 {
                     try
                     {
-                        KhachHangBUS.Instances.update(gvCustomer.GetRowCellValue(e.RowHandle,"TENKH").ToString().Trim()
+                        KhachHangBUS.Instances.update(gvCustomer.GetRowCellValue(e.RowHandle, "TENKH").ToString().Trim()
                             , bool.Parse(gvCustomer.GetRowCellValue(e.RowHandle, "GIOITINH").ToString().Trim())
                             , gvCustomer.GetRowCellValue(e.RowHandle, "DIACHI").ToString()
                             , gvCustomer.GetRowCellValue(e.RowHandle, "SDT").ToString()

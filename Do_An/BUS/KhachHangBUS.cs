@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DAO;
 using System.Data;
 using DevExpress.XtraGrid;
+using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraEditors;
 
 namespace BUS
@@ -99,6 +100,18 @@ namespace BUS
                 return -1;
             }
 
+        }
+
+        public void getDataLkKH(LookUpEdit lk)
+        {
+            lk.Properties.DataSource = from kh in db.KHACHHANGs select kh;
+            lk.Properties.DisplayMember = "TENKH";
+            lk.Properties.ValueMember = "Makh";            
+        }
+        public KHACHHANG layThongTinTheoMa(string maKH)
+        {
+            KHACHHANG kh = db.KHACHHANGs.FirstOrDefault(x => x.Makh.Equals(maKH));
+            return kh;
         }
     }
 }

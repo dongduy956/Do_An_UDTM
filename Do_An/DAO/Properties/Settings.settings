@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="QL_LINHKIENMAYTINHConnectionString" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Data Source=.f;Initial Catalog=QL_LINHKIENMAYTINH;Integrated Security=True</Value>
+      <Value Profile="(Default)">Data Source=.;Initial Catalog=QL_LINHKIENMAYTINH;Integrated Security=True</Value>
     </Setting>
   </Settings>
 </SettingsFile>
