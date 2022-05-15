@@ -108,11 +108,23 @@
     <Compile Include="UC\uc_customer.Designer.cs">
       <DependentUpon>uc_customer.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\uc_import.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\uc_import.Designer.cs">
+      <DependentUpon>uc_import.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\uc_import_employee.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC\uc_import_employee.Designer.cs">
       <DependentUpon>uc_import_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\uc_order.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\uc_order.Designer.cs">
+      <DependentUpon>uc_order.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\uc_order_employee.cs">
       <SubType>UserControl</SubType>
@@ -158,8 +170,14 @@
     <EmbeddedResource Include="UC\uc_customer.resx">
       <DependentUpon>uc_customer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC\uc_import.resx">
+      <DependentUpon>uc_import.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\uc_import_employee.resx">
       <DependentUpon>uc_import_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\uc_order.resx">
+      <DependentUpon>uc_order.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\uc_order_employee.resx">
       <DependentUpon>uc_order_employee.cs</DependentUpon>

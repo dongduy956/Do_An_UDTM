@@ -71,5 +71,17 @@ namespace GUI
         {
             openUC(typeof(uc_import_employee));
         }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            openUC(typeof(uc_order));
+
+        }
+
+        private void btnReceipt_Click(object sender, EventArgs e)
+        {
+            openUC(typeof(uc_import));
+
+        }
     }
 }

@@ -34,6 +34,13 @@ namespace BUS
             var lst = (from ctnk in db.CHITIETNKs where ctnk.MAPN == mapn select ctnk).ToList();
             gv.DataSource = Support.ToDataTable<CHITIETNK>(lst);
         }
+        public List<CHITIETNK> getDataGV(int mapn)
+        {
+            db.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues,
+                   db.CHITIETNKs);
+            return (from ctnk in db.CHITIETNKs where ctnk.MAPN == mapn select ctnk).ToList();
+
+        }
         public int insert(int mapn, int malk, int soluong,double donGia)
         {
             var ctnk = db.CHITIETNKs.FirstOrDefault(x => x.MAPN == mapn && x.MALINHKIEN == malk);

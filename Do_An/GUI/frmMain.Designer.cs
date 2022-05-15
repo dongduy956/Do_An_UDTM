@@ -144,6 +144,7 @@
             this.btnReceipt.Name = "btnReceipt";
             this.btnReceipt.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnReceipt.Text = "Phiếu nhập";
+            this.btnReceipt.Click += new System.EventHandler(this.btnReceipt_Click);
             // 
             // btnOrder
             // 
@@ -151,6 +152,7 @@
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnOrder.Text = "Hoá đơn";
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // accordionControlElement2
             // 
@@ -163,7 +165,7 @@
             // 
             // btnBanHang
             // 
-            this.btnBanHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement3.ImageOptions.Image")));
+            this.btnBanHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBanHang.ImageOptions.Image")));
             this.btnBanHang.Name = "btnBanHang";
             this.btnBanHang.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnBanHang.Text = "Bán hàng";
@@ -171,7 +173,7 @@
             // 
             // btnNhapHang
             // 
-            this.btnNhapHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement4.ImageOptions.Image")));
+            this.btnNhapHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNhapHang.ImageOptions.Image")));
             this.btnNhapHang.Name = "btnNhapHang";
             this.btnNhapHang.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnNhapHang.Text = "Nhập hàng";

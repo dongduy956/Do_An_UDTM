@@ -387,3 +387,5 @@ E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\ja\DevE
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\ru\DevExpress.XtraPdfViewer.v19.2.resources.dll
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.UC.uc_import_employee.resources
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.UC.uc_order_employee.resources
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.UC.uc_order.resources
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.UC.uc_import.resources

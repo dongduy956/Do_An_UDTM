@@ -2,6 +2,7 @@
 using DevExpress.XtraGrid;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +34,13 @@ namespace BUS
                    db.CHITIETHDs);
             var lst = (from cthd in db.CHITIETHDs where cthd.MAHD == mahd select cthd).ToList();
             gv.DataSource = Support.ToDataTable<CHITIETHD>(lst);
+        }
+        public List<CHITIETHD> getDataGV(int mahd)
+        {
+            db.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues,
+                   db.CHITIETHDs);
+           return (from cthd in db.CHITIETHDs where cthd.MAHD == mahd select cthd).ToList();
+           
         }
         public int insert(int mahd, int malk, int soluong)
         {

@@ -30,12 +30,12 @@ namespace DAO
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertCHITIETHD(CHITIETHD instance);
-    partial void UpdateCHITIETHD(CHITIETHD instance);
-    partial void DeleteCHITIETHD(CHITIETHD instance);
     partial void InsertQUYEN(QUYEN instance);
     partial void UpdateQUYEN(QUYEN instance);
     partial void DeleteQUYEN(QUYEN instance);
+    partial void InsertCHITIETHD(CHITIETHD instance);
+    partial void UpdateCHITIETHD(CHITIETHD instance);
+    partial void DeleteCHITIETHD(CHITIETHD instance);
     partial void InsertCHITIETNK(CHITIETNK instance);
     partial void UpdateCHITIETNK(CHITIETNK instance);
     partial void DeleteCHITIETNK(CHITIETNK instance);
@@ -86,19 +86,19 @@ namespace DAO
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<CHITIETHD> CHITIETHDs
-		{
-			get
-			{
-				return this.GetTable<CHITIETHD>();
-			}
-		}
-		
 		public System.Data.Linq.Table<QUYEN> QUYENs
 		{
 			get
 			{
 				return this.GetTable<QUYEN>();
+			}
+		}
+		
+		public System.Data.Linq.Table<CHITIETHD> CHITIETHDs
+		{
+			get
+			{
+				return this.GetTable<CHITIETHD>();
 			}
 		}
 		
@@ -164,6 +164,120 @@ namespace DAO
 			{
 				return this.GetTable<NHAPKHO>();
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.QUYEN")]
+	public partial class QUYEN : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _maquyen;
+		
+		private string _tenquyen;
+		
+		private EntitySet<NHANVIEN> _NHANVIENs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnmaquyenChanging(int value);
+    partial void OnmaquyenChanged();
+    partial void OntenquyenChanging(string value);
+    partial void OntenquyenChanged();
+    #endregion
+		
+		public QUYEN()
+		{
+			this._NHANVIENs = new EntitySet<NHANVIEN>(new Action<NHANVIEN>(this.attach_NHANVIENs), new Action<NHANVIEN>(this.detach_NHANVIENs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maquyen", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int maquyen
+		{
+			get
+			{
+				return this._maquyen;
+			}
+			set
+			{
+				if ((this._maquyen != value))
+				{
+					this.OnmaquyenChanging(value);
+					this.SendPropertyChanging();
+					this._maquyen = value;
+					this.SendPropertyChanged("maquyen");
+					this.OnmaquyenChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenquyen", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string tenquyen
+		{
+			get
+			{
+				return this._tenquyen;
+			}
+			set
+			{
+				if ((this._tenquyen != value))
+				{
+					this.OntenquyenChanging(value);
+					this.SendPropertyChanging();
+					this._tenquyen = value;
+					this.SendPropertyChanged("tenquyen");
+					this.OntenquyenChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="QUYEN_NHANVIEN", Storage="_NHANVIENs", ThisKey="maquyen", OtherKey="maquyen")]
+		public EntitySet<NHANVIEN> NHANVIENs
+		{
+			get
+			{
+				return this._NHANVIENs;
+			}
+			set
+			{
+				this._NHANVIENs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_NHANVIENs(NHANVIEN entity)
+		{
+			this.SendPropertyChanging();
+			entity.QUYEN = this;
+		}
+		
+		private void detach_NHANVIENs(NHANVIEN entity)
+		{
+			this.SendPropertyChanging();
+			entity.QUYEN = null;
 		}
 	}
 	
@@ -404,120 +518,6 @@ namespace DAO
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.QUYEN")]
-	public partial class QUYEN : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _maquyen;
-		
-		private string _tenquyen;
-		
-		private EntitySet<NHANVIEN> _NHANVIENs;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnmaquyenChanging(int value);
-    partial void OnmaquyenChanged();
-    partial void OntenquyenChanging(string value);
-    partial void OntenquyenChanged();
-    #endregion
-		
-		public QUYEN()
-		{
-			this._NHANVIENs = new EntitySet<NHANVIEN>(new Action<NHANVIEN>(this.attach_NHANVIENs), new Action<NHANVIEN>(this.detach_NHANVIENs));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maquyen", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int maquyen
-		{
-			get
-			{
-				return this._maquyen;
-			}
-			set
-			{
-				if ((this._maquyen != value))
-				{
-					this.OnmaquyenChanging(value);
-					this.SendPropertyChanging();
-					this._maquyen = value;
-					this.SendPropertyChanged("maquyen");
-					this.OnmaquyenChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenquyen", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string tenquyen
-		{
-			get
-			{
-				return this._tenquyen;
-			}
-			set
-			{
-				if ((this._tenquyen != value))
-				{
-					this.OntenquyenChanging(value);
-					this.SendPropertyChanging();
-					this._tenquyen = value;
-					this.SendPropertyChanged("tenquyen");
-					this.OntenquyenChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="QUYEN_NHANVIEN", Storage="_NHANVIENs", ThisKey="maquyen", OtherKey="maquyen")]
-		public EntitySet<NHANVIEN> NHANVIENs
-		{
-			get
-			{
-				return this._NHANVIENs;
-			}
-			set
-			{
-				this._NHANVIENs.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_NHANVIENs(NHANVIEN entity)
-		{
-			this.SendPropertyChanging();
-			entity.QUYEN = this;
-		}
-		
-		private void detach_NHANVIENs(NHANVIEN entity)
-		{
-			this.SendPropertyChanging();
-			entity.QUYEN = null;
 		}
 	}
 	
