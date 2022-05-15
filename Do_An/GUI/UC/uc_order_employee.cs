@@ -24,9 +24,8 @@ namespace GUI.UC
         {
             InitializeComponent();
             this.frm = frm;
-
-
         }
+        //load form khi chạy lần đầu
         private void uc_order_employee_Load(object sender, EventArgs e)
         {
             //lấy danh sách khách hàng
@@ -35,12 +34,13 @@ namespace GUI.UC
             HoaDonBUS.Instances.getDataGV(gcOrder, false);
             LinhKienBUS.Instances.getDataLkLK(lkLinhKien);
             gvOrderDetail.OptionsView.NewItemRowPosition = NewItemRowPosition.Top;
-        
+
         }
+        //xoá data gridview chi tiết hoá đơn
         void clearDataGVOrderDetail()
         {
             gcOrderDetail.DataSource = null;
-            layoutGroupOrderDetail.Enabled=txtTienKhachDua.Enabled = false;
+            layoutGroupOrderDetail.Enabled = txtTienKhachDua.Enabled = false;
             txtTienKhachDua.Text = txtTienThua.Text = txtTienPhaiTra.Text = "";
 
         }
@@ -52,27 +52,27 @@ namespace GUI.UC
             txtSDT.Text = kh.SDT.Trim();
             txtDiaChi.Text = kh.DIACHI.Trim();
         }
-
+        //đóng user control bán hàng
         private void btnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             frm._close();
         }
-
+        //gọi các chi tiết của 1 hoá đơn có mã hoá đơn truyền vào
+        private void callDataGVOrderDetail(int mahd)
+        {
+            ChiTietHDBUS.Instances.getDataGV(gcOrderDetail, mahd);
+            LinhKienBUS.Instances.getDataLkLK(lkLinhKien);
+            layoutGroupOrderDetail.Enabled = txtTienKhachDua.Enabled = true;
+            layoutGroupOrderDetail.Text = "Chi tiết hoá đơn " + mahd;
+            txtTienPhaiTra.Text = Support.convertVND(gvOrder.GetRowCellValue(gvOrder.FocusedRowHandle, "tongtien").ToString());
+        }
+        //click 1 dòng trong gridview hoá đơn
         private void gvOrder_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             if (e.RowHandle > -1)
                 callDataGVOrderDetail(int.Parse(gvOrder.GetRowCellValue(e.RowHandle, "MAHD").ToString()));
         }
-
-        private void callDataGVOrderDetail(int mahd)
-        {
-            ChiTietHDBUS.Instances.getDataGV(gcOrderDetail, mahd);
-            LinhKienBUS.Instances.getDataLkLK(lkLinhKien);
-            layoutGroupOrderDetail.Enabled = txtTienKhachDua.Enabled =  true;
-            layoutGroupOrderDetail.Text = "Chi tiết hoá đơn " + mahd;
-            txtTienPhaiTra.Text =Support.convertVND(gvOrder.GetRowCellValue(gvOrder.FocusedRowHandle, "tongtien").ToString());
-        }
-
+        //tạo 1 hoá đơn mới cho khách hàng       
         private void btnCreateOrder_Click(object sender, EventArgs e)
         {
             var makh = cbbKhachHang.GetColumnValue("Makh");
@@ -90,11 +90,7 @@ namespace GUI.UC
                 }
             }
         }
-        private void btnDestroy_Click(object sender, EventArgs e)
-        {
-            destroyOrder();
-        }
-
+        //huỷ 1 hoá đơn trong gridview hoá đơn
         private void destroyOrder()
         {
             var mahd = gvOrder.GetRowCellValue(gvOrder.FocusedRowHandle, "MAHD");
@@ -114,7 +110,12 @@ namespace GUI.UC
                 }
             }
         }
-
+        //sự kiện gọi hàm huỷ hoá đơn
+        private void btnDestroy_Click(object sender, EventArgs e)
+        {
+            destroyOrder();
+        }
+        //click nút delete xoá 1 dòng trong chi tiết hoá đơn
         private void gcOrderDetail_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             if (e.KeyCode == Keys.Delete && gvOrderDetail.State != GridState.Editing)
@@ -123,7 +124,7 @@ namespace GUI.UC
                 var malinhkien = gvOrderDetail.GetRowCellValue(gvOrderDetail.FocusedRowHandle, "MALINHKIEN");
                 if (mahd != null)
                 {
-                    if (XtraMessageBox.Show("Bạn chắc chắn xoá dòng này", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    if (XtraMessageBox.Show("Bạn chắc chắn xoá linh kiện " + LinhKienBUS.Instances.timTheoMa(int.Parse(malinhkien.ToString())).TENLINHKIEN + "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
                         int i = ChiTietHDBUS.Instances.delete(int.Parse(mahd.ToString()), int.Parse(malinhkien.ToString()));
                         if (i != -1)
@@ -139,13 +140,12 @@ namespace GUI.UC
                 }
             }
         }
-
+        //ngăn không cho thao tác khi thêm sửa 1 dòng trong bảng cthd khi dữ liệu sai
         private void gvOrderDetail_InvalidRowException(object sender, DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventArgs e)
         {
             e.ExceptionMode = ExceptionMode.NoAction;
-
         }
-
+        //thêm sửa 1 dòng trong bảng chi tiết hoá đơn
         private void gvOrderDetail_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
         {
             string sErr = "";
@@ -168,44 +168,44 @@ namespace GUI.UC
                 //thêm mới
                 if (e.RowHandle < 0)
                 {
-               
-                        if (int.Parse(gvOrderDetail.GetRowCellValue(e.RowHandle, "SOLUONG").ToString().Trim()) <= 0)
-                        {
-                            bVali = false;
-                            sErr += "Số lượng phải lớn hơn hoặc bằng 0.\n";
-                        }
-                        if (!bVali)
-                        {
-                            e.Valid = false;
-                            XtraMessageBox.Show(sErr, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-                      int i=  ChiTietHDBUS.Instances.insert(
-                       int.Parse(gvOrder.GetRowCellValue(gvOrder.FocusedRowHandle, "MAHD").ToString()),
-                       int.Parse(gvOrderDetail.GetRowCellValue(e.RowHandle, "MALINHKIEN").ToString().Trim()),
-                       int.Parse(gvOrderDetail.GetRowCellValue(e.RowHandle, "SOLUONG").ToString().Trim()));
-                        if (i != -1)
-                        XtraMessageBox.Show("Thêm thành công", "Thông báo", DevExpress.Utils.DefaultBoolean.True);
-                        int row = gvOrder.FocusedRowHandle;
-                        int mahd = int.Parse(gvOrder.GetRowCellValue(row, "MAHD").ToString());
-                        HoaDonBUS.Instances.getDataGV(gcOrder, false);
-                        gvOrder.FocusedRowHandle = row;
-                        callDataGVOrderDetail(mahd);
 
-                 
+                    if (int.Parse(gvOrderDetail.GetRowCellValue(e.RowHandle, "SOLUONG").ToString().Trim()) <= 0)
+                    {
+                        bVali = false;
+                        sErr += "Số lượng phải lớn hơn 0.\n";
+                    }
+                    if (!bVali)
+                    {
+                        e.Valid = false;
+                        XtraMessageBox.Show(sErr, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    int i = ChiTietHDBUS.Instances.insert(
+                     int.Parse(gvOrder.GetRowCellValue(gvOrder.FocusedRowHandle, "MAHD").ToString()),
+                     int.Parse(gvOrderDetail.GetRowCellValue(e.RowHandle, "MALINHKIEN").ToString().Trim()),
+                     int.Parse(gvOrderDetail.GetRowCellValue(e.RowHandle, "SOLUONG").ToString().Trim()));
+                    if (i != -1)
+                        XtraMessageBox.Show("Thêm thành công", "Thông báo", DevExpress.Utils.DefaultBoolean.True);
+                    int row = gvOrder.FocusedRowHandle;
+                    int mahd = int.Parse(gvOrder.GetRowCellValue(row, "MAHD").ToString());
+                    HoaDonBUS.Instances.getDataGV(gcOrder, false);
+                    gvOrder.FocusedRowHandle = row;
+                    callDataGVOrderDetail(mahd);
+
+
                 }
                 //sửa 
                 else
                 {
-                  ChiTietHDBUS.Instances.update(
-                               int.Parse(gvOrder.GetRowCellValue(gvOrder.FocusedRowHandle, "MAHD").ToString()),
-                              int.Parse(gvOrderDetail.GetRowCellValue(e.RowHandle, "MALINHKIEN").ToString().Trim()),
-                              int.Parse(gvOrderDetail.GetRowCellValue(e.RowHandle, "SOLUONG").ToString().Trim()));
-                        int row = gvOrder.FocusedRowHandle;
-                        int mahd = int.Parse(gvOrder.GetRowCellValue(row, "MAHD").ToString());
-                        HoaDonBUS.Instances.getDataGV(gcOrder, false);
-                        gvOrder.FocusedRowHandle = row;
-                        callDataGVOrderDetail(mahd);  
+                    ChiTietHDBUS.Instances.update(
+                                 int.Parse(gvOrder.GetRowCellValue(gvOrder.FocusedRowHandle, "MAHD").ToString()),
+                                int.Parse(gvOrderDetail.GetRowCellValue(e.RowHandle, "MALINHKIEN").ToString().Trim()),
+                                int.Parse(gvOrderDetail.GetRowCellValue(e.RowHandle, "SOLUONG").ToString().Trim()));
+                    int row = gvOrder.FocusedRowHandle;
+                    int mahd = int.Parse(gvOrder.GetRowCellValue(row, "MAHD").ToString());
+                    HoaDonBUS.Instances.getDataGV(gcOrder, false);
+                    gvOrder.FocusedRowHandle = row;
+                    callDataGVOrderDetail(mahd);
 
                 }
             }
@@ -215,10 +215,10 @@ namespace GUI.UC
                 XtraMessageBox.Show(sErr, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+        //thanh toán 1 hoá đơn
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            if(txtTienPhaiTra.Text.Trim().Length==0)
+            if (txtTienPhaiTra.Text.Trim().Length == 0)
             {
                 XtraMessageBox.Show("Mời bạn chọn hoá đơn muốn thanh toán.", "Thông báo");
                 return;
@@ -230,34 +230,32 @@ namespace GUI.UC
                 XtraMessageBox.Show("Hoá đơn chưa có sản phẩm không cần thanh toán.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (txtTienKhachDua.Text.Trim().Length==0)
+            if (txtTienKhachDua.Text.Trim().Length == 0)
             {
                 XtraMessageBox.Show("Khách chưa đưa tiền.", "Thông báo");
                 return;
             }
             double tienKhachDua = double.Parse(txtTienKhachDua.Text.Trim());
-        
-            if(tienPhaiTra>tienKhachDua)
+
+            if (tienPhaiTra > tienKhachDua)
             {
-                XtraMessageBox.Show("Khách đưa không đủ tiền.", "Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                XtraMessageBox.Show("Khách đưa không đủ tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            int i=HoaDonBUS.Instances.update(int.Parse(gvOrder.GetRowCellValue(gvOrder.FocusedRowHandle, "MAHD").ToString()),true);
-            if(i!=-1)
+            int i = HoaDonBUS.Instances.update(int.Parse(gvOrder.GetRowCellValue(gvOrder.FocusedRowHandle, "MAHD").ToString()), true);
+            if (i != -1)
             {
                 XtraMessageBox.Show("Thanh toán thành công.", "Thông báo");
-                txtTienThua.Text = Support.convertVND((tienKhachDua-tienPhaiTra).ToString());
+                txtTienThua.Text = Support.convertVND((tienKhachDua - tienPhaiTra).ToString());
                 HoaDonBUS.Instances.getDataGV(gcOrder, false);
                 clearDataGVOrderDetail();
             }
 
         }
-
-      
-
+        //chuyển về kiểu tiền tệ khi nhập tiền vào textbox
         private void txtTienKhachDua_KeyUp(object sender, KeyEventArgs e)
         {
-              CultureInfo culture = new CultureInfo("en-US");
+            CultureInfo culture = new CultureInfo("en-US");
             decimal value;
             try
             {
@@ -273,13 +271,13 @@ namespace GUI.UC
             decimal tienPhaiTra = decimal.Parse(gvOrder.GetRowCellValue(gvOrder.FocusedRowHandle, "tongtien").ToString());
             txtTienThua.Text = Support.convertVND((value - tienPhaiTra).ToString());
         }
-
+        //không cho nhập chữ vào ô textbox
         private void txtTienKhachDua_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
-
+        //xoá 1 hoá đơn bằng nút delete
         private void gcOrder_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             destroyOrder();

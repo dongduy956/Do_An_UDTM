@@ -26,7 +26,7 @@ namespace GUI
             InitializeComponent();
             lbTieuDe.Caption = "Trang chủ";
         }
-       private void openUC(Type typeUC)
+        private void openUC(Type typeUC)
         {
             bool check = false;
             foreach (UserControl _uc in mainContainer.Controls)

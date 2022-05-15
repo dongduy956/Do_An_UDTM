@@ -41,10 +41,6 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
-            this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
-            this.btnExcel = new DevExpress.XtraBars.BarButtonItem();
-            this.btnWord = new DevExpress.XtraBars.BarButtonItem();
-            this.btnPdf = new DevExpress.XtraBars.BarButtonItem();
             this.btnClose = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -267,11 +263,7 @@
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.btnClose,
-            this.btnDelete,
-            this.btnXoa,
-            this.btnExcel,
-            this.btnWord,
-            this.btnPdf});
+            this.btnDelete});
             this.barManager1.MainMenu = this.bar2;
             this.barManager1.MaxItemId = 9;
             // 
@@ -282,50 +274,10 @@
             this.bar2.DockRow = 0;
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnXoa),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnExcel, true),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnWord, true),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnPdf, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnClose, true)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Caption = "Xoá";
-            this.btnXoa.Id = 5;
-            this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
-            this.btnXoa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.LargeImage")));
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // btnExcel
-            // 
-            this.btnExcel.Caption = "Xuất excel";
-            this.btnExcel.Id = 6;
-            this.btnExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.ImageOptions.Image")));
-            this.btnExcel.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnExcel.ImageOptions.LargeImage")));
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // btnWord
-            // 
-            this.btnWord.Caption = "Xuất word";
-            this.btnWord.Id = 7;
-            this.btnWord.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnWord.ImageOptions.Image")));
-            this.btnWord.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnWord.ImageOptions.LargeImage")));
-            this.btnWord.Name = "btnWord";
-            this.btnWord.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // btnPdf
-            // 
-            this.btnPdf.Caption = "Xuất pdf";
-            this.btnPdf.Id = 8;
-            this.btnPdf.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPdf.ImageOptions.Image")));
-            this.btnPdf.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPdf.ImageOptions.LargeImage")));
-            this.btnPdf.Name = "btnPdf";
-            this.btnPdf.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
             // btnClose
             // 
@@ -944,10 +896,6 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar bar2;
-        private DevExpress.XtraBars.BarButtonItem btnXoa;
-        private DevExpress.XtraBars.BarButtonItem btnExcel;
-        private DevExpress.XtraBars.BarButtonItem btnWord;
-        private DevExpress.XtraBars.BarButtonItem btnPdf;
         private DevExpress.XtraBars.BarButtonItem btnClose;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;

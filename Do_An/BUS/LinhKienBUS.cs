@@ -30,7 +30,7 @@ namespace BUS
         }
         public void getDataGV(GridControl gv)
         {
-
+            db.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, db.LINHKIENs);
             var lst = (from lk in db.LINHKIENs select lk).ToList();
             gv.DataSource = Support.ToDataTable<LINHKIEN>(lst);
 
@@ -103,6 +103,7 @@ namespace BUS
         }
         public void getDataLkLK(RepositoryItemLookUpEdit lk)
         {
+            db.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, db.LINHKIENs);
             lk.DataSource = from lkk in db.LINHKIENs where lkk.SOLUONGCON>0 select lkk;
             lk.DisplayMember = "TENLINHKIEN";
             lk.ValueMember = "MALINHKIEN";
