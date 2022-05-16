@@ -12,7 +12,8 @@ using BUS;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.Utils;
 using DevExpress.XtraEditors.Controls;
-
+using GUI.Report;
+using DevExpress.XtraReports.UI;
 namespace GUI.UC
 {
     public partial class uc_customer : XtraUserControl
@@ -300,6 +301,11 @@ namespace GUI.UC
                 }
                 XtraMessageBox.Show("Xuất file pdf " + str + " thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
+        }
+
+        private void btnPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            new rpCustomer(KhachHangBUS.Instances.getDataGV()).ShowPreview();
         }
     }
 }

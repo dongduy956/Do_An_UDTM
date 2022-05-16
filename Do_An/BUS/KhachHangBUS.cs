@@ -37,6 +37,10 @@ namespace BUS
             gv.DataSource = Support.ToDataTable<KHACHHANG>(lst);
 
         }
+        public List<KHACHHANG> getDataGV()
+        {
+            return (from kh in db.KHACHHANGs select kh).ToList();            
+        }
         public int insert(string tenkh,bool gioiTinh, string diaChi, string sdt,int maLoaiKH)
         {
             try

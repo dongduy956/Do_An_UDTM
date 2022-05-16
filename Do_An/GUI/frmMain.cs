@@ -83,5 +83,20 @@ namespace GUI
             openUC(typeof(uc_import));
 
         }
+
+        private void btnStatistical_Month_Click(object sender, EventArgs e)
+        {
+            openUC(typeof(uc_statistical_month));
+        }
+
+        private void btnStatistical_Day_Click(object sender, EventArgs e)
+        {
+            openUC(typeof(uc_statistical_day));
+        }
+
+        private void btnStatistical_Year_Click(object sender, EventArgs e)
+        {
+            openUC(typeof(uc_statistical_year));
+        }
     }
 }

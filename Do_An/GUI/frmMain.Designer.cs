@@ -42,9 +42,9 @@
             this.btnBanHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnNhapHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnStatistical_Day = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnStatistical_Month = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnStatistical_Year = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.lbTieuDe = new DevExpress.XtraBars.BarHeaderItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
@@ -182,33 +182,36 @@
             // accordionControlElement5
             // 
             this.accordionControlElement5.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement6,
-            this.accordionControlElement7,
-            this.accordionControlElement8});
+            this.btnStatistical_Day,
+            this.btnStatistical_Month,
+            this.btnStatistical_Year});
             this.accordionControlElement5.Expanded = true;
             this.accordionControlElement5.Name = "accordionControlElement5";
             this.accordionControlElement5.Text = "Thống kê";
             // 
-            // accordionControlElement6
+            // btnStatistical_Day
             // 
-            this.accordionControlElement6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement6.ImageOptions.Image")));
-            this.accordionControlElement6.Name = "accordionControlElement6";
-            this.accordionControlElement6.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement6.Text = "Doanh thu ngày";
+            this.btnStatistical_Day.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStatistical_Day.ImageOptions.Image")));
+            this.btnStatistical_Day.Name = "btnStatistical_Day";
+            this.btnStatistical_Day.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnStatistical_Day.Text = "Doanh thu ngày";
+            this.btnStatistical_Day.Click += new System.EventHandler(this.btnStatistical_Day_Click);
             // 
-            // accordionControlElement7
+            // btnStatistical_Month
             // 
-            this.accordionControlElement7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement7.ImageOptions.Image")));
-            this.accordionControlElement7.Name = "accordionControlElement7";
-            this.accordionControlElement7.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement7.Text = "Doanh thu tháng";
+            this.btnStatistical_Month.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStatistical_Month.ImageOptions.Image")));
+            this.btnStatistical_Month.Name = "btnStatistical_Month";
+            this.btnStatistical_Month.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnStatistical_Month.Text = "Doanh thu tháng";
+            this.btnStatistical_Month.Click += new System.EventHandler(this.btnStatistical_Month_Click);
             // 
-            // accordionControlElement8
+            // btnStatistical_Year
             // 
-            this.accordionControlElement8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement8.ImageOptions.Image")));
-            this.accordionControlElement8.Name = "accordionControlElement8";
-            this.accordionControlElement8.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement8.Text = "Doanh thu năm";
+            this.btnStatistical_Year.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStatistical_Year.ImageOptions.Image")));
+            this.btnStatistical_Year.Name = "btnStatistical_Year";
+            this.btnStatistical_Year.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnStatistical_Year.Text = "Doanh thu năm";
+            this.btnStatistical_Year.Click += new System.EventHandler(this.btnStatistical_Year_Click);
             // 
             // fluentDesignFormControl1
             // 
@@ -438,11 +441,11 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnBanHang;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnNhapHang;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnStatistical_Day;
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem1;
         private DevExpress.XtraBars.Bar bar2;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement7;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement8;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnStatistical_Month;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnStatistical_Year;
         public DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
         private DevExpress.XtraBars.BarHeaderItem lbTieuDe;
     }
