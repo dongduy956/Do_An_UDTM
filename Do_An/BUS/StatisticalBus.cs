@@ -37,17 +37,17 @@ namespace BUS
         {
             if (date == 1)
             {
-                double? sumMoney = db.NHAPKHOs.Where(x => x.NGAYNHAP.Month == datetime.Month && x.NGAYNHAP.Year == datetime.Year).Sum(x => x.tongtien);
+                double? sumMoney = db.NHAPKHOs.Where(x =>x.ispay==true&& x.NGAYNHAP.Month == datetime.Month && x.NGAYNHAP.Year == datetime.Year).Sum(x => x.tongtien);
                 return sumMoney;
             }
             else if (date == 2)
             {
-                double? sumMoney = db.NHAPKHOs.Where(x => x.NGAYNHAP.Year == datetime.Year).Sum(x => x.tongtien);
+                double? sumMoney = db.NHAPKHOs.Where(x => x.ispay == true && x.NGAYNHAP.Year == datetime.Year).Sum(x => x.tongtien);
                 return sumMoney;
             }
             else
             {
-                double? sumMoney = db.NHAPKHOs.Where(x => x.NGAYNHAP.CompareTo(datetime)==0).Sum(x => x.tongtien);
+                double? sumMoney = db.NHAPKHOs.Where(x => x.ispay == true && x.NGAYNHAP.CompareTo(datetime)==0).Sum(x => x.tongtien);
                 return sumMoney;
             }
         }
@@ -56,17 +56,17 @@ namespace BUS
         {
             if (date == 1)
             {
-                double? sumMoney = db.HOADONs.Where(x => x.NGAYLAP.Month == datetime.Month && x.NGAYLAP.Year == datetime.Year).Sum(x => x.tongtien);
+                double? sumMoney = db.HOADONs.Where(x => x.ispay == true && x.NGAYLAP.Month == datetime.Month && x.NGAYLAP.Year == datetime.Year).Sum(x => x.tongtien);
                 return sumMoney;
             }
             else if (date == 2)
             {
-                double? sumMoney = db.HOADONs.Where(x => x.NGAYLAP.Year == datetime.Year).Sum(x => x.tongtien);
+                double? sumMoney = db.HOADONs.Where(x => x.ispay == true && x.NGAYLAP.Year == datetime.Year).Sum(x => x.tongtien);
                 return sumMoney;
             }
             else
             {
-                double? sumMoney = db.HOADONs.Where(x => x.NGAYLAP.CompareTo(datetime) == 0).Sum(x => x.tongtien);
+                double? sumMoney = db.HOADONs.Where(x => x.ispay == true && x.NGAYLAP.CompareTo(datetime) == 0).Sum(x => x.tongtien);
                 return sumMoney;
             }
         }

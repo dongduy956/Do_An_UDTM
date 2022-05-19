@@ -305,7 +305,7 @@ namespace GUI.UC
 
         private void btnPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            new rpCustomer(KhachHangBUS.Instances.getDataGV()).ShowPreview();
+           /// new rpCustomer(KhachHangBUS.Instances.getDataGV()).ShowPreview();
         }
     }
 }

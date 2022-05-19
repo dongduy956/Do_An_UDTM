@@ -445,4 +445,4 @@ E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.Rep
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.UC.uc_statistical_day.resources
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.UC.uc_statistical_month.resources
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.UC.uc_statistical_year.resources
-E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.Report.rpStatistical.resources
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.Report.rpImport.resources
