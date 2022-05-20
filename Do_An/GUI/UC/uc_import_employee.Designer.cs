@@ -174,6 +174,7 @@
             this.gridColumn8});
             this.gvImportDetail.GridControl = this.gcImportDetail;
             this.gvImportDetail.Name = "gvImportDetail";
+            this.gvImportDetail.OptionsDetail.EnableMasterViewMode = false;
             this.gvImportDetail.OptionsView.ShowGroupPanel = false;
             this.gvImportDetail.InvalidRowException += new DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventHandler(this.gvImportDetail_InvalidRowException);
             this.gvImportDetail.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gvImportDetail_ValidateRow);
@@ -259,6 +260,7 @@
             this.gridColumn4});
             this.gvImport.GridControl = this.gcImport;
             this.gvImport.Name = "gvImport";
+            this.gvImport.OptionsDetail.EnableMasterViewMode = false;
             this.gvImport.OptionsView.ShowGroupPanel = false;
             this.gvImport.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gvImport_RowCellClick);
             // 

@@ -36,6 +36,9 @@
             this.btnReset = new DevExpress.XtraBars.BarButtonItem();
             this.btnDelete = new DevExpress.XtraBars.BarButtonItem();
             this.btnDong = new DevExpress.XtraBars.BarButtonItem();
+            this.btnExcel = new DevExpress.XtraBars.BarButtonItem();
+            this.btnWord = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPdf = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -62,9 +65,6 @@
             this.gvRole = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnExcel = new DevExpress.XtraBars.BarButtonItem();
-            this.btnWord = new DevExpress.XtraBars.BarButtonItem();
-            this.btnPdf = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -154,6 +154,36 @@
             this.btnDong.Name = "btnDong";
             this.btnDong.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnDong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDong_ItemClick);
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Caption = "Xuất excel";
+            this.btnExcel.Id = 5;
+            this.btnExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.ImageOptions.Image")));
+            this.btnExcel.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnExcel.ImageOptions.LargeImage")));
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnExcel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnExcel_ItemClick);
+            // 
+            // btnWord
+            // 
+            this.btnWord.Caption = "Xuất word";
+            this.btnWord.Id = 6;
+            this.btnWord.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnWord.ImageOptions.Image")));
+            this.btnWord.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnWord.ImageOptions.LargeImage")));
+            this.btnWord.Name = "btnWord";
+            this.btnWord.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnWord.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnWord_ItemClick);
+            // 
+            // btnPdf
+            // 
+            this.btnPdf.Caption = "Xuất pdf";
+            this.btnPdf.Id = 7;
+            this.btnPdf.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPdf.ImageOptions.Image")));
+            this.btnPdf.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPdf.ImageOptions.LargeImage")));
+            this.btnPdf.Name = "btnPdf";
+            this.btnPdf.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnPdf.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPdf_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -248,6 +278,7 @@
             this.gridColumn9});
             this.gvStaff.GridControl = this.gcStaff;
             this.gvStaff.Name = "gvStaff";
+            this.gvStaff.OptionsDetail.EnableMasterViewMode = false;
             this.gvStaff.OptionsFind.AlwaysVisible = true;
             this.gvStaff.OptionsFind.Condition = DevExpress.Data.Filtering.FilterCondition.Contains;
             this.gvStaff.OptionsFind.FindDelay = 100;
@@ -415,6 +446,7 @@
             this.gridColumn11});
             this.gvRole.GridControl = this.gcRole;
             this.gvRole.Name = "gvRole";
+            this.gvRole.OptionsDetail.EnableMasterViewMode = false;
             this.gvRole.OptionsFind.AlwaysVisible = true;
             this.gvRole.OptionsFind.Condition = DevExpress.Data.Filtering.FilterCondition.Contains;
             this.gvRole.OptionsFind.FindDelay = 100;
@@ -444,36 +476,6 @@
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 1;
             this.gridColumn11.Width = 112;
-            // 
-            // btnExcel
-            // 
-            this.btnExcel.Caption = "Xuất excel";
-            this.btnExcel.Id = 5;
-            this.btnExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.btnExcel.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.btnExcel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnExcel_ItemClick);
-            // 
-            // btnWord
-            // 
-            this.btnWord.Caption = "Xuất word";
-            this.btnWord.Id = 6;
-            this.btnWord.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.btnWord.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
-            this.btnWord.Name = "btnWord";
-            this.btnWord.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.btnWord.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnWord_ItemClick);
-            // 
-            // btnPdf
-            // 
-            this.btnPdf.Caption = "Xuất pdf";
-            this.btnPdf.Id = 7;
-            this.btnPdf.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this.btnPdf.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
-            this.btnPdf.Name = "btnPdf";
-            this.btnPdf.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.btnPdf.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPdf_ItemClick);
             // 
             // uc_staff
             // 

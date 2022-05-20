@@ -98,5 +98,28 @@ namespace GUI
         {
             openUC(typeof(uc_statistical_year));
         }
+
+        private void btnBackup_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            SaveFileDialog sf = new SaveFileDialog();
+            sf.Filter = "SQL Backup (*.bak)|*.bak";
+            sf.Title = "Backup database";
+            if (sf.ShowDialog() == DialogResult.OK)
+            {
+                new frmBKRS(sf.FileName,0).ShowDialog();
+            }
+        }
+
+        private void btnRestore_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OpenFileDialog op = new OpenFileDialog();
+            op.Filter = "SQL Backup (*.bak)|*.bak";
+            op.Title = "Restore database";
+            if (op.ShowDialog() == DialogResult.OK)
+            {
+                new frmBKRS(op.FileName, 1).ShowDialog();
+
+            }
+        }
     }
 }

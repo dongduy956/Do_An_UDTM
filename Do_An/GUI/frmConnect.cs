@@ -71,11 +71,16 @@ namespace GUI
         private void btnConnect_Click(object sender, EventArgs e)
         {
             connectionString = String.Format("server={0}; database={1}; Integrated Security = False;uid={2};pwd={3}", cbbServer.Text.Trim(), cbbDatabase.Text, txtUsername.Text, txtPassword.Text);
+
             if (Support.SaveConnection(connectionString))
             {
                 frm.setStatus("Lưu thành công.Vui lòng khởi động lại ứng dụng.",Color.Yellow);
                 if (XtraMessageBox.Show("Lưu thành công.Vui lòng khởi động lại ứng dụng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk) == DialogResult.OK)
+                {
                     Application.Restart();
+                    Properties.Settings.Default.BackupRestore = cbbServer.Text.Trim() + "-" + cbbDatabase.Text + "-" + txtUsername.Text + "-" + txtPassword.Text;
+                    Properties.Settings.Default.Save();
+                }
             }
             else
             {

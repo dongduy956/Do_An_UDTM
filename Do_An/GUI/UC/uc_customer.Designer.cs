@@ -37,6 +37,7 @@
             this.btnWord = new DevExpress.XtraBars.BarButtonItem();
             this.btnPdf = new DevExpress.XtraBars.BarButtonItem();
             this.btnClose = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPrint = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -59,7 +60,6 @@
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnPrint = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -159,6 +159,16 @@
             this.btnClose.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnClose.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnClose_ItemClick);
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Caption = "In";
+            this.btnPrint.Id = 9;
+            this.btnPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.ImageOptions.Image")));
+            this.btnPrint.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPrint.ImageOptions.LargeImage")));
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPrint_ItemClick);
+            // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
@@ -244,6 +254,7 @@
             this.gridColumn6});
             this.gvCustomer.GridControl = this.gcCustomer;
             this.gvCustomer.Name = "gvCustomer";
+            this.gvCustomer.OptionsDetail.EnableMasterViewMode = false;
             this.gvCustomer.OptionsFind.AlwaysVisible = true;
             this.gvCustomer.OptionsFind.Condition = DevExpress.Data.Filtering.FilterCondition.Contains;
             this.gvCustomer.OptionsFind.FindDelay = 100;
@@ -355,6 +366,7 @@
             this.gridColumn9});
             this.gvTypeCustomer.GridControl = this.gcTypeCustomer;
             this.gvTypeCustomer.Name = "gvTypeCustomer";
+            this.gvTypeCustomer.OptionsDetail.EnableMasterViewMode = false;
             this.gvTypeCustomer.OptionsFind.AlwaysVisible = true;
             this.gvTypeCustomer.OptionsFind.Condition = DevExpress.Data.Filtering.FilterCondition.Contains;
             this.gvTypeCustomer.OptionsFind.FindDelay = 100;
@@ -395,16 +407,6 @@
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 2;
             this.gridColumn9.Width = 112;
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.Caption = "In";
-            this.btnPrint.Id = 9;
-            this.btnPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.btnPrint.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.btnPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPrint_ItemClick);
             // 
             // uc_customer
             // 

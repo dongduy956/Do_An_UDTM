@@ -34,5 +34,17 @@ namespace GUI.Properties {
                 this["Remember"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(".-QL_LINHKIENMAYTINH-sa-123")]
+        public string BackupRestore {
+            get {
+                return ((string)(this["BackupRestore"]));
+            }
+            set {
+                this["BackupRestore"] = value;
+            }
+        }
     }
 }

@@ -37,5 +37,11 @@ namespace GUI.UC
                 MessageBox.Show(ex.Message, "Thông báo");
             }
         }
+
+        private void btnDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmMain._close();
+
+        }
     }
 }

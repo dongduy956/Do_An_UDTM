@@ -33,10 +33,10 @@
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
-            this.btnClose = new DevExpress.XtraBars.BarButtonItem();
             this.btnExcel = new DevExpress.XtraBars.BarButtonItem();
             this.btnWord = new DevExpress.XtraBars.BarButtonItem();
             this.btnPdf = new DevExpress.XtraBars.BarButtonItem();
+            this.btnClose = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -134,16 +134,6 @@
             this.btnXoa.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnXoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXoa_ItemClick);
             // 
-            // btnClose
-            // 
-            this.btnClose.Caption = "Đóng";
-            this.btnClose.Id = 3;
-            this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
-            this.btnClose.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.LargeImage")));
-            this.btnClose.Name = "btnClose";
-            this.btnClose.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.btnClose.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnClose_ItemClick);
-            // 
             // btnExcel
             // 
             this.btnExcel.Caption = "Xuất excel";
@@ -173,6 +163,16 @@
             this.btnPdf.Name = "btnPdf";
             this.btnPdf.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnPdf.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPdf_ItemClick);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Caption = "Đóng";
+            this.btnClose.Id = 3;
+            this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
+            this.btnClose.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.LargeImage")));
+            this.btnClose.Name = "btnClose";
+            this.btnClose.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnClose.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnClose_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -291,6 +291,7 @@
             this.gridColumn6});
             this.gvProduct.GridControl = this.gcProduct;
             this.gvProduct.Name = "gvProduct";
+            this.gvProduct.OptionsDetail.EnableMasterViewMode = false;
             this.gvProduct.OptionsFind.AlwaysVisible = true;
             this.gvProduct.OptionsFind.Condition = DevExpress.Data.Filtering.FilterCondition.Contains;
             this.gvProduct.OptionsFind.FindDelay = 100;
@@ -431,6 +432,7 @@
             this.gridColumn8});
             this.gvTypeProduct.GridControl = this.gcTypeProduct;
             this.gvTypeProduct.Name = "gvTypeProduct";
+            this.gvTypeProduct.OptionsDetail.EnableMasterViewMode = false;
             this.gvTypeProduct.OptionsFind.AlwaysVisible = true;
             this.gvTypeProduct.OptionsFind.Condition = DevExpress.Data.Filtering.FilterCondition.Contains;
             this.gvTypeProduct.OptionsFind.FindDelay = 100;

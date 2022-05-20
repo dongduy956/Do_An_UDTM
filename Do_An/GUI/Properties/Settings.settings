@@ -5,5 +5,8 @@
     <Setting Name="Remember" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="BackupRestore" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.-QL_LINHKIENMAYTINH-sa-123</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -43,5 +43,11 @@ namespace GUI.UC
              Tiền sản phẩm bán ra
              */
         }
+
+        private void btnDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frm._close();
+
+        }
     }
 }
