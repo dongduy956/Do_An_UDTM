@@ -1,24 +1,26 @@
 ﻿using DAO;
+using DevExpress.XtraGrid;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BUS
 {
-   public class StatisticalBus
+    public class StatisticalBUS
     {
         private QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
 
-        private static StatisticalBus instance;
+        private static StatisticalBUS instance;
 
-        public static StatisticalBus Instance
+        public static StatisticalBUS Instance
         {
             get
             {
                 if (instance == null)
-                    return new StatisticalBus();
+                    return new StatisticalBUS();
                 return instance;
             }
 
@@ -34,42 +36,43 @@ namespace BUS
          2: năm
              */
 
-        public double? tinhTienChi(DateTime datetime, int date = 0)
+        public double? tinhTienChi(DateTime dateTimeFrom, DateTime dateTimeTo)
         {
-            if (date == 1)
-            {
-                double? sumMoney = db.NHAPKHOs.Where(x =>x.ispay==true&& x.NGAYNHAP.Month == datetime.Month && x.NGAYNHAP.Year == datetime.Year).Sum(x => x.tongtien);
-                return sumMoney;
-            }
-            else if (date == 2)
-            {
-                double? sumMoney = db.NHAPKHOs.Where(x => x.ispay == true && x.NGAYNHAP.Year == datetime.Year).Sum(x => x.tongtien);
-                return sumMoney;
-            }
-            else
-            {
-                double? sumMoney = db.NHAPKHOs.Where(x => x.ispay == true && x.NGAYNHAP.CompareTo(datetime)==0).Sum(x => x.tongtien);
-                return sumMoney;
-            }
+            double? sumMoney = db.NHAPKHOs.Where(x => x.ispay == true && x.NGAYNHAP.CompareTo(dateTimeFrom) >= 0 && x.NGAYNHAP.CompareTo(dateTimeTo) <= 0).Sum(x => x.tongtien)??0;
+            return sumMoney;
         }
 
-        public double? tinhTienThu(DateTime datetime, int date = 0)
+        public double? tinhTienThu(DateTime dateTimeFrom, DateTime dateTimeTo)
         {
-            if (date == 1)
+            double? sumMoney = db.HOADONs.Where(x => x.ispay == true && x.NGAYLAP.CompareTo(dateTimeFrom) >= 0 && x.NGAYLAP.CompareTo(dateTimeTo) <= 0).Sum(x => x.tongtien)??0;
+            return sumMoney;
+        }
+        public void loadDetailStatistical(GridControl gc, DateTime dateTimeFrom, DateTime dateTimeTo)
+        {
+            DataTable tb = new DataTable();
+            tb.Columns.Add("ngay");
+            tb.Columns.Add("thu");
+            tb.Columns.Add("chi");
+            tb.Columns.Add("loinhuan");
+            var lstOrder = db.HOADONs.Where(x => x.ispay == true && x.NGAYLAP.CompareTo(dateTimeFrom) >= 0 && x.NGAYLAP.CompareTo(dateTimeTo) <= 0).ToList();
+            var lstImport = db.NHAPKHOs.Where(x => x.ispay == true && x.NGAYNHAP.CompareTo(dateTimeFrom) >= 0 && x.NGAYNHAP.CompareTo(dateTimeTo) <= 0).ToList();
+            for (DateTime date = dateTimeFrom; date.CompareTo(dateTimeTo) <= 0;date= date.AddDays(1))
             {
-                double? sumMoney = db.HOADONs.Where(x => x.ispay == true && x.NGAYLAP.Month == datetime.Month && x.NGAYLAP.Year == datetime.Year).Sum(x => x.tongtien);
-                return sumMoney;
+                var lstOrderTemp = lstOrder.Where(x => DateTime.Parse(x.NGAYLAP.ToShortDateString()).CompareTo(DateTime.Parse(date.ToShortDateString())) == 0).ToList();
+                var lstImportTemp = lstImport.Where(x => DateTime.Parse(x.NGAYNHAP.ToShortDateString()).CompareTo(DateTime.Parse(date.ToShortDateString())) == 0).ToList();
+                if (lstOrderTemp .Count!=0 || lstImportTemp.Count!=0)
+                {
+                    DataRow dr = tb.NewRow();
+                    var sumOrder =lstOrderTemp.Sum(x => x.tongtien);
+                    var sumImport = lstImportTemp.Sum(x => x.tongtien);
+                    dr[0] = date.ToShortDateString();
+                    dr[1] = Support.convertVND(sumOrder.ToString());
+                    dr[2] = Support.convertVND(sumImport.ToString());
+                    dr[3] = Support.convertVND((sumOrder - sumImport).ToString());
+                    tb.Rows.Add(dr);
+                }
             }
-            else if (date == 2)
-            {
-                double? sumMoney = db.HOADONs.Where(x => x.ispay == true && x.NGAYLAP.Year == datetime.Year).Sum(x => x.tongtien);
-                return sumMoney;
-            }
-            else
-            {
-                double? sumMoney = db.HOADONs.Where(x => x.ispay == true && x.NGAYLAP.CompareTo(datetime) == 0).Sum(x => x.tongtien);
-                return sumMoney;
-            }
+            gc.DataSource = tb;
         }
 
     }
