@@ -134,11 +134,10 @@ namespace BUS
             }
 
         }
-        public long login(string userName,string passWord)
+        public NHANVIEN login(string userName,string passWord,ref int errorCode)
         {
             passWord = Support.EndCodeMD5(passWord.Trim());
-            int manv = -1;
-            var nv=new NHANVIEN();
+            NHANVIEN nv = null;
             try
             {
                 nv = db.NHANVIENs.FirstOrDefault(x => x.taikhoan.Trim().Equals(userName.Trim()) && x.MATKHAU.Equals(passWord));
@@ -146,11 +145,10 @@ namespace BUS
             }
             catch (SqlException ex)
             {
-                return ex.ErrorCode;
+                errorCode = ex.ErrorCode;
             }
-            if (nv != null)
-                manv = nv.MANV;
-            return manv;
+          
+            return nv;
         }
        
     }

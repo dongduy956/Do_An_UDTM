@@ -1,4 +1,6 @@
-﻿using DevExpress.XtraBars;
+﻿using DAO;
+using DevExpress.XtraBars;
+using DevExpress.XtraEditors;
 using GUI.UC;
 using System;
 using System.Collections.Generic;
@@ -14,6 +16,17 @@ namespace GUI
     public partial class frmMain : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
         UserControl uc;
+        NHANVIEN nv;
+        frmSystem frm;
+        public frmMain(frmSystem frm, NHANVIEN nv)
+        {
+            InitializeComponent();
+            lbTieuDe.Caption = "Trang chủ";
+            this.nv = nv;
+            this.frm = frm;
+            //btnAccount.Caption = nv.TENNV;
+          //repositoryItemPictureEdit3.image = Image.FromFile("../../Images/" + nv.HINHANH);
+        }
         public void _close()
         {
             mainContainer.Controls.Remove(uc);
@@ -21,11 +34,7 @@ namespace GUI
             lbTieuDe.Caption = "Trang chủ";
 
         }
-        public frmMain()
-        {
-            InitializeComponent();
-            lbTieuDe.Caption = "Trang chủ";
-        }
+
         private void openUC(Type typeUC)
         {
             bool check = false;
@@ -102,7 +111,7 @@ namespace GUI
             sf.Title = "Backup database";
             if (sf.ShowDialog() == DialogResult.OK)
             {
-                new frmBKRS(sf.FileName,0).ShowDialog();
+                new frmBKRS(sf.FileName, 0).ShowDialog();
             }
         }
 
@@ -116,6 +125,28 @@ namespace GUI
                 new frmBKRS(op.FileName, 1).ShowDialog();
 
             }
+        }
+        void logout()
+        {
+            if (XtraMessageBox.Show("Bạn muốn đăng xuất trái đất hả?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Hide();
+                frm.Show();
+            }
+        }
+        private void btnLogout_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            logout();
+        }
+      
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            logout();
+        }
+
+        private void btnAccount_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BUS;
+using DAO;
 
 namespace GUI
 {
@@ -47,18 +48,18 @@ namespace GUI
         {
             if (validateTextBox(txtUsername) || validateTextBox(txtPassword))
                 return;
-            long manv = NhanVienBUS.Instances.login(txtUsername.Text, txtPassword.Text);
-            if (manv == -1)
+            int errorCode=0;
+           NHANVIEN nv = NhanVienBUS.Instances.login(txtUsername.Text, txtPassword.Text,ref errorCode);
+            if (nv==null)
             {
                 XtraMessageBox.Show("Sai tài khoản hoặc mật khẩu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 frm.setStatus("Sai tài khoản hoặc mật khẩu", Color.Red);
             }
             else
-                if (manv.ToString().Equals("-2146232060"))
+                if (errorCode.ToString().Equals("-2146232060"))
             {
                 XtraMessageBox.Show("Lỗi kết nối server.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 frm.setStatus("Lỗi kết nối server.", Color.Red);
-
             }
             else
             {
@@ -67,7 +68,8 @@ namespace GUI
                 else
                     Properties.Settings.Default.Remember = "";
                 Properties.Settings.Default.Save();
-                XtraMessageBox.Show("Đăng nhập thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                new frmMain(frm,nv).Show();
+                frm.Hide();
             }
 
         }
