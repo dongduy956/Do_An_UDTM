@@ -127,17 +127,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Report\rpCustomer.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\rpCustomer.Designer.cs">
-      <DependentUpon>rpCustomer.cs</DependentUpon>
-    </Compile>
     <Compile Include="Report\rpImport.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\rpImport.Designer.cs">
       <DependentUpon>rpImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rpOrder.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rpOrder.Designer.cs">
+      <DependentUpon>rpOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rpStatistical.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rpStatistical.Designer.cs">
+      <DependentUpon>rpStatistical.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\uc_customer.cs">
       <SubType>UserControl</SubType>
@@ -213,11 +219,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Report\rpCustomer.resx">
-      <DependentUpon>rpCustomer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Report\rpImport.resx">
       <DependentUpon>rpImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rpOrder.resx">
+      <DependentUpon>rpOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rpStatistical.resx">
+      <DependentUpon>rpStatistical.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\uc_customer.resx">
       <DependentUpon>uc_customer.cs</DependentUpon>
@@ -405,6 +414,7 @@
     <Content Include="Images\team.png" />
     <Content Include="Images\test.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BUS;
 using DevExpress.XtraGrid.Views.Grid;
+using GUI.Report;
+using DevExpress.XtraReports.UI;
 
 namespace GUI.UC
 {
@@ -87,6 +89,12 @@ namespace GUI.UC
         {
             if (e.KeyCode == Keys.Delete && gvOrder.State != GridState.Editing)
                 deleteOrder();
+        }
+
+        private void btnPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            rpOrder rpt = new rpOrder();
+            rpt.ShowPreview();
         }
     }
 }

@@ -1,17 +1,18 @@
-﻿using DevExpress.XtraReports.UI;
+﻿using BUS;
+using DevExpress.XtraReports.UI;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 
 namespace GUI.Report
 {
-    public partial class rpImport : DevExpress.XtraReports.UI.XtraReport
+    public partial class rpOrder : DevExpress.XtraReports.UI.XtraReport
     {
-        public rpImport()
+        public rpOrder()
         {
             InitializeComponent();
         }
-
     }
 }

@@ -34,3 +34,35 @@ E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\bin\Debug\de\DevE
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\bin\Debug\es\DevExpress.Pdf.v19.2.Core.resources.dll
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\bin\Debug\ja\DevExpress.Pdf.v19.2.Core.resources.dll
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\bin\Debug\ru\DevExpress.Pdf.v19.2.Core.resources.dll
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\DAO.dll.config
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\DAO.dll
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\DAO.pdb
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\DevExpress.Utils.v19.2.dll
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\DevExpress.Data.v19.2.dll
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\DevExpress.Printing.v19.2.Core.dll
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\DevExpress.Pdf.v19.2.Core.dll
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\DevExpress.Utils.v19.2.xml
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\DevExpress.Data.v19.2.xml
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\DevExpress.Printing.v19.2.Core.xml
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\DevExpress.Pdf.v19.2.Core.xml
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\de\DevExpress.Utils.v19.2.resources.dll
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\es\DevExpress.Utils.v19.2.resources.dll
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\ja\DevExpress.Utils.v19.2.resources.dll
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\ru\DevExpress.Utils.v19.2.resources.dll
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\de\DevExpress.Data.v19.2.resources.dll
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\es\DevExpress.Data.v19.2.resources.dll
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\ja\DevExpress.Data.v19.2.resources.dll
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\ru\DevExpress.Data.v19.2.resources.dll
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\de\DevExpress.Printing.v19.2.Core.resources.dll
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\es\DevExpress.Printing.v19.2.Core.resources.dll
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\ja\DevExpress.Printing.v19.2.Core.resources.dll
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\ru\DevExpress.Printing.v19.2.Core.resources.dll
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\de\DevExpress.Pdf.v19.2.Core.resources.dll
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\es\DevExpress.Pdf.v19.2.Core.resources.dll
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\ja\DevExpress.Pdf.v19.2.Core.resources.dll
+D:\Do_An_UDTM\Do_An\DAO\bin\Debug\ru\DevExpress.Pdf.v19.2.Core.resources.dll
+D:\Do_An_UDTM\Do_An\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+D:\Do_An_UDTM\Do_An\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\Do_An_UDTM\Do_An\DAO\obj\Debug\DAO.csproj.CopyComplete
+D:\Do_An_UDTM\Do_An\DAO\obj\Debug\DAO.dll
+D:\Do_An_UDTM\Do_An\DAO\obj\Debug\DAO.pdb

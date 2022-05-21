@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BUS;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraReports.UI;
+using GUI.Report;
 
 namespace GUI.UC
 {
@@ -86,6 +88,12 @@ namespace GUI.UC
         {
             if (e.KeyCode == Keys.Delete && gvImport.State != GridState.Editing)
                 deleteImport();
+        }
+
+        private void btnIn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            rpImport rpt = new rpImport();
+            rpt.ShowPreview();
         }
     }
 }

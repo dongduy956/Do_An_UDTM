@@ -6,9 +6,9 @@ using System.Drawing;
 
 namespace GUI.Report
 {
-    public partial class rpImport : DevExpress.XtraReports.UI.XtraReport
+    public partial class rpStatistical : DevExpress.XtraReports.UI.XtraReport
     {
-        public rpImport()
+        public rpStatistical()
         {
             InitializeComponent();
         }

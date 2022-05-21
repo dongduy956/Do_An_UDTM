@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
+using GUI.Report;
 
 namespace GUI.UC
 {
@@ -23,6 +25,12 @@ namespace GUI.UC
         private void btnDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             frm._close();
+        }
+
+        private void btnPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            rpStatistical rpt = new rpStatistical();
+            rpt.ShowPreview();
         }
     }
 }
