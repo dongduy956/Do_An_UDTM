@@ -9,6 +9,8 @@ namespace BUS
 {
    public class StatisticalBus
     {
+        private QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
+
         private static StatisticalBus instance;
 
         public static StatisticalBus Instance
@@ -25,7 +27,6 @@ namespace BUS
                 instance = value;
             }
         }
-        private QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
 
         /*
          0: ngày

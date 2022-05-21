@@ -13,6 +13,7 @@ namespace GUI
 {
     public partial class frmMain : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
+        UserControl uc;
         public void _close()
         {
             mainContainer.Controls.Remove(uc);
@@ -20,7 +21,6 @@ namespace GUI
             lbTieuDe.Caption = "Trang chủ";
 
         }
-        UserControl uc;
         public frmMain()
         {
             InitializeComponent();
@@ -84,19 +84,15 @@ namespace GUI
 
         }
 
-        private void btnStatistical_Month_Click(object sender, EventArgs e)
-        {
-            openUC(typeof(uc_statistical_month));
-        }
 
         private void btnStatistical_Day_Click(object sender, EventArgs e)
         {
-            openUC(typeof(uc_statistical_day));
+            openUC(typeof(uc_statistical));
         }
 
         private void btnStatistical_Year_Click(object sender, EventArgs e)
         {
-            openUC(typeof(uc_statistical_year));
+            openUC(typeof(uc_statistical));
         }
 
         private void btnBackup_ItemClick(object sender, ItemClickEventArgs e)

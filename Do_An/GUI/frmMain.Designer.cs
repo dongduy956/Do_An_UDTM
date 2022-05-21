@@ -43,8 +43,6 @@
             this.btnNhapHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnStatistical_Day = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnStatistical_Month = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnStatistical_Year = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.lbTieuDe = new DevExpress.XtraBars.BarHeaderItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
@@ -182,9 +180,7 @@
             // accordionControlElement5
             // 
             this.accordionControlElement5.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.btnStatistical_Day,
-            this.btnStatistical_Month,
-            this.btnStatistical_Year});
+            this.btnStatistical_Day});
             this.accordionControlElement5.Expanded = true;
             this.accordionControlElement5.Name = "accordionControlElement5";
             this.accordionControlElement5.Text = "Thống kê";
@@ -194,24 +190,8 @@
             this.btnStatistical_Day.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStatistical_Day.ImageOptions.Image")));
             this.btnStatistical_Day.Name = "btnStatistical_Day";
             this.btnStatistical_Day.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnStatistical_Day.Text = "Doanh thu ngày";
+            this.btnStatistical_Day.Text = "Doanh thu";
             this.btnStatistical_Day.Click += new System.EventHandler(this.btnStatistical_Day_Click);
-            // 
-            // btnStatistical_Month
-            // 
-            this.btnStatistical_Month.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStatistical_Month.ImageOptions.Image")));
-            this.btnStatistical_Month.Name = "btnStatistical_Month";
-            this.btnStatistical_Month.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnStatistical_Month.Text = "Doanh thu tháng";
-            this.btnStatistical_Month.Click += new System.EventHandler(this.btnStatistical_Month_Click);
-            // 
-            // btnStatistical_Year
-            // 
-            this.btnStatistical_Year.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStatistical_Year.ImageOptions.Image")));
-            this.btnStatistical_Year.Name = "btnStatistical_Year";
-            this.btnStatistical_Year.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnStatistical_Year.Text = "Doanh thu năm";
-            this.btnStatistical_Year.Click += new System.EventHandler(this.btnStatistical_Year_Click);
             // 
             // fluentDesignFormControl1
             // 
@@ -298,8 +278,8 @@
             // 
             this.btnBackup.Caption = "Backup";
             this.btnBackup.Id = 8;
-            this.btnBackup.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this.btnBackup.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.btnBackup.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBackup.ImageOptions.Image")));
+            this.btnBackup.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnBackup.ImageOptions.LargeImage")));
             this.btnBackup.Name = "btnBackup";
             this.btnBackup.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnBackup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBackup_ItemClick);
@@ -308,8 +288,8 @@
             // 
             this.btnRestore.Caption = "Restore";
             this.btnRestore.Id = 9;
-            this.btnRestore.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
-            this.btnRestore.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
+            this.btnRestore.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRestore.ImageOptions.Image")));
+            this.btnRestore.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnRestore.ImageOptions.LargeImage")));
             this.btnRestore.Name = "btnRestore";
             this.btnRestore.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnRestore.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRestore_ItemClick);
@@ -446,8 +426,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnStatistical_Day;
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem1;
         private DevExpress.XtraBars.Bar bar2;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnStatistical_Month;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnStatistical_Year;
         public DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
         private DevExpress.XtraBars.BarHeaderItem lbTieuDe;
     }

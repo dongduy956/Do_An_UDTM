@@ -57,10 +57,21 @@ namespace GUI
                 {
                     Server dbserver = new Server(new ServerConnection(strs[0], strs[2], strs[3]));
                     Restore dbrestore = new Restore() { Database = strs[1], Action = RestoreActionType.Database, ReplaceDatabase = true, NoRecovery = false };
+                    // Kill all processes
+                    dbserver.KillAllProcesses(dbrestore.Database);
+                    // Set single-user mode
+                    Database db = dbserver.Databases[dbrestore.Database];
+                    // db.DatabaseOptions.UserAccess=true;
+                    db.Alter(TerminationClause.RollbackTransactionsImmediately);
+                    // Detach database
+                    dbserver.DetachDatabase(dbrestore.Database, false);
                     dbrestore.Devices.AddDevice(fileName, DeviceType.File);
+                    
                     dbrestore.PercentComplete += Dbrestore_PercentComplete;
                     dbrestore.Complete += Dbrestore_Complete;
                     dbrestore.SqlRestoreAsync(dbserver);
+
+                    
                 }
                 catch (Exception ex)
                 {

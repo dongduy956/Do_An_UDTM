@@ -181,23 +181,11 @@
     <Compile Include="UC\uc_staff.Designer.cs">
       <DependentUpon>uc_staff.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\uc_statistical_day.cs">
+    <Compile Include="UC\uc_statistical.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC\uc_statistical_day.Designer.cs">
-      <DependentUpon>uc_statistical_day.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC\uc_statistical_month.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\uc_statistical_month.Designer.cs">
-      <DependentUpon>uc_statistical_month.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC\uc_statistical_year.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\uc_statistical_year.Designer.cs">
-      <DependentUpon>uc_statistical_year.cs</DependentUpon>
+    <Compile Include="UC\uc_statistical.Designer.cs">
+      <DependentUpon>uc_statistical.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmBKRS.resx">
       <DependentUpon>frmBKRS.cs</DependentUpon>
@@ -252,14 +240,8 @@
     <EmbeddedResource Include="UC\uc_staff.resx">
       <DependentUpon>uc_staff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\uc_statistical_day.resx">
-      <DependentUpon>uc_statistical_day.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC\uc_statistical_month.resx">
-      <DependentUpon>uc_statistical_month.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC\uc_statistical_year.resx">
-      <DependentUpon>uc_statistical_year.cs</DependentUpon>
+    <EmbeddedResource Include="UC\uc_statistical.resx">
+      <DependentUpon>uc_statistical.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
