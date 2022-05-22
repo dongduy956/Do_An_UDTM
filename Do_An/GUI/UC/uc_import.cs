@@ -10,12 +10,18 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BUS;
 using DevExpress.XtraGrid.Views.Grid;
+using GUI.FRM;
+using DAO;
+using GUI.Report;
+using DevExpress.XtraReports.UI;
 
 namespace GUI.UC
 {
     public partial class uc_import : DevExpress.XtraEditors.XtraUserControl
     {
         frmMain frm;
+        List<CHITIETNK> lstDetailImport;
+
         public uc_import(frmMain frm)
         {
             InitializeComponent();
@@ -86,6 +92,24 @@ namespace GUI.UC
         {
             if (e.KeyCode == Keys.Delete && gvImport.State != GridState.Editing)
                 deleteImport();
+        }
+
+        private void btnPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int row = gvImport.FocusedRowHandle;
+            if (row >= 0)
+            {
+                int mapn = int.Parse(gvImport.GetRowCellValue(row, "MAPN").ToString());
+                lstDetailImport = ChiTietNKBUS.Instances.getDataGV(mapn);
+                NHAPKHO nk = NhapKhoBUS.Instances.findOrderCode(mapn);
+                var rp = new rpImport();
+                rp.DataSource = lstDetailImport;
+                rp.lbNguoiLap.Value = frm.nv.TENNV;
+                rp.lbCodeImport.Value = "BÁO CÁO PHIẾU NHẬP " + mapn;
+                rp.lbDate.Value = nk.NGAYNHAP;
+                rp.lbStaff.Value = nk.NHANVIEN.TENNV;
+                rp.ShowPreviewDialog();
+            }
         }
     }
 }

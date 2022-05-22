@@ -367,10 +367,6 @@ E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\es\DevE
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\ja\DevExpress.XtraTreeList.v19.2.resources.dll
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\ru\DevExpress.XtraTreeList.v19.2.resources.dll
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
-E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.frmConnect.resources
-E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.frmLogin.resources
-E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.frmMain.resources
-E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.frmSystem.resources
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.Properties.Resources.resources
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.UC.uc_customer.resources
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.UC.uc_staff.resources
@@ -441,7 +437,6 @@ E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\de\DevE
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\es\DevExpress.Diagram.v19.2.Core.resources.dll
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\ja\DevExpress.Diagram.v19.2.Core.resources.dll
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\ru\DevExpress.Diagram.v19.2.Core.resources.dll
-E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.Report.rpCustomer.resources
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.Report.rpImport.resources
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\Microsoft.SqlServer.ConnectionInfoExtended.dll
@@ -452,5 +447,12 @@ E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\Microso
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\Microsoft.SqlServer.Dmf.dll
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\Microsoft.SqlServer.RegSvrEnum.dll
-E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.frmBKRS.resources
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.UC.uc_statistical.resources
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.FRM.frmBKRS.resources
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.FRM.frmConnect.resources
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.FRM.frmLogin.resources
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.FRM.frmMain.resources
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.FRM.frmSystem.resources
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.Report.rpOrder.resources
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.Report.rpStatistical.resources
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.FRM.frmChangePass.resources

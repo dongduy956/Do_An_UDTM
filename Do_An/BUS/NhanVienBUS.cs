@@ -150,6 +150,24 @@ namespace BUS
           
             return nv;
         }
-       
+        public int changePass(int manv,string oldPass,string newPass)
+        {
+            try
+            {
+                oldPass = Support.EndCodeMD5(oldPass);
+                var nv = db.NHANVIENs.FirstOrDefault(x => x.MANV == manv&&x.MATKHAU.Equals(oldPass));
+                if (nv == null)
+                    return -1;
+                nv.MATKHAU = Support.EndCodeMD5(newPass);
+                db.SubmitChanges();
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                return -1;
+            }
+
+        }
+
     }
 }

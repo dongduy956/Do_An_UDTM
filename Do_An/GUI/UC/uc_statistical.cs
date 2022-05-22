@@ -10,11 +10,15 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BUS;
 using DAO;
-
+using GUI.FRM;
+using GUI.Report;
+using DevExpress.XtraReports.UI;
+using DevExpress.XtraReports.Parameters;
 namespace GUI.UC
 {
     public partial class uc_statistical : DevExpress.XtraEditors.XtraUserControl
     {
+        DataTable tb;
         frmMain frm;
         public uc_statistical(frmMain frm)
         {
@@ -39,8 +43,18 @@ namespace GUI.UC
             txtSumStatistic.Text = Support.convertVND(sumStatistic.ToString());
             txtSumSpend.Text = Support.convertVND(sumSpend.ToString());
             txtProfit.Text = Support.convertVND((sumStatistic - sumSpend).ToString());
-            StatisticalBUS.Instance.loadDetailStatistical(gcStatistical, dateFrom.DateTime, dateTo.DateTime);
+            tb=StatisticalBUS.Instance.loadDetailStatistical(gcStatistical, dateFrom.DateTime, dateTo.DateTime);
 
+        }
+
+        private void btnPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (tb == null || tb.Rows.Count == 0)
+                return;
+            var rp = new rpStatistical();
+            rp.DataSource = tb;
+            rp.lbNguoiLap.Value = frm.nv.TENNV;
+            rp.ShowPreviewDialog();
         }
     }
 }

@@ -12,6 +12,7 @@ using BUS;
 using DevExpress.XtraGrid.Views.Grid;
 using DAO;
 using DevExpress.XtraEditors.Controls;
+using GUI.FRM;
 
 namespace GUI.UC
 {

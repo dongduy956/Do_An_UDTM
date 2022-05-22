@@ -92,5 +92,9 @@ namespace BUS
         {
             return db.HOADONs.OrderByDescending(x => x.MAHD).FirstOrDefault();
         }
+        public HOADON findOrderCode(int code)
+        {
+            return db.HOADONs.FirstOrDefault(x => x.MAHD == code);
+        }
     }
 }

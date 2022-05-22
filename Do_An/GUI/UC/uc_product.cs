@@ -18,6 +18,7 @@ using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraPrinting;
+using GUI.FRM;
 
 namespace GUI.UC
 {

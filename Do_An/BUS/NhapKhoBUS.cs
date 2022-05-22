@@ -89,5 +89,9 @@ namespace BUS
         {
             return db.NHAPKHOs.OrderByDescending(x => x.MAPN).FirstOrDefault();
         }
+        public NHAPKHO findOrderCode(int code)
+        {
+            return db.NHAPKHOs.FirstOrDefault(x => x.MAPN == code);
+        }
     }
 }

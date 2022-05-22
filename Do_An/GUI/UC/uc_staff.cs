@@ -20,6 +20,7 @@ using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using DevExpress.XtraEditors.ViewInfo;
 using System.Reflection;
 using DevExpress.Utils.Menu;
+using GUI.FRM;
 
 namespace GUI.UC
 {

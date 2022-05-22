@@ -10,11 +10,16 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BUS;
 using DevExpress.XtraGrid.Views.Grid;
+using GUI.FRM;
+using DAO;
+using GUI.Report;
+using DevExpress.XtraReports.UI;
 
 namespace GUI.UC
 {
     public partial class uc_order : DevExpress.XtraEditors.XtraUserControl
     {
+        List<CHITIETHD> lstDetailOrder;
         frmMain frm;
         public uc_order(frmMain frm)
         {
@@ -45,6 +50,7 @@ namespace GUI.UC
             if (mahd != null)
             {
                 e.ChildList = ChiTietHDBUS.Instances.getDataGV(int.Parse(mahd.ToString()));
+
                 gvOrderDetail.ViewCaption = "Chi tiết hoá đơn " + mahd;
 
             }
@@ -87,6 +93,29 @@ namespace GUI.UC
         {
             if (e.KeyCode == Keys.Delete && gvOrder.State != GridState.Editing)
                 deleteOrder();
+        }
+
+        private void btnPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            int row = gvOrder.FocusedRowHandle;
+            if (row >= 0)
+            {
+                int mahd = int.Parse(gvOrder.GetRowCellValue(row, "MAHD").ToString());
+                lstDetailOrder = ChiTietHDBUS.Instances.getDataGV(mahd);
+                HOADON hd = HoaDonBUS.Instances.findOrderCode(mahd);
+                var rp = new rpOrder();
+                rp.DataSource = lstDetailOrder;
+                rp.lbNguoiLap.Value = frm.nv.TENNV;
+                rp.lbCodeOrder.Value = "BÁO CÁO HOÁ ĐƠN " + mahd;
+                rp.lbCustomer.Value = hd.KHACHHANG.TENKH;
+                rp.lbDate.Value = hd.NGAYLAP;
+                rp.lbSale.Value = hd.giamgia;
+                rp.lbStaff.Value = hd.NHANVIEN.TENNV;
+                rp.lbTienPhaiTra.Value = hd.tongtien;
+                rp.ShowPreviewDialog();
+
+            }
         }
     }
 }

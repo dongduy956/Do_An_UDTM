@@ -14,6 +14,7 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using DevExpress.XtraEditors.Controls;
 using System.Globalization;
+using GUI.FRM;
 
 namespace GUI.UC
 {

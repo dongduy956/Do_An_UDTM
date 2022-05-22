@@ -47,7 +47,7 @@ namespace BUS
             double? sumMoney = db.HOADONs.Where(x => x.ispay == true && x.NGAYLAP.CompareTo(dateTimeFrom) >= 0 && x.NGAYLAP.CompareTo(dateTimeTo) <= 0).Sum(x => x.tongtien)??0;
             return sumMoney;
         }
-        public void loadDetailStatistical(GridControl gc, DateTime dateTimeFrom, DateTime dateTimeTo)
+        public DataTable loadDetailStatistical(GridControl gc, DateTime dateTimeFrom, DateTime dateTimeTo)
         {
             DataTable tb = new DataTable();
             tb.Columns.Add("ngay");
@@ -73,6 +73,7 @@ namespace BUS
                 }
             }
             gc.DataSource = tb;
+            return tb;
         }
 
     }

@@ -14,6 +14,8 @@ using DevExpress.Utils;
 using DevExpress.XtraEditors.Controls;
 using GUI.Report;
 using DevExpress.XtraReports.UI;
+using GUI.FRM;
+
 namespace GUI.UC
 {
     public partial class uc_customer : XtraUserControl
