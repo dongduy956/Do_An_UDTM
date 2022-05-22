@@ -54,7 +54,6 @@
             this.btnDestroy = new DevExpress.XtraEditors.SimpleButton();
             this.txtGiamGia = new DevExpress.XtraEditors.TextEdit();
             this.txtSDT = new DevExpress.XtraEditors.TextEdit();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.btnCreateOrder = new DevExpress.XtraEditors.SimpleButton();
             this.gcOrderDetail = new DevExpress.XtraGrid.GridControl();
             this.gvOrderDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -82,7 +81,6 @@
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -123,7 +121,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
@@ -144,7 +141,6 @@
             this.layoutControl1.Controls.Add(this.btnDestroy);
             this.layoutControl1.Controls.Add(this.txtGiamGia);
             this.layoutControl1.Controls.Add(this.txtSDT);
-            this.layoutControl1.Controls.Add(this.simpleButton2);
             this.layoutControl1.Controls.Add(this.btnCreateOrder);
             this.layoutControl1.Controls.Add(this.gcOrderDetail);
             this.layoutControl1.Controls.Add(this.cbbKhachHang);
@@ -351,12 +347,12 @@
             // 
             // btnThanhToan
             // 
-            this.btnThanhToan.Location = new System.Drawing.Point(355, 433);
+            this.btnThanhToan.Location = new System.Drawing.Point(355, 397);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(317, 32);
             this.btnThanhToan.StyleController = this.layoutControl1;
             this.btnThanhToan.TabIndex = 25;
-            this.btnThanhToan.Text = "Xác nhận thanh toán";
+            this.btnThanhToan.Text = "Thanh toán";
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // txtTienPhaiTra
@@ -395,15 +391,6 @@
             this.txtSDT.Size = new System.Drawing.Size(226, 28);
             this.txtSDT.StyleController = this.layoutControl1;
             this.txtSDT.TabIndex = 18;
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Location = new System.Drawing.Point(355, 397);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(317, 32);
-            this.simpleButton2.StyleController = this.layoutControl1;
-            this.simpleButton2.TabIndex = 17;
-            this.simpleButton2.Text = "Xuất report";
             // 
             // btnCreateOrder
             // 
@@ -675,7 +662,6 @@
             this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem12,
             this.layoutControlItem3,
-            this.layoutControlItem4,
             this.layoutControlItem7});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 157);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
@@ -685,9 +671,9 @@
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.btnThanhToan;
-            this.layoutControlItem12.Location = new System.Drawing.Point(319, 36);
+            this.layoutControlItem12.Location = new System.Drawing.Point(319, 0);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(321, 60);
+            this.layoutControlItem12.Size = new System.Drawing.Size(321, 96);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
             // 
@@ -699,15 +685,6 @@
             this.layoutControlItem3.Size = new System.Drawing.Size(319, 36);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.simpleButton2;
-            this.layoutControlItem4.Location = new System.Drawing.Point(319, 0);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(321, 36);
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem4.TextVisible = false;
             // 
             // layoutControlItem7
             // 
@@ -834,7 +811,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
@@ -861,9 +837,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraLayout.LayoutControlGroup layoutGroupOrderDetail;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton btnCreateOrder;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraEditors.TextEdit txtGiamGia;
         private DevExpress.XtraEditors.TextEdit txtSDT;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;

@@ -27,7 +27,7 @@ namespace GUI.UC
     public partial class uc_staff : DevExpress.XtraEditors.XtraUserControl
     {
         private frmMain frm;
-        private ImageCollection images = new ImageCollection();
+        private ImageCollection images = new ImageCollection(); //{ ImageSize=new Size(20, 20) };
         private OpenFileDialog open;
         public uc_staff(frmMain frm)
         {
@@ -105,6 +105,7 @@ namespace GUI.UC
 
                 try
                 {
+
                     Image img = Image.FromFile("../../Images/" + gvStaff.GetDataRow(e.RowHandle)["HINHANH"].ToString());
                     images.Images.Clear();
                     images.Images.Add(img);
@@ -114,6 +115,8 @@ namespace GUI.UC
 
                     Image img = Image.FromFile("../../Images/loadImg.png");
                     images.Images.Clear();
+                //    images.ImageSize = new Size(100, 100);
+
                     images.Images.Add(img);
                 }
 

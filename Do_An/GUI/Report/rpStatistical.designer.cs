@@ -81,12 +81,12 @@ namespace GUI.Report
             // 
             // TopMargin
             // 
-            this.TopMargin.HeightF = 7F;
+            this.TopMargin.HeightF = 6F;
             this.TopMargin.Name = "TopMargin";
             // 
             // BottomMargin
             // 
-            this.BottomMargin.HeightF = 13F;
+            this.BottomMargin.HeightF = 6F;
             this.BottomMargin.Name = "BottomMargin";
             // 
             // Detail
@@ -104,7 +104,7 @@ namespace GUI.Report
             this.xrTable2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow2});
-            this.xrTable2.SizeF = new System.Drawing.SizeF(813.9999F, 25F);
+            this.xrTable2.SizeF = new System.Drawing.SizeF(815F, 25F);
             this.xrTable2.StylePriority.UseFont = false;
             this.xrTable2.StylePriority.UseTextAlignment = false;
             this.xrTable2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
@@ -166,7 +166,7 @@ namespace GUI.Report
             this.xrTableCell8.Multiline = true;
             this.xrTableCell8.Name = "xrTableCell8";
             this.xrTableCell8.Text = "Lợi Nhuận";
-            this.xrTableCell8.Weight = 1.5996892482557579D;
+            this.xrTableCell8.Weight = 1.6072604469114713D;
             // 
             // GroupHeader1
             // 
@@ -187,7 +187,7 @@ namespace GUI.Report
             this.xrTable1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1});
-            this.xrTable1.SizeF = new System.Drawing.SizeF(813.9999F, 25F);
+            this.xrTable1.SizeF = new System.Drawing.SizeF(815F, 25F);
             this.xrTable1.StylePriority.UseFont = false;
             this.xrTable1.StylePriority.UseTextAlignment = false;
             this.xrTable1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
@@ -236,7 +236,7 @@ namespace GUI.Report
             this.xrTableCell4.Multiline = true;
             this.xrTableCell4.Name = "xrTableCell4";
             this.xrTableCell4.Text = "Lợi Nhuận";
-            this.xrTableCell4.Weight = 1.5996892248761103D;
+            this.xrTableCell4.Weight = 1.6072604238125776D;
             // 
             // xrLabel7
             // 
@@ -457,7 +457,7 @@ namespace GUI.Report
             this.xrLabel10.Multiline = true;
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel10.SizeF = new System.Drawing.SizeF(813.9999F, 26.38889F);
+            this.xrLabel10.SizeF = new System.Drawing.SizeF(815.0001F, 26.38889F);
             this.xrLabel10.StylePriority.UseBackColor = false;
             this.xrLabel10.StylePriority.UseBorderColor = false;
             this.xrLabel10.StylePriority.UseFont = false;
@@ -473,7 +473,7 @@ namespace GUI.Report
             this.xrTable3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable3.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow3});
-            this.xrTable3.SizeF = new System.Drawing.SizeF(813.9999F, 25F);
+            this.xrTable3.SizeF = new System.Drawing.SizeF(815.0001F, 25F);
             // 
             // xrTableRow3
             // 
@@ -534,7 +534,7 @@ namespace GUI.Report
             this.xrTableCell10.Text = "xrTableCell10";
             this.xrTableCell10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell10.TextFormatString = "{0:N0}";
-            this.xrTableCell10.Weight = 1.3851131928756726D;
+            this.xrTableCell10.Weight = 1.3916692204440664D;
             // 
             // lbNguoiLap
             // 
@@ -555,10 +555,11 @@ namespace GUI.Report
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Margins = new System.Drawing.Printing.Margins(7, 6, 7, 13);
+            this.Margins = new System.Drawing.Printing.Margins(6, 6, 6, 6);
             this.PageHeight = 1169;
             this.PageWidth = 827;
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;
+            this.PaperName = "Custom";
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.lbNguoiLap});
             this.Version = "19.2";
