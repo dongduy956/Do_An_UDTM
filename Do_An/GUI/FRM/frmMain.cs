@@ -18,6 +18,7 @@ namespace GUI.FRM
         UserControl uc;
        public NHANVIEN nv;
         frmSystem frm;
+        bool checkClose;
         public frmMain(frmSystem frm,NHANVIEN nv)
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace GUI.FRM
             this.frm = frm;
             lbAccount.Caption = "Nhân viên: " + nv.TENNV;
             openUC(typeof(uc_home));
+            checkClose = true;
 
         }
         public void _close()
@@ -130,6 +132,7 @@ namespace GUI.FRM
         }
         public void logout(int check = 0)
         {
+            checkClose = false;
             if (check == 0)
             {
                 if (XtraMessageBox.Show("Bạn muốn đăng xuất trái đất hả?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
@@ -144,6 +147,8 @@ namespace GUI.FRM
 
                 frm._show();
             }
+            checkClose = true;
+
         }
         private void btnLogout_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -152,6 +157,8 @@ namespace GUI.FRM
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if(checkClose)
+            e.Cancel = true;
         }
 
         private void btnChangePass_ItemClick(object sender, ItemClickEventArgs e)

@@ -115,8 +115,15 @@
             // 
             // accordionControlElement1
             // 
-            this.accordionControlElement1.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(223)))), ((int)(((byte)(247)))));
+            this.accordionControlElement1.Appearance.Disabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.accordionControlElement1.Appearance.Disabled.Options.UseBackColor = true;
+            this.accordionControlElement1.Appearance.Hovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.accordionControlElement1.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement1.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.accordionControlElement1.Appearance.Normal.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.accordionControlElement1.Appearance.Normal.Options.UseBackColor = true;
+            this.accordionControlElement1.Appearance.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.accordionControlElement1.Appearance.Pressed.Options.UseBackColor = true;
             this.accordionControlElement1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnProduct,
             this.btnNhanVien,
@@ -171,6 +178,14 @@
             // 
             // accordionControlElement2
             // 
+            this.accordionControlElement2.Appearance.Disabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.accordionControlElement2.Appearance.Disabled.Options.UseBackColor = true;
+            this.accordionControlElement2.Appearance.Hovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.accordionControlElement2.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement2.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.accordionControlElement2.Appearance.Normal.Options.UseBackColor = true;
+            this.accordionControlElement2.Appearance.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.accordionControlElement2.Appearance.Pressed.Options.UseBackColor = true;
             this.accordionControlElement2.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnBanHang,
             this.btnNhapHang});
@@ -197,6 +212,14 @@
             // 
             // accordionControlElement5
             // 
+            this.accordionControlElement5.Appearance.Disabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.accordionControlElement5.Appearance.Disabled.Options.UseBackColor = true;
+            this.accordionControlElement5.Appearance.Hovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.accordionControlElement5.Appearance.Hovered.Options.UseBackColor = true;
+            this.accordionControlElement5.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.accordionControlElement5.Appearance.Normal.Options.UseBackColor = true;
+            this.accordionControlElement5.Appearance.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.accordionControlElement5.Appearance.Pressed.Options.UseBackColor = true;
             this.accordionControlElement5.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnStatistical_Day,
             this.btnInventory});
