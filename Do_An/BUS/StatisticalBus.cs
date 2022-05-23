@@ -30,12 +30,6 @@ namespace BUS
             }
         }
 
-        /*
-         0: ngày
-         1: tháng
-         2: năm
-             */
-
         public double? tinhTienChi(DateTime dateTimeFrom, DateTime dateTimeTo)
         {
             double? sumMoney = db.NHAPKHOs.Where(x => x.ispay == true && x.NGAYNHAP.CompareTo(dateTimeFrom) >= 0 && x.NGAYNHAP.CompareTo(dateTimeTo) <= 0).Sum(x => x.tongtien)??0;

@@ -21,16 +21,18 @@ namespace GUI.FRM
         public frmMain(frmSystem frm, NHANVIEN nv)
         {
             InitializeComponent();
-            lbTieuDe.Caption = "Trang chủ";
+            
             this.nv = nv;
             this.frm = frm;
             lbAccount.Caption = "Nhân viên: " + nv.TENNV;
+            openUC(typeof(uc_home));
+
         }
         public void _close()
         {
             mainContainer.Controls.Remove(uc);
             mainContainer.BringToFront();
-            lbTieuDe.Caption = "Trang chủ";
+            
 
         }
 
@@ -154,6 +156,18 @@ namespace GUI.FRM
         private void btnChangePass_ItemClick(object sender, ItemClickEventArgs e)
         {
             new frmChangePass(this, nv).ShowDialog();
+        }
+
+        private void btnInventory_Click(object sender, EventArgs e)
+        {
+            openUC(typeof(uc_inventory));
+
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            openUC(typeof(uc_home));
+
         }
     }
 }

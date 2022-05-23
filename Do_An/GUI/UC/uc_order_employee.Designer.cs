@@ -451,7 +451,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkLinhKien.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENLINHKIEN", "Tên linh kiện"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DONGIA", "Đơn giá")});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DONGIA", "Đơn giá"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SOLUONGCON", "Số lượng còn")});
             this.lkLinhKien.Name = "lkLinhKien";
             // 
             // gridColumn8

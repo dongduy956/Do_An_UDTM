@@ -133,7 +133,7 @@ namespace GUI.UC
                             XtraMessageBox.Show("Xoá thành công.", "Thông báo");
                             ChiTietHDBUS.Instances.getDataGV(gcOrderDetail, int.Parse(mahd.ToString()));
                             HoaDonBUS.Instances.getDataGV(gcOrder, false);
-
+                            LinhKienBUS.Instances.getDataLkLK(lkLinhKien);
                         }
                         else
                             XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -161,19 +161,22 @@ namespace GUI.UC
                 bVali = false;
                 sErr += "Vui lòng điền số lượng.\n";
             }
-
-
             if (bVali)
             {
-
+                int? soLuong = int.Parse(gvOrderDetail.GetRowCellValue(e.RowHandle, "SOLUONG").ToString().Trim());
+                LINHKIEN lk = LinhKienBUS.Instances.timTheoMa(int.Parse(gvOrderDetail.GetRowCellValue(e.RowHandle, "MALINHKIEN").ToString().Trim()));
+                if (soLuong <= 0)
+                {
+                    bVali = false;
+                    sErr += "Số lượng phải lớn hơn 0.\n";
+                }
                 //thêm mới
                 if (e.RowHandle < 0)
-                {
-
-                    if (int.Parse(gvOrderDetail.GetRowCellValue(e.RowHandle, "SOLUONG").ToString().Trim()) <= 0)
+                {                                
+                    if (soLuong > lk.SOLUONGCON)
                     {
                         bVali = false;
-                        sErr += "Số lượng phải lớn hơn 0.\n";
+                        sErr += "Hết hàng.\n";
                     }
                     if (!bVali)
                     {
@@ -181,6 +184,7 @@ namespace GUI.UC
                         XtraMessageBox.Show(sErr, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
+
                     int i = ChiTietHDBUS.Instances.insert(
                      int.Parse(gvOrder.GetRowCellValue(gvOrder.FocusedRowHandle, "MAHD").ToString()),
                      int.Parse(gvOrderDetail.GetRowCellValue(e.RowHandle, "MALINHKIEN").ToString().Trim()),
@@ -192,12 +196,24 @@ namespace GUI.UC
                     HoaDonBUS.Instances.getDataGV(gcOrder, false);
                     gvOrder.FocusedRowHandle = row;
                     callDataGVOrderDetail(mahd);
-
-
                 }
                 //sửa 
                 else
                 {
+                    CHITIETHD cthd = ChiTietHDBUS.Instances.timCTHDTheoMaHDMaLK(int.Parse(gvOrder.GetRowCellValue(gvOrder.FocusedRowHandle, "MAHD").ToString()), lk.MALINHKIEN);
+                    int? soLuongCon = cthd.SOLUONG + lk.SOLUONGCON;
+                    if (soLuong > soLuongCon)
+                    {
+                        bVali = false;
+                        sErr += "Hết hàng.\n";
+                    }
+                    if (!bVali)
+                    {
+                        e.Valid = false;
+                        XtraMessageBox.Show(sErr, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
                     ChiTietHDBUS.Instances.update(
                                  int.Parse(gvOrder.GetRowCellValue(gvOrder.FocusedRowHandle, "MAHD").ToString()),
                                 int.Parse(gvOrderDetail.GetRowCellValue(e.RowHandle, "MALINHKIEN").ToString().Trim()),

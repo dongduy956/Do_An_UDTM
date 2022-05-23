@@ -48,9 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChartBUS.cs" />
     <Compile Include="ChiTietHDBUS.cs" />
     <Compile Include="ChiTietNKBUS.cs" />
     <Compile Include="HoaDonBUS.cs" />
+    <Compile Include="InventoryBUS.cs" />
     <Compile Include="LinhKienBUS.cs" />
     <Compile Include="LoaiKHBUS.cs" />
     <Compile Include="LoaiLKBUS.cs" />

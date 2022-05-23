@@ -104,11 +104,12 @@ namespace BUS
         public void getDataLkLK(RepositoryItemLookUpEdit lk)
         {
             db.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, db.LINHKIENs);
-            lk.DataSource = from lkk in db.LINHKIENs where lkk.SOLUONGCON>0 select lkk;
+            lk.DataSource = from lkk in db.LINHKIENs select lkk;
             lk.DisplayMember = "TENLINHKIEN";
             lk.ValueMember = "MALINHKIEN";
 
         }
+
         public LINHKIEN timTheoMa(int malk)
         {
             return db.LINHKIENs.FirstOrDefault(x => x.MALINHKIEN == malk);

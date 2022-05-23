@@ -68,7 +68,7 @@ namespace GUI.FRM
                 else
                     Properties.Settings.Default.Remember = "";
                 Properties.Settings.Default.Save();
-                new frmMain(frm,nv).Show();
+               new frmMain(frm,nv).Show();
                 frm.Hide();
             }
 

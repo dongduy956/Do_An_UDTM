@@ -215,7 +215,7 @@
             // gridColumn5
             // 
             this.gridColumn5.Caption = "Giảm giá";
-            this.gridColumn5.FieldName = "Giảm giá";
+            this.gridColumn5.FieldName = "giamgia";
             this.gridColumn5.MinWidth = 30;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;

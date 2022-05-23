@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.mainContainer = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
+            this.btnHome = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnProduct = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnNhanVien = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -43,6 +44,7 @@
             this.btnNhapHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnStatistical_Day = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnInventory = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.lbTieuDe = new DevExpress.XtraBars.BarHeaderItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
@@ -77,9 +79,9 @@
             // mainContainer
             // 
             this.mainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainContainer.Location = new System.Drawing.Point(375, 76);
+            this.mainContainer.Location = new System.Drawing.Point(375, 78);
             this.mainContainer.Name = "mainContainer";
-            this.mainContainer.Size = new System.Drawing.Size(657, 544);
+            this.mainContainer.Size = new System.Drawing.Size(671, 585);
             this.mainContainer.TabIndex = 0;
             // 
             // accordionControl1
@@ -90,18 +92,30 @@
             this.accordionControl1.Appearance.AccordionControl.Options.UseFont = true;
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.btnHome,
             this.accordionControlElement1,
             this.accordionControlElement2,
             this.accordionControlElement5});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 76);
+            this.accordionControl1.Location = new System.Drawing.Point(0, 78);
             this.accordionControl1.Name = "accordionControl1";
+            this.accordionControl1.OptionsHamburgerMenu.DisplayMode = DevExpress.XtraBars.Navigation.AccordionControlDisplayMode.Overlay;
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(375, 544);
+            this.accordionControl1.Size = new System.Drawing.Size(375, 585);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
+            // btnHome
+            // 
+            this.btnHome.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.ImageOptions.Image")));
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnHome.Text = "Trang chủ";
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
             // accordionControlElement1
             // 
+            this.accordionControlElement1.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(223)))), ((int)(((byte)(247)))));
+            this.accordionControlElement1.Appearance.Normal.Options.UseBackColor = true;
             this.accordionControlElement1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnProduct,
             this.btnNhanVien,
@@ -109,13 +123,9 @@
             this.btnReceipt,
             this.btnOrder});
             this.accordionControlElement1.Expanded = true;
-            this.accordionControlElement1.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons)});
             this.accordionControlElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement1.ImageOptions.Image")));
             this.accordionControlElement1.Name = "accordionControlElement1";
+            this.accordionControlElement1.Tag = "";
             this.accordionControlElement1.Text = "Quản lý";
             // 
             // btnProduct
@@ -164,6 +174,7 @@
             this.btnBanHang,
             this.btnNhapHang});
             this.accordionControlElement2.Expanded = true;
+            this.accordionControlElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement2.ImageOptions.Image")));
             this.accordionControlElement2.Name = "accordionControlElement2";
             this.accordionControlElement2.Text = "Khách hàng";
             // 
@@ -186,8 +197,10 @@
             // accordionControlElement5
             // 
             this.accordionControlElement5.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.btnStatistical_Day});
+            this.btnStatistical_Day,
+            this.btnInventory});
             this.accordionControlElement5.Expanded = true;
+            this.accordionControlElement5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement5.ImageOptions.Image")));
             this.accordionControlElement5.Name = "accordionControlElement5";
             this.accordionControlElement5.Text = "Thống kê";
             // 
@@ -199,6 +212,14 @@
             this.btnStatistical_Day.Text = "Doanh thu";
             this.btnStatistical_Day.Click += new System.EventHandler(this.btnStatistical_Day_Click);
             // 
+            // btnInventory
+            // 
+            this.btnInventory.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInventory.ImageOptions.Image")));
+            this.btnInventory.Name = "btnInventory";
+            this.btnInventory.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnInventory.Text = "Tồn kho";
+            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
+            // 
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
@@ -207,7 +228,7 @@
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1032, 36);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1046, 42);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.lbTieuDe);
@@ -268,8 +289,8 @@
             // 
             this.btnChangePass.Caption = "Đổi mật khẩu";
             this.btnChangePass.Id = 7;
-            this.btnChangePass.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.btnChangePass.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.btnChangePass.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnChangePass.ImageOptions.Image")));
+            this.btnChangePass.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnChangePass.ImageOptions.LargeImage")));
             this.btnChangePass.Name = "btnChangePass";
             this.btnChangePass.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnChangePass.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnChangePass_ItemClick);
@@ -329,33 +350,33 @@
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 36);
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 42);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1032, 40);
+            this.barDockControlTop.Size = new System.Drawing.Size(1046, 36);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 620);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 663);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1032, 40);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1046, 39);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 76);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 78);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 544);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 585);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1032, 76);
+            this.barDockControlRight.Location = new System.Drawing.Point(1046, 78);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 544);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 585);
             // 
             // barHeaderItem1
             // 
@@ -395,9 +416,9 @@
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1032, 660);
+            this.ClientSize = new System.Drawing.Size(1046, 702);
             this.ControlContainer = this.mainContainer;
             this.Controls.Add(this.mainContainer);
             this.Controls.Add(this.accordionControl1);
@@ -454,12 +475,14 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnStatistical_Day;
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem1;
         private DevExpress.XtraBars.Bar bar2;
-        public DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
         private DevExpress.XtraBars.BarHeaderItem lbTieuDe;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit2;
         private DevExpress.XtraEditors.Repository.RepositoryItemImageEdit repositoryItemImageEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit3;
         private DevExpress.XtraBars.Bar bar3;
         private DevExpress.XtraBars.BarHeaderItem lbAccount;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnInventory;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnHome;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
     }
 }

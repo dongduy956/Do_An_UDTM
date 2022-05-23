@@ -33,12 +33,12 @@
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnLogin = new DevExpress.XtraBars.BarButtonItem();
             this.btnConnect = new DevExpress.XtraBars.BarButtonItem();
+            this.lbStatus = new DevExpress.XtraBars.BarStaticItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.lbStatus = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -58,7 +58,7 @@
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbon.Size = new System.Drawing.Size(956, 203);
+            this.ribbon.Size = new System.Drawing.Size(956, 212);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // btnLogin
@@ -79,6 +79,19 @@
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnConnect_ItemClick);
             // 
+            // lbStatus
+            // 
+            this.lbStatus.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.lbStatus.Caption = "Trạng thái";
+            this.lbStatus.Id = 5;
+            this.lbStatus.ItemAppearance.Normal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStatus.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Yellow;
+            this.lbStatus.ItemAppearance.Normal.Options.UseFont = true;
+            this.lbStatus.ItemAppearance.Normal.Options.UseForeColor = true;
+            this.lbStatus.ItemInMenuAppearance.Normal.ForeColor = System.Drawing.Color.Transparent;
+            this.lbStatus.ItemInMenuAppearance.Normal.Options.UseForeColor = true;
+            this.lbStatus.Name = "lbStatus";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -96,10 +109,10 @@
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.lbStatus);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 701);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 704);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(956, 37);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(956, 34);
             // 
             // documentManager1
             // 
@@ -108,19 +121,6 @@
             this.documentManager1.View = this.tabbedView1;
             this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView1});
-            // 
-            // lbStatus
-            // 
-            this.lbStatus.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.lbStatus.Caption = "Trạng thái";
-            this.lbStatus.Id = 5;
-            this.lbStatus.ItemAppearance.Normal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbStatus.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Yellow;
-            this.lbStatus.ItemAppearance.Normal.Options.UseFont = true;
-            this.lbStatus.ItemAppearance.Normal.Options.UseForeColor = true;
-            this.lbStatus.ItemInMenuAppearance.Normal.ForeColor = System.Drawing.Color.Transparent;
-            this.lbStatus.ItemInMenuAppearance.Normal.Options.UseForeColor = true;
-            this.lbStatus.Name = "lbStatus";
             // 
             // frmSystem
             // 

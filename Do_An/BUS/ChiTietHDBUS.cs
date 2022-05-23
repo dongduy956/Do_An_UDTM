@@ -97,5 +97,9 @@ namespace BUS
                 return 1;
          
         }
+        public CHITIETHD timCTHDTheoMaHDMaLK(int mahd,int malk)
+        {
+            return db.CHITIETHDs.FirstOrDefault(x => x.MAHD == mahd && x.MALINHKIEN == malk);
+        }
     }
 }

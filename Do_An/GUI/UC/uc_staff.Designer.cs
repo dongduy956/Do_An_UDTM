@@ -418,6 +418,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("maquyen", "Mã quyền"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("tenquyen", "Tên quyền")});
             this.lkQuyen.Name = "lkQuyen";
+            this.lkQuyen.NullText = "";
             // 
             // xtraTabPage2
             // 

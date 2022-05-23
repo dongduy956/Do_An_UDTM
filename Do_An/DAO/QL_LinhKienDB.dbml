@@ -1,11 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_LINHKIENMAYTINH" Class="QL_LinhKienDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Table Name="dbo.QUYEN" Member="QUYENs">
-    <Type Name="QUYEN">
-      <Column Name="maquyen" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="tenquyen" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Association Name="QUYEN_NHANVIEN" Member="NHANVIENs" ThisKey="maquyen" OtherKey="maquyen" Type="NHANVIEN" />
-    </Type>
-  </Table>
   <Table Name="dbo.CHITIETHD" Member="CHITIETHDs">
     <Type Name="CHITIETHD">
       <Column Name="MAHD" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -15,6 +8,13 @@
       <Column Name="THANHTIEN" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Association Name="HOADON_CHITIETHD" Member="HOADON" ThisKey="MAHD" OtherKey="MAHD" Type="HOADON" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="LINHKIEN_CHITIETHD" Member="LINHKIEN" ThisKey="MALINHKIEN" OtherKey="MALINHKIEN" Type="LINHKIEN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QUYEN" Member="QUYENs">
+    <Type Name="QUYEN">
+      <Column Name="maquyen" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tenquyen" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="QUYEN_NHANVIEN" Member="NHANVIENs" ThisKey="maquyen" OtherKey="maquyen" Type="NHANVIEN" />
     </Type>
   </Table>
   <Table Name="dbo.CHITIETNK" Member="CHITIETNKs">
@@ -112,4 +112,16 @@
       <Association Name="NHANVIEN_NHAPKHO" Member="NHANVIEN" ThisKey="MANV" OtherKey="MANV" Type="NHANVIEN" IsForeignKey="true" />
     </Type>
   </Table>
+  <Function Name="dbo.topSelling" Method="topSelling" IsComposable="true">
+    <ElementType Name="topSellingResult">
+      <Column Name="TENLINHKIEN" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.topSelling" Method="topSelling1" IsComposable="true">
+    <ElementType Name="topSellingResult1">
+      <Column Name="TENLINHKIEN" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>
