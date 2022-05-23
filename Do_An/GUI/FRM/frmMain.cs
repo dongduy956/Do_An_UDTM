@@ -18,7 +18,7 @@ namespace GUI.FRM
         UserControl uc;
        public NHANVIEN nv;
         frmSystem frm;
-        public frmMain(frmSystem frm, NHANVIEN nv)
+        public frmMain(frmSystem frm,NHANVIEN nv)
         {
             InitializeComponent();
             
@@ -32,12 +32,11 @@ namespace GUI.FRM
         {
             mainContainer.Controls.Remove(uc);
             mainContainer.BringToFront();
-            
-
         }
 
         private void openUC(Type typeUC)
         {
+            splashScreenManager1.ShowWaitForm();
             bool check = false;
             foreach (UserControl _uc in mainContainer.Controls)
             {
@@ -52,13 +51,15 @@ namespace GUI.FRM
                 mainContainer.Controls.Remove(_uc);
 
             }
-            if (check)
-                return;
-            uc = (UserControl)Activator.CreateInstance(typeUC, this);
-            uc.Dock = DockStyle.Fill;
-            mainContainer.Controls.Add(uc);
-            uc.BringToFront();
-            lbTieuDe.Caption = uc.Tag.ToString();
+            if (!check)
+            {
+                uc = (UserControl)Activator.CreateInstance(typeUC, this);
+                uc.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(uc);
+                uc.BringToFront();
+                lbTieuDe.Caption = uc.Tag.ToString();
+            }
+            splashScreenManager1.CloseWaitForm();
         }
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
@@ -133,13 +134,14 @@ namespace GUI.FRM
             {
                 if (XtraMessageBox.Show("Bạn muốn đăng xuất trái đất hả?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    Hide();
+                    Close();
                     frm._show();
                 }
             }
             else
             {
-                Hide();
+                Close();
+
                 frm._show();
             }
         }
@@ -150,7 +152,6 @@ namespace GUI.FRM
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            logout();
         }
 
         private void btnChangePass_ItemClick(object sender, ItemClickEventArgs e)
@@ -169,5 +170,6 @@ namespace GUI.FRM
             openUC(typeof(uc_home));
 
         }
+      
     }
 }

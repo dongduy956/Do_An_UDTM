@@ -44,6 +44,7 @@
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::GUI.FRM.WaitForm1), true, true);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbDatabase.Properties)).BeginInit();
@@ -115,7 +116,7 @@
             // 
             // cbbDatabase
             // 
-            this.cbbDatabase.Location = new System.Drawing.Point(12, 252);
+            this.cbbDatabase.Location = new System.Drawing.Point(12, 253);
             this.cbbDatabase.Name = "cbbDatabase";
             this.cbbDatabase.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -126,7 +127,7 @@
             // 
             // cbbServer
             // 
-            this.cbbServer.Location = new System.Drawing.Point(12, 34);
+            this.cbbServer.Location = new System.Drawing.Point(12, 35);
             this.cbbServer.Name = "cbbServer";
             this.cbbServer.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -164,7 +165,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(12, 180);
+            this.txtPassword.Location = new System.Drawing.Point(12, 181);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(608, 36);
@@ -174,7 +175,7 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(12, 107);
+            this.txtUsername.Location = new System.Drawing.Point(12, 108);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(608, 36);
             this.txtUsername.StyleController = this.layoutControl1;
@@ -207,7 +208,7 @@
             this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem4.Text = "Username";
             this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(71, 19);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(74, 20);
             // 
             // layoutControlItem5
             // 
@@ -219,7 +220,7 @@
             this.layoutControlItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem5.Text = "Password";
             this.layoutControlItem5.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(71, 19);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(74, 20);
             // 
             // layoutControlItem6
             // 
@@ -264,7 +265,7 @@
             this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem3.Text = "Server";
             this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(71, 19);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(74, 20);
             // 
             // layoutControlItem2
             // 
@@ -276,7 +277,11 @@
             this.layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem2.Text = "Database";
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(71, 19);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(74, 20);
+            // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
             // 
             // frmConnect
             // 
@@ -327,5 +332,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraEditors.ComboBoxEdit cbbServer;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

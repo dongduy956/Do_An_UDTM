@@ -7,8 +7,6 @@ E:\Phát triển ứng dụng thông minh\Do_An\DAO\bin\Debug\DAO.dll.config
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\bin\Debug\DAO.dll.config
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\bin\Debug\DAO.dll
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\bin\Debug\DAO.pdb
-E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\obj\Debug\DAO.dll
-E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\obj\Debug\DAO.pdb
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\bin\Debug\DevExpress.Utils.v19.2.dll
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\bin\Debug\DevExpress.Data.v19.2.dll
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\bin\Debug\DevExpress.Printing.v19.2.Core.dll
@@ -33,3 +31,5 @@ E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\bin\Debug\de\DevE
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\bin\Debug\es\DevExpress.Pdf.v19.2.Core.resources.dll
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\bin\Debug\ja\DevExpress.Pdf.v19.2.Core.resources.dll
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\bin\Debug\ru\DevExpress.Pdf.v19.2.Core.resources.dll
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\obj\Debug\DAO.dll
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\obj\Debug\DAO.pdb
