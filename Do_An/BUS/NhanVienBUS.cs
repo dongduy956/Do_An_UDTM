@@ -80,6 +80,7 @@ namespace BUS
                 if (nv == null)
                     return -1;
                 nv.TENNV = tennv;
+                nv.DIACHI = diachi;
                 nv.SDT = sdt;
                 nv.GIOITINH = gioiTinh;
                 nv.NGAYVL = ngayVL;
@@ -100,6 +101,7 @@ namespace BUS
         }
         public int delete(int manv)
         {
+           
             try
             {
                 var nv = db.NHANVIENs.FirstOrDefault(x => x.MANV == manv);
