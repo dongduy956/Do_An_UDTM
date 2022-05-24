@@ -50,7 +50,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gcProduct = new DevExpress.XtraGrid.GridControl();
             this.gvProduct = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lkLoaiLK = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
@@ -64,7 +63,6 @@
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.gcTypeProduct = new DevExpress.XtraGrid.GridControl();
             this.gvTypeProduct = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
@@ -186,7 +184,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 568);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 598);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(937, 0);
             // 
@@ -196,7 +194,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 40);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 528);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 558);
             // 
             // barDockControlRight
             // 
@@ -204,7 +202,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(937, 40);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 528);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 558);
             // 
             // btnDelete
             // 
@@ -238,7 +236,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 40);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(937, 528);
+            this.xtraTabControl1.Size = new System.Drawing.Size(937, 558);
             this.xtraTabControl1.TabIndex = 4;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -249,14 +247,14 @@
             this.xtraTabPage1.Controls.Add(this.pictureBox1);
             this.xtraTabPage1.Controls.Add(this.gcProduct);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(929, 491);
+            this.xtraTabPage1.Size = new System.Drawing.Size(929, 520);
             this.xtraTabPage1.Text = "Linh kiện";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(916, 214);
+            this.pictureBox1.Location = new System.Drawing.Point(916, 225);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(10, 10);
+            this.pictureBox1.Size = new System.Drawing.Size(10, 11);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
@@ -273,7 +271,7 @@
             this.pictureImage,
             this.repositoryItemPictureEdit2,
             this.imgHinhAnh});
-            this.gcProduct.Size = new System.Drawing.Size(929, 491);
+            this.gcProduct.Size = new System.Drawing.Size(929, 520);
             this.gcProduct.TabIndex = 0;
             this.gcProduct.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvProduct});
@@ -282,13 +280,13 @@
             // gvProduct
             // 
             this.gvProduct.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn5,
             this.gridColumn9,
             this.gridColumn6});
+            this.gvProduct.DetailHeight = 368;
             this.gvProduct.GridControl = this.gcProduct;
             this.gvProduct.Name = "gvProduct";
             this.gvProduct.OptionsDetail.EnableMasterViewMode = false;
@@ -299,21 +297,10 @@
             this.gvProduct.OptionsFind.SearchInPreview = true;
             this.gvProduct.OptionsFind.ShowFindButton = false;
             this.gvProduct.OptionsView.ShowGroupPanel = false;
+            this.gvProduct.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvProduct_CustomDrawRowIndicator);
             this.gvProduct.CustomDrawCell += new DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventHandler(this.gvProduct_CustomDrawCell);
             this.gvProduct.InvalidRowException += new DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventHandler(this.gvProduct_InvalidRowException);
             this.gvProduct.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gvProduct_ValidateRow);
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Mã linh kiện";
-            this.gridColumn1.FieldName = "MALINHKIEN";
-            this.gridColumn1.MinWidth = 30;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.OptionsColumn.AllowEdit = false;
-            this.gridColumn1.UnboundType = DevExpress.Data.UnboundColumnType.Object;
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 112;
             // 
             // gridColumn2
             // 
@@ -322,7 +309,7 @@
             this.gridColumn2.MinWidth = 30;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.VisibleIndex = 0;
             this.gridColumn2.Width = 112;
             // 
             // gridColumn3
@@ -333,7 +320,7 @@
             this.gridColumn3.MinWidth = 30;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.VisibleIndex = 1;
             this.gridColumn3.Width = 112;
             // 
             // lkLoaiLK
@@ -353,7 +340,7 @@
             this.gridColumn4.MinWidth = 30;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.VisibleIndex = 2;
             this.gridColumn4.Width = 112;
             // 
             // gridColumn5
@@ -363,7 +350,7 @@
             this.gridColumn5.MinWidth = 30;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.VisibleIndex = 3;
             this.gridColumn5.Width = 112;
             // 
             // gridColumn9
@@ -374,7 +361,7 @@
             this.gridColumn9.MinWidth = 30;
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 5;
+            this.gridColumn9.VisibleIndex = 4;
             this.gridColumn9.Width = 112;
             // 
             // imgHinhAnh
@@ -391,8 +378,9 @@
             this.gridColumn6.FieldName = "SOLUONGCON";
             this.gridColumn6.MinWidth = 30;
             this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 6;
+            this.gridColumn6.VisibleIndex = 5;
             this.gridColumn6.Width = 112;
             // 
             // pictureImage
@@ -409,7 +397,7 @@
             // 
             this.xtraTabPage2.Controls.Add(this.gcTypeProduct);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(929, 491);
+            this.xtraTabPage2.Size = new System.Drawing.Size(929, 520);
             this.xtraTabPage2.Text = "Loại linh kiện";
             // 
             // gcTypeProduct
@@ -419,7 +407,7 @@
             this.gcTypeProduct.MainView = this.gvTypeProduct;
             this.gcTypeProduct.MenuManager = this.barManager1;
             this.gcTypeProduct.Name = "gcTypeProduct";
-            this.gcTypeProduct.Size = new System.Drawing.Size(929, 491);
+            this.gcTypeProduct.Size = new System.Drawing.Size(929, 520);
             this.gcTypeProduct.TabIndex = 0;
             this.gcTypeProduct.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTypeProduct});
@@ -428,8 +416,8 @@
             // gvTypeProduct
             // 
             this.gvTypeProduct.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn7,
             this.gridColumn8});
+            this.gvTypeProduct.DetailHeight = 368;
             this.gvTypeProduct.GridControl = this.gcTypeProduct;
             this.gvTypeProduct.Name = "gvTypeProduct";
             this.gvTypeProduct.OptionsDetail.EnableMasterViewMode = false;
@@ -440,19 +428,9 @@
             this.gvTypeProduct.OptionsFind.SearchInPreview = true;
             this.gvTypeProduct.OptionsFind.ShowFindButton = false;
             this.gvTypeProduct.OptionsView.ShowGroupPanel = false;
+            this.gvTypeProduct.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvTypeProduct_CustomDrawRowIndicator);
             this.gvTypeProduct.InvalidRowException += new DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventHandler(this.gvTypeProduct_InvalidRowException);
             this.gvTypeProduct.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gvTypeProduct_ValidateRow);
-            // 
-            // gridColumn7
-            // 
-            this.gridColumn7.Caption = "Mã loại";
-            this.gridColumn7.FieldName = "MALOAI";
-            this.gridColumn7.MinWidth = 30;
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.OptionsColumn.AllowEdit = false;
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 0;
-            this.gridColumn7.Width = 112;
             // 
             // gridColumn8
             // 
@@ -461,12 +439,12 @@
             this.gridColumn8.MinWidth = 30;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 1;
+            this.gridColumn8.VisibleIndex = 0;
             this.gridColumn8.Width = 112;
             // 
             // uc_product
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.barDockControlLeft);
@@ -474,7 +452,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "uc_product";
-            this.Size = new System.Drawing.Size(937, 568);
+            this.Size = new System.Drawing.Size(937, 598);
             this.Tag = "Linh kiện";
             this.Load += new System.EventHandler(this.uc_product_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
@@ -515,7 +493,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gvProduct;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
         private DevExpress.XtraBars.BarButtonItem btnDelete;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit lkLoaiLK;
@@ -524,7 +501,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.GridControl gcTypeProduct;
         private DevExpress.XtraGrid.Views.Grid.GridView gvTypeProduct;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit pictureImage;
         private DevExpress.XtraEditors.Repository.RepositoryItemImageEdit repositoryItemImageEdit1;

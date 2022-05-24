@@ -33,17 +33,17 @@
             this.mainContainer = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.btnHome = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnManagerment = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnProduct = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnNhanVien = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnKhachHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnReceipt = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnOrder = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnStaffCustomer = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnBanHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnNhapHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnStatistical_Day = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnStatistical = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnTurnover = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnInventory = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.lbTieuDe = new DevExpress.XtraBars.BarHeaderItem();
@@ -80,7 +80,7 @@
             // mainContainer
             // 
             this.mainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainContainer.Location = new System.Drawing.Point(375, 78);
+            this.mainContainer.Location = new System.Drawing.Point(375, 76);
             this.mainContainer.Name = "mainContainer";
             this.mainContainer.Size = new System.Drawing.Size(671, 585);
             this.mainContainer.TabIndex = 0;
@@ -94,10 +94,10 @@
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnHome,
-            this.accordionControlElement1,
-            this.accordionControlElement2,
-            this.accordionControlElement5});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 78);
+            this.btnManagerment,
+            this.btnStaffCustomer,
+            this.btnStatistical});
+            this.accordionControl1.Location = new System.Drawing.Point(0, 76);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.OptionsHamburgerMenu.DisplayMode = DevExpress.XtraBars.Navigation.AccordionControlDisplayMode.Overlay;
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
@@ -113,28 +113,28 @@
             this.btnHome.Text = "Trang chủ";
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // accordionControlElement1
+            // btnManagerment
             // 
-            this.accordionControlElement1.Appearance.Disabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
-            this.accordionControlElement1.Appearance.Disabled.Options.UseBackColor = true;
-            this.accordionControlElement1.Appearance.Hovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
-            this.accordionControlElement1.Appearance.Hovered.Options.UseBackColor = true;
-            this.accordionControlElement1.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
-            this.accordionControlElement1.Appearance.Normal.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.accordionControlElement1.Appearance.Normal.Options.UseBackColor = true;
-            this.accordionControlElement1.Appearance.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
-            this.accordionControlElement1.Appearance.Pressed.Options.UseBackColor = true;
-            this.accordionControlElement1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.btnManagerment.Appearance.Disabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.btnManagerment.Appearance.Disabled.Options.UseBackColor = true;
+            this.btnManagerment.Appearance.Hovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.btnManagerment.Appearance.Hovered.Options.UseBackColor = true;
+            this.btnManagerment.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.btnManagerment.Appearance.Normal.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnManagerment.Appearance.Normal.Options.UseBackColor = true;
+            this.btnManagerment.Appearance.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.btnManagerment.Appearance.Pressed.Options.UseBackColor = true;
+            this.btnManagerment.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnProduct,
             this.btnNhanVien,
             this.btnKhachHang,
             this.btnReceipt,
             this.btnOrder});
-            this.accordionControlElement1.Expanded = true;
-            this.accordionControlElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement1.ImageOptions.Image")));
-            this.accordionControlElement1.Name = "accordionControlElement1";
-            this.accordionControlElement1.Tag = "";
-            this.accordionControlElement1.Text = "Quản lý";
+            this.btnManagerment.Expanded = true;
+            this.btnManagerment.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement1.ImageOptions.Image")));
+            this.btnManagerment.Name = "btnManagerment";
+            this.btnManagerment.Tag = "";
+            this.btnManagerment.Text = "Quản lý";
             // 
             // btnProduct
             // 
@@ -176,23 +176,23 @@
             this.btnOrder.Text = "Hoá đơn";
             this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
-            // accordionControlElement2
+            // btnStaffCustomer
             // 
-            this.accordionControlElement2.Appearance.Disabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
-            this.accordionControlElement2.Appearance.Disabled.Options.UseBackColor = true;
-            this.accordionControlElement2.Appearance.Hovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
-            this.accordionControlElement2.Appearance.Hovered.Options.UseBackColor = true;
-            this.accordionControlElement2.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
-            this.accordionControlElement2.Appearance.Normal.Options.UseBackColor = true;
-            this.accordionControlElement2.Appearance.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
-            this.accordionControlElement2.Appearance.Pressed.Options.UseBackColor = true;
-            this.accordionControlElement2.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.btnStaffCustomer.Appearance.Disabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.btnStaffCustomer.Appearance.Disabled.Options.UseBackColor = true;
+            this.btnStaffCustomer.Appearance.Hovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.btnStaffCustomer.Appearance.Hovered.Options.UseBackColor = true;
+            this.btnStaffCustomer.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.btnStaffCustomer.Appearance.Normal.Options.UseBackColor = true;
+            this.btnStaffCustomer.Appearance.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.btnStaffCustomer.Appearance.Pressed.Options.UseBackColor = true;
+            this.btnStaffCustomer.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnBanHang,
             this.btnNhapHang});
-            this.accordionControlElement2.Expanded = true;
-            this.accordionControlElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement2.ImageOptions.Image")));
-            this.accordionControlElement2.Name = "accordionControlElement2";
-            this.accordionControlElement2.Text = "Khách hàng";
+            this.btnStaffCustomer.Expanded = true;
+            this.btnStaffCustomer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement2.ImageOptions.Image")));
+            this.btnStaffCustomer.Name = "btnStaffCustomer";
+            this.btnStaffCustomer.Text = "Khách hàng";
             // 
             // btnBanHang
             // 
@@ -210,31 +210,31 @@
             this.btnNhapHang.Text = "Nhập hàng";
             this.btnNhapHang.Click += new System.EventHandler(this.btnNhapHang_Click);
             // 
-            // accordionControlElement5
+            // btnStatistical
             // 
-            this.accordionControlElement5.Appearance.Disabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
-            this.accordionControlElement5.Appearance.Disabled.Options.UseBackColor = true;
-            this.accordionControlElement5.Appearance.Hovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
-            this.accordionControlElement5.Appearance.Hovered.Options.UseBackColor = true;
-            this.accordionControlElement5.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
-            this.accordionControlElement5.Appearance.Normal.Options.UseBackColor = true;
-            this.accordionControlElement5.Appearance.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
-            this.accordionControlElement5.Appearance.Pressed.Options.UseBackColor = true;
-            this.accordionControlElement5.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.btnStatistical_Day,
+            this.btnStatistical.Appearance.Disabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.btnStatistical.Appearance.Disabled.Options.UseBackColor = true;
+            this.btnStatistical.Appearance.Hovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.btnStatistical.Appearance.Hovered.Options.UseBackColor = true;
+            this.btnStatistical.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.btnStatistical.Appearance.Normal.Options.UseBackColor = true;
+            this.btnStatistical.Appearance.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.btnStatistical.Appearance.Pressed.Options.UseBackColor = true;
+            this.btnStatistical.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.btnTurnover,
             this.btnInventory});
-            this.accordionControlElement5.Expanded = true;
-            this.accordionControlElement5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement5.ImageOptions.Image")));
-            this.accordionControlElement5.Name = "accordionControlElement5";
-            this.accordionControlElement5.Text = "Thống kê";
+            this.btnStatistical.Expanded = true;
+            this.btnStatistical.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement5.ImageOptions.Image")));
+            this.btnStatistical.Name = "btnStatistical";
+            this.btnStatistical.Text = "Thống kê";
             // 
-            // btnStatistical_Day
+            // btnTurnover
             // 
-            this.btnStatistical_Day.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStatistical_Day.ImageOptions.Image")));
-            this.btnStatistical_Day.Name = "btnStatistical_Day";
-            this.btnStatistical_Day.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnStatistical_Day.Text = "Doanh thu";
-            this.btnStatistical_Day.Click += new System.EventHandler(this.btnStatistical_Day_Click);
+            this.btnTurnover.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStatistical_Day.ImageOptions.Image")));
+            this.btnTurnover.Name = "btnTurnover";
+            this.btnTurnover.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnTurnover.Text = "Doanh thu";
+            this.btnTurnover.Click += new System.EventHandler(this.btnTurnover_Click);
             // 
             // btnInventory
             // 
@@ -252,7 +252,7 @@
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1046, 42);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1046, 36);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.lbTieuDe);
@@ -374,23 +374,23 @@
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 42);
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 36);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1046, 36);
+            this.barDockControlTop.Size = new System.Drawing.Size(1046, 40);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 663);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 661);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1046, 39);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1046, 41);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 78);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 76);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Size = new System.Drawing.Size(0, 585);
             // 
@@ -398,7 +398,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1046, 78);
+            this.barDockControlRight.Location = new System.Drawing.Point(1046, 76);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 585);
             // 
@@ -496,11 +496,11 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnKhachHang;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnReceipt;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnOrder;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnStaffCustomer;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnBanHang;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnNhapHang;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnStatistical_Day;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnStatistical;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnTurnover;
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem1;
         private DevExpress.XtraBars.Bar bar2;
         private DevExpress.XtraBars.BarHeaderItem lbTieuDe;
@@ -511,7 +511,7 @@
         private DevExpress.XtraBars.BarHeaderItem lbAccount;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnInventory;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnHome;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnManagerment;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

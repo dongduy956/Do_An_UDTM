@@ -33,6 +33,7 @@ namespace GUI.UC
         {
             InitializeComponent();
             this.frm = frm;
+
         }
 
         private void btnDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -47,7 +48,8 @@ namespace GUI.UC
             QuyenBUS.Instances.getDataGV(gcRole);
             gvStaff.OptionsView.NewItemRowPosition = NewItemRowPosition.Top;
             gvRole.OptionsView.NewItemRowPosition = NewItemRowPosition.Top;
-
+            gvRole.IndicatorWidth = 30;
+            gvStaff.IndicatorWidth = 30;
         }
         private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -71,6 +73,8 @@ namespace GUI.UC
                 DataRow dr = gvRole.GetFocusedDataRow();
                 if (dr != null)
                 {
+                    if (dr["tenquyen"].ToString().ToLower().Equals("admin") || dr["tenquyen"].ToString().ToLower().Equals("nhân viên"))
+                        return;
                     if (XtraMessageBox.Show("Bạn có muốn xoá quyền " + dr["tenquyen"].ToString() + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         QuyenBUS.Instances.delete(int.Parse(dr["maquyen"].ToString()));
@@ -88,6 +92,7 @@ namespace GUI.UC
                 DataRow dr = gvStaff.GetFocusedDataRow();
                 if (dr != null)
                 {
+                    
                     if (XtraMessageBox.Show("Bạn có muốn reset mật khẩu nhân viên " + dr["TENNV"].ToString() + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
                         NhanVienBUS.Instances.resetPass(int.Parse(dr["MANV"].ToString()));
@@ -288,6 +293,8 @@ namespace GUI.UC
                 DataRow dr = gvRole.GetFocusedDataRow();
                 if (dr != null)
                 {
+                    if (dr["tenquyen"].ToString().ToLower().Equals("admin") || dr["tenquyen"].ToString().ToLower().Equals("nhân viên"))
+                        return;
                     if (XtraMessageBox.Show("Bạn có muốn xoá quyền " + dr["tenquyen"].ToString() + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         QuyenBUS.Instances.delete(int.Parse(dr["maquyen"].ToString()));
@@ -406,6 +413,20 @@ namespace GUI.UC
                 }
                 XtraMessageBox.Show("Xuất file pdf " + str + " thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
+        }
+
+        private void gvRole_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
+        {
+            if (!e.Info.IsRowIndicator || e.RowHandle < 0)
+                return;
+            e.Info.DisplayText = (e.RowHandle + 1) + "";
+        }
+
+        private void gvStaff_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
+        {
+            if (!e.Info.IsRowIndicator || e.RowHandle < 0)
+                return;
+            e.Info.DisplayText = (e.RowHandle + 1) + "";
         }
     }
 }

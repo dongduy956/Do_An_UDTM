@@ -31,7 +31,8 @@ namespace GUI.UC
         private void uc_import_Load(object sender, EventArgs e)
         {
             NhapKhoBUS.Instances.getDataGV(gcImport, true);
-
+            gvImport.IndicatorWidth = 30;
+            gvImportDetail.IndicatorWidth = 30;
         }
         //đóng form
         private void btnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -110,6 +111,21 @@ namespace GUI.UC
                 rp.lbStaff.Value = nk.NHANVIEN.TENNV;
                 rp.ShowPreviewDialog();
             }
+        }
+
+        private void gvImport_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
+        {
+            if (!e.Info.IsRowIndicator || e.RowHandle < 0)
+                return;
+            e.Info.DisplayText = (e.RowHandle + 1) + "";
+        }
+
+        private void gvImportDetail_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
+        {
+
+            if (!e.Info.IsRowIndicator || e.RowHandle < 0)
+                return;
+            e.Info.DisplayText = (e.RowHandle + 1) + "";
         }
     }
 }

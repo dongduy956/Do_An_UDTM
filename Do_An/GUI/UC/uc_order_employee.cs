@@ -35,7 +35,8 @@ namespace GUI.UC
             HoaDonBUS.Instances.getDataGV(gcOrder, false);
             LinhKienBUS.Instances.getDataLkLK(lkLinhKien);
             gvOrderDetail.OptionsView.NewItemRowPosition = NewItemRowPosition.Top;
-
+            gvOrder.IndicatorWidth = 30;
+            gvOrderDetail.IndicatorWidth = 30;
         }
         //xoá data gridview chi tiết hoá đơn
         void clearDataGVOrderDetail()
@@ -298,6 +299,20 @@ namespace GUI.UC
         private void gcOrder_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             destroyOrder();
+        }
+
+        private void gvOrder_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
+        {
+            if (!e.Info.IsRowIndicator || e.RowHandle < 0)
+                return;
+            e.Info.DisplayText = (e.RowHandle + 1) + "";
+        }
+
+        private void gvOrderDetail_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
+        {
+            if (!e.Info.IsRowIndicator || e.RowHandle < 0)
+                return;
+            e.Info.DisplayText = (e.RowHandle + 1) + "";
         }
     }
 }

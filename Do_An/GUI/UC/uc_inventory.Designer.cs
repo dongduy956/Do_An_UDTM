@@ -238,6 +238,7 @@
             this.gvInventory.GridControl = this.gcInventory;
             this.gvInventory.Name = "gvInventory";
             this.gvInventory.OptionsView.ShowGroupPanel = false;
+            this.gvInventory.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvInventory_CustomDrawRowIndicator);
             // 
             // gridColumn1
             // 
@@ -315,7 +316,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateTo.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateTo.Size = new System.Drawing.Size(255, 29);
+            this.dateTo.Size = new System.Drawing.Size(255, 28);
             this.dateTo.StyleController = this.layoutControl1;
             this.dateTo.TabIndex = 5;
             // 
@@ -329,7 +330,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateFrom.Size = new System.Drawing.Size(255, 29);
+            this.dateFrom.Size = new System.Drawing.Size(255, 28);
             this.dateFrom.StyleController = this.layoutControl1;
             this.dateFrom.TabIndex = 4;
             // 

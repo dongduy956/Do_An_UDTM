@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_import));
             this.gvImportDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -45,6 +45,7 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
+            this.btnPrint = new DevExpress.XtraBars.BarButtonItem();
             this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
             this.btnClose = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -52,7 +53,6 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.btnDelete = new DevExpress.XtraBars.BarButtonItem();
-            this.btnPrint = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gvImportDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcImport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvImport)).BeginInit();
@@ -67,9 +67,11 @@
             this.gridColumn9,
             this.gridColumn10,
             this.gridColumn11});
+            this.gvImportDetail.DetailHeight = 368;
             this.gvImportDetail.GridControl = this.gcImport;
             this.gvImportDetail.Name = "gvImportDetail";
             this.gvImportDetail.OptionsView.ShowGroupPanel = false;
+            this.gvImportDetail.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvImportDetail_CustomDrawRowIndicator);
             // 
             // gridColumn7
             // 
@@ -129,15 +131,15 @@
             // gcImport
             // 
             this.gcImport.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode1.LevelTemplate = this.gvImportDetail;
-            gridLevelNode1.RelationName = "Chi tiết phiếu nhập";
+            gridLevelNode2.LevelTemplate = this.gvImportDetail;
+            gridLevelNode2.RelationName = "Chi tiết phiếu nhập";
             this.gcImport.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.gcImport.Location = new System.Drawing.Point(0, 40);
             this.gcImport.MainView = this.gvImport;
             this.gcImport.MenuManager = this.barManager1;
             this.gcImport.Name = "gcImport";
-            this.gcImport.Size = new System.Drawing.Size(862, 411);
+            this.gcImport.Size = new System.Drawing.Size(862, 435);
             this.gcImport.TabIndex = 5;
             this.gcImport.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvImport,
@@ -151,6 +153,7 @@
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn6});
+            this.gvImport.DetailHeight = 368;
             this.gvImport.GridControl = this.gcImport;
             this.gvImport.Name = "gvImport";
             this.gvImport.OptionsFind.AlwaysVisible = true;
@@ -159,6 +162,7 @@
             this.gvImport.OptionsFind.FindNullPrompt = "Tìm kiếm tại đây...";
             this.gvImport.OptionsFind.ShowFindButton = false;
             this.gvImport.OptionsView.ShowGroupPanel = false;
+            this.gvImport.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvImport_CustomDrawRowIndicator);
             this.gvImport.MasterRowEmpty += new DevExpress.XtraGrid.Views.Grid.MasterRowEmptyEventHandler(this.gvImport_MasterRowEmpty);
             this.gvImport.MasterRowGetChildList += new DevExpress.XtraGrid.Views.Grid.MasterRowGetChildListEventHandler(this.gvImport_MasterRowGetChildList);
             this.gvImport.MasterRowGetRelationName += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationNameEventHandler(this.gvImport_MasterRowGetRelationName);
@@ -239,6 +243,16 @@
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Caption = "Print";
+            this.btnPrint.Id = 9;
+            this.btnPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.ImageOptions.Image")));
+            this.btnPrint.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPrint.ImageOptions.LargeImage")));
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPrint_ItemClick);
+            // 
             // btnXoa
             // 
             this.btnXoa.Caption = "Xoá";
@@ -271,7 +285,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 451);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 475);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(862, 0);
             // 
@@ -281,7 +295,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 40);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 411);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 435);
             // 
             // barDockControlRight
             // 
@@ -289,7 +303,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(862, 40);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 411);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 435);
             // 
             // btnDelete
             // 
@@ -299,19 +313,9 @@
             this.btnDelete.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.LargeImage")));
             this.btnDelete.Name = "btnDelete";
             // 
-            // btnPrint
-            // 
-            this.btnPrint.Caption = "Print";
-            this.btnPrint.Id = 9;
-            this.btnPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.btnPrint.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.btnPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPrint_ItemClick);
-            // 
             // uc_import
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gcImport);
             this.Controls.Add(this.barDockControlLeft);
@@ -319,7 +323,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "uc_import";
-            this.Size = new System.Drawing.Size(862, 451);
+            this.Size = new System.Drawing.Size(862, 475);
             this.Tag = "Phiếu nhập";
             this.Load += new System.EventHandler(this.uc_import_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvImportDetail)).EndInit();

@@ -70,7 +70,7 @@ namespace GUI.UC
             chartQuantityImportOrder.Series.Add(_seri);
             foreach (DataRow dr in ChartBUS.Instances.loadOrderAndImportInMonthNow().Rows)
             {
-                _seri.Points.Add(new SeriesPoint(dr[0].ToString(), dr[1].ToString()));
+                _seri.Points.Add(new SeriesPoint(dr[0].ToString(), dr[1].ToString().Equals("") ? "0" : dr[1].ToString()));
             }
             _seri.Label.TextPattern = "{A}: {V}";
         }
@@ -82,7 +82,7 @@ namespace GUI.UC
             title.Text = "Doanh thu năm " + DateTime.Now.Year;
             chartStatistical.Titles.Add(title);
             foreach (DataRow dr in ChartBUS.Instances.loadStatisticalYear().Rows)
-            _seri.Points.Add(new SeriesPoint(dr[0].ToString(), dr[1].ToString()));
+            _seri.Points.Add(new SeriesPoint(dr[0].ToString(), dr[1].ToString().Equals("")?"0": dr[1].ToString()));
             _seri.ShowInLegend = true;
             _seri.Label.TextPattern = "{A}: {V: N0}";
             chartStatistical.Series.Add(_seri);

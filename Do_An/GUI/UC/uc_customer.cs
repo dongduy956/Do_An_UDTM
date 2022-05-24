@@ -26,6 +26,8 @@ namespace GUI.UC
         {
             InitializeComponent();
             this.frm = frm;
+     
+
         }
         private void uc_customer_Load(object sender, EventArgs e)
         {
@@ -35,6 +37,9 @@ namespace GUI.UC
 
             LoaiKHBUS.Instances.getDataGV(gcTypeCustomer);
             gvTypeCustomer.OptionsView.NewItemRowPosition = NewItemRowPosition.Top;
+
+            gvCustomer.IndicatorWidth = 30;
+            gvTypeCustomer.IndicatorWidth = 30;
         }
         private void btnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -66,6 +71,7 @@ namespace GUI.UC
                         LoaiKHBUS.Instances.delete(int.Parse(dr["MALOAIKH"].ToString()));
                         XtraMessageBox.Show("Xoá thành công", "Thông báo");
                         LoaiKHBUS.Instances.getDataGV(gcTypeCustomer);
+                        LoaiKHBUS.Instances.getDataLkLoaiKH(lkLoaiKH);
                     }
                 }
             }
@@ -180,6 +186,7 @@ namespace GUI.UC
                         LoaiKHBUS.Instances.delete(int.Parse(dr["MALOAIKH"].ToString()));
                         XtraMessageBox.Show("Xoá thành công", "Thông báo");
                         LoaiKHBUS.Instances.getDataGV(gcTypeCustomer);
+                        LoaiKHBUS.Instances.getDataLkLoaiKH(lkLoaiKH);
                     }
                 }
             }
@@ -217,6 +224,7 @@ namespace GUI.UC
                            , double.Parse(gvTypeCustomer.GetRowCellValue(e.RowHandle, "GIAMGIA").ToString().Trim()));
                         XtraMessageBox.Show("Thêm thành công", "Thông báo", DefaultBoolean.True);
                         LoaiKHBUS.Instances.getDataGV(gcTypeCustomer);
+                        LoaiKHBUS.Instances.getDataLkLoaiKH(lkLoaiKH);
                     }
                     catch (Exception ex)
                     {
@@ -232,7 +240,7 @@ namespace GUI.UC
                             , double.Parse(gvTypeCustomer.GetRowCellValue(e.RowHandle, "GIAMGIA").ToString().Trim())
                             , int.Parse(gvTypeCustomer.GetRowCellValue(e.RowHandle, "MALOAIKH").ToString().Trim()));
                         LoaiKHBUS.Instances.getDataGV(gcTypeCustomer);
-
+                        LoaiKHBUS.Instances.getDataLkLoaiKH(lkLoaiKH);
                     }
                     catch (Exception)
                     {
@@ -304,10 +312,18 @@ namespace GUI.UC
                 XtraMessageBox.Show("Xuất file pdf " + str + " thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
-
-        private void btnPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void gvCustomer_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
         {
-           /// new rpCustomer(KhachHangBUS.Instances.getDataGV()).ShowPreview();
+            if (!e.Info.IsRowIndicator || e.RowHandle < 0)
+                return;
+            e.Info.DisplayText = (e.RowHandle + 1) + "";
+        }
+
+        private void gvTypeCustomer_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
+        {
+            if (!e.Info.IsRowIndicator || e.RowHandle < 0)
+                return;
+            e.Info.DisplayText = (e.RowHandle + 1) + "";
         }
     }
 }

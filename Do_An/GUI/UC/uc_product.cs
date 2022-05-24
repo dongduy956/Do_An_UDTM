@@ -39,6 +39,8 @@ namespace GUI.UC
             gvProduct.OptionsView.NewItemRowPosition = NewItemRowPosition.Top;
             LoaiLKBUS.Instances.getDataGV(gcTypeProduct);
             gvTypeProduct.OptionsView.NewItemRowPosition = NewItemRowPosition.Top;
+            gvProduct.IndicatorWidth = 30;
+            gvTypeProduct.IndicatorWidth = 30;
         }
         private void btnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -365,6 +367,20 @@ namespace GUI.UC
                 }
                 XtraMessageBox.Show("Xuất file pdf " + str + " thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
+        }
+
+        private void gvProduct_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
+        {
+            if (!e.Info.IsRowIndicator || e.RowHandle < 0)
+                return;
+            e.Info.DisplayText = (e.RowHandle + 1) + "";
+        }
+
+        private void gvTypeProduct_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
+        {
+            if (!e.Info.IsRowIndicator || e.RowHandle < 0)
+                return;
+            e.Info.DisplayText = (e.RowHandle + 1) + "";
         }
     }
 }

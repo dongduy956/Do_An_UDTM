@@ -24,6 +24,9 @@ namespace GUI.UC
         {
             InitializeComponent();
             this.frm = frm;
+            gvStatistical.IndicatorWidth = 30;
+            dateFrom.DateTime = DateTime.Now;
+            dateTo.DateTime = DateTime.Now;
         }
 
         private void btnDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -55,6 +58,13 @@ namespace GUI.UC
             rp.DataSource = tb;
             rp.lbNguoiLap.Value = frm.nv.TENNV;
             rp.ShowPreviewDialog();
+        }
+
+        private void gvStatistical_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
+        {
+            if (!e.Info.IsRowIndicator || e.RowHandle < 0)
+                return;
+            e.Info.DisplayText = (e.RowHandle + 1) + "";
         }
     }
 }

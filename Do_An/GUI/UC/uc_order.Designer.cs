@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_order));
             this.gvOrderDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -69,9 +69,11 @@
             this.gridColumn9,
             this.gridColumn10,
             this.gridColumn11});
+            this.gvOrderDetail.DetailHeight = 368;
             this.gvOrderDetail.GridControl = this.gcOrder;
             this.gvOrderDetail.Name = "gvOrderDetail";
             this.gvOrderDetail.OptionsView.ShowGroupPanel = false;
+            this.gvOrderDetail.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvOrderDetail_CustomDrawRowIndicator);
             // 
             // gridColumn7
             // 
@@ -131,15 +133,15 @@
             // gcOrder
             // 
             this.gcOrder.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode1.LevelTemplate = this.gvOrderDetail;
-            gridLevelNode1.RelationName = "Chi tiết hoá đơn";
+            gridLevelNode2.LevelTemplate = this.gvOrderDetail;
+            gridLevelNode2.RelationName = "Chi tiết hoá đơn";
             this.gcOrder.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.gcOrder.Location = new System.Drawing.Point(0, 40);
             this.gcOrder.MainView = this.gvOrder;
             this.gcOrder.MenuManager = this.barManager1;
             this.gcOrder.Name = "gcOrder";
-            this.gcOrder.Size = new System.Drawing.Size(888, 387);
+            this.gcOrder.Size = new System.Drawing.Size(888, 409);
             this.gcOrder.TabIndex = 4;
             this.gcOrder.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvOrder,
@@ -155,6 +157,7 @@
             this.gridColumn4,
             this.gridColumn5,
             this.gridColumn6});
+            this.gvOrder.DetailHeight = 368;
             this.gvOrder.GridControl = this.gcOrder;
             this.gvOrder.Name = "gvOrder";
             this.gvOrder.OptionsFind.AlwaysVisible = true;
@@ -163,6 +166,7 @@
             this.gvOrder.OptionsFind.FindNullPrompt = "Tìm kiếm tại đây...";
             this.gvOrder.OptionsFind.ShowFindButton = false;
             this.gvOrder.OptionsView.ShowGroupPanel = false;
+            this.gvOrder.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvOrder_CustomDrawRowIndicator);
             this.gvOrder.MasterRowEmpty += new DevExpress.XtraGrid.Views.Grid.MasterRowEmptyEventHandler(this.gvOrder_MasterRowEmpty);
             this.gvOrder.MasterRowGetChildList += new DevExpress.XtraGrid.Views.Grid.MasterRowGetChildListEventHandler(this.gvOrder_MasterRowGetChildList);
             this.gvOrder.MasterRowGetRelationName += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationNameEventHandler(this.gvOrder_MasterRowGetRelationName);
@@ -307,7 +311,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 427);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 449);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(888, 0);
             // 
@@ -317,7 +321,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 40);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 387);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 409);
             // 
             // barDockControlRight
             // 
@@ -325,7 +329,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(888, 40);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 387);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 409);
             // 
             // btnDelete
             // 
@@ -337,7 +341,7 @@
             // 
             // uc_order
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gcOrder);
             this.Controls.Add(this.barDockControlLeft);
@@ -345,7 +349,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "uc_order";
-            this.Size = new System.Drawing.Size(888, 427);
+            this.Size = new System.Drawing.Size(888, 449);
             this.Tag = "Hoá đơn";
             this.Load += new System.EventHandler(this.uc_order_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvOrderDetail)).EndInit();

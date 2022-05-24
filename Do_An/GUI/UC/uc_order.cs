@@ -30,6 +30,8 @@ namespace GUI.UC
         private void uc_order_Load(object sender, EventArgs e)
         {
             HoaDonBUS.Instances.getDataGV(gcOrder, true);
+            gvOrder.IndicatorWidth = 30;
+            gvOrderDetail.IndicatorWidth = 30;
         }
         //đóng form hoá đơn
         private void btnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -116,6 +118,20 @@ namespace GUI.UC
                 rp.ShowPreviewDialog();
 
             }
+        }
+
+        private void gvOrder_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
+        {
+            if (!e.Info.IsRowIndicator || e.RowHandle < 0)
+                return;
+            e.Info.DisplayText = (e.RowHandle + 1) + "";
+        }
+
+        private void gvOrderDetail_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
+        {
+            if (!e.Info.IsRowIndicator || e.RowHandle < 0)
+                return;
+            e.Info.DisplayText = (e.RowHandle + 1) + "";
         }
     }
 }
