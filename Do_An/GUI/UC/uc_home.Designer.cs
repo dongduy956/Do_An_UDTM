@@ -140,10 +140,11 @@
             DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem createSideBySideGanttChartItem1 = new DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem();
             DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupBoxPlot chartControlCommandGalleryItemGroupBoxPlot1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupBoxPlot();
             DevExpress.XtraCharts.UI.CreateBoxPlotChartItem createBoxPlotChartItem1 = new DevExpress.XtraCharts.UI.CreateBoxPlotChartItem();
-            this.vScrollBar1 = new DevExpress.XtraEditors.VScrollBar();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.chartStatistical = new DevExpress.XtraCharts.ChartControl();
             this.chartQuantityImportOrder = new DevExpress.XtraCharts.ChartControl();
+            this.chartTopSelling = new DevExpress.XtraCharts.ChartControl();
+            this.chartNotStock = new DevExpress.XtraCharts.ChartControl();
             this.commandBarGalleryDropDown1 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.commandBarGalleryDropDown2 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.commandBarGalleryDropDown3 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
@@ -152,11 +153,11 @@
             this.commandBarGalleryDropDown6 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.commandBarGalleryDropDown7 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.commandBarGalleryDropDown8 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
-            this.chartNotStock = new DevExpress.XtraCharts.ChartControl();
-            this.chartTopSelling = new DevExpress.XtraCharts.ChartControl();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartStatistical)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartQuantityImportOrder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTopSelling)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartNotStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown3)).BeginInit();
@@ -165,17 +166,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartNotStock)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartTopSelling)).BeginInit();
             this.SuspendLayout();
-            // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.vScrollBar1.Location = new System.Drawing.Point(917, 0);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(26, 674);
-            this.vScrollBar1.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
@@ -193,7 +184,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(917, 674);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(943, 674);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // chartStatistical
@@ -203,18 +194,38 @@
             this.chartStatistical.Location = new System.Drawing.Point(3, 3);
             this.chartStatistical.Name = "chartStatistical";
             this.chartStatistical.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartStatistical.Size = new System.Drawing.Size(452, 331);
+            this.chartStatistical.Size = new System.Drawing.Size(465, 331);
             this.chartStatistical.TabIndex = 0;
             // 
             // chartQuantityImportOrder
             // 
             this.chartQuantityImportOrder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartQuantityImportOrder.Legend.Name = "Default Legend";
-            this.chartQuantityImportOrder.Location = new System.Drawing.Point(461, 3);
+            this.chartQuantityImportOrder.Location = new System.Drawing.Point(474, 3);
             this.chartQuantityImportOrder.Name = "chartQuantityImportOrder";
             this.chartQuantityImportOrder.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartQuantityImportOrder.Size = new System.Drawing.Size(453, 331);
+            this.chartQuantityImportOrder.Size = new System.Drawing.Size(466, 331);
             this.chartQuantityImportOrder.TabIndex = 1;
+            // 
+            // chartTopSelling
+            // 
+            this.chartTopSelling.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartTopSelling.Legend.Name = "Default Legend";
+            this.chartTopSelling.Location = new System.Drawing.Point(3, 340);
+            this.chartTopSelling.Name = "chartTopSelling";
+            this.chartTopSelling.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            this.chartTopSelling.Size = new System.Drawing.Size(465, 331);
+            this.chartTopSelling.TabIndex = 2;
+            // 
+            // chartNotStock
+            // 
+            this.chartNotStock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartNotStock.Legend.Name = "Default Legend";
+            this.chartNotStock.Location = new System.Drawing.Point(474, 340);
+            this.chartNotStock.Name = "chartNotStock";
+            this.chartNotStock.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            this.chartNotStock.Size = new System.Drawing.Size(466, 331);
+            this.chartNotStock.TabIndex = 3;
             // 
             // commandBarGalleryDropDown1
             // 
@@ -824,32 +835,11 @@
             this.commandBarGalleryDropDown8.Manager = null;
             this.commandBarGalleryDropDown8.Name = "commandBarGalleryDropDown8";
             // 
-            // chartNotStock
-            // 
-            this.chartNotStock.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartNotStock.Legend.Name = "Default Legend";
-            this.chartNotStock.Location = new System.Drawing.Point(461, 340);
-            this.chartNotStock.Name = "chartNotStock";
-            this.chartNotStock.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartNotStock.Size = new System.Drawing.Size(453, 331);
-            this.chartNotStock.TabIndex = 3;
-            // 
-            // chartTopSelling
-            // 
-            this.chartTopSelling.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartTopSelling.Legend.Name = "Default Legend";
-            this.chartTopSelling.Location = new System.Drawing.Point(3, 340);
-            this.chartTopSelling.Name = "chartTopSelling";
-            this.chartTopSelling.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartTopSelling.Size = new System.Drawing.Size(452, 331);
-            this.chartTopSelling.TabIndex = 2;
-            // 
             // uc_home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.vScrollBar1);
             this.Name = "uc_home";
             this.Size = new System.Drawing.Size(943, 674);
             this.Tag = "Trang chủ";
@@ -857,6 +847,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartStatistical)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartQuantityImportOrder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTopSelling)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartNotStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown3)).EndInit();
@@ -865,15 +857,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartNotStock)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartTopSelling)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.VScrollBar vScrollBar1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private DevExpress.XtraCharts.ChartControl chartStatistical;
         private DevExpress.XtraCharts.ChartControl chartQuantityImportOrder;

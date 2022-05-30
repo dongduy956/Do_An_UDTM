@@ -433,7 +433,6 @@ E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\de\DevE
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\es\DevExpress.XtraPivotGrid.v19.2.resources.dll
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\ja\DevExpress.XtraPivotGrid.v19.2.resources.dll
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\ru\DevExpress.XtraPivotGrid.v19.2.resources.dll
-E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.FRM.frmBKRS.resources
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.FRM.frmChangePass.resources
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.FRM.frmConnect.resources
@@ -462,3 +461,4 @@ E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.exe
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.pdb
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\GUI.exe.config
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Debug\GUI.pdb
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
