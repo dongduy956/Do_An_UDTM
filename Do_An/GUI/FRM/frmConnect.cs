@@ -71,7 +71,7 @@ namespace GUI.FRM
         private void cbbServer_MouseDown(object sender, MouseEventArgs e)
         {
             splashScreenManager1.ShowWaitForm();
-
+            cbbServer.Properties.Items.Clear();
             DataTable tb = Support.GetServerName();
             foreach (DataRow r in tb.Rows)
                 cbbServer.Properties.Items.Add(r[0].ToString());

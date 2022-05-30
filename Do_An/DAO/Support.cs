@@ -87,7 +87,7 @@ namespace DAO
                 dt = new DataTable();
                 dt.Columns.Add("ServerName");
                 DataRow r = dt.NewRow();
-                r[0] = ".";
+                r[0] = "DESKTOP-RM3PO5N";
                 dt.Rows.Add(r);
             }
             return dt;
