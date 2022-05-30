@@ -86,7 +86,7 @@ namespace BUS
             try
             {
                 var lkh = db.LOAIKHs.FirstOrDefault(x => x.MALOAIKH == maLoaiKH);
-                if (lkh == null)
+                if (lkh == null||KhachHangBUS.Instances.IsTypeCustomer(lkh.MALOAIKH))
                     return -1;
                 db.LOAIKHs.DeleteOnSubmit(lkh);
                 db.SubmitChanges();

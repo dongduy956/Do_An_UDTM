@@ -101,5 +101,9 @@ namespace BUS
         {
             return db.CHITIETHDs.FirstOrDefault(x => x.MAHD == mahd && x.MALINHKIEN == malk);
         }
+        public bool IsProduct(int malinhkien)
+        {
+            return db.CHITIETHDs.FirstOrDefault(x => x.MALINHKIEN == malinhkien) != null;
+        }
     }
 }

@@ -93,5 +93,9 @@ namespace BUS
         {
             return db.NHAPKHOs.FirstOrDefault(x => x.MAPN == code);
         }
+        public bool checkIsStaffImport(int manv)
+        {
+            return db.NHAPKHOs.FirstOrDefault(x => x.MANV == manv) != null;
+        }
     }
 }

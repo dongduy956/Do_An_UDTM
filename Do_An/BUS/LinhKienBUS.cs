@@ -88,7 +88,7 @@ namespace BUS
             try
             {
                 var lk = db.LINHKIENs.FirstOrDefault(x => x.MALINHKIEN == maLK);
-                if (lk == null)
+                if (lk == null||ChiTietHDBUS.Instances.IsProduct(lk.MALINHKIEN)||ChiTietNKBUS.Instances.IsProduct(lk.MALINHKIEN))
                     return -1;
                 db.LINHKIENs.DeleteOnSubmit(lk);
                 db.SubmitChanges();
@@ -113,6 +113,10 @@ namespace BUS
         public LINHKIEN timTheoMa(int malk)
         {
             return db.LINHKIENs.FirstOrDefault(x => x.MALINHKIEN == malk);
+        }
+        public bool IsTypeProduct(int maloai)
+        {
+            return db.LINHKIENs.FirstOrDefault(x => x.MALOAI==maloai) != null;
         }
     }
 }

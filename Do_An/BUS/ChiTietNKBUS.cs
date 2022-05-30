@@ -96,5 +96,9 @@ namespace BUS
             return 1;
 
         }
+        public bool IsProduct(int malinhkien)
+        {
+            return db.CHITIETNKs.FirstOrDefault(x => x.MALINHKIEN == malinhkien) != null;
+        }
     }
 }

@@ -35,10 +35,10 @@
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnReset = new DevExpress.XtraBars.BarButtonItem();
             this.btnDelete = new DevExpress.XtraBars.BarButtonItem();
-            this.btnDong = new DevExpress.XtraBars.BarButtonItem();
             this.btnExcel = new DevExpress.XtraBars.BarButtonItem();
             this.btnWord = new DevExpress.XtraBars.BarButtonItem();
             this.btnPdf = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDong = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -115,10 +115,10 @@
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnReset),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnDelete, true),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnDong, true),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnExcel),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnWord),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnPdf)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnExcel, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnWord, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnPdf, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnDong, true)});
             this.bar1.OptionsBar.MultiLine = true;
             this.bar1.OptionsBar.UseWholeRow = true;
             this.bar1.Text = "Main menu";
@@ -142,16 +142,6 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDelete_ItemClick);
-            // 
-            // btnDong
-            // 
-            this.btnDong.Caption = "Đóng";
-            this.btnDong.Id = 3;
-            this.btnDong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.ImageOptions.Image")));
-            this.btnDong.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDong.ImageOptions.LargeImage")));
-            this.btnDong.Name = "btnDong";
-            this.btnDong.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.btnDong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDong_ItemClick);
             // 
             // btnExcel
             // 
@@ -182,6 +172,16 @@
             this.btnPdf.Name = "btnPdf";
             this.btnPdf.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnPdf.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPdf_ItemClick);
+            // 
+            // btnDong
+            // 
+            this.btnDong.Caption = "Đóng";
+            this.btnDong.Id = 3;
+            this.btnDong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.ImageOptions.Image")));
+            this.btnDong.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDong.ImageOptions.LargeImage")));
+            this.btnDong.Name = "btnDong";
+            this.btnDong.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnDong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDong_ItemClick);
             // 
             // barDockControlTop
             // 

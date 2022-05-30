@@ -96,5 +96,13 @@ namespace BUS
         {
             return db.HOADONs.FirstOrDefault(x => x.MAHD == code);
         }
+        public bool checkIsStaffOrder(int manv)
+        {
+            return db.HOADONs.FirstOrDefault(x => x.MANV == manv) != null;
+        }
+        public bool IsCustomer(int makh)
+        {
+            return db.HOADONs.FirstOrDefault(x => x.MAKH == makh) != null;
+        }
     }
 }

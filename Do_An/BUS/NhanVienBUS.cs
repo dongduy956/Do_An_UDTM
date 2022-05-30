@@ -70,8 +70,8 @@ namespace BUS
             }
 
         }
-        public int update(string tennv, string diachi,string sdt,bool gioiTinh,DateTime ngayVL
-            ,double luong,string hinhAnh,string taiKhoan,int maQuyen,int manv)
+        public int update(string tennv, string diachi, string sdt, bool gioiTinh, DateTime ngayVL
+            , double luong, string hinhAnh, int maQuyen, int manv)
         {
             var nv = db.NHANVIENs.FirstOrDefault(x => x.MANV == manv);
 
@@ -86,7 +86,6 @@ namespace BUS
                 nv.NGAYVL = ngayVL;
                 nv.LUONG = luong;
                 nv.HINHANH = hinhAnh;
-                nv.taikhoan = taiKhoan;
                 nv.QUYEN = db.QUYENs.FirstOrDefault(x => x.maquyen == maQuyen);
                 nv.maquyen = maQuyen;
                 db.SubmitChanges();
@@ -101,11 +100,10 @@ namespace BUS
         }
         public int delete(int manv)
         {
-           
             try
             {
                 var nv = db.NHANVIENs.FirstOrDefault(x => x.MANV == manv);
-                if (nv == null)
+                if (nv == null||HoaDonBUS.Instances.checkIsStaffOrder(nv.MANV) || NhapKhoBUS.Instances.checkIsStaffImport(manv))
                     return -1;
                 db.NHANVIENs.DeleteOnSubmit(nv);
                 db.SubmitChanges();
@@ -123,6 +121,7 @@ namespace BUS
             try
             {
                 var nv = db.NHANVIENs.FirstOrDefault(x => x.MANV == manv);
+              
                 if (nv == null)
                     return -1;
                 nv.MATKHAU = Support.EndCodeMD5("12345");
@@ -136,7 +135,7 @@ namespace BUS
             }
 
         }
-        public NHANVIEN login(string userName,string passWord,ref int errorCode)
+        public NHANVIEN login(string userName, string passWord, ref int errorCode)
         {
             passWord = Support.EndCodeMD5(passWord.Trim());
             NHANVIEN nv = null;
@@ -149,15 +148,15 @@ namespace BUS
             {
                 errorCode = ex.ErrorCode;
             }
-          
+
             return nv;
         }
-        public int changePass(int manv,string oldPass,string newPass)
+        public int changePass(int manv, string oldPass, string newPass)
         {
             try
             {
                 oldPass = Support.EndCodeMD5(oldPass);
-                var nv = db.NHANVIENs.FirstOrDefault(x => x.MANV == manv&&x.MATKHAU.Equals(oldPass));
+                var nv = db.NHANVIENs.FirstOrDefault(x => x.MANV == manv && x.MATKHAU.Equals(oldPass));
                 if (nv == null)
                     return -1;
                 nv.MATKHAU = Support.EndCodeMD5(newPass);

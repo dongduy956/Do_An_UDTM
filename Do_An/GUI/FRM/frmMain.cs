@@ -136,7 +136,7 @@ namespace GUI.FRM
             checkClose = false;
             if (check == 0)
             {
-                if (XtraMessageBox.Show("Bạn muốn đăng xuất trái đất hả?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (XtraMessageBox.Show("Bạn chắc chắn muốn đăng xuất?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     Close();
                     frm._show();

@@ -81,6 +81,8 @@ namespace GUI.UC
                         XtraMessageBox.Show("Xoá hoá đơn thành công.", "Thông báo");
                         HoaDonBUS.Instances.getDataGV(gcOrder, true);
                     }
+                    else
+                        XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
             }
         }

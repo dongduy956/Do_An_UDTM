@@ -81,6 +81,9 @@ namespace GUI.UC
                         XtraMessageBox.Show("Xoá phiếu nhập thành công.", "Thông báo");
                         NhapKhoBUS.Instances.getDataGV(gcImport, true);
                     }
+                    else
+                        XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
             }
         }

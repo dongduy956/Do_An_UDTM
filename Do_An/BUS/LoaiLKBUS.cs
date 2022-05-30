@@ -83,9 +83,8 @@ namespace BUS
         {
             try
             {
-                var llk = db.LOAILINHKIENs.FirstOrDefault(x => x.MALOAI == maLoai);
-
-                if (llk == null)
+                var llk = db.LOAILINHKIENs.FirstOrDefault(x => x.MALOAI == maLoai);                
+                if (llk == null||LinhKienBUS.Instances.IsTypeProduct(llk.MALOAI))
                     return -1;
                 db.LOAILINHKIENs.DeleteOnSubmit(llk);
                 db.SubmitChanges();

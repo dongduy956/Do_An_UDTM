@@ -61,9 +61,15 @@ namespace GUI.UC
                 {
                     if (XtraMessageBox.Show("Bạn có muốn xoá nhân viên " + dr["TENNV"].ToString() + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        NhanVienBUS.Instances.delete(int.Parse(dr["MANV"].ToString()));
-                        XtraMessageBox.Show("Xoá thành công", "Thông báo");
-                        NhanVienBUS.Instances.getDataGV(gcStaff);
+                        int i = NhanVienBUS.Instances.delete(int.Parse(dr["MANV"].ToString()));
+                        if (i == 1)
+                        {
+                            XtraMessageBox.Show("Xoá thành công", "Thông báo");
+                            NhanVienBUS.Instances.getDataGV(gcStaff);
+                        }
+                        else
+                            XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     }
                 }
             }
@@ -92,12 +98,29 @@ namespace GUI.UC
                 DataRow dr = gvStaff.GetFocusedDataRow();
                 if (dr != null)
                 {
-                    
+
                     if (XtraMessageBox.Show("Bạn có muốn reset mật khẩu nhân viên " + dr["TENNV"].ToString() + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        NhanVienBUS.Instances.resetPass(int.Parse(dr["MANV"].ToString()));
-                        XtraMessageBox.Show("Reset mật khẩu thành công. Mật khẩu mới là 12345", "Thông báo");
-                        NhanVienBUS.Instances.getDataGV(gcStaff);
+                        int manv = int.Parse(dr["MANV"].ToString());
+                        int i = NhanVienBUS.Instances.resetPass(manv);
+                        if (i == 1)
+                        {
+                            if (manv == frm.nv.MANV)
+                            {
+                                XtraMessageBox.Show("Reset mật khẩu thành công. Mật khẩu mới là 12345", "Thông báo");
+                                XtraMessageBox.Show("Vui lòng đăng nhập lại.", "Thông báo");
+                                frm.logout(1);
+                            }
+                            else
+                            {
+                                XtraMessageBox.Show("Reset mật khẩu thành công. Mật khẩu mới là 12345", "Thông báo");
+                                NhanVienBUS.Instances.getDataGV(gcStaff);
+                            }
+                        }
+                        else
+                            XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
                     }
                 }
             }
@@ -120,7 +143,7 @@ namespace GUI.UC
 
                     Image img = Image.FromFile("../../Images/loadImg.png");
                     images.Images.Clear();
-                //    images.ImageSize = new Size(100, 100);
+                    //    images.ImageSize = new Size(100, 100);
 
                     images.Images.Add(img);
                 }
@@ -142,14 +165,15 @@ namespace GUI.UC
                 try
                 {
                     DataRow dr = gvStaff.GetFocusedDataRow();
-                    NhanVienBUS.Instances.update(dr["TENNV"].ToString().Trim(), dr["DIACHI"].ToString().Trim()
+                    int i = NhanVienBUS.Instances.update(dr["TENNV"].ToString().Trim(), dr["DIACHI"].ToString().Trim()
                      , dr["SDT"].ToString().Trim(), bool.Parse(dr["GIOITINH"].ToString().Trim()), DateTime.Parse(dr["NGAYVL"].ToString().Trim())
-                     , double.Parse(dr["LUONG"].ToString().Trim()), open.SafeFileName, dr["taikhoan"].ToString().Trim()
+                     , double.Parse(dr["LUONG"].ToString().Trim()), open.SafeFileName
                      , int.Parse(dr["maquyen"].ToString().Trim()), int.Parse(dr["MANV"].ToString().Trim()));
-                    NhanVienBUS.Instances.getDataGV(gcStaff);
+                    if (i == 1)
+                        NhanVienBUS.Instances.getDataGV(gcStaff);
+                    else
+                        XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     open = null;
-
-
                 }
                 catch (Exception)
                 {
@@ -169,9 +193,21 @@ namespace GUI.UC
                 {
                     if (XtraMessageBox.Show("Bạn có muốn xoá nhân viên " + dr["TENNV"].ToString() + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        NhanVienBUS.Instances.delete(int.Parse(dr["MANV"].ToString()));
-                        XtraMessageBox.Show("Xoá thành công", "Thông báo");
-                        NhanVienBUS.Instances.getDataGV(gcStaff);
+                        int manv = int.Parse(dr["MANV"].ToString());
+                        if(frm.nv.MANV==manv)
+                        {
+                            XtraMessageBox.Show("Tài khoản đang đăng nhập không được phép xoá.", "Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                            return;
+                        }
+                        int i = NhanVienBUS.Instances.delete(manv);
+                        if (i == 1)
+                        {
+                            XtraMessageBox.Show("Xoá thành công", "Thông báo");
+                            NhanVienBUS.Instances.getDataGV(gcStaff);
+                        }
+                        else
+                            XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     }
                 }
             }
@@ -211,11 +247,7 @@ namespace GUI.UC
                 bVali = false;
                 sErr += "Vui lòng điền lương.\n";
             }
-            if (gvStaff.GetRowCellValue(e.RowHandle, "taikhoan").ToString() == "")
-            {
-                bVali = false;
-                sErr += "Vui lòng điền tài khoản.\n";
-            }
+
             if (gvStaff.GetRowCellValue(e.RowHandle, "maquyen").ToString() == "")
             {
                 bVali = false;
@@ -223,23 +255,38 @@ namespace GUI.UC
             }
             if (bVali)
             {
+                if (gvStaff.GetRowCellValue(e.RowHandle, "taikhoan").ToString() == "")
+                {
+                    bVali = false;
+                    sErr += "Vui lòng điền tài khoản.\n";
+                }
+                if (!bVali)
+                {
+                    e.Valid = false;
 
+                    XtraMessageBox.Show(sErr, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 //thêm mới
                 if (e.RowHandle < 0)
                 {
                     try
                     {
-                        NhanVienBUS.Instances.insert(gvStaff.GetRowCellValue(e.RowHandle, "TENNV").ToString().Trim()
-                            , gvStaff.GetRowCellValue(e.RowHandle, "DIACHI").ToString().Trim()
-                         , gvStaff.GetRowCellValue(e.RowHandle, "SDT").ToString().Trim()
-                         , gvStaff.GetRowCellValue(e.RowHandle, "GIOITINH") == null || gvStaff.GetRowCellValue(e.RowHandle, "GIOITINH").ToString() == "" ? false: bool.Parse(gvStaff.GetRowCellValue(e.RowHandle, "GIOITINH").ToString().Trim())
-                         , DateTime.Parse(gvStaff.GetRowCellValue(e.RowHandle, "NGAYVL").ToString().Trim())
-                         , double.Parse(gvStaff.GetRowCellValue(e.RowHandle, "LUONG").ToString().Trim())
-                         , open == null || open.SafeFileName == null ? gvStaff.GetRowCellValue(e.RowHandle, "HINHANH").ToString() : open.SafeFileName
-                         , gvStaff.GetRowCellValue(e.RowHandle, "taikhoan").ToString().Trim()
-                         , int.Parse(gvStaff.GetRowCellValue(e.RowHandle, "maquyen").ToString().Trim()));
+                        int i = NhanVienBUS.Instances.insert(gvStaff.GetRowCellValue(e.RowHandle, "TENNV").ToString().Trim()
+                              , gvStaff.GetRowCellValue(e.RowHandle, "DIACHI").ToString().Trim()
+                           , gvStaff.GetRowCellValue(e.RowHandle, "SDT").ToString().Trim()
+                           , gvStaff.GetRowCellValue(e.RowHandle, "GIOITINH") == null || gvStaff.GetRowCellValue(e.RowHandle, "GIOITINH").ToString() == "" ? false : bool.Parse(gvStaff.GetRowCellValue(e.RowHandle, "GIOITINH").ToString().Trim())
+                           , DateTime.Parse(gvStaff.GetRowCellValue(e.RowHandle, "NGAYVL").ToString().Trim())
+                           , double.Parse(gvStaff.GetRowCellValue(e.RowHandle, "LUONG").ToString().Trim())
+                           , open == null || open.SafeFileName == null ? gvStaff.GetRowCellValue(e.RowHandle, "HINHANH").ToString() : open.SafeFileName
+                           , gvStaff.GetRowCellValue(e.RowHandle, "taikhoan").ToString().Trim()
+                           , int.Parse(gvStaff.GetRowCellValue(e.RowHandle, "maquyen").ToString().Trim()));
                         open = null;
-                        XtraMessageBox.Show("Thêm thành công", "Thông báo", DefaultBoolean.True);
+                        if (i == 1)
+                            XtraMessageBox.Show("Thêm thành công. Mật khẩu mặc định là 12345", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        else
+                            XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     }
                     catch (Exception ex)
                     {
@@ -250,26 +297,28 @@ namespace GUI.UC
                 //sửa 
                 else
                 {
-
+                    int i = -1;
                     try
                     {
-                        NhanVienBUS.Instances.update(gvStaff.GetRowCellValue(e.RowHandle, "TENNV").ToString().Trim()
-                            , gvStaff.GetRowCellValue(e.RowHandle, "DIACHI").ToString().Trim()
-                         , gvStaff.GetRowCellValue(e.RowHandle, "SDT").ToString().Trim()
-                         , bool.Parse(gvStaff.GetRowCellValue(e.RowHandle, "GIOITINH").ToString().Trim())
-                         , DateTime.Parse(gvStaff.GetRowCellValue(e.RowHandle, "NGAYVL").ToString().Trim())
-                         , double.Parse(gvStaff.GetRowCellValue(e.RowHandle, "LUONG").ToString().Trim())
-                         , open == null || open.SafeFileName == null ? gvStaff.GetRowCellValue(e.RowHandle, "HINHANH").ToString() : open.SafeFileName
-                         , gvStaff.GetRowCellValue(e.RowHandle, "taikhoan").ToString().Trim()
-                         , int.Parse(gvStaff.GetRowCellValue(e.RowHandle, "maquyen").ToString().Trim())
-                         , int.Parse(gvStaff.GetRowCellValue(e.RowHandle, "MANV").ToString().Trim()));
+                        i = NhanVienBUS.Instances.update(gvStaff.GetRowCellValue(e.RowHandle, "TENNV").ToString().Trim()
+                                 , gvStaff.GetRowCellValue(e.RowHandle, "DIACHI").ToString().Trim()
+                              , gvStaff.GetRowCellValue(e.RowHandle, "SDT").ToString().Trim()
+                              , bool.Parse(gvStaff.GetRowCellValue(e.RowHandle, "GIOITINH").ToString().Trim())
+                              , DateTime.Parse(gvStaff.GetRowCellValue(e.RowHandle, "NGAYVL").ToString().Trim())
+                              , double.Parse(gvStaff.GetRowCellValue(e.RowHandle, "LUONG").ToString().Trim())
+                              , open == null || open.SafeFileName == null ? gvStaff.GetRowCellValue(e.RowHandle, "HINHANH").ToString() : open.SafeFileName
+                              , int.Parse(gvStaff.GetRowCellValue(e.RowHandle, "maquyen").ToString().Trim())
+                              , int.Parse(gvStaff.GetRowCellValue(e.RowHandle, "MANV").ToString().Trim()));
                         open = null;
                     }
                     catch (Exception)
                     {
 
                     }
-                    NhanVienBUS.Instances.getDataGV(gcStaff);
+                    if (i == 1)
+                        NhanVienBUS.Instances.getDataGV(gcStaff);
+                    else
+                        XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -297,14 +346,20 @@ namespace GUI.UC
                         return;
                     if (XtraMessageBox.Show("Bạn có muốn xoá quyền " + dr["tenquyen"].ToString() + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        QuyenBUS.Instances.delete(int.Parse(dr["maquyen"].ToString()));
-                        XtraMessageBox.Show("Xoá thành công", "Thông báo");
-                        QuyenBUS.Instances.getDataGV(gcRole);
+                        int i = QuyenBUS.Instances.delete(int.Parse(dr["maquyen"].ToString()));
+                        if (i == 1)
+                        {
+                            XtraMessageBox.Show("Xoá thành công.", "Thông báo");
+                            QuyenBUS.Instances.getDataGV(gcRole);
+                        }
+                        else
+                            XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     }
                 }
             }
         }
-        //thêm sửa dữ liệu nhân viên
+        //thêm sửa dữ liệu quyền
         private void gvRole_ValidateRow(object sender, ValidateRowEventArgs e)
         {
             string sErr = "";
@@ -323,15 +378,21 @@ namespace GUI.UC
                 {
                     try
                     {
-                        QuyenBUS.Instances.insert(gvRole.GetRowCellValue(e.RowHandle, "tenquyen").ToString().Trim());
+                        int i = QuyenBUS.Instances.insert(gvRole.GetRowCellValue(e.RowHandle, "tenquyen").ToString().Trim());
+                        if (i == 1)
+                        {
+                            XtraMessageBox.Show("Thêm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            QuyenBUS.Instances.getDataGV(gcRole);
+                        }
+                        else
+                            XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                        XtraMessageBox.Show("Thêm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        QuyenBUS.Instances.getDataGV(gcRole);
 
                     }
                     catch (Exception ex)
                     {
-                        XtraMessageBox.Show("Thêm thất bại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
 
                     }
                 }
@@ -340,8 +401,11 @@ namespace GUI.UC
                 {
                     try
                     {
-                        QuyenBUS.Instances.update(gvRole.GetRowCellValue(e.RowHandle, "tenquyen").ToString().Trim(), int.Parse(gvRole.GetRowCellValue(e.RowHandle, "maquyen").ToString().Trim()));
-                        QuyenBUS.Instances.getDataGV(gcRole);
+                        int i = QuyenBUS.Instances.update(gvRole.GetRowCellValue(e.RowHandle, "tenquyen").ToString().Trim(), int.Parse(gvRole.GetRowCellValue(e.RowHandle, "maquyen").ToString().Trim()));
+                        if (i == 1)
+                            QuyenBUS.Instances.getDataGV(gcRole);
+                        else
+                            XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     }
                     catch (Exception)

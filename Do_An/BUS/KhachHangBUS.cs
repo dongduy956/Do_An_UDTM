@@ -92,7 +92,7 @@ namespace BUS
             try
             {
                 var kh = db.KHACHHANGs.FirstOrDefault(x => x.Makh == maKH);
-                if (kh == null)
+                if (kh == null||HoaDonBUS.Instances.IsCustomer(kh.Makh))
                     return -1;
                 db.KHACHHANGs.DeleteOnSubmit(kh);
                 db.SubmitChanges();
@@ -116,6 +116,10 @@ namespace BUS
         {
             KHACHHANG kh = db.KHACHHANGs.FirstOrDefault(x => x.Makh.Equals(maKH));
             return kh;
+        }
+        public bool IsTypeCustomer(int malkh)
+        {
+            return db.KHACHHANGs.FirstOrDefault(x => x.maloaikh == malkh) != null;
         }
     }
 }

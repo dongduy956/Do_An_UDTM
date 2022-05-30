@@ -26,7 +26,7 @@ namespace GUI.UC
         {
             InitializeComponent();
             this.frm = frm;
-     
+
 
         }
         private void uc_customer_Load(object sender, EventArgs e)
@@ -55,9 +55,15 @@ namespace GUI.UC
                 {
                     if (XtraMessageBox.Show("Bạn có muốn xoá khách hàng " + dr["TENKH"].ToString() + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        KhachHangBUS.Instances.delete(int.Parse(dr["MAKH"].ToString()));
-                        XtraMessageBox.Show("Xoá thành công", "Thông báo");
-                        KhachHangBUS.Instances.getDataGV(gcCustomer);
+                        int i = KhachHangBUS.Instances.delete(int.Parse(dr["MAKH"].ToString()));
+                        if (i == 1)
+                        {
+                            XtraMessageBox.Show("Xoá thành công.", "Thông báo");
+                            KhachHangBUS.Instances.getDataGV(gcCustomer);
+                        }
+                        else
+                            XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     }
                 }
             }
@@ -68,14 +74,20 @@ namespace GUI.UC
                 {
                     if (XtraMessageBox.Show("Bạn có muốn xoá loại khách hàng " + dr["TENLOAIKH"].ToString() + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        LoaiKHBUS.Instances.delete(int.Parse(dr["MALOAIKH"].ToString()));
-                        XtraMessageBox.Show("Xoá thành công", "Thông báo");
-                        LoaiKHBUS.Instances.getDataGV(gcTypeCustomer);
-                        LoaiKHBUS.Instances.getDataLkLoaiKH(lkLoaiKH);
+                        int i = LoaiKHBUS.Instances.delete(int.Parse(dr["MALOAIKH"].ToString()));
+                        if (i == 1)
+                        {
+                            XtraMessageBox.Show("Xoá thành công", "Thông báo");
+                            LoaiKHBUS.Instances.getDataGV(gcTypeCustomer);
+                            LoaiKHBUS.Instances.getDataLkLoaiKH(lkLoaiKH);
+                        }
+                        else
+                            XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     }
                 }
             }
-        }        
+        }
         //xoá bằng nút delete 1 dòng trong bảng khách hàng
         private void gcCustomer_ProcessGridKey(object sender, KeyEventArgs e)
         {
@@ -86,9 +98,15 @@ namespace GUI.UC
                 {
                     if (XtraMessageBox.Show("Bạn có muốn xoá khách hàng " + dr["TENKH"].ToString() + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        KhachHangBUS.Instances.delete(int.Parse(dr["MAKH"].ToString()));
-                        XtraMessageBox.Show("Xoá thành công", "Thông báo");
-                        KhachHangBUS.Instances.getDataGV(gcCustomer);
+                        int i = KhachHangBUS.Instances.delete(int.Parse(dr["MAKH"].ToString()));
+                        if (i == 1)
+                        {
+                            XtraMessageBox.Show("Xoá thành công", "Thông báo");
+                            KhachHangBUS.Instances.getDataGV(gcCustomer);
+                        }
+                        else
+                            XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     }
                 }
             }
@@ -132,13 +150,19 @@ namespace GUI.UC
                 {
                     try
                     {
-                        KhachHangBUS.Instances.insert(gvCustomer.GetRowCellValue(e.RowHandle, "TENKH").ToString().Trim()
-                            , gvCustomer.GetRowCellValue(e.RowHandle, "GIOITINH")==null|| gvCustomer.GetRowCellValue(e.RowHandle, "GIOITINH").ToString()==""? false: bool.Parse(gvCustomer.GetRowCellValue(e.RowHandle, "GIOITINH").ToString().Trim())
-                            , gvCustomer.GetRowCellValue(e.RowHandle, "DIACHI").ToString()
-                            , gvCustomer.GetRowCellValue(e.RowHandle, "SDT").ToString()
-                            , int.Parse(gvCustomer.GetRowCellValue(e.RowHandle, "maloaikh").ToString().Trim()));
-                        XtraMessageBox.Show("Thêm thành công", "Thông báo", DevExpress.Utils.DefaultBoolean.True);
-                        KhachHangBUS.Instances.getDataGV(gcCustomer);
+                        int i = KhachHangBUS.Instances.insert(gvCustomer.GetRowCellValue(e.RowHandle, "TENKH").ToString().Trim()
+                             , gvCustomer.GetRowCellValue(e.RowHandle, "GIOITINH") == null || gvCustomer.GetRowCellValue(e.RowHandle, "GIOITINH").ToString() == "" ? false : bool.Parse(gvCustomer.GetRowCellValue(e.RowHandle, "GIOITINH").ToString().Trim())
+                             , gvCustomer.GetRowCellValue(e.RowHandle, "DIACHI").ToString()
+                             , gvCustomer.GetRowCellValue(e.RowHandle, "SDT").ToString()
+                             , int.Parse(gvCustomer.GetRowCellValue(e.RowHandle, "maloaikh").ToString().Trim()));
+                        if (i == 1)
+                        {
+                            XtraMessageBox.Show("Thêm thành công.", "Thông báo", DevExpress.Utils.DefaultBoolean.True);
+                            KhachHangBUS.Instances.getDataGV(gcCustomer);
+                        }
+                        else
+                            XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
 
                     }
                     catch (Exception ex)
@@ -151,13 +175,17 @@ namespace GUI.UC
                 {
                     try
                     {
-                        KhachHangBUS.Instances.update(gvCustomer.GetRowCellValue(e.RowHandle, "TENKH").ToString().Trim()
-                            , bool.Parse(gvCustomer.GetRowCellValue(e.RowHandle, "GIOITINH").ToString().Trim())
-                            , gvCustomer.GetRowCellValue(e.RowHandle, "DIACHI").ToString()
-                            , gvCustomer.GetRowCellValue(e.RowHandle, "SDT").ToString()
-                            , int.Parse(gvCustomer.GetRowCellValue(e.RowHandle, "maloaikh").ToString().Trim())
-                            , int.Parse(gvCustomer.GetRowCellValue(e.RowHandle, "Makh").ToString().Trim()));
-                        KhachHangBUS.Instances.getDataGV(gcCustomer);
+                        int i = KhachHangBUS.Instances.update(gvCustomer.GetRowCellValue(e.RowHandle, "TENKH").ToString().Trim()
+                             , bool.Parse(gvCustomer.GetRowCellValue(e.RowHandle, "GIOITINH").ToString().Trim())
+                             , gvCustomer.GetRowCellValue(e.RowHandle, "DIACHI").ToString()
+                             , gvCustomer.GetRowCellValue(e.RowHandle, "SDT").ToString()
+                             , int.Parse(gvCustomer.GetRowCellValue(e.RowHandle, "maloaikh").ToString().Trim())
+                             , int.Parse(gvCustomer.GetRowCellValue(e.RowHandle, "Makh").ToString().Trim()));
+                        if (i == 1)
+                            KhachHangBUS.Instances.getDataGV(gcCustomer);
+                        else
+                            XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
 
                     }
                     catch (Exception)
@@ -183,10 +211,16 @@ namespace GUI.UC
                 {
                     if (XtraMessageBox.Show("Bạn có muốn xoá loại khách hàng " + dr["TENLOAIKH"].ToString() + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        LoaiKHBUS.Instances.delete(int.Parse(dr["MALOAIKH"].ToString()));
-                        XtraMessageBox.Show("Xoá thành công", "Thông báo");
-                        LoaiKHBUS.Instances.getDataGV(gcTypeCustomer);
-                        LoaiKHBUS.Instances.getDataLkLoaiKH(lkLoaiKH);
+                        int i = LoaiKHBUS.Instances.delete(int.Parse(dr["MALOAIKH"].ToString()));
+                        if (i == 1)
+                        {
+                            XtraMessageBox.Show("Xoá thành công", "Thông báo");
+                            LoaiKHBUS.Instances.getDataGV(gcTypeCustomer);
+                            LoaiKHBUS.Instances.getDataLkLoaiKH(lkLoaiKH);
+                        }
+                        else
+                            XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     }
                 }
             }
@@ -220,11 +254,17 @@ namespace GUI.UC
                 {
                     try
                     {
-                        LoaiKHBUS.Instances.insert(gvTypeCustomer.GetRowCellValue(e.RowHandle, "TENLOAIKH").ToString().Trim()
+                     int i=   LoaiKHBUS.Instances.insert(gvTypeCustomer.GetRowCellValue(e.RowHandle, "TENLOAIKH").ToString().Trim()
                            , double.Parse(gvTypeCustomer.GetRowCellValue(e.RowHandle, "GIAMGIA").ToString().Trim()));
-                        XtraMessageBox.Show("Thêm thành công", "Thông báo", DefaultBoolean.True);
-                        LoaiKHBUS.Instances.getDataGV(gcTypeCustomer);
-                        LoaiKHBUS.Instances.getDataLkLoaiKH(lkLoaiKH);
+                        if (i == 1)
+                        {
+                            XtraMessageBox.Show("Thêm thành công", "Thông báo", DefaultBoolean.True);
+                            LoaiKHBUS.Instances.getDataGV(gcTypeCustomer);
+                            LoaiKHBUS.Instances.getDataLkLoaiKH(lkLoaiKH);
+                        }
+                        else
+                            XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     }
                     catch (Exception ex)
                     {
@@ -236,11 +276,17 @@ namespace GUI.UC
                 {
                     try
                     {
-                        LoaiKHBUS.Instances.update(gvTypeCustomer.GetRowCellValue(e.RowHandle,"TENLOAIKH").ToString().Trim()
+                       int i= LoaiKHBUS.Instances.update(gvTypeCustomer.GetRowCellValue(e.RowHandle, "TENLOAIKH").ToString().Trim()
                             , double.Parse(gvTypeCustomer.GetRowCellValue(e.RowHandle, "GIAMGIA").ToString().Trim())
                             , int.Parse(gvTypeCustomer.GetRowCellValue(e.RowHandle, "MALOAIKH").ToString().Trim()));
-                        LoaiKHBUS.Instances.getDataGV(gcTypeCustomer);
-                        LoaiKHBUS.Instances.getDataLkLoaiKH(lkLoaiKH);
+                        if (i == 1)
+                        {
+                            LoaiKHBUS.Instances.getDataGV(gcTypeCustomer);
+                            LoaiKHBUS.Instances.getDataLkLoaiKH(lkLoaiKH);
+                        }
+                        else
+                            XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     }
                     catch (Exception)
                     {

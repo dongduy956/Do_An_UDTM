@@ -56,9 +56,15 @@ namespace GUI.UC
                 {
                     if (XtraMessageBox.Show("Bạn có muốn xoá linh kiện " + dr["TENLINHKIEN"].ToString() + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        LinhKienBUS.Instances.delete(int.Parse(dr["MALINHKIEN"].ToString()));
-                        XtraMessageBox.Show("Xoá thành công", "Thông báo");
-                        LinhKienBUS.Instances.getDataGV(gcProduct);
+                        int i = LinhKienBUS.Instances.delete(int.Parse(dr["MALINHKIEN"].ToString()));
+                        if (i == 1)
+                        {
+                            XtraMessageBox.Show("Xoá thành công.", "Thông báo");
+                            LinhKienBUS.Instances.getDataGV(gcProduct);
+                        }
+                        else
+                            XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     }
                 }
             }
@@ -69,9 +75,15 @@ namespace GUI.UC
                 {
                     if (XtraMessageBox.Show("Bạn có muốn xoá loại linh kiện " + dr["TENLOAI"].ToString() + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        LoaiLKBUS.Instances.delete(int.Parse(dr["MALOAI"].ToString()));
-                        XtraMessageBox.Show("Xoá thành công", "Thông báo");
-                        LoaiLKBUS.Instances.getDataGV(gcTypeProduct);
+                        int i = LoaiLKBUS.Instances.delete(int.Parse(dr["MALOAI"].ToString()));
+                        if (i == 1)
+                        {
+                            XtraMessageBox.Show("Xoá thành công", "Thông báo");
+                            LoaiLKBUS.Instances.getDataGV(gcTypeProduct);
+                        }
+                        else
+                            XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     }
                 }
             }
@@ -96,16 +108,18 @@ namespace GUI.UC
                 try
                 {
                     int i = gvProduct.GetSelectedRows()[0];
-                    LinhKienBUS.Instances.update(
-                          gvProduct.GetRowCellValue(i, "TENLINHKIEN").ToString().Trim()
-                           , int.Parse(gvProduct.GetRowCellValue(i, "MALOAI").ToString().Trim())
-                           , gvProduct.GetRowCellValue(i, "HANGSX").ToString().Trim()
-                           , double.Parse(gvProduct.GetRowCellValue(i, "DONGIA").ToString().Trim())
-                           , open.SafeFileName
-                           , int.Parse(gvProduct.GetRowCellValue(i, "SOLUONGCON").ToString().Trim())
-                       , int.Parse(gvProduct.GetRowCellValue(i, "MALINHKIEN").ToString().Trim()));
-
-                    LinhKienBUS.Instances.getDataGV(gcProduct);
+                    int j = LinhKienBUS.Instances.update(
+                           gvProduct.GetRowCellValue(i, "TENLINHKIEN").ToString().Trim()
+                            , int.Parse(gvProduct.GetRowCellValue(i, "MALOAI").ToString().Trim())
+                            , gvProduct.GetRowCellValue(i, "HANGSX").ToString().Trim()
+                            , double.Parse(gvProduct.GetRowCellValue(i, "DONGIA").ToString().Trim())
+                            , open.SafeFileName
+                            , int.Parse(gvProduct.GetRowCellValue(i, "SOLUONGCON").ToString().Trim())
+                        , int.Parse(gvProduct.GetRowCellValue(i, "MALINHKIEN").ToString().Trim()));
+                    if (j == 1)
+                        LinhKienBUS.Instances.getDataGV(gcProduct);
+                    else
+                        XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     open = null;
                 }
                 catch (Exception)
@@ -145,9 +159,15 @@ namespace GUI.UC
                 {
                     if (XtraMessageBox.Show("Bạn có muốn xoá linh kiện " + dr["TENLINHKIEN"].ToString() + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        LinhKienBUS.Instances.delete(int.Parse(dr["MALINHKIEN"].ToString()));
-                        XtraMessageBox.Show("Xoá thành công", "Thông báo");
-                        LinhKienBUS.Instances.getDataGV(gcProduct);
+                        int i = LinhKienBUS.Instances.delete(int.Parse(dr["MALINHKIEN"].ToString()));
+                        if (i == 1)
+                        {
+                            XtraMessageBox.Show("Xoá thành công", "Thông báo");
+                            LinhKienBUS.Instances.getDataGV(gcProduct);
+                        }
+                        else
+                            XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     }
                 }
             }
@@ -177,11 +197,6 @@ namespace GUI.UC
                 bVali = false;
                 sErr = "Vui lòng điền đơn giá.\n";
             }
-            if (gvProduct.GetRowCellValue(e.RowHandle, "SOLUONGCON").ToString().Trim() == "")
-            {
-                bVali = false;
-                sErr = "Vui lòng điền số lượng còn.";
-            }
             if (bVali)
             {
 
@@ -191,15 +206,20 @@ namespace GUI.UC
                     try
                     {
 
-                        LinhKienBUS.Instances.insert(
-                           gvProduct.GetRowCellValue(e.RowHandle, "TENLINHKIEN").ToString().Trim()
-                            , int.Parse(gvProduct.GetRowCellValue(e.RowHandle, "MALOAI").ToString().Trim())
-                            , gvProduct.GetRowCellValue(e.RowHandle, "HANGSX").ToString().Trim()
-                            , double.Parse(gvProduct.GetRowCellValue(e.RowHandle, "DONGIA").ToString().Trim())
-                            , open == null || open.SafeFileName == null ? gvProduct.GetRowCellValue(e.RowHandle, "HINHANH").ToString() : open.SafeFileName
-                            , int.Parse(gvProduct.GetRowCellValue(e.RowHandle, "SOLUONGCON").ToString().Trim()));
-                        XtraMessageBox.Show("Thêm thành công", "Thông báo", DefaultBoolean.True);
-                        LinhKienBUS.Instances.getDataGV(gcProduct);
+                        int i = LinhKienBUS.Instances.insert(
+                              gvProduct.GetRowCellValue(e.RowHandle, "TENLINHKIEN").ToString().Trim()
+                               , int.Parse(gvProduct.GetRowCellValue(e.RowHandle, "MALOAI").ToString().Trim())
+                               , gvProduct.GetRowCellValue(e.RowHandle, "HANGSX").ToString().Trim()
+                               , double.Parse(gvProduct.GetRowCellValue(e.RowHandle, "DONGIA").ToString().Trim())
+                               , open == null || open.SafeFileName == null ? gvProduct.GetRowCellValue(e.RowHandle, "HINHANH").ToString() : open.SafeFileName
+                               , 0);
+                        if (i == 1)
+                        {
+                            XtraMessageBox.Show("Thêm thành công", "Thông báo", DefaultBoolean.True);
+                            LinhKienBUS.Instances.getDataGV(gcProduct);
+                        }
+                        else
+                            XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     }
                     catch (Exception ex)
@@ -214,16 +234,19 @@ namespace GUI.UC
 
                     try
                     {
-                        LinhKienBUS.Instances.update(
-                            gvProduct.GetRowCellValue(e.RowHandle, "TENLINHKIEN").ToString().Trim()
-                             , int.Parse(gvProduct.GetRowCellValue(e.RowHandle, "MALOAI").ToString().Trim())
-                             , gvProduct.GetRowCellValue(e.RowHandle, "HANGSX").ToString().Trim()
-                             , double.Parse(gvProduct.GetRowCellValue(e.RowHandle, "DONGIA").ToString().Trim())
-                             , open == null || open.SafeFileName == null ? gvProduct.GetRowCellValue(e.RowHandle, "HINHANH").ToString() : open.SafeFileName
-                             , int.Parse(gvProduct.GetRowCellValue(e.RowHandle, "SOLUONGCON").ToString().Trim())
-                         , int.Parse(gvProduct.GetRowCellValue(e.RowHandle, "MALINHKIEN").ToString().Trim()));
+                        int i = LinhKienBUS.Instances.update(
+                               gvProduct.GetRowCellValue(e.RowHandle, "TENLINHKIEN").ToString().Trim()
+                                , int.Parse(gvProduct.GetRowCellValue(e.RowHandle, "MALOAI").ToString().Trim())
+                                , gvProduct.GetRowCellValue(e.RowHandle, "HANGSX").ToString().Trim()
+                                , double.Parse(gvProduct.GetRowCellValue(e.RowHandle, "DONGIA").ToString().Trim())
+                                , open == null || open.SafeFileName == null ? gvProduct.GetRowCellValue(e.RowHandle, "HINHANH").ToString() : open.SafeFileName
+                                , 0
+                            , int.Parse(gvProduct.GetRowCellValue(e.RowHandle, "MALINHKIEN").ToString().Trim()));
+                        if (i == 1)
+                            LinhKienBUS.Instances.getDataGV(gcProduct);
+                        else
+                            XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                        LinhKienBUS.Instances.getDataGV(gcProduct);
                     }
                     catch (Exception)
                     {
@@ -248,9 +271,15 @@ namespace GUI.UC
                 {
                     if (XtraMessageBox.Show("Bạn có muốn xoá loại linh kiện " + dr["TENLOAI"].ToString() + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        LoaiLKBUS.Instances.delete(int.Parse(dr["MALOAI"].ToString()));
-                        XtraMessageBox.Show("Xoá thành công", "Thông báo");
-                        LoaiLKBUS.Instances.getDataGV(gcTypeProduct);
+                        int i = LoaiLKBUS.Instances.delete(int.Parse(dr["MALOAI"].ToString()));
+                        if (i == 1)
+                        {
+                            XtraMessageBox.Show("Xoá thành công", "Thông báo");
+                            LoaiLKBUS.Instances.getDataGV(gcTypeProduct);
+                        }
+                        else
+                            XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     }
                 }
             }
@@ -280,9 +309,15 @@ namespace GUI.UC
                 {
                     try
                     {
-                        LoaiLKBUS.Instances.insert(gvTypeProduct.GetRowCellValue(e.RowHandle, "TENLOAI").ToString().Trim());
-                        LoaiLKBUS.Instances.getDataGV(gcTypeProduct);
-                        XtraMessageBox.Show("Thêm thành công", "Thông báo", DefaultBoolean.True);
+                        int i = LoaiLKBUS.Instances.insert(gvTypeProduct.GetRowCellValue(e.RowHandle, "TENLOAI").ToString().Trim());
+                        if (i == 1)
+                        {
+                            XtraMessageBox.Show("Thêm thành công", "Thông báo", DefaultBoolean.True);
+                            LoaiLKBUS.Instances.getDataGV(gcTypeProduct);
+                        }
+                        else
+                            XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     }
                     catch (Exception ex)
                     {
@@ -294,8 +329,12 @@ namespace GUI.UC
                 {
                     try
                     {
-                        LoaiLKBUS.Instances.update(gvTypeProduct.GetRowCellValue(e.RowHandle, "TENLOAI").ToString().Trim(), int.Parse(gvTypeProduct.GetRowCellValue(e.RowHandle, "TENLOAI").ToString().Trim()));
+                       int i= LoaiLKBUS.Instances.update(gvTypeProduct.GetRowCellValue(e.RowHandle, "TENLOAI").ToString().Trim(), int.Parse(gvTypeProduct.GetRowCellValue(e.RowHandle, "TENLOAI").ToString().Trim()));
+                        if(i==1)
                         LoaiLKBUS.Instances.getDataGV(gcTypeProduct);
+                        else
+                            XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
 
                     }
                     catch (Exception)
@@ -323,11 +362,11 @@ namespace GUI.UC
                 if (xtraTabControl1.SelectedTabPageIndex == 0)
                     gvProduct.ExportToXls(sf.FileName);
                 else
-                { 
+                {
                     gvTypeProduct.ExportToXls(sf.FileName);
                     str = "loại linh kiện";
                 }
-                XtraMessageBox.Show("Xuất file excel "+str+" thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                XtraMessageBox.Show("Xuất file excel " + str + " thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
         //xuất ra file Word linh kiện hoặc loại linh kiện
