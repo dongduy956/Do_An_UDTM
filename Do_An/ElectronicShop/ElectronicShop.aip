@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="19.4" version="19.4" Modules="simple" RootPath="." Language="en" Id="{835D11A3-9EB4-43B3-AFD5-D6668DCAF9AC}">
+  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
+    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;FixupComponent;MsiXDiffComponent;MsixManifestEditorComponent"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_CURRENT_YEAR" Value="2022" ValueLocId="-"/>
+    <ROW Property="AI_PACKAGING_TOOL" Value="Advanced Installer 19.4 build 4648ec91" ValueLocId="-"/>
+    <ROW Property="AI_PREDEF_LCONDS_PROPS" Value="AI_DETECTED_DOTNET_VERSION;AI_DETECTED_SQLEXPRESS_VERSION"/>
+    <ROW Property="AI_REQUIRED_DOTNET_DISPLAY" MultiBuildValue="DefaultBuild:4.8" ValueLocId="-"/>
+    <ROW Property="AI_REQUIRED_DOTNET_VERSION" MultiBuildValue="DefaultBuild:4.8" ValueLocId="-"/>
+    <ROW Property="AI_REQUIRED_SQLEXPRESS_DISPLAY" MultiBuildValue="DefaultBuild:SQL Server Express 2012" ValueLocId="-"/>
+    <ROW Property="AI_REQUIRED_SQLEXPRESS_VERSION" MultiBuildValue="DefaultBuild:2012" ValueLocId="-"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPPRODUCTICON" Value="GUI.exe" Type="8"/>
+    <ROW Property="Manufacturer" Value="Electronic entertainment"/>
+    <ROW Property="ProductCode" Value="1033:{0FB04C44-D250-4B44-B145-9664E2414DAE} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="ElectronicShop"/>
+    <ROW Property="ProductVersion" Value="1.0.0"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{4F1B00C0-B8EC-4F4F-87BE-5D69AC8B9FA6}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="Form_Dir" Directory_Parent="APPDIR" DefaultDir="Form"/>
+    <ROW Directory="Images_Dir" Directory_Parent="APPDIR" DefaultDir="Images"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="UC_Dir" Directory_Parent="Form_Dir" DefaultDir="UC"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="APPDIR" ComponentId="{46AE6F25-AFD9-4BF4-9A52-C6773103C47A}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="BUS.dll_1" ComponentId="{D8F2E6E6-C301-4E19-B212-6559218E6E51}" Directory_="UC_Dir" Attributes="0" KeyPath="BUS.dll"/>
+    <ROW Component="DAO.dll_1" ComponentId="{AE77F527-B93F-487E-80D4-4437040E2265}" Directory_="UC_Dir" Attributes="0" KeyPath="DAO.dll"/>
+    <ROW Component="DevExpress.BonusSkins.v19.2.dll" ComponentId="{C5D80E40-8423-4DF6-8B36-7F1CB40DFE65}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.BonusSkins.v19.2.dll"/>
+    <ROW Component="DevExpress.Charts.v19.2.Core.dll" ComponentId="{A14B17D2-A984-45D6-8A08-4FB8B7128D9B}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Charts.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.CodeParser.v19.2.dll" ComponentId="{A3EBB835-2183-4AD7-BECE-F81EBF00EB6B}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.CodeParser.v19.2.dll"/>
+    <ROW Component="DevExpress.Dashboard.v19.2.Core.dll" ComponentId="{EEFA9747-281F-4F16-80E2-79B7798AE5ED}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Dashboard.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.Dashboard.v19.2.Core.xml" ComponentId="{3EC5A0B4-F33A-40C6-928D-95F687B2FDB9}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Dashboard.v19.2.Core.xml" Type="0"/>
+    <ROW Component="DevExpress.Data.v19.2.dll" ComponentId="{D5685512-0B88-4B0C-98D0-531F658CBDDD}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Data.v19.2.dll"/>
+    <ROW Component="DevExpress.DataAccess.v19.2.UI.dll" ComponentId="{1CC29B1D-9432-44C6-B03B-72D86D500EBF}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.DataAccess.v19.2.UI.dll"/>
+    <ROW Component="DevExpress.DataAccess.v19.2.dll" ComponentId="{9B647148-8B8A-4194-8552-79AFAD0669DB}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.DataAccess.v19.2.dll"/>
+    <ROW Component="DevExpress.Diagram.v19.2.Core.dll" ComponentId="{5EC5EAA2-93C4-489A-ABFD-9570E0ADEBA0}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Diagram.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.Images.v19.2.dll" ComponentId="{3DC1015A-74D3-4891-BD49-2010C340E689}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Images.v19.2.dll"/>
+    <ROW Component="DevExpress.Map.v19.2.Core.dll" ComponentId="{20360E09-77F2-4171-8D84-F6E1FFBE1407}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Map.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.Office.v19.2.Core.dll" ComponentId="{BB0B725E-8C71-4235-8518-A1B75C68C372}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Office.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.Pdf.v19.2.Core.dll" ComponentId="{5EC5E0FF-DF0D-4F77-8C8B-8A01180AF033}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Pdf.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.Pdf.v19.2.Drawing.dll" ComponentId="{9D3E383E-8D57-42D3-9555-08C55B5D2C05}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Pdf.v19.2.Drawing.dll"/>
+    <ROW Component="DevExpress.PivotGrid.v19.2.Core.dll" ComponentId="{B93BC940-AE62-46AA-84F1-2ED5400DD9C4}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.PivotGrid.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.Printing.v19.2.Core.dll" ComponentId="{0DE0D981-AE2C-4D8A-BF27-BC39E5004B8F}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Printing.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.RichEdit.v19.2.Core.dll" ComponentId="{F00F71E9-212D-4FEA-A1A9-F15FDC623C4E}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.RichEdit.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.RichEdit.v19.2.Export.dll" ComponentId="{C7A3F363-A4C7-40D9-AF3D-123FC2B7CEE9}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.RichEdit.v19.2.Export.dll"/>
+    <ROW Component="DevExpress.Sparkline.v19.2.Core.dll" ComponentId="{165870BD-DA08-4678-B73C-BA67573BEC50}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Sparkline.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.SpellChecker.v19.2.Core.dll" ComponentId="{351D054B-9AA6-44A6-890C-27517E254717}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.SpellChecker.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.TreeMap.v19.2.Core.dll" ComponentId="{DE28C242-9A4D-4634-9221-F4A09CE46FBA}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.TreeMap.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.Utils.v19.2.UI.dll" ComponentId="{993D16EA-3FA9-4171-8309-0D75E4422B9D}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Utils.v19.2.UI.dll"/>
+    <ROW Component="DevExpress.Utils.v19.2.dll" ComponentId="{BFECF306-BD71-4700-BDC5-BD0CC9D74C94}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Utils.v19.2.dll"/>
+    <ROW Component="DevExpress.Xpo.v19.2.dll" ComponentId="{B79A7F63-5E5D-403E-9B32-496AF90B3FA1}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Xpo.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraBars.v19.2.dll" ComponentId="{BB8DBF27-DBEF-4170-B13B-DC9F872093C3}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraBars.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraCharts.v19.2.Extensions.dll" ComponentId="{61CF23BE-767C-4B9A-B362-B03C65B51CA3}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraCharts.v19.2.Extensions.dll"/>
+    <ROW Component="DevExpress.XtraCharts.v19.2.UI.dll" ComponentId="{CADAB58A-86BC-4C0B-9008-9CBD47C31AE3}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraCharts.v19.2.UI.dll"/>
+    <ROW Component="DevExpress.XtraCharts.v19.2.Wizard.dll" ComponentId="{A8E9E0E7-6968-4D0B-9906-9E152C89D3D9}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraCharts.v19.2.Wizard.dll"/>
+    <ROW Component="DevExpress.XtraCharts.v19.2.dll" ComponentId="{7CA9F7A2-F197-4B8B-A323-C091A0AFA221}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraCharts.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraDiagram.v19.2.dll" ComponentId="{3172921B-ADAA-4E10-8418-671DF9997E09}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraDiagram.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraEditors.v19.2.dll" ComponentId="{67CF7809-7111-4DFD-AA65-8DD701ED2B3B}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraEditors.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraGauges.v19.2.Core.dll" ComponentId="{B6EC4353-F525-4352-AB46-15D1EFDC0051}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraGauges.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.XtraGauges.v19.2.Presets.dll" ComponentId="{9DC68399-7D79-4443-8927-8B93DAEE9577}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraGauges.v19.2.Presets.dll"/>
+    <ROW Component="DevExpress.XtraGauges.v19.2.Win.dll" ComponentId="{DA79D842-147C-4B32-9FCD-694779AD4FF1}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraGauges.v19.2.Win.dll"/>
+    <ROW Component="DevExpress.XtraGrid.v19.2.dll" ComponentId="{F946740C-E9A9-4E4F-A24E-9312BE9295E9}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraGrid.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraLayout.v19.2.dll" ComponentId="{EC2A4B11-F96C-4F30-9CBB-6284BE04E584}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraLayout.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraMap.v19.2.dll" ComponentId="{3359C67E-892F-4406-B190-DC1CAC0FEC22}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraMap.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraNavBar.v19.2.dll" ComponentId="{E120827F-6F6E-4330-8CC3-77D543FFAEBC}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraNavBar.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraPdfViewer.v19.2.dll" ComponentId="{B18796F4-EDC5-41FE-8808-B277CDC0A639}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraPdfViewer.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraPivotGrid.v19.2.dll" ComponentId="{184C662F-C7ED-452E-9E01-127D290BC891}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraPivotGrid.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraPrinting.v19.2.dll" ComponentId="{C9008932-50BC-4D20-AF3D-2F52DE460FCB}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraPrinting.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraReports.v19.2.Extensions.dll" ComponentId="{E1E2FF8E-DC30-4782-888E-35909106DE89}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraReports.v19.2.Extensions.dll"/>
+    <ROW Component="DevExpress.XtraReports.v19.2.dll" ComponentId="{7D82952B-DF44-49B2-A553-CEBC736311F7}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraReports.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraRichEdit.v19.2.dll" ComponentId="{9BD6DA10-1469-46B4-9492-4633A1C8F7EB}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraRichEdit.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraScheduler.v19.2.Core.dll" ComponentId="{295A7158-09FC-465D-8B9A-D75CE1C20B21}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraScheduler.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.XtraScheduler.v19.2.dll" ComponentId="{EBA3ACC1-F65E-4E0A-916D-52B175177EC0}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraScheduler.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraSpellChecker.v19.2.dll" ComponentId="{94128221-B2B6-44C6-9B2E-3A5EE1A9D5EE}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraSpellChecker.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraTreeList.v19.2.dll" ComponentId="{868153BA-F755-4C87-B572-37070D672BEE}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraTreeList.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraTreeMap.v19.2.dll" ComponentId="{4AE77803-DD80-4B79-925E-346E1993B3D2}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraTreeMap.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraVerticalGrid.v19.2.dll" ComponentId="{E9F21FB5-7252-46E1-B97A-A2697EACC22E}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraVerticalGrid.v19.2.dll"/>
+    <ROW Component="GUI.exe" ComponentId="{011A3706-6D1B-45E1-9736-5478B409B99F}" Directory_="UC_Dir" Attributes="0" KeyPath="GUI.exe"/>
+    <ROW Component="GUI.vshost.exe" ComponentId="{538A590F-7C9C-4217-B8D5-DBA7AC75B0A6}" Directory_="UC_Dir" Attributes="0" KeyPath="GUI.vshost.exe"/>
+    <ROW Component="Microsoft.SqlServer.ConnectionInfo.dll" ComponentId="{14246C31-A554-4675-987D-92C005766893}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.ConnectionInfo.dll"/>
+    <ROW Component="Microsoft.SqlServer.ConnectionInfoExtended.dll" ComponentId="{573B50AC-58DA-4A2F-BBF5-6054A2E47BEF}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.ConnectionInfoExtended.dll"/>
+    <ROW Component="Microsoft.SqlServer.Dmf.dll" ComponentId="{FD67139B-BD4E-405E-99A1-7204DA0AB52A}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.Dmf.dll"/>
+    <ROW Component="Microsoft.SqlServer.Management.Sdk.Sfc.dll" ComponentId="{4D7BD22E-94C7-402D-9CB0-DB4B48D54287}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.Management.Sdk.Sfc.dll"/>
+    <ROW Component="Microsoft.SqlServer.RegSvrEnum.dll" ComponentId="{2CA22682-4EB5-44A5-8AED-0087C685E58F}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.RegSvrEnum.dll"/>
+    <ROW Component="Microsoft.SqlServer.ServiceBrokerEnum.dll" ComponentId="{6DCDF616-F034-43C1-BA69-3B6C9882006E}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.ServiceBrokerEnum.dll"/>
+    <ROW Component="Microsoft.SqlServer.Smo.dll" ComponentId="{3AF50651-A654-4BAF-AC7E-ECD63E9998B1}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.Smo.dll"/>
+    <ROW Component="Microsoft.SqlServer.SmoExtended.dll" ComponentId="{989476F9-11D6-4A48-A91A-9DD4639FED68}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.SmoExtended.dll"/>
+    <ROW Component="Microsoft.SqlServer.SqlEnum.dll" ComponentId="{E15D0DDA-FB64-47EB-B37A-68BB105C0D65}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.SqlEnum.dll"/>
+    <ROW Component="ProductInformation" ComponentId="{F9C9DD5F-24C8-4981-8005-F8F335A71C6E}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{771F2E7D-2939-4D87-8DA5-70A99CA338B7}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="addfile.png" ComponentId="{14EFBFC4-CC7F-44E2-929F-749C6726F2C6}" Directory_="Images_Dir" Attributes="0" KeyPath="addfile.png" Type="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="GUI.exe.config" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="GUIEXE~1.CON|GUI.exe.config" Attributes="0" SourcePath="..\GUI\bin\Release\GUI.exe.config" SelfReg="false"/>
+    <ROW File="GUI.pdb" Component_="GUI.exe" FileName="GUI.pdb" Attributes="0" SourcePath="..\GUI\bin\Release\GUI.pdb" SelfReg="false"/>
+    <ROW File="GUI.vshost.exe" Component_="GUI.vshost.exe" FileName="GUIVSH~1.EXE|GUI.vshost.exe" Attributes="0" SourcePath="..\GUI\bin\Release\GUI.vshost.exe" SelfReg="false"/>
+    <ROW File="GUI.vshost.exe.config" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="GUIVSH~1.CON|GUI.vshost.exe.config" Attributes="0" SourcePath="..\GUI\bin\Release\GUI.vshost.exe.config" SelfReg="false"/>
+    <ROW File="GUI.vshost.exe.manifest" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="GUIVSH~1.MAN|GUI.vshost.exe.manifest" Attributes="0" SourcePath="..\GUI\bin\Release\GUI.vshost.exe.manifest" SelfReg="false"/>
+    <ROW File="Microsoft.SqlServer.ConnectionInfo.dll" Component_="Microsoft.SqlServer.ConnectionInfo.dll" FileName="MICROS~1.DLL|Microsoft.SqlServer.ConnectionInfo.dll" Attributes="0" SourcePath="..\GUI\bin\Release\Microsoft.SqlServer.ConnectionInfo.dll" SelfReg="false"/>
+    <ROW File="Microsoft.SqlServer.ConnectionInfoExtended.dll" Component_="Microsoft.SqlServer.ConnectionInfoExtended.dll" FileName="MICROS~2.DLL|Microsoft.SqlServer.ConnectionInfoExtended.dll" Attributes="0" SourcePath="..\GUI\bin\Release\Microsoft.SqlServer.ConnectionInfoExtended.dll" SelfReg="false"/>
+    <ROW File="Microsoft.SqlServer.Dmf.dll" Component_="Microsoft.SqlServer.Dmf.dll" FileName="MICROS~3.DLL|Microsoft.SqlServer.Dmf.dll" Attributes="0" SourcePath="..\GUI\bin\Release\Microsoft.SqlServer.Dmf.dll" SelfReg="false"/>
+    <ROW File="Microsoft.SqlServer.Management.Sdk.Sfc.dll" Component_="Microsoft.SqlServer.Management.Sdk.Sfc.dll" FileName="MICROS~4.DLL|Microsoft.SqlServer.Management.Sdk.Sfc.dll" Attributes="0" SourcePath="..\GUI\bin\Release\Microsoft.SqlServer.Management.Sdk.Sfc.dll" SelfReg="false"/>
+    <ROW File="Microsoft.SqlServer.RegSvrEnum.dll" Component_="Microsoft.SqlServer.RegSvrEnum.dll" FileName="MICROS~5.DLL|Microsoft.SqlServer.RegSvrEnum.dll" Attributes="0" SourcePath="..\GUI\bin\Release\Microsoft.SqlServer.RegSvrEnum.dll" SelfReg="false"/>
+    <ROW File="Microsoft.SqlServer.ServiceBrokerEnum.dll" Component_="Microsoft.SqlServer.ServiceBrokerEnum.dll" FileName="MICROS~6.DLL|Microsoft.SqlServer.ServiceBrokerEnum.dll" Attributes="0" SourcePath="..\GUI\bin\Release\Microsoft.SqlServer.ServiceBrokerEnum.dll" SelfReg="false"/>
+    <ROW File="Microsoft.SqlServer.Smo.dll" Component_="Microsoft.SqlServer.Smo.dll" FileName="MICROS~7.DLL|Microsoft.SqlServer.Smo.dll" Attributes="0" SourcePath="..\GUI\bin\Release\Microsoft.SqlServer.Smo.dll" SelfReg="false"/>
+    <ROW File="Microsoft.SqlServer.SmoExtended.dll" Component_="Microsoft.SqlServer.SmoExtended.dll" FileName="MICROS~8.DLL|Microsoft.SqlServer.SmoExtended.dll" Attributes="0" SourcePath="..\GUI\bin\Release\Microsoft.SqlServer.SmoExtended.dll" SelfReg="false"/>
+    <ROW File="Microsoft.SqlServer.SqlEnum.dll" Component_="Microsoft.SqlServer.SqlEnum.dll" FileName="MICROS~9.DLL|Microsoft.SqlServer.SqlEnum.dll" Attributes="0" SourcePath="..\GUI\bin\Release\Microsoft.SqlServer.SqlEnum.dll" SelfReg="false"/>
+    <ROW File="BUS.dll" Component_="BUS.dll_1" FileName="BUS.dll" Attributes="0" SourcePath="..\GUI\bin\Release\BUS.dll" SelfReg="false"/>
+    <ROW File="BUS.pdb" Component_="BUS.dll_1" FileName="BUS.pdb" Attributes="0" SourcePath="..\GUI\bin\Release\BUS.pdb" SelfReg="false"/>
+    <ROW File="DAO.dll" Component_="DAO.dll_1" FileName="DAO.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DAO.dll" SelfReg="false"/>
+    <ROW File="DAO.pdb" Component_="DAO.dll_1" FileName="DAO.pdb" Attributes="0" SourcePath="..\GUI\bin\Release\DAO.pdb" SelfReg="false"/>
+    <ROW File="DevExpress.BonusSkins.v19.2.dll" Component_="DevExpress.BonusSkins.v19.2.dll" FileName="DEVEXP~1.DLL|DevExpress.BonusSkins.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.BonusSkins.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Charts.v19.2.Core.dll" Component_="DevExpress.Charts.v19.2.Core.dll" FileName="DEVEXP~2.DLL|DevExpress.Charts.v19.2.Core.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Charts.v19.2.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.CodeParser.v19.2.dll" Component_="DevExpress.CodeParser.v19.2.dll" FileName="DEVEXP~3.DLL|DevExpress.CodeParser.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.CodeParser.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Dashboard.v19.2.Core.dll" Component_="DevExpress.Dashboard.v19.2.Core.dll" FileName="DEVEXP~4.DLL|DevExpress.Dashboard.v19.2.Core.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Dashboard.v19.2.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Dashboard.v19.2.Core.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEXP~1.XML|DevExpress.Dashboard.v19.2.Core.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Dashboard.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Data.v19.2.dll" Component_="DevExpress.Data.v19.2.dll" FileName="DEVEXP~5.DLL|DevExpress.Data.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Data.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Data.v19.2.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEXP~2.XML|DevExpress.Data.v19.2.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Data.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.DataAccess.v19.2.dll" Component_="DevExpress.DataAccess.v19.2.dll" FileName="DEVEXP~6.DLL|DevExpress.DataAccess.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.DataAccess.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.DataAccess.v19.2.UI.dll" Component_="DevExpress.DataAccess.v19.2.UI.dll" FileName="DEVEXP~7.DLL|DevExpress.DataAccess.v19.2.UI.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.DataAccess.v19.2.UI.dll" SelfReg="false"/>
+    <ROW File="DevExpress.DataAccess.v19.2.UI.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEXP~3.XML|DevExpress.DataAccess.v19.2.UI.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.DataAccess.v19.2.UI.xml" SelfReg="false"/>
+    <ROW File="DevExpress.DataAccess.v19.2.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEXP~4.XML|DevExpress.DataAccess.v19.2.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.DataAccess.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Diagram.v19.2.Core.dll" Component_="DevExpress.Diagram.v19.2.Core.dll" FileName="DEVEXP~8.DLL|DevExpress.Diagram.v19.2.Core.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Diagram.v19.2.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Diagram.v19.2.Core.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEXP~5.XML|DevExpress.Diagram.v19.2.Core.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Diagram.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Images.v19.2.dll" Component_="DevExpress.Images.v19.2.dll" FileName="DEVEXP~9.DLL|DevExpress.Images.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Images.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Map.v19.2.Core.dll" Component_="DevExpress.Map.v19.2.Core.dll" FileName="DEVEX~10.DLL|DevExpress.Map.v19.2.Core.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Map.v19.2.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Map.v19.2.Core.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEXP~6.XML|DevExpress.Map.v19.2.Core.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Map.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Office.v19.2.Core.dll" Component_="DevExpress.Office.v19.2.Core.dll" FileName="DEVEX~11.DLL|DevExpress.Office.v19.2.Core.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Office.v19.2.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Office.v19.2.Core.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEXP~7.XML|DevExpress.Office.v19.2.Core.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Office.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Pdf.v19.2.Core.dll" Component_="DevExpress.Pdf.v19.2.Core.dll" FileName="DEVEX~12.DLL|DevExpress.Pdf.v19.2.Core.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Pdf.v19.2.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Pdf.v19.2.Core.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEXP~8.XML|DevExpress.Pdf.v19.2.Core.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Pdf.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Pdf.v19.2.Drawing.dll" Component_="DevExpress.Pdf.v19.2.Drawing.dll" FileName="DEVEX~13.DLL|DevExpress.Pdf.v19.2.Drawing.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Pdf.v19.2.Drawing.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Pdf.v19.2.Drawing.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEXP~9.XML|DevExpress.Pdf.v19.2.Drawing.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Pdf.v19.2.Drawing.xml" SelfReg="false"/>
+    <ROW File="DevExpress.PivotGrid.v19.2.Core.dll" Component_="DevExpress.PivotGrid.v19.2.Core.dll" FileName="DEVEX~14.DLL|DevExpress.PivotGrid.v19.2.Core.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.PivotGrid.v19.2.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.PivotGrid.v19.2.Core.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~10.XML|DevExpress.PivotGrid.v19.2.Core.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.PivotGrid.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Printing.v19.2.Core.dll" Component_="DevExpress.Printing.v19.2.Core.dll" FileName="DEVEX~15.DLL|DevExpress.Printing.v19.2.Core.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Printing.v19.2.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Printing.v19.2.Core.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~11.XML|DevExpress.Printing.v19.2.Core.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Printing.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.RichEdit.v19.2.Core.dll" Component_="DevExpress.RichEdit.v19.2.Core.dll" FileName="DEVEX~16.DLL|DevExpress.RichEdit.v19.2.Core.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.RichEdit.v19.2.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.RichEdit.v19.2.Core.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~12.XML|DevExpress.RichEdit.v19.2.Core.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.RichEdit.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.RichEdit.v19.2.Export.dll" Component_="DevExpress.RichEdit.v19.2.Export.dll" FileName="DEVEX~17.DLL|DevExpress.RichEdit.v19.2.Export.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.RichEdit.v19.2.Export.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Sparkline.v19.2.Core.dll" Component_="DevExpress.Sparkline.v19.2.Core.dll" FileName="DEVEX~18.DLL|DevExpress.Sparkline.v19.2.Core.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Sparkline.v19.2.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Sparkline.v19.2.Core.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~13.XML|DevExpress.Sparkline.v19.2.Core.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Sparkline.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.SpellChecker.v19.2.Core.dll" Component_="DevExpress.SpellChecker.v19.2.Core.dll" FileName="DEVEX~19.DLL|DevExpress.SpellChecker.v19.2.Core.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.SpellChecker.v19.2.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.SpellChecker.v19.2.Core.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~14.XML|DevExpress.SpellChecker.v19.2.Core.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.SpellChecker.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.TreeMap.v19.2.Core.dll" Component_="DevExpress.TreeMap.v19.2.Core.dll" FileName="DEVEX~20.DLL|DevExpress.TreeMap.v19.2.Core.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.TreeMap.v19.2.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.TreeMap.v19.2.Core.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~15.XML|DevExpress.TreeMap.v19.2.Core.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.TreeMap.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v19.2.dll" Component_="DevExpress.Utils.v19.2.dll" FileName="DEVEX~21.DLL|DevExpress.Utils.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Utils.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v19.2.UI.dll" Component_="DevExpress.Utils.v19.2.UI.dll" FileName="DEVEX~22.DLL|DevExpress.Utils.v19.2.UI.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Utils.v19.2.UI.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v19.2.UI.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~16.XML|DevExpress.Utils.v19.2.UI.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Utils.v19.2.UI.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v19.2.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~17.XML|DevExpress.Utils.v19.2.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Utils.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Xpo.v19.2.dll" Component_="DevExpress.Xpo.v19.2.dll" FileName="DEVEX~23.DLL|DevExpress.Xpo.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Xpo.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Xpo.v19.2.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~18.XML|DevExpress.Xpo.v19.2.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.Xpo.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraBars.v19.2.dll" Component_="DevExpress.XtraBars.v19.2.dll" FileName="DEVEX~24.DLL|DevExpress.XtraBars.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraBars.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraBars.v19.2.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~19.XML|DevExpress.XtraBars.v19.2.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraBars.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v19.2.dll" Component_="DevExpress.XtraCharts.v19.2.dll" FileName="DEVEX~25.DLL|DevExpress.XtraCharts.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraCharts.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v19.2.Extensions.dll" Component_="DevExpress.XtraCharts.v19.2.Extensions.dll" FileName="DEVEX~26.DLL|DevExpress.XtraCharts.v19.2.Extensions.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraCharts.v19.2.Extensions.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v19.2.UI.dll" Component_="DevExpress.XtraCharts.v19.2.UI.dll" FileName="DEVEX~27.DLL|DevExpress.XtraCharts.v19.2.UI.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraCharts.v19.2.UI.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v19.2.UI.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~20.XML|DevExpress.XtraCharts.v19.2.UI.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraCharts.v19.2.UI.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v19.2.Wizard.dll" Component_="DevExpress.XtraCharts.v19.2.Wizard.dll" FileName="DEVEX~28.DLL|DevExpress.XtraCharts.v19.2.Wizard.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraCharts.v19.2.Wizard.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v19.2.Wizard.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~21.XML|DevExpress.XtraCharts.v19.2.Wizard.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraCharts.v19.2.Wizard.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v19.2.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~22.XML|DevExpress.XtraCharts.v19.2.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraCharts.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraDiagram.v19.2.dll" Component_="DevExpress.XtraDiagram.v19.2.dll" FileName="DEVEX~29.DLL|DevExpress.XtraDiagram.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraDiagram.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraDiagram.v19.2.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~23.XML|DevExpress.XtraDiagram.v19.2.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraDiagram.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraEditors.v19.2.dll" Component_="DevExpress.XtraEditors.v19.2.dll" FileName="DEVEX~30.DLL|DevExpress.XtraEditors.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraEditors.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraEditors.v19.2.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~24.XML|DevExpress.XtraEditors.v19.2.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraEditors.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGauges.v19.2.Core.dll" Component_="DevExpress.XtraGauges.v19.2.Core.dll" FileName="DEVEX~31.DLL|DevExpress.XtraGauges.v19.2.Core.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraGauges.v19.2.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGauges.v19.2.Core.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~25.XML|DevExpress.XtraGauges.v19.2.Core.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraGauges.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGauges.v19.2.Presets.dll" Component_="DevExpress.XtraGauges.v19.2.Presets.dll" FileName="DEVEX~32.DLL|DevExpress.XtraGauges.v19.2.Presets.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraGauges.v19.2.Presets.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGauges.v19.2.Presets.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~26.XML|DevExpress.XtraGauges.v19.2.Presets.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraGauges.v19.2.Presets.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGauges.v19.2.Win.dll" Component_="DevExpress.XtraGauges.v19.2.Win.dll" FileName="DEVEX~33.DLL|DevExpress.XtraGauges.v19.2.Win.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraGauges.v19.2.Win.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGauges.v19.2.Win.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~27.XML|DevExpress.XtraGauges.v19.2.Win.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraGauges.v19.2.Win.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGrid.v19.2.dll" Component_="DevExpress.XtraGrid.v19.2.dll" FileName="DEVEX~34.DLL|DevExpress.XtraGrid.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraGrid.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGrid.v19.2.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~28.XML|DevExpress.XtraGrid.v19.2.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraGrid.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraLayout.v19.2.dll" Component_="DevExpress.XtraLayout.v19.2.dll" FileName="DEVEX~35.DLL|DevExpress.XtraLayout.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraLayout.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraLayout.v19.2.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~29.XML|DevExpress.XtraLayout.v19.2.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraLayout.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraMap.v19.2.dll" Component_="DevExpress.XtraMap.v19.2.dll" FileName="DEVEX~36.DLL|DevExpress.XtraMap.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraMap.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraMap.v19.2.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~30.XML|DevExpress.XtraMap.v19.2.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraMap.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraNavBar.v19.2.dll" Component_="DevExpress.XtraNavBar.v19.2.dll" FileName="DEVEX~37.DLL|DevExpress.XtraNavBar.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraNavBar.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraNavBar.v19.2.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~31.XML|DevExpress.XtraNavBar.v19.2.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraNavBar.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPdfViewer.v19.2.dll" Component_="DevExpress.XtraPdfViewer.v19.2.dll" FileName="DEVEX~38.DLL|DevExpress.XtraPdfViewer.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraPdfViewer.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPdfViewer.v19.2.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~32.XML|DevExpress.XtraPdfViewer.v19.2.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraPdfViewer.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPivotGrid.v19.2.dll" Component_="DevExpress.XtraPivotGrid.v19.2.dll" FileName="DEVEX~39.DLL|DevExpress.XtraPivotGrid.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraPivotGrid.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPivotGrid.v19.2.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~33.XML|DevExpress.XtraPivotGrid.v19.2.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraPivotGrid.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPrinting.v19.2.dll" Component_="DevExpress.XtraPrinting.v19.2.dll" FileName="DEVEX~40.DLL|DevExpress.XtraPrinting.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraPrinting.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPrinting.v19.2.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~34.XML|DevExpress.XtraPrinting.v19.2.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraPrinting.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraReports.v19.2.dll" Component_="DevExpress.XtraReports.v19.2.dll" FileName="DEVEX~41.DLL|DevExpress.XtraReports.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraReports.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraReports.v19.2.Extensions.dll" Component_="DevExpress.XtraReports.v19.2.Extensions.dll" FileName="DEVEX~42.DLL|DevExpress.XtraReports.v19.2.Extensions.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraReports.v19.2.Extensions.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraReports.v19.2.Extensions.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~35.XML|DevExpress.XtraReports.v19.2.Extensions.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraReports.v19.2.Extensions.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraReports.v19.2.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~36.XML|DevExpress.XtraReports.v19.2.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraReports.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraRichEdit.v19.2.dll" Component_="DevExpress.XtraRichEdit.v19.2.dll" FileName="DEVEX~43.DLL|DevExpress.XtraRichEdit.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraRichEdit.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraRichEdit.v19.2.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~37.XML|DevExpress.XtraRichEdit.v19.2.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraRichEdit.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraScheduler.v19.2.Core.dll" Component_="DevExpress.XtraScheduler.v19.2.Core.dll" FileName="DEVEX~44.DLL|DevExpress.XtraScheduler.v19.2.Core.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraScheduler.v19.2.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraScheduler.v19.2.Core.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~38.XML|DevExpress.XtraScheduler.v19.2.Core.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraScheduler.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraScheduler.v19.2.dll" Component_="DevExpress.XtraScheduler.v19.2.dll" FileName="DEVEX~45.DLL|DevExpress.XtraScheduler.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraScheduler.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraScheduler.v19.2.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~39.XML|DevExpress.XtraScheduler.v19.2.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraScheduler.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraSpellChecker.v19.2.dll" Component_="DevExpress.XtraSpellChecker.v19.2.dll" FileName="DEVEX~46.DLL|DevExpress.XtraSpellChecker.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraSpellChecker.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraSpellChecker.v19.2.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~40.XML|DevExpress.XtraSpellChecker.v19.2.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraSpellChecker.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraTreeList.v19.2.dll" Component_="DevExpress.XtraTreeList.v19.2.dll" FileName="DEVEX~47.DLL|DevExpress.XtraTreeList.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraTreeList.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraTreeList.v19.2.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~41.XML|DevExpress.XtraTreeList.v19.2.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraTreeList.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraTreeMap.v19.2.dll" Component_="DevExpress.XtraTreeMap.v19.2.dll" FileName="DEVEX~48.DLL|DevExpress.XtraTreeMap.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraTreeMap.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraTreeMap.v19.2.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~42.XML|DevExpress.XtraTreeMap.v19.2.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraTreeMap.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraVerticalGrid.v19.2.dll" Component_="DevExpress.XtraVerticalGrid.v19.2.dll" FileName="DEVEX~49.DLL|DevExpress.XtraVerticalGrid.v19.2.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraVerticalGrid.v19.2.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraVerticalGrid.v19.2.xml" Component_="DevExpress.Dashboard.v19.2.Core.xml" FileName="DEVEX~43.XML|DevExpress.XtraVerticalGrid.v19.2.xml" Attributes="0" SourcePath="..\GUI\bin\Release\DevExpress.XtraVerticalGrid.v19.2.xml" SelfReg="false"/>
+    <ROW File="GUI.exe" Component_="GUI.exe" FileName="GUI.exe" Attributes="0" SourcePath="..\GUI\bin\Release\GUI.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="addfile.png" Component_="addfile.png" FileName="add-file.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\add-file.png" SelfReg="false"/>
+    <ROW File="addimage.png" Component_="addfile.png" FileName="ADD-IM~1.PNG|add-image.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\add-image.png" SelfReg="false"/>
+    <ROW File="analytics.png" Component_="addfile.png" FileName="ANALYT~1.PNG|analytics.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\analytics.png" SelfReg="false"/>
+    <ROW File="background.png" Component_="addfile.png" FileName="BACKGR~1.PNG|background.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\background.png" SelfReg="false"/>
+    <ROW File="banner1.jpg" Component_="addfile.png" FileName="banner1.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\banner1.jpg" SelfReg="false"/>
+    <ROW File="bg.gif" Component_="addfile.png" FileName="bg.gif" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\bg.gif" SelfReg="false"/>
+    <ROW File="bill.png" Component_="addfile.png" FileName="bill.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\bill.png" SelfReg="false"/>
+    <ROW File="blog1.jpg" Component_="addfile.png" FileName="blog1.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\blog1.jpg" SelfReg="false"/>
+    <ROW File="blog13.jpg" Component_="addfile.png" FileName="blog13.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\blog13.jpg" SelfReg="false"/>
+    <ROW File="blog2.jpg" Component_="addfile.png" FileName="blog2.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\blog2.jpg" SelfReg="false"/>
+    <ROW File="blog4.jpg" Component_="addfile.png" FileName="blog4.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\blog4.jpg" SelfReg="false"/>
+    <ROW File="blog5.jpg" Component_="addfile.png" FileName="blog5.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\blog5.jpg" SelfReg="false"/>
+    <ROW File="blog7.jpg" Component_="addfile.png" FileName="blog7.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\blog7.jpg" SelfReg="false"/>
+    <ROW File="cart.jpg" Component_="addfile.png" FileName="cart.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\cart.jpg" SelfReg="false"/>
+    <ROW File="cart.png" Component_="addfile.png" FileName="cart.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\cart.png" SelfReg="false"/>
+    <ROW File="cart17.jpg" Component_="addfile.png" FileName="cart17.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\cart17.jpg" SelfReg="false"/>
+    <ROW File="cart18.jpg" Component_="addfile.png" FileName="cart18.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\cart18.jpg" SelfReg="false"/>
+    <ROW File="cart19.jpg" Component_="addfile.png" FileName="cart19.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\cart19.jpg" SelfReg="false"/>
+    <ROW File="cart2.jpg" Component_="addfile.png" FileName="cart2.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\cart2.jpg" SelfReg="false"/>
+    <ROW File="cart3.jpg" Component_="addfile.png" FileName="cart3.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\cart3.jpg" SelfReg="false"/>
+    <ROW File="cart4.jpg" Component_="addfile.png" FileName="cart4.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\cart4.jpg" SelfReg="false"/>
+    <ROW File="cart5.png" Component_="addfile.png" FileName="cart5.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\cart5.png" SelfReg="false"/>
+    <ROW File="clipboard.png" Component_="addfile.png" FileName="CLIPBO~1.PNG|clipboard.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\clipboard.png" SelfReg="false"/>
+    <ROW File="count2.png" Component_="addfile.png" FileName="count2.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\count2.png" SelfReg="false"/>
+    <ROW File="data_1_.ico" Component_="addfile.png" FileName="data-_1_.ico" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\data-_1_.ico" SelfReg="false"/>
+    <ROW File="data.png" Component_="addfile.png" FileName="data.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\data.png" SelfReg="false"/>
+    <ROW File="data_1.png" Component_="addfile.png" FileName="data_1.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\data_1.png" SelfReg="false"/>
+    <ROW File="delete1.png" Component_="addfile.png" FileName="DELETE~1.PNG|delete (1).png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\delete (1).png" SelfReg="false"/>
+    <ROW File="deletefile.png" Component_="addfile.png" FileName="DELETE~2.PNG|delete-file.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\delete-file.png" SelfReg="false"/>
+    <ROW File="delete.png" Component_="addfile.png" FileName="delete.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\delete.png" SelfReg="false"/>
+    <ROW File="device.png" Component_="addfile.png" FileName="device.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\device.png" SelfReg="false"/>
+    <ROW File="devices.png" Component_="addfile.png" FileName="devices.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\devices.png" SelfReg="false"/>
+    <ROW File="dropinvalue.png" Component_="addfile.png" FileName="DROP-I~1.PNG|drop-in-value.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\drop-in-value.png" SelfReg="false"/>
+    <ROW File="duy.jpg" Component_="addfile.png" FileName="duy.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\duy.jpg" SelfReg="false"/>
+    <ROW File="favicon.png" Component_="addfile.png" FileName="favicon.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\favicon.png" SelfReg="false"/>
+    <ROW File="fontlogo.jpg" Component_="addfile.png" FileName="fontlogo.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\fontlogo.jpg" SelfReg="false"/>
+    <ROW File="fontlogo2.jpg" Component_="addfile.png" FileName="FONTLO~1.JPG|fontlogo2.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\fontlogo2.jpg" SelfReg="false"/>
+    <ROW File="fsadf.bak" Component_="addfile.png" FileName="fsadf.bak" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\fsadf.bak" SelfReg="false"/>
+    <ROW File="hinhnenvutru4k11scaled.jpg" Component_="addfile.png" FileName="HINH-N~1.JPG|hinh-nen-vu-tru-4k-11-scaled.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\hinh-nen-vu-tru-4k-11-scaled.jpg" SelfReg="false"/>
+    <ROW File="holdingwrench.png" Component_="addfile.png" FileName="HOLDIN~1.PNG|holding-wrench.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\holding-wrench.png" SelfReg="false"/>
+    <ROW File="imagebp1.jpg" Component_="addfile.png" FileName="imagebp1.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagebp1.jpg" SelfReg="false"/>
+    <ROW File="imagebp2.jpg" Component_="addfile.png" FileName="imagebp2.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagebp2.jpg" SelfReg="false"/>
+    <ROW File="imagebp3.jpg" Component_="addfile.png" FileName="imagebp3.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagebp3.jpg" SelfReg="false"/>
+    <ROW File="imagebp4.jpg" Component_="addfile.png" FileName="imagebp4.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagebp4.jpg" SelfReg="false"/>
+    <ROW File="imagebp5.jpg" Component_="addfile.png" FileName="imagebp5.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagebp5.jpg" SelfReg="false"/>
+    <ROW File="imagebp6.jpg" Component_="addfile.png" FileName="imagebp6.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagebp6.jpg" SelfReg="false"/>
+    <ROW File="imagech1.jpg" Component_="addfile.png" FileName="imagech1.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagech1.jpg" SelfReg="false"/>
+    <ROW File="imagech2.jpg" Component_="addfile.png" FileName="imagech2.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagech2.jpg" SelfReg="false"/>
+    <ROW File="imagech3.jpg" Component_="addfile.png" FileName="imagech3.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagech3.jpg" SelfReg="false"/>
+    <ROW File="imagech4.jpg" Component_="addfile.png" FileName="imagech4.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagech4.jpg" SelfReg="false"/>
+    <ROW File="imagech5.jpg" Component_="addfile.png" FileName="imagech5.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagech5.jpg" SelfReg="false"/>
+    <ROW File="imagech6.jpg" Component_="addfile.png" FileName="imagech6.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagech6.jpg" SelfReg="false"/>
+    <ROW File="imagecp1.jpg" Component_="addfile.png" FileName="imagecp1.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagecp1.jpg" SelfReg="false"/>
+    <ROW File="imagecp2.jpg" Component_="addfile.png" FileName="imagecp2.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagecp2.jpg" SelfReg="false"/>
+    <ROW File="imagecp3.jpg" Component_="addfile.png" FileName="imagecp3.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagecp3.jpg" SelfReg="false"/>
+    <ROW File="imagecp4.jpg" Component_="addfile.png" FileName="imagecp4.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagecp4.jpg" SelfReg="false"/>
+    <ROW File="imagecp5.jpg" Component_="addfile.png" FileName="imagecp5.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagecp5.jpg" SelfReg="false"/>
+    <ROW File="imagecp6.jpg" Component_="addfile.png" FileName="imagecp6.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagecp6.jpg" SelfReg="false"/>
+    <ROW File="imagehd1.JPG" Component_="addfile.png" FileName="imagehd1.JPG" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagehd1.JPG" SelfReg="false"/>
+    <ROW File="imagehd2.jpg" Component_="addfile.png" FileName="imagehd2.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagehd2.jpg" SelfReg="false"/>
+    <ROW File="imagehd3.jpg" Component_="addfile.png" FileName="imagehd3.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagehd3.jpg" SelfReg="false"/>
+    <ROW File="imagehd4.jpg" Component_="addfile.png" FileName="imagehd4.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagehd4.jpg" SelfReg="false"/>
+    <ROW File="imagehd5.jpg" Component_="addfile.png" FileName="imagehd5.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagehd5.jpg" SelfReg="false"/>
+    <ROW File="imagehd6jpg.JPG" Component_="addfile.png" FileName="IMAGEH~1.JPG|imagehd6,jpg.JPG" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagehd6,jpg.JPG" SelfReg="false"/>
+    <ROW File="imagelp1.jpg" Component_="addfile.png" FileName="imagelp1.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagelp1.jpg" SelfReg="false"/>
+    <ROW File="imagelp2.jpg" Component_="addfile.png" FileName="imagelp2.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagelp2.jpg" SelfReg="false"/>
+    <ROW File="imagelp3.jpg" Component_="addfile.png" FileName="imagelp3.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagelp3.jpg" SelfReg="false"/>
+    <ROW File="imagelp4.jpg" Component_="addfile.png" FileName="imagelp4.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagelp4.jpg" SelfReg="false"/>
+    <ROW File="imagelp5.jpg" Component_="addfile.png" FileName="imagelp5.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagelp5.jpg" SelfReg="false"/>
+    <ROW File="imagelp6.jpg" Component_="addfile.png" FileName="imagelp6.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagelp6.jpg" SelfReg="false"/>
+    <ROW File="imagemb1.jpg" Component_="addfile.png" FileName="imagemb1.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagemb1.jpg" SelfReg="false"/>
+    <ROW File="imagemb2.jpg" Component_="addfile.png" FileName="imagemb2.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagemb2.jpg" SelfReg="false"/>
+    <ROW File="imagemb3.jpg" Component_="addfile.png" FileName="imagemb3.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagemb3.jpg" SelfReg="false"/>
+    <ROW File="imagemb4.jpg" Component_="addfile.png" FileName="imagemb4.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagemb4.jpg" SelfReg="false"/>
+    <ROW File="imagemb5.jpg" Component_="addfile.png" FileName="imagemb5.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagemb5.jpg" SelfReg="false"/>
+    <ROW File="imagemb6.jpg" Component_="addfile.png" FileName="imagemb6.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagemb6.jpg" SelfReg="false"/>
+    <ROW File="imagemh1.jpg" Component_="addfile.png" FileName="imagemh1.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagemh1.jpg" SelfReg="false"/>
+    <ROW File="imagemh2.jpg" Component_="addfile.png" FileName="imagemh2.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagemh2.jpg" SelfReg="false"/>
+    <ROW File="imagemh3.jpg" Component_="addfile.png" FileName="imagemh3.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagemh3.jpg" SelfReg="false"/>
+    <ROW File="imagemh4.jpg" Component_="addfile.png" FileName="imagemh4.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagemh4.jpg" SelfReg="false"/>
+    <ROW File="imagemh5.jpg" Component_="addfile.png" FileName="imagemh5.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagemh5.jpg" SelfReg="false"/>
+    <ROW File="imagemh6.jpg" Component_="addfile.png" FileName="imagemh6.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagemh6.jpg" SelfReg="false"/>
+    <ROW File="imageps1.jpg" Component_="addfile.png" FileName="imageps1.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imageps1.jpg" SelfReg="false"/>
+    <ROW File="imageps2.jpg" Component_="addfile.png" FileName="imageps2.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imageps2.jpg" SelfReg="false"/>
+    <ROW File="imageps3.jpg" Component_="addfile.png" FileName="imageps3.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imageps3.jpg" SelfReg="false"/>
+    <ROW File="imageps4.jpg" Component_="addfile.png" FileName="imageps4.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imageps4.jpg" SelfReg="false"/>
+    <ROW File="imageps5.jpg" Component_="addfile.png" FileName="imageps5.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imageps5.jpg" SelfReg="false"/>
+    <ROW File="imageps6.jpg" Component_="addfile.png" FileName="imageps6.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imageps6.jpg" SelfReg="false"/>
+    <ROW File="imagera1.jpg" Component_="addfile.png" FileName="imagera1.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagera1.jpg" SelfReg="false"/>
+    <ROW File="imagera2.jpg" Component_="addfile.png" FileName="imagera2.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagera2.jpg" SelfReg="false"/>
+    <ROW File="imagera3.jpg" Component_="addfile.png" FileName="imagera3.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagera3.jpg" SelfReg="false"/>
+    <ROW File="imagera4.jpg" Component_="addfile.png" FileName="imagera4.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagera4.jpg" SelfReg="false"/>
+    <ROW File="imagera5.jpg" Component_="addfile.png" FileName="imagera5.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagera5.jpg" SelfReg="false"/>
+    <ROW File="imagera6.jpg" Component_="addfile.png" FileName="imagera6.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagera6.jpg" SelfReg="false"/>
+    <ROW File="imagess1.jpg" Component_="addfile.png" FileName="imagess1.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagess1.jpg" SelfReg="false"/>
+    <ROW File="imagess2.jpg" Component_="addfile.png" FileName="imagess2.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagess2.jpg" SelfReg="false"/>
+    <ROW File="imagess3.jpg" Component_="addfile.png" FileName="imagess3.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagess3.jpg" SelfReg="false"/>
+    <ROW File="imagess4.jpg" Component_="addfile.png" FileName="imagess4.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagess4.jpg" SelfReg="false"/>
+    <ROW File="imagess5.jpg" Component_="addfile.png" FileName="imagess5.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagess5.jpg" SelfReg="false"/>
+    <ROW File="imagess6.jpg" Component_="addfile.png" FileName="imagess6.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagess6.jpg" SelfReg="false"/>
+    <ROW File="imagetbm1.jpg" Component_="addfile.png" FileName="IMAGET~1.JPG|imagetbm1.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagetbm1.jpg" SelfReg="false"/>
+    <ROW File="imagetbm2.jpg" Component_="addfile.png" FileName="IMAGET~2.JPG|imagetbm2.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagetbm2.jpg" SelfReg="false"/>
+    <ROW File="imagetbm3.jpg" Component_="addfile.png" FileName="IMAGET~3.JPG|imagetbm3.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagetbm3.jpg" SelfReg="false"/>
+    <ROW File="imagetbm4.jpg" Component_="addfile.png" FileName="IMAGET~4.JPG|imagetbm4.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagetbm4.jpg" SelfReg="false"/>
+    <ROW File="imagetbm5.jpg" Component_="addfile.png" FileName="IMAGET~5.JPG|imagetbm5.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagetbm5.jpg" SelfReg="false"/>
+    <ROW File="imagetbm6.jpg" Component_="addfile.png" FileName="IMAGET~6.JPG|imagetbm6.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagetbm6.jpg" SelfReg="false"/>
+    <ROW File="imagetn1.jpg" Component_="addfile.png" FileName="imagetn1.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagetn1.jpg" SelfReg="false"/>
+    <ROW File="imagetn2.jpg" Component_="addfile.png" FileName="imagetn2.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagetn2.jpg" SelfReg="false"/>
+    <ROW File="imagetn3.jpg" Component_="addfile.png" FileName="imagetn3.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagetn3.jpg" SelfReg="false"/>
+    <ROW File="imagetn4.jpg" Component_="addfile.png" FileName="imagetn4.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagetn4.jpg" SelfReg="false"/>
+    <ROW File="imagetn5.jpg" Component_="addfile.png" FileName="imagetn5.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagetn5.jpg" SelfReg="false"/>
+    <ROW File="imagetn6.jpg" Component_="addfile.png" FileName="imagetn6.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagetn6.jpg" SelfReg="false"/>
+    <ROW File="imagetng1.jpg" Component_="addfile.png" FileName="IMAGET~7.JPG|imagetng1.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagetng1.jpg" SelfReg="false"/>
+    <ROW File="imagetng2.jpg" Component_="addfile.png" FileName="IMAGET~8.JPG|imagetng2.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagetng2.jpg" SelfReg="false"/>
+    <ROW File="imagetng3.jpg" Component_="addfile.png" FileName="IMAGET~9.JPG|imagetng3.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagetng3.jpg" SelfReg="false"/>
+    <ROW File="imagetng4.jpg" Component_="addfile.png" FileName="IMAGE~10.JPG|imagetng4.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagetng4.jpg" SelfReg="false"/>
+    <ROW File="imagetng5.jpg" Component_="addfile.png" FileName="IMAGE~11.JPG|imagetng5.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagetng5.jpg" SelfReg="false"/>
+    <ROW File="imagetng6.jpg" Component_="addfile.png" FileName="IMAGE~12.JPG|imagetng6.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagetng6.jpg" SelfReg="false"/>
+    <ROW File="imagevg1.jpg" Component_="addfile.png" FileName="imagevg1.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagevg1.jpg" SelfReg="false"/>
+    <ROW File="imagevg2.jpg" Component_="addfile.png" FileName="imagevg2.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagevg2.jpg" SelfReg="false"/>
+    <ROW File="imagevg3.jpg" Component_="addfile.png" FileName="imagevg3.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagevg3.jpg" SelfReg="false"/>
+    <ROW File="imagevg4.jpg" Component_="addfile.png" FileName="imagevg4.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagevg4.jpg" SelfReg="false"/>
+    <ROW File="imagevm1.jpg" Component_="addfile.png" FileName="imagevm1.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagevm1.jpg" SelfReg="false"/>
+    <ROW File="imagevm2.jpg" Component_="addfile.png" FileName="imagevm2.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagevm2.jpg" SelfReg="false"/>
+    <ROW File="imagevm3.jpg" Component_="addfile.png" FileName="imagevm3.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagevm3.jpg" SelfReg="false"/>
+    <ROW File="imagevm4.jpg" Component_="addfile.png" FileName="imagevm4.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagevm4.jpg" SelfReg="false"/>
+    <ROW File="imagevm5.jpg" Component_="addfile.png" FileName="imagevm5.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagevm5.jpg" SelfReg="false"/>
+    <ROW File="imagevm6.jpg" Component_="addfile.png" FileName="imagevm6.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\imagevm6.jpg" SelfReg="false"/>
+    <ROW File="import1.png" Component_="addfile.png" FileName="IMPORT~1.PNG|import (1).png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\import (1).png" SelfReg="false"/>
+    <ROW File="import.png" Component_="addfile.png" FileName="import.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\import.png" SelfReg="false"/>
+    <ROW File="insert1.png" Component_="addfile.png" FileName="INSERT~1.PNG|insert (1).png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\insert (1).png" SelfReg="false"/>
+    <ROW File="insert.png" Component_="addfile.png" FileName="insert.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\insert.png" SelfReg="false"/>
+    <ROW File="kh.png" Component_="addfile.png" FileName="kh.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\kh.png" SelfReg="false"/>
+    <ROW File="loadImg.png" Component_="addfile.png" FileName="loadImg.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\loadImg.png" SelfReg="false"/>
+    <ROW File="logo.jpg.png" Component_="addfile.png" FileName="LOGOJP~1.PNG|logo.jpg.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\logo.jpg.png" SelfReg="false"/>
+    <ROW File="nv.png" Component_="addfile.png" FileName="nv.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\nv.png" SelfReg="false"/>
+    <ROW File="onlineorder.png" Component_="addfile.png" FileName="ONLINE~1.PNG|online-order.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\online-order.png" SelfReg="false"/>
+    <ROW File="openbox.png" Component_="addfile.png" FileName="open-box.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\open-box.png" SelfReg="false"/>
+    <ROW File="pay.png" Component_="addfile.png" FileName="pay.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\pay.png" SelfReg="false"/>
+    <ROW File="port1.jpg" Component_="addfile.png" FileName="port1.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\port1.jpg" SelfReg="false"/>
+    <ROW File="port3.jpg" Component_="addfile.png" FileName="port3.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\port3.jpg" SelfReg="false"/>
+    <ROW File="port4.jpg" Component_="addfile.png" FileName="port4.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\port4.jpg" SelfReg="false"/>
+    <ROW File="port5.jpg" Component_="addfile.png" FileName="port5.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\port5.jpg" SelfReg="false"/>
+    <ROW File="port7.jpg" Component_="addfile.png" FileName="port7.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\port7.jpg" SelfReg="false"/>
+    <ROW File="port9.jpg" Component_="addfile.png" FileName="port9.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\port9.jpg" SelfReg="false"/>
+    <ROW File="printer.png" Component_="addfile.png" FileName="printer.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\printer.png" SelfReg="false"/>
+    <ROW File="product1.jpg" Component_="addfile.png" FileName="product1.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\product1.jpg" SelfReg="false"/>
+    <ROW File="product13.jpg" Component_="addfile.png" FileName="PRODUC~1.JPG|product13.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\product13.jpg" SelfReg="false"/>
+    <ROW File="product15.jpg" Component_="addfile.png" FileName="PRODUC~2.JPG|product15.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\product15.jpg" SelfReg="false"/>
+    <ROW File="product2.jpg" Component_="addfile.png" FileName="product2.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\product2.jpg" SelfReg="false"/>
+    <ROW File="product3.jpg" Component_="addfile.png" FileName="product3.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\product3.jpg" SelfReg="false"/>
+    <ROW File="product4.jpg" Component_="addfile.png" FileName="product4.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\product4.jpg" SelfReg="false"/>
+    <ROW File="product5.jpg" Component_="addfile.png" FileName="product5.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\product5.jpg" SelfReg="false"/>
+    <ROW File="product8.jpg" Component_="addfile.png" FileName="product8.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\product8.jpg" SelfReg="false"/>
+    <ROW File="product9.jpg" Component_="addfile.png" FileName="product9.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\product9.jpg" SelfReg="false"/>
+    <ROW File="productbig.jpg" Component_="addfile.png" FileName="PRODUC~3.JPG|productbig.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\productbig.jpg" SelfReg="false"/>
+    <ROW File="productbig1.jpg" Component_="addfile.png" FileName="PRODUC~4.JPG|productbig1.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\productbig1.jpg" SelfReg="false"/>
+    <ROW File="productbig2.jpg" Component_="addfile.png" FileName="PRODUC~5.JPG|productbig2.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\productbig2.jpg" SelfReg="false"/>
+    <ROW File="profits.png" Component_="addfile.png" FileName="profits.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\profits.png" SelfReg="false"/>
+    <ROW File="rating.png" Component_="addfile.png" FileName="rating.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\rating.png" SelfReg="false"/>
+    <ROW File="receipt.png" Component_="addfile.png" FileName="receipt.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\receipt.png" SelfReg="false"/>
+    <ROW File="report.png" Component_="addfile.png" FileName="report.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\report.png" SelfReg="false"/>
+    <ROW File="reset.png" Component_="addfile.png" FileName="reset.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\reset.png" SelfReg="false"/>
+    <ROW File="salary.png" Component_="addfile.png" FileName="salary.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\salary.png" SelfReg="false"/>
+    <ROW File="savefile.png" Component_="addfile.png" FileName="SAVE-F~1.PNG|save-file.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\save-file.png" SelfReg="false"/>
+    <ROW File="save.png" Component_="addfile.png" FileName="save.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\save.png" SelfReg="false"/>
+    <ROW File="service1.jpg" Component_="addfile.png" FileName="service1.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\service1.jpg" SelfReg="false"/>
+    <ROW File="service2.jpg" Component_="addfile.png" FileName="service2.jpg" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\service2.jpg" SelfReg="false"/>
+    <ROW File="spanhot.png" Component_="addfile.png" FileName="span-hot.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\span-hot.png" SelfReg="false"/>
+    <ROW File="spannew.png" Component_="addfile.png" FileName="span-new.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\span-new.png" SelfReg="false"/>
+    <ROW File="staff3.png" Component_="addfile.png" FileName="STAFF(~1.PNG|staff (3).png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\staff (3).png" SelfReg="false"/>
+    <ROW File="staff4.png" Component_="addfile.png" FileName="STAFF(~2.PNG|staff (4).png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\staff (4).png" SelfReg="false"/>
+    <ROW File="staff5.png" Component_="addfile.png" FileName="STAFF(~3.PNG|staff (5).png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\staff (5).png" SelfReg="false"/>
+    <ROW File="staff1.png" Component_="addfile.png" FileName="staff(1).png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\staff(1).png" SelfReg="false"/>
+    <ROW File="staff2.png" Component_="addfile.png" FileName="staff(2).png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\staff(2).png" SelfReg="false"/>
+    <ROW File="staff6.png" Component_="addfile.png" FileName="staff(6).png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\staff(6).png" SelfReg="false"/>
+    <ROW File="staff7.png" Component_="addfile.png" FileName="staff(7).png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\staff(7).png" SelfReg="false"/>
+    <ROW File="staff.png" Component_="addfile.png" FileName="staff.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\staff.png" SelfReg="false"/>
+    <ROW File="synchronize.png" Component_="addfile.png" FileName="SYNCHR~1.PNG|synchronize.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\synchronize.png" SelfReg="false"/>
+    <ROW File="team.png" Component_="addfile.png" FileName="team.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\team.png" SelfReg="false"/>
+    <ROW File="test.png" Component_="addfile.png" FileName="test.png" Attributes="0" SourcePath="..\..\..\Do_An_PTUDTM\Do_An\GUI\Images\test.png" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
+    <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrapperUISequenceComponent">
+    <ROW Action="AI_DetectSoftware" Sequence="151"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" Languages="en" InstallationType="4" UseLargeSchema="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="Themes.aip" Path="&lt;AI_FRAGS&gt;Themes.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="SoftwareDetector.dll" SourcePath="&lt;AI_CUSTACTS&gt;SoftwareDetector.dll"/>
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DetectSoftware" Type="257" Source="SoftwareDetector.dll" Target="OnDetectSoftware"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]" MultiBuildTarget="DefaultBuild:[SHORTCUTDIR][DesktopFolder]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
+    <ROW Feature_="MainFeature" Component_="APPDIR"/>
+    <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="MainFeature" Component_="GUI.vshost.exe"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.ConnectionInfo.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.ConnectionInfoExtended.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.Dmf.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.Management.Sdk.Sfc.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.RegSvrEnum.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.ServiceBrokerEnum.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.Smo.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.SmoExtended.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.SqlEnum.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.BonusSkins.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Charts.v19.2.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.CodeParser.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Dashboard.v19.2.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Data.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.DataAccess.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.DataAccess.v19.2.UI.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Diagram.v19.2.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Images.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Map.v19.2.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Office.v19.2.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Pdf.v19.2.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Pdf.v19.2.Drawing.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.PivotGrid.v19.2.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Printing.v19.2.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.RichEdit.v19.2.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.RichEdit.v19.2.Export.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Sparkline.v19.2.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.SpellChecker.v19.2.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.TreeMap.v19.2.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Utils.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Utils.v19.2.UI.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Xpo.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraBars.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraCharts.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraCharts.v19.2.Extensions.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraCharts.v19.2.UI.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraCharts.v19.2.Wizard.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraDiagram.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraEditors.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraGauges.v19.2.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraGauges.v19.2.Presets.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraGauges.v19.2.Win.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraGrid.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraLayout.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraMap.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraNavBar.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraPdfViewer.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraPivotGrid.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraPrinting.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraReports.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraReports.v19.2.Extensions.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraRichEdit.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraScheduler.v19.2.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraScheduler.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraSpellChecker.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraTreeList.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraTreeMap.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraVerticalGrid.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="addfile.png"/>
+    <ROW Feature_="MainFeature" Component_="DAO.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="BUS.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Dashboard.v19.2.Core.xml"/>
+    <ROW Feature_="MainFeature" Component_="GUI.exe"/>
+    <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="GUI.exe" SourcePath="..\GUI\Images\data-_1_.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_DetectSoftware" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_DetectSoftware" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="((VersionNT &lt;&gt; 501) AND (VersionNT &lt;&gt; 502))" Description="[ProductName] cannot be installed on [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] cannot be installed on [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="AI_DETECTED_DOTNET_VERSION &gt;= AI_REQUIRED_DOTNET_VERSION" Description="[ProductName] cannot be installed on systems with .NET Framework version lower than [AI_REQUIRED_DOTNET_DISPLAY]." DescriptionLocId="AI.LaunchCondition.DotNET" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="AI_DETECTED_SQLEXPRESS_VERSION &gt;= AI_REQUIRED_SQLEXPRESS_VERSION" Description="[ProductName] cannot be installed on systems without [AI_REQUIRED_SQLEXPRESS_DISPLAY] or higher." DescriptionLocId="AI.LaunchCondition.SQLExpress" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="Manufacturer" Root="-1" Key="Software\[Manufacturer]" Name="\"/>
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="ProductName" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="\"/>
+    <ROW Registry="Software" Root="-1" Key="Software" Name="\"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="GUI" Directory_="SHORTCUTDIR" Name="ELECTR~1|Electronic shop" Component_="GUI.exe" Target="[#GUI.exe]" Description="Phần mềm quản lý bán linh kiện điện tử" Hotkey="0" Icon_="GUI.exe" IconIndex="0" ShowCmd="1" WkDir="UC_Dir"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+</DOCUMENT>
