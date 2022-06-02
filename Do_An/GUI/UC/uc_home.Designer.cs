@@ -87,7 +87,6 @@
             DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar chartControlCommandGalleryItemGroup2DBar1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar();
             DevExpress.XtraCharts.UI.CreateRotatedBarChartItem createRotatedBarChartItem1 = new DevExpress.XtraCharts.UI.CreateRotatedBarChartItem();
             DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem createRotatedFullStackedBarChartItem1 = new DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_home));
             DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem createRotatedSideBySideFullStackedBarChartItem1 = new DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem();
             DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem createRotatedSideBySideStackedBarChartItem1 = new DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem();
             DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem createRotatedStackedBarChartItem1 = new DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem();
@@ -103,6 +102,7 @@
             DevExpress.XtraCharts.UI.CreateStepAreaChartItem createStepAreaChartItem1 = new DevExpress.XtraCharts.UI.CreateStepAreaChartItem();
             DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea chartControlCommandGalleryItemGroup3DArea1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea();
             DevExpress.XtraCharts.UI.CreateArea3DChartItem createArea3DChartItem1 = new DevExpress.XtraCharts.UI.CreateArea3DChartItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_home));
             DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem createFullStackedArea3DChartItem1 = new DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem();
             DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem createFullStackedSplineArea3DChartItem1 = new DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem();
             DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem createSplineArea3DChartItem1 = new DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem();
@@ -559,8 +559,12 @@
             createRotatedBarChartItem1.Hint = "Insert a bar chart.\r\n\r\nBar charts are the best chart type for comparing multiple " +
     "values.";
             createRotatedFullStackedBarChartItem1.Caption = "100% Stacked Bar";
-            createRotatedFullStackedBarChartItem1.Description = resources.GetString("createRotatedFullStackedBarChartItem1.Description");
-            createRotatedFullStackedBarChartItem1.Hint = resources.GetString("createRotatedFullStackedBarChartItem1.Hint");
+            createRotatedFullStackedBarChartItem1.Description = "Compare the percentage each value contributes to a total across categories using " +
+    "horizontal rectangles.\n\nUse it when the values on the chart represent durations " +
+    "or when the category text is very long.";
+            createRotatedFullStackedBarChartItem1.Hint = "Compare the percentage each value contributes to a total across categories using " +
+    "horizontal rectangles.\n\nUse it when the values on the chart represent durations " +
+    "or when the category text is very long.";
             createRotatedSideBySideFullStackedBarChartItem1.Caption = "Clustered 100% Stacked Bar";
             createRotatedSideBySideFullStackedBarChartItem1.Description = "Combine the advantages of both the 100% Stacked Bar and Clustered Bar chart types" +
     ", so you can stack different bars, and combine them into groups across the same " +

@@ -247,7 +247,7 @@
             this.xtraTabPage1.Controls.Add(this.pictureBox1);
             this.xtraTabPage1.Controls.Add(this.gcProduct);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(929, 520);
+            this.xtraTabPage1.Size = new System.Drawing.Size(930, 520);
             this.xtraTabPage1.Text = "Linh kiện";
             // 
             // pictureBox1
@@ -271,7 +271,7 @@
             this.pictureImage,
             this.repositoryItemPictureEdit2,
             this.imgHinhAnh});
-            this.gcProduct.Size = new System.Drawing.Size(929, 520);
+            this.gcProduct.Size = new System.Drawing.Size(930, 520);
             this.gcProduct.TabIndex = 0;
             this.gcProduct.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvProduct});
@@ -310,7 +310,7 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 0;
-            this.gridColumn2.Width = 112;
+            this.gridColumn2.Width = 168;
             // 
             // gridColumn3
             // 
@@ -321,7 +321,7 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 1;
-            this.gridColumn3.Width = 112;
+            this.gridColumn3.Width = 168;
             // 
             // lkLoaiLK
             // 
@@ -341,7 +341,7 @@
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
-            this.gridColumn4.Width = 112;
+            this.gridColumn4.Width = 168;
             // 
             // gridColumn5
             // 
@@ -351,7 +351,7 @@
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 3;
-            this.gridColumn5.Width = 112;
+            this.gridColumn5.Width = 168;
             // 
             // gridColumn9
             // 
@@ -362,7 +362,7 @@
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 4;
-            this.gridColumn9.Width = 112;
+            this.gridColumn9.Width = 92;
             // 
             // imgHinhAnh
             // 
@@ -381,7 +381,7 @@
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 112;
+            this.gridColumn6.Width = 143;
             // 
             // pictureImage
             // 
@@ -397,7 +397,7 @@
             // 
             this.xtraTabPage2.Controls.Add(this.gcTypeProduct);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(929, 520);
+            this.xtraTabPage2.Size = new System.Drawing.Size(930, 520);
             this.xtraTabPage2.Text = "Loại linh kiện";
             // 
             // gcTypeProduct
@@ -407,7 +407,7 @@
             this.gcTypeProduct.MainView = this.gvTypeProduct;
             this.gcTypeProduct.MenuManager = this.barManager1;
             this.gcTypeProduct.Name = "gcTypeProduct";
-            this.gcTypeProduct.Size = new System.Drawing.Size(929, 520);
+            this.gcTypeProduct.Size = new System.Drawing.Size(930, 520);
             this.gcTypeProduct.TabIndex = 0;
             this.gcTypeProduct.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTypeProduct});

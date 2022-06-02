@@ -28,8 +28,10 @@ namespace GUI.FRM
             lbAccount.Caption = "Nhân viên: " + nv.TENNV;
             openUC(typeof(uc_home));
             checkClose = true;
-            if(!nv.QUYEN.tenquyen.ToLower().Equals("admin"))
-                btnManagerment.Visible =btnStatistical.Visible=btnRestore.Enabled=btnBackup.Enabled= false;                
+            if (!nv.QUYEN.tenquyen.ToLower().Equals("admin"))
+                btnManagerment.Visible = btnStatistical.Visible = btnRestore.Enabled = btnBackup.Enabled = false;
+            else
+                btnCustomerOfStaff.Visible = false;
         }
         public void _close()
         {
@@ -182,6 +184,11 @@ namespace GUI.FRM
         private void btnTurnover_Click(object sender, EventArgs e)
         {
             openUC(typeof(uc_statistical));
+        }
+
+        private void btnCustomerOfStaff_Click(object sender, EventArgs e)
+        {
+            openUC(typeof(uc_customer));
         }
     }
 }

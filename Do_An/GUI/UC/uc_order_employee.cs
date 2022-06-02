@@ -177,7 +177,7 @@ namespace GUI.UC
                     if (soLuong > lk.SOLUONGCON)
                     {
                         bVali = false;
-                        sErr += "Hết hàng.\n";
+                        sErr += "Không đủ hàng.\n";
                     }
                     if (!bVali)
                     {
