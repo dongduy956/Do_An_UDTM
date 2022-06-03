@@ -28,15 +28,17 @@ namespace GUI.FRM
             connectionString = String.Format("server={0}; database={1}; Integrated Security = False;uid={2};pwd={3}", cbbServer.Text.Trim(), cbbDatabase.Text, txtUsername.Text, txtPassword.Text);
             if (Support.TestConnection(connectionString))
             {
+                splashScreenManager1.CloseWaitForm();
                 XtraMessageBox.Show("Kết nối thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 frm.setStatus("Test kết nối thành công.",Color.Yellow);
             }
             else
             {
+                splashScreenManager1.CloseWaitForm();
+
                 XtraMessageBox.Show("Kết nối thất bại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 frm.setStatus("Test kết nối thất bại.",Color.Red);
             }
-            splashScreenManager1.CloseWaitForm();
 
 
         }
@@ -87,14 +89,14 @@ namespace GUI.FRM
             if (Support.SaveConnection(connectionString))
             {
                 frm.setStatus("Lưu thành công.Vui lòng khởi động lại ứng dụng.",Color.Yellow);
+                splashScreenManager1.CloseWaitForm();
+
                 if (XtraMessageBox.Show("Lưu thành công.Vui lòng khởi động lại ứng dụng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk) == DialogResult.OK)
                 {
 
-                    Properties.Settings.Default.BackupRestore = cbbServer.Text.Trim() + "-" + cbbDatabase.Text + "-" + txtUsername.Text + "-" + txtPassword.Text;
-                    Properties.Settings.Default.Save();
-                    splashScreenManager1.CloseWaitForm();
+                   GUI.Properties.Settings.Default.BKRS = cbbServer.Text.Trim() + "+" + cbbDatabase.Text + "+" + txtUsername.Text + "+" + txtPassword.Text;
+                    GUI.Properties.Settings.Default.Save();
                     Application.Restart();
-
                 }
             }
             else

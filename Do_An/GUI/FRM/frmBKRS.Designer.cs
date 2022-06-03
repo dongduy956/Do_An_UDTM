@@ -35,26 +35,26 @@
             // 
             // progressBarControl1
             // 
-            this.progressBarControl1.Location = new System.Drawing.Point(12, 12);
+            this.progressBarControl1.Location = new System.Drawing.Point(12, 13);
             this.progressBarControl1.Name = "progressBarControl1";
             this.progressBarControl1.Properties.ShowTitle = true;
-            this.progressBarControl1.Size = new System.Drawing.Size(670, 46);
+            this.progressBarControl1.Size = new System.Drawing.Size(670, 48);
             this.progressBarControl1.TabIndex = 0;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(12, 79);
+            this.labelControl1.Location = new System.Drawing.Point(12, 83);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(0, 19);
+            this.labelControl1.Size = new System.Drawing.Size(0, 20);
             this.labelControl1.TabIndex = 1;
             // 
             // frmBKRS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(691, 131);
+            this.ClientSize = new System.Drawing.Size(691, 138);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.progressBarControl1);
             this.MaximizeBox = false;
@@ -62,6 +62,7 @@
             this.Name = "frmBKRS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông báo";
+            this.Load += new System.EventHandler(this.frmBKRS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

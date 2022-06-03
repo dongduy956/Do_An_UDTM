@@ -45,15 +45,6 @@ namespace GUI.FRM
             }
             return false;
         }
-        void CloseProgressPanel(IOverlaySplashScreenHandle handle)
-        {
-            if (handle != null)
-                SplashScreenManager.CloseOverlayForm(handle);
-        }
-        IOverlaySplashScreenHandle ShowProgressPanel()
-        {
-            return SplashScreenManager.ShowOverlayForm(this);
-        }
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
@@ -64,12 +55,15 @@ namespace GUI.FRM
            NHANVIEN nv = NhanVienBUS.Instances.login(txtUsername.Text, txtPassword.Text,ref errorCode);
             if (errorCode.ToString().Equals("-2146232060"))
             {
+                splashScreenManager1.CloseWaitForm();
+
                 XtraMessageBox.Show("Lỗi kết nối server.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 frm.setStatus("Lỗi kết nối server.", Color.Red);
             }
             else
         if (nv==null)
             {
+                splashScreenManager1.CloseWaitForm();
                 XtraMessageBox.Show("Sai tài khoản hoặc mật khẩu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 frm.setStatus("Sai tài khoản hoặc mật khẩu", Color.Red);
             }
@@ -82,9 +76,9 @@ namespace GUI.FRM
                     Properties.Settings.Default.Remember = "";
                 Properties.Settings.Default.Save();
                 frm.Hide();
+                splashScreenManager1.CloseWaitForm();
                 new frmMain(frm, nv).Show();
             }
-            splashScreenManager1.CloseWaitForm();
 
         }
 

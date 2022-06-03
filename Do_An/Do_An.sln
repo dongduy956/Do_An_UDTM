@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{BCEE7808-D7F3-4616-ADD7-BA197F99AC97}"
 EndProject
-Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "ElectronicShop", "ElectronicShop\ElectronicShop.aiproj", "{A43DE4DD-5BB8-48B4-9763-3151C914574D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		All|Any CPU = All|Any CPU
@@ -36,12 +34,6 @@ Global
 		{BCEE7808-D7F3-4616-ADD7-BA197F99AC97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCEE7808-D7F3-4616-ADD7-BA197F99AC97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCEE7808-D7F3-4616-ADD7-BA197F99AC97}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A43DE4DD-5BB8-48B4-9763-3151C914574D}.All|Any CPU.ActiveCfg = DefaultBuild
-		{A43DE4DD-5BB8-48B4-9763-3151C914574D}.All|Any CPU.Build.0 = DefaultBuild
-		{A43DE4DD-5BB8-48B4-9763-3151C914574D}.Debug|Any CPU.ActiveCfg = DefaultBuild
-		{A43DE4DD-5BB8-48B4-9763-3151C914574D}.Debug|Any CPU.Build.0 = DefaultBuild
-		{A43DE4DD-5BB8-48B4-9763-3151C914574D}.Release|Any CPU.ActiveCfg = DefaultBuild
-		{A43DE4DD-5BB8-48B4-9763-3151C914574D}.Release|Any CPU.Build.0 = DefaultBuild
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

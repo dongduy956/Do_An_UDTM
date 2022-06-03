@@ -37,13 +37,13 @@ namespace GUI.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(".-QL_LINHKIENMAYTINH-sa-123")]
-        public string BackupRestore {
+        [global::System.Configuration.DefaultSettingValueAttribute(".+QL_LINHKIENMAYTINH+sa+123")]
+        public string BKRS {
             get {
-                return ((string)(this["BackupRestore"]));
+                return ((string)(this["BKRS"]));
             }
             set {
-                this["BackupRestore"] = value;
+                this["BKRS"] = value;
             }
         }
     }

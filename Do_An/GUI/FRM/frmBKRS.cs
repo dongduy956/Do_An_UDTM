@@ -32,7 +32,7 @@ namespace GUI.FRM
             if (check == 0)
             {
                 progressBarControl1.Position = 0;
-                string[] strs = Properties.Settings.Default.BackupRestore.Split('-');
+                string[] strs = Properties.Settings.Default.BKRS.Split('+');
                 try
                 {
                     Server dbserver = new Server(new ServerConnection(strs[0], strs[2], strs[3]));
@@ -52,7 +52,7 @@ namespace GUI.FRM
             else
             {
                 progressBarControl1.Position = 0;
-                string[] strs = Properties.Settings.Default.BackupRestore.Split('-');
+                string[] strs = Properties.Settings.Default.BKRS.Split('+');
                 try
                 {
                     Server dbserver = new Server(new ServerConnection(strs[0], strs[2], strs[3]));
@@ -122,6 +122,9 @@ namespace GUI.FRM
             });
         }
 
-       
+        private void frmBKRS_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
