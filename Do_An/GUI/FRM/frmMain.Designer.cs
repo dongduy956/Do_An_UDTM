@@ -68,6 +68,7 @@
             this.repositoryItemPictureEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::GUI.FRM.WaitForm1), true, true);
+            this.btnPredictNextDay = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -81,7 +82,7 @@
             // mainContainer
             // 
             this.mainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainContainer.Location = new System.Drawing.Point(375, 78);
+            this.mainContainer.Location = new System.Drawing.Point(375, 76);
             this.mainContainer.Name = "mainContainer";
             this.mainContainer.Size = new System.Drawing.Size(669, 584);
             this.mainContainer.TabIndex = 0;
@@ -98,7 +99,7 @@
             this.btnManagerment,
             this.btnStaffCustomer,
             this.btnStatistical});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 78);
+            this.accordionControl1.Location = new System.Drawing.Point(0, 76);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.OptionsHamburgerMenu.DisplayMode = DevExpress.XtraBars.Navigation.AccordionControlDisplayMode.Overlay;
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
@@ -232,7 +233,8 @@
             this.btnStatistical.Appearance.Pressed.Options.UseBackColor = true;
             this.btnStatistical.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnTurnover,
-            this.btnInventory});
+            this.btnInventory,
+            this.btnPredictNextDay});
             this.btnStatistical.Expanded = true;
             this.btnStatistical.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStatistical.ImageOptions.Image")));
             this.btnStatistical.Name = "btnStatistical";
@@ -262,7 +264,7 @@
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1044, 42);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1044, 36);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.lbTieuDe);
@@ -384,23 +386,23 @@
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 42);
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 36);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1044, 36);
+            this.barDockControlTop.Size = new System.Drawing.Size(1044, 40);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 662);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 660);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1044, 39);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1044, 41);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 78);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 76);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Size = new System.Drawing.Size(0, 584);
             // 
@@ -408,7 +410,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1044, 78);
+            this.barDockControlRight.Location = new System.Drawing.Point(1044, 76);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 584);
             // 
@@ -451,6 +453,14 @@
             // splashScreenManager1
             // 
             this.splashScreenManager1.ClosingDelay = 500;
+            // 
+            // btnPredictNextDay
+            // 
+            this.btnPredictNextDay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement1.ImageOptions.Image")));
+            this.btnPredictNextDay.Name = "btnPredictNextDay";
+            this.btnPredictNextDay.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnPredictNextDay.Text = "Dự báo doanh thu";
+            this.btnPredictNextDay.Click += new System.EventHandler(this.btnPredictNextDay_Click);
             // 
             // frmMain
             // 
@@ -524,5 +534,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnManagerment;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnCustomerOfStaff;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnPredictNextDay;
     }
 }

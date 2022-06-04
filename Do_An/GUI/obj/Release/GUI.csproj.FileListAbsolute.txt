@@ -273,3 +273,4 @@ E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.c
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.exe.licenses
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.exe
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.pdb
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.UC.uc_predict_day.resources

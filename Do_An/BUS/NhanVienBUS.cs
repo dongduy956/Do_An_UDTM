@@ -37,10 +37,10 @@ namespace BUS
                 instances = value;
             }
         }
-        public void getDataGV(GridControl gv)
+        public void getDataGV(GridControl gc)
         {
             var lst = (from nv in db.NHANVIENs select nv).ToList();
-            gv.DataSource = Support.ToDataTable<NHANVIEN>(lst);
+            gc.DataSource = Support.ToDataTable<NHANVIEN>(lst);
         }
         public int insert(string tennv, string diachi, string sdt, bool gioiTinh, DateTime ngayVL
             , double luong, string hinhAnh, string taiKhoan, int maQuyen)

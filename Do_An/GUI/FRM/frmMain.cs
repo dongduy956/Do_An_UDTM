@@ -190,5 +190,11 @@ namespace GUI.FRM
         {
             openUC(typeof(uc_customer));
         }
+
+        private void btnPredictNextDay_Click(object sender, EventArgs e)
+        {
+            openUC(typeof(uc_predict_day));
+
+        }
     }
 }
