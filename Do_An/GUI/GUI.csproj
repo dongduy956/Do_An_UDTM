@@ -224,11 +224,11 @@
     <Compile Include="UC\uc_order_employee.Designer.cs">
       <DependentUpon>uc_order_employee.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\uc_predict_day.cs">
+    <Compile Include="UC\uc_predict.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC\uc_predict_day.Designer.cs">
-      <DependentUpon>uc_predict_day.cs</DependentUpon>
+    <Compile Include="UC\uc_predict.Designer.cs">
+      <DependentUpon>uc_predict.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\uc_product.cs">
       <SubType>UserControl</SubType>
@@ -310,8 +310,8 @@
     <EmbeddedResource Include="UC\uc_order_employee.resx">
       <DependentUpon>uc_order_employee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\uc_predict_day.resx">
-      <DependentUpon>uc_predict_day.cs</DependentUpon>
+    <EmbeddedResource Include="UC\uc_predict.resx">
+      <DependentUpon>uc_predict.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\uc_product.resx">
       <DependentUpon>uc_product.cs</DependentUpon>

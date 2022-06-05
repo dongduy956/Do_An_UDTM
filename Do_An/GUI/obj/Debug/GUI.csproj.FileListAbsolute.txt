@@ -1012,4 +1012,4 @@ E:\Phát triển ứng dụng thông minh\Do_An_PTUDTM\Do_An\GUI\obj\Debug\GUI.c
 E:\Phát triển ứng dụng thông minh\Do_An_PTUDTM\Do_An\GUI\obj\Debug\GUI.exe.licenses
 E:\Phát triển ứng dụng thông minh\Do_An_PTUDTM\Do_An\GUI\obj\Debug\GUI.exe
 E:\Phát triển ứng dụng thông minh\Do_An_PTUDTM\Do_An\GUI\obj\Debug\GUI.pdb
-E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.UC.uc_predict_day.resources
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Debug\GUI.UC.uc_predict.resources
