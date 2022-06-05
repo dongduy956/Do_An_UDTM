@@ -46,6 +46,7 @@
             this.btnStatistical = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnTurnover = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnInventory = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnPredictNextDay = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.lbTieuDe = new DevExpress.XtraBars.BarHeaderItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
@@ -68,7 +69,6 @@
             this.repositoryItemPictureEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::GUI.FRM.WaitForm1), true, true);
-            this.btnPredictNextDay = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -238,7 +238,7 @@
             this.btnStatistical.Expanded = true;
             this.btnStatistical.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStatistical.ImageOptions.Image")));
             this.btnStatistical.Name = "btnStatistical";
-            this.btnStatistical.Text = "Thống kê";
+            this.btnStatistical.Text = "Thống kê - Dự đoán";
             // 
             // btnTurnover
             // 
@@ -255,6 +255,14 @@
             this.btnInventory.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnInventory.Text = "Tồn kho";
             this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
+            // 
+            // btnPredictNextDay
+            // 
+            this.btnPredictNextDay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPredictNextDay.ImageOptions.Image")));
+            this.btnPredictNextDay.Name = "btnPredictNextDay";
+            this.btnPredictNextDay.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnPredictNextDay.Text = "Dự báo doanh thu";
+            this.btnPredictNextDay.Click += new System.EventHandler(this.btnPredictNextDay_Click);
             // 
             // fluentDesignFormControl1
             // 
@@ -453,14 +461,6 @@
             // splashScreenManager1
             // 
             this.splashScreenManager1.ClosingDelay = 500;
-            // 
-            // btnPredictNextDay
-            // 
-            this.btnPredictNextDay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement1.ImageOptions.Image")));
-            this.btnPredictNextDay.Name = "btnPredictNextDay";
-            this.btnPredictNextDay.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnPredictNextDay.Text = "Dự báo doanh thu";
-            this.btnPredictNextDay.Click += new System.EventHandler(this.btnPredictNextDay_Click);
             // 
             // frmMain
             // 

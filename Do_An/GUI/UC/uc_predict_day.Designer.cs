@@ -31,12 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_predict_day));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.gcPredictNextDay = new DevExpress.XtraGrid.GridControl();
             this.gvPredictNextDay = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.btnPredict = new DevExpress.XtraBars.BarButtonItem();
@@ -48,15 +50,18 @@
             this.btnDelete = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPredictNextDay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPredictNextDay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.chartControl1);
             this.layoutControl1.Controls.Add(this.gcPredictNextDay);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 40);
@@ -66,12 +71,22 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // chartControl1
+            // 
+            this.chartControl1.Legend.Name = "Default Legend";
+            this.chartControl1.Location = new System.Drawing.Point(426, 12);
+            this.chartControl1.Name = "chartControl1";
+            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            this.chartControl1.Size = new System.Drawing.Size(410, 384);
+            this.chartControl1.TabIndex = 5;
+            this.chartControl1.CustomDrawAxisLabel += new DevExpress.XtraCharts.CustomDrawAxisLabelEventHandler(this.chartControl1_CustomDrawAxisLabel);
+            // 
             // gcPredictNextDay
             // 
             this.gcPredictNextDay.Location = new System.Drawing.Point(12, 12);
             this.gcPredictNextDay.MainView = this.gvPredictNextDay;
             this.gcPredictNextDay.Name = "gcPredictNextDay";
-            this.gcPredictNextDay.Size = new System.Drawing.Size(824, 384);
+            this.gcPredictNextDay.Size = new System.Drawing.Size(410, 384);
             this.gcPredictNextDay.TabIndex = 4;
             this.gcPredictNextDay.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPredictNextDay});
@@ -113,7 +128,8 @@
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1});
+            this.layoutControlItem1,
+            this.layoutControlItem2});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(848, 408);
             this.Root.TextVisible = false;
@@ -123,9 +139,18 @@
             this.layoutControlItem1.Control = this.gcPredictNextDay;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(828, 388);
+            this.layoutControlItem1.Size = new System.Drawing.Size(414, 388);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.chartControl1;
+            this.layoutControlItem2.Location = new System.Drawing.Point(414, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(414, 388);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
             // 
             // barManager1
             // 
@@ -230,10 +255,12 @@
             this.Tag = "Dự báo doanh thu";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPredictNextDay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPredictNextDay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -258,5 +285,7 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarButtonItem btnDelete;
+        private DevExpress.XtraCharts.ChartControl chartControl1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
     }
 }

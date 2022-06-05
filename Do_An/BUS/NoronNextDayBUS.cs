@@ -2,6 +2,7 @@
 using DevExpress.XtraGrid;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,7 @@ namespace BUS
         //tính hiệu lỗi
         private double ng1, ng2, ng3, ng4, ng5;
         //hệ số hiệu chỉnh bias bằng 1 và hệ số nguy = 1
-        private double n = 0.5;
+        private double n = 1;
         private List<ItemNoronNextDay> lstRevenue;
         private static NoronNextDayBUS instances;
         public static NoronNextDayBUS Instances
@@ -36,7 +37,7 @@ namespace BUS
             Random random = new Random();
             return random.NextDouble() * (maximum - minimum) + minimum;
         }
-        public void loadDataGC(GridControl gc)
+        public DataTable loadDataGC(GridControl gc)
         {
             lstRevenue = new List<ItemNoronNextDay>();
             DateTime date30Agos = DateTime.Now.AddDays(-29);
@@ -60,7 +61,9 @@ namespace BUS
                     train();
                 }
             }
-            gc.DataSource = Support.ToDataTable<ItemNoronNextDay>(lstRevenue);
+            var tb= Support.ToDataTable<ItemNoronNextDay>(lstRevenue); ;
+            gc.DataSource = tb;
+            return tb; 
         }
         //tìm doanh thu lớn nhất
         private double findMax()
