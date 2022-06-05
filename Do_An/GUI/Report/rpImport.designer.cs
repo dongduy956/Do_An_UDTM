@@ -64,7 +64,6 @@ namespace GUI.Report
             this.lbDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.lbCodeImport = new DevExpress.XtraReports.Parameters.Parameter();
             this.lbNguoiLap = new DevExpress.XtraReports.Parameters.Parameter();
-            this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPictureBox2 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
@@ -76,6 +75,7 @@ namespace GUI.Report
             this.xrTableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell12 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell13 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
@@ -440,22 +440,10 @@ namespace GUI.Report
             this.lbNguoiLap.Name = "lbNguoiLap";
             this.lbNguoiLap.Visible = false;
             // 
-            // PageFooter
-            // 
-            this.PageFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPictureBox2,
-            this.xrLabel3,
-            this.xrLabel4,
-            this.xrLabel9,
-            this.xrPageInfo1,
-            this.xrLabel8});
-            this.PageFooter.HeightF = 160.0417F;
-            this.PageFooter.Name = "PageFooter";
-            // 
             // xrPictureBox2
             // 
             this.xrPictureBox2.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource(global::GUI.Properties.Resources.ecommerce, true);
-            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 10.00002F);
+            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(10.00003F, 38.70201F);
             this.xrPictureBox2.Name = "xrPictureBox2";
             this.xrPictureBox2.SizeF = new System.Drawing.SizeF(172.1726F, 128.6548F);
             this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
@@ -463,7 +451,7 @@ namespace GUI.Report
             // xrLabel3
             // 
             this.xrLabel3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(9.999996F, 140.0179F);
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(9.999985F, 168.7199F);
             this.xrLabel3.Multiline = true;
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -477,7 +465,7 @@ namespace GUI.Report
             // 
             this.xrLabel4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.xrLabel4.ForeColor = System.Drawing.Color.Crimson;
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(325.7617F, 127.0417F);
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(325.7617F, 155.7437F);
             this.xrLabel4.Multiline = true;
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -494,7 +482,7 @@ namespace GUI.Report
             this.xrLabel9.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?lbNguoiLap")});
             this.xrLabel9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(626.4901F, 78.33337F);
+            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(626.4901F, 107.0354F);
             this.xrLabel9.Multiline = true;
             this.xrLabel9.Name = "xrLabel9";
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -508,7 +496,7 @@ namespace GUI.Report
             // xrPageInfo1
             // 
             this.xrPageInfo1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(715F, 137.0417F);
+            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(715F, 17.27778F);
             this.xrPageInfo1.Name = "xrPageInfo1";
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrPageInfo1.SizeF = new System.Drawing.SizeF(100F, 23F);
@@ -519,7 +507,7 @@ namespace GUI.Report
             // xrLabel8
             // 
             this.xrLabel8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(662.1665F, 23.19446F);
+            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(662.1665F, 51.89645F);
             this.xrLabel8.Multiline = true;
             this.xrLabel8.Name = "xrLabel8";
             this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -532,8 +520,13 @@ namespace GUI.Report
             // ReportFooter
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrPictureBox2,
+            this.xrLabel9,
+            this.xrLabel4,
+            this.xrLabel3,
+            this.xrLabel8,
             this.xrTable3});
-            this.ReportFooter.HeightF = 25F;
+            this.ReportFooter.HeightF = 191.202F;
             this.ReportFooter.Name = "ReportFooter";
             // 
             // xrTable3
@@ -580,6 +573,13 @@ namespace GUI.Report
             this.xrTableCell13.TextFormatString = "{0:N0}";
             this.xrTableCell13.Weight = 1.0129666372758956D;
             // 
+            // PageFooter
+            // 
+            this.PageFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrPageInfo1});
+            this.PageFooter.HeightF = 40.27778F;
+            this.PageFooter.Name = "PageFooter";
+            // 
             // rpImport
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -588,8 +588,8 @@ namespace GUI.Report
             this.Detail,
             this.GroupHeader1,
             this.GroupHeader2,
-            this.PageFooter,
-            this.ReportFooter});
+            this.ReportFooter,
+            this.PageFooter});
             this.Font = new System.Drawing.Font("Arial", 9.75F);
             this.Margins = new System.Drawing.Printing.Margins(6, 6, 6, 6);
             this.PageHeight = 1169;
@@ -636,7 +636,6 @@ namespace GUI.Report
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
         public DevExpress.XtraReports.Parameters.Parameter lbCodeImport;
         public DevExpress.XtraReports.Parameters.Parameter lbNguoiLap;
-        private DevExpress.XtraReports.UI.PageFooterBand PageFooter;
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox2;
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
         private DevExpress.XtraReports.UI.XRLabel xrLabel4;
@@ -655,5 +654,6 @@ namespace GUI.Report
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell9;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell10;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell11;
+        private DevExpress.XtraReports.UI.PageFooterBand PageFooter;
     }
 }

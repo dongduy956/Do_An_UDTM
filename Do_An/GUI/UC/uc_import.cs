@@ -31,8 +31,8 @@ namespace GUI.UC
         private void uc_import_Load(object sender, EventArgs e)
         {
             NhapKhoBUS.Instances.getDataGV(gcImport, true);
-            gvImport.IndicatorWidth = 30;
-            gvImportDetail.IndicatorWidth = 30;
+            gvImport.IndicatorWidth = 50;
+            gvImportDetail.IndicatorWidth = 50;
         }
         //đóng form
         private void btnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

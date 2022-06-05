@@ -100,7 +100,7 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Doanh thu";
-            this.gridColumn2.FieldName = "Revenue";
+            this.gridColumn2.FieldName = "ConvertRevenue";
             this.gridColumn2.MinWidth = 30;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;

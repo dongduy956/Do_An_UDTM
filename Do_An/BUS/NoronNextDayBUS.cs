@@ -19,7 +19,7 @@ namespace BUS
         //tính hiệu lỗi
         private double ng1, ng2, ng3, ng4, ng5;
         //hệ số hiệu chỉnh bias bằng 1 và hệ số nguy = 1
-        private double n = 1;
+        private double n = 0.5;
         private List<ItemNoronNextDay> lstRevenue;
         private static NoronNextDayBUS instances;
         public static NoronNextDayBUS Instances
@@ -31,47 +31,47 @@ namespace BUS
                 return instances;
             }
         }
-       
+        public double GetRandomNumber(double minimum, double maximum)
+        {
+            Random random = new Random();
+            return random.NextDouble() * (maximum - minimum) + minimum;
+        }
         public void loadDataGC(GridControl gc)
         {
-
-            
             lstRevenue = new List<ItemNoronNextDay>();
-            DateTime date30Agos = DateTime.Now.AddDays(-30);
+            DateTime date30Agos = DateTime.Now.AddDays(-29);
             for (DateTime date = date30Agos; date.CompareTo(DateTime.Now) <= 0; date = date.AddDays(1))
             {
-                var total = db.HOADONs.Where(x => x.NGAYLAP.CompareTo(date) == 0).Sum(x => x.tongtien) ?? 0;
+                var total = db.HOADONs.Where(x => x.NGAYLAP.CompareTo(date) == 0 && x.ispay == true).Sum(x => x.tongtien) ?? 0;
                 lstRevenue.Add(new ItemNoronNextDay()
                 {
                     Date = date,
-                    Revenue = total
+                    Revenue = total,
+                    ConvertRevenue = Support.convertVND(total.ToString())
                 });
             }
+
             randomWeight();
-            for (int i = 0; i < 22; i++)
+            for (int j = 0; j < 1000; j++)
             {
-                ReadInput(i);
-                train();
+                for (int i = 0; i < 22; i++)
+                {
+                    ReadInput(i);
+                    train();
+                }
             }
             gc.DataSource = Support.ToDataTable<ItemNoronNextDay>(lstRevenue);
         }
         //tìm doanh thu lớn nhất
         private double findMax()
         {
-            double max = lstRevenue[0].Revenue??0;
-            for (int i = 1; i < lstRevenue.Count; i++)
-                if (max < lstRevenue[i].Revenue)
-                    max = lstRevenue[i].Revenue??0;
-            return Math.Round(max, 6);
+            return Math.Round(lstRevenue.Max(x => x.Revenue) ?? 0, 6);
         }
         //tìm doanh thu nhỏ nhất
         private double findMin()
         {
-            double min = lstRevenue[0].Revenue??0;
-            for (int i = 1; i < lstRevenue.Count; i++)
-                if (min > lstRevenue[i].Revenue)
-                    min = lstRevenue[i].Revenue??0;
-            return Math.Round(min, 6);
+            return Math.Round(lstRevenue.Min(x => x.Revenue) ?? 0, 6);
+
         }
         //chuẩn hoá dữ liệu về [min,max] của lstStaticalDay
         private double dataNormalization(double x)
@@ -84,37 +84,37 @@ namespace BUS
         //đọc dữ liệu đầu vào và kết quả mong muốn
         private void ReadInput(int day)
         {
-            A = lstRevenue[day].Revenue??0;
+            A = lstRevenue[day].Revenue ?? 0;
             //chuẩn hoá dữ liệu A
             A = Math.Round(dataNormalization(A), 6);
 
-            B = lstRevenue[day + 1].Revenue??0;
+            B = lstRevenue[day + 1].Revenue ?? 0;
             //chuẩn hoá dữ liệu B
             B = Math.Round(dataNormalization(B), 6);
 
-            C = lstRevenue[day + 2].Revenue??0;
+            C = lstRevenue[day + 2].Revenue ?? 0;
             //chuẩn hoá dữ liệu C
             C = Math.Round(dataNormalization(C), 6);
 
 
-            D = lstRevenue[day + 3].Revenue??0;
+            D = lstRevenue[day + 3].Revenue ?? 0;
             //chuẩn hoá dữ liệu D
             D = Math.Round(dataNormalization(D), 6);
-            if (day + 4 > 30)
+            if (day + 4 > 29)
                 return;
-            Z = lstRevenue[day + 4].Revenue??0;
+            Z = lstRevenue[day + 4].Revenue ?? 0;
             //chuẩn hoá dữ liệu Z
             Z = Math.Round(dataNormalization(Z), 6);
         }
 
         private static double Sigmoid(double t)
         {
-            return Math.Round((1.0 / (1 + Math.Pow(Math.E, -t))), 6);
+            return Math.Round(1.0 / (1 + Math.Pow(Math.E, -t)), 6);
         }
 
         private static double derivative_Sigmoid(double t)
         {
-            return Math.Round((Math.Pow(Math.E, t) / (Math.Pow(1.0 + Math.Pow(Math.E, t), 2))), 6);
+            return Math.Round(Math.Pow(Math.E, t) / Math.Pow(1.0 + Math.Pow(Math.E, t), 2), 6);
         }
         //tìm t cho nơron
         private double findT(double wa, double wb, double wc, double wd)
@@ -138,30 +138,30 @@ namespace BUS
         private void randomWeight()
         {
             Random r = new Random();
-            wa1 = r.NextDouble();
-            wb1 = r.NextDouble();
-            wc1 = r.NextDouble();
-            wd1 = r.NextDouble();
+            wa1 = GetRandomNumber(0,1);
+            wb1 = GetRandomNumber(0, 1);
+            wc1 = GetRandomNumber(0, 1);
+            wd1 = GetRandomNumber(0, 1);
             //
-            wa2 = r.NextDouble();
-            wb2 = r.NextDouble();
-            wc2 = r.NextDouble();
-            wd2 = r.NextDouble();
+            wa2 = GetRandomNumber(0, 1);
+            wb2 = GetRandomNumber(0, 1);
+            wc2 = GetRandomNumber(0, 1);
+            wd2 = GetRandomNumber(0, 1);
             //
-            wa3 = r.NextDouble();
-            wb3 = r.NextDouble();
-            wc3 = r.NextDouble();
-            wd3 = r.NextDouble();
+            wa3 = GetRandomNumber(0, 1);
+            wb3 = GetRandomNumber(0, 1);
+            wc3 = GetRandomNumber(0, 1);
+            wd3 = GetRandomNumber(0, 1);
             //
-            wa4 = r.NextDouble();
-            wb4 = r.NextDouble();
-            wc4 = r.NextDouble();
-            wd4 = r.NextDouble();
+            wa4 = GetRandomNumber(0, 1);
+            wb4 = GetRandomNumber(0, 1);
+            wc4 = GetRandomNumber(0, 1);
+            wd4 = GetRandomNumber(0, 1);
             //
-            w15 = r.NextDouble();
-            w25 = r.NextDouble();
-            w35 = r.NextDouble();
-            w45 = r.NextDouble();
+            w15 = GetRandomNumber(0, 1);
+            w25 = GetRandomNumber(0, 1);
+            w35 = GetRandomNumber(0, 1);
+            w45 = GetRandomNumber(0, 1);
         }
 
         //train dữ liệu 
@@ -170,6 +170,7 @@ namespace BUS
             //Tính nơron 1
             double t1 = findT(wa1, wb1, wc1, wd1);
             double y1 = Sigmoid(t1);
+
             //tính nơron 2
             double t2 = findT(wa2, wb2, wc2, wd2);
             double y2 = Sigmoid(t2);

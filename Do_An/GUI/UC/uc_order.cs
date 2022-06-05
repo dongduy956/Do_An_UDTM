@@ -30,8 +30,8 @@ namespace GUI.UC
         private void uc_order_Load(object sender, EventArgs e)
         {
             HoaDonBUS.Instances.getDataGV(gcOrder, true);
-            gvOrder.IndicatorWidth = 30;
-            gvOrderDetail.IndicatorWidth = 30;
+            gvOrder.IndicatorWidth = 50;
+            gvOrderDetail.IndicatorWidth = 50;
         }
         //đóng form hoá đơn
         private void btnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

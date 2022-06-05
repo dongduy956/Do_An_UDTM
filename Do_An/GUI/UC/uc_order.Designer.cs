@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_order));
             this.gvOrderDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -45,6 +45,7 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.btnPrint = new DevExpress.XtraBars.BarButtonItem();
@@ -133,10 +134,10 @@
             // gcOrder
             // 
             this.gcOrder.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode2.LevelTemplate = this.gvOrderDetail;
-            gridLevelNode2.RelationName = "Chi tiết hoá đơn";
+            gridLevelNode1.LevelTemplate = this.gvOrderDetail;
+            gridLevelNode1.RelationName = "Chi tiết hoá đơn";
             this.gcOrder.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.gcOrder.Location = new System.Drawing.Point(0, 40);
             this.gcOrder.MainView = this.gvOrder;
             this.gcOrder.MenuManager = this.barManager1;
@@ -156,7 +157,8 @@
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn5,
-            this.gridColumn6});
+            this.gridColumn6,
+            this.gridColumn12});
             this.gvOrder.DetailHeight = 368;
             this.gvOrder.GridControl = this.gcOrder;
             this.gvOrder.Name = "gvOrder";
@@ -237,6 +239,17 @@
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
             this.gridColumn6.Width = 112;
+            // 
+            // gridColumn12
+            // 
+            this.gridColumn12.Caption = "Thanh toán?";
+            this.gridColumn12.FieldName = "ispay";
+            this.gridColumn12.MinWidth = 30;
+            this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.OptionsColumn.AllowEdit = false;
+            this.gridColumn12.Visible = true;
+            this.gridColumn12.VisibleIndex = 6;
+            this.gridColumn12.Width = 112;
             // 
             // barManager1
             // 
@@ -387,5 +400,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraBars.BarButtonItem btnDelete;
         private DevExpress.XtraBars.BarButtonItem btnPrint;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
     }
 }

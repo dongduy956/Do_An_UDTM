@@ -10,6 +10,7 @@ namespace DAO
     {
         private DateTime date;
         private double? revenue;
+        private string convertRevenue;
 
         public DateTime Date
         {
@@ -34,6 +35,19 @@ namespace DAO
             set
             {
                 revenue = value;
+            }
+        }
+
+        public string ConvertRevenue
+        {
+            get
+            {
+                return convertRevenue;
+            }
+
+            set
+            {
+                convertRevenue = value;
             }
         }
     }

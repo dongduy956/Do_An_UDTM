@@ -35,8 +35,8 @@ namespace GUI.UC
             HoaDonBUS.Instances.getDataGV(gcOrder, false);
             LinhKienBUS.Instances.getDataLkLK(lkLinhKien);
             gvOrderDetail.OptionsView.NewItemRowPosition = NewItemRowPosition.Top;
-            gvOrder.IndicatorWidth = 30;
-            gvOrderDetail.IndicatorWidth = 30;
+            gvOrder.IndicatorWidth = 50;
+            gvOrderDetail.IndicatorWidth = 50;
         }
         //xoá data gridview chi tiết hoá đơn
         void clearDataGVOrderDetail()

@@ -15,5 +15,9 @@ namespace GUI.Report
            
         }
 
+        private void xrLabel1_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+
+        }
     }
 }

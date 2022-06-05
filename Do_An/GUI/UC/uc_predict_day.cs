@@ -22,8 +22,7 @@ namespace GUI.UC
             InitializeComponent();
             this.frm = frm;
             NoronNextDayBUS.Instances.loadDataGC(gcPredictNextDay);
-            gvPredictNextDay.IndicatorWidth = 30;
-            gvPredictNextDay.IndicatorWidth = 30;
+            gvPredictNextDay.IndicatorWidth = 50;
         }
 
         private void btnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -33,7 +32,7 @@ namespace GUI.UC
 
         private void btnPredict_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-           XtraMessageBox.Show("Doanh thu ngày "+DateTime.Now.AddDays(1).ToShortDateString()+" là : "+Support.convertVND(NoronNextDayBUS.Instances.ReturnResult().ToString()),"Thông báo");
+            XtraMessageBox.Show("Doanh thu ngày " + DateTime.Now.AddDays(1).ToShortDateString() + " là : " + Support.convertVND(NoronNextDayBUS.Instances.ReturnResult().ToString()), "Thông báo");
         }
 
         private void gvPredictNextDay_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
@@ -41,6 +40,6 @@ namespace GUI.UC
             if (!e.Info.IsRowIndicator || e.RowHandle < 0)
                 return;
             e.Info.DisplayText = (e.RowHandle + 1) + "";
-        }
+        }        
     }
 }

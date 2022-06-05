@@ -24,7 +24,7 @@ namespace GUI.UC
         {
             InitializeComponent();
             this.frm = frm;
-            gvStatistical.IndicatorWidth = 30;
+            gvStatistical.IndicatorWidth = 50;
             dateFrom.DateTime = DateTime.Now;
             dateTo.DateTime = DateTime.Now;
         }

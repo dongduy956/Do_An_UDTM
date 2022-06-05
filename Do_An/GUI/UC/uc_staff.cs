@@ -48,8 +48,8 @@ namespace GUI.UC
             QuyenBUS.Instances.getDataGV(gcRole);
             gvStaff.OptionsView.NewItemRowPosition = NewItemRowPosition.Top;
             gvRole.OptionsView.NewItemRowPosition = NewItemRowPosition.Top;
-            gvRole.IndicatorWidth = 30;
-            gvStaff.IndicatorWidth = 30;
+            gvRole.IndicatorWidth = 50;
+            gvStaff.IndicatorWidth = 50;
         }
         private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

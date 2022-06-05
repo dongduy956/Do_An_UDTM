@@ -38,8 +38,8 @@ namespace GUI.UC
             LoaiKHBUS.Instances.getDataGV(gcTypeCustomer);
             gvTypeCustomer.OptionsView.NewItemRowPosition = NewItemRowPosition.Top;
 
-            gvCustomer.IndicatorWidth = 30;
-            gvTypeCustomer.IndicatorWidth = 30;
+            gvCustomer.IndicatorWidth = 50;
+            gvTypeCustomer.IndicatorWidth = 50;
         }
         private void btnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

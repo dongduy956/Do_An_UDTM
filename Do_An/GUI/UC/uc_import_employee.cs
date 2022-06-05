@@ -31,8 +31,8 @@ namespace GUI.UC
             NhapKhoBUS.Instances.getDataGV(gcImport, false);
             LinhKienBUS.Instances.getDataLkLK(lkLinhKien);
             gvImportDetail.OptionsView.NewItemRowPosition = NewItemRowPosition.Top;
-            gvImport.IndicatorWidth = 30;
-            gvImportDetail.IndicatorWidth = 30;
+            gvImport.IndicatorWidth = 50;
+            gvImportDetail.IndicatorWidth = 50;
         }
         //xoá data gridview chi tiết nhập kho
         void clearDataGVImportDetail()

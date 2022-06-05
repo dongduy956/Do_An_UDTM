@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_import));
             this.gvImportDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -43,6 +43,7 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.btnPrint = new DevExpress.XtraBars.BarButtonItem();
@@ -131,10 +132,10 @@
             // gcImport
             // 
             this.gcImport.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode2.LevelTemplate = this.gvImportDetail;
-            gridLevelNode2.RelationName = "Chi tiết phiếu nhập";
+            gridLevelNode1.LevelTemplate = this.gvImportDetail;
+            gridLevelNode1.RelationName = "Chi tiết phiếu nhập";
             this.gcImport.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.gcImport.Location = new System.Drawing.Point(0, 40);
             this.gcImport.MainView = this.gvImport;
             this.gcImport.MenuManager = this.barManager1;
@@ -152,7 +153,8 @@
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
-            this.gridColumn6});
+            this.gridColumn6,
+            this.gridColumn4});
             this.gvImport.DetailHeight = 368;
             this.gvImport.GridControl = this.gcImport;
             this.gvImport.Name = "gvImport";
@@ -211,6 +213,17 @@
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 3;
             this.gridColumn6.Width = 112;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Thanh toán?";
+            this.gridColumn4.FieldName = "isPay";
+            this.gridColumn4.MinWidth = 30;
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.OptionsColumn.AllowEdit = false;
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 4;
+            this.gridColumn4.Width = 112;
             // 
             // barManager1
             // 
@@ -359,5 +372,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraBars.BarButtonItem btnPrint;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
     }
 }

@@ -37,7 +37,6 @@ namespace BUS
             else
                 lst = (from hd in db.HOADONs where hd.ispay == false select hd).ToList();
             gv.DataSource = Support.ToDataTable<HOADON>(lst);
-            
         }
         public int insert(int manv,int makh,double giamGia)
         {
