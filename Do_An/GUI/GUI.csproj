@@ -254,6 +254,12 @@
     <Compile Include="UC\uc_statistical.Designer.cs">
       <DependentUpon>uc_statistical.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\uc_statistic_staff_customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\uc_statistic_staff_customer.Designer.cs">
+      <DependentUpon>uc_statistic_staff_customer.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FRM\frmBKRS.resx">
       <DependentUpon>frmBKRS.cs</DependentUpon>
     </EmbeddedResource>
@@ -324,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\uc_statistical.resx">
       <DependentUpon>uc_statistical.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\uc_statistic_staff_customer.resx">
+      <DependentUpon>uc_statistic_staff_customer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -82,7 +82,7 @@ namespace GUI.UC
                 XtraMessageBox.Show("Vui lòng chọn khách hàng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
-                int i = HoaDonBUS.Instances.insert(1, int.Parse(makh.ToString()), double.Parse(txtGiamGia.Text));
+                int i = HoaDonBUS.Instances.insert(frm.nv.MANV, int.Parse(makh.ToString()), double.Parse(txtGiamGia.Text));
                 if (i != -1)
                 {
                     XtraMessageBox.Show("Tạo hoá đơn thành công.", "Thông báo");

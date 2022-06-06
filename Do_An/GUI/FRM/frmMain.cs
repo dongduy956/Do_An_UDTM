@@ -196,5 +196,11 @@ namespace GUI.FRM
             openUC(typeof(uc_predict));
 
         }
+
+        private void btnTopStaffCustomer_Click(object sender, EventArgs e)
+        {
+            openUC(typeof(uc_statistic_staff_customer));
+
+        }
     }
 }

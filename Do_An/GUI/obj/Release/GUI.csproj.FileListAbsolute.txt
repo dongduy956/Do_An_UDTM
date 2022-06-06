@@ -1,4 +1,3 @@
-E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.UC.uc_predict.resources
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Release\GUI.exe.config
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Release\GUI.exe
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Release\GUI.pdb
@@ -266,10 +265,12 @@ E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.U
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.UC.uc_import_employee.resources
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.UC.uc_order.resources
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.UC.uc_order_employee.resources
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.UC.uc_predict.resources
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.UC.uc_product.resources
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.UC.uc_staff.resources
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.UC.uc_inventory.resources
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.UC.uc_statistical.resources
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.UC.uc_statistic_staff_customer.resources
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.csproj.GenerateResource.Cache
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.exe.licenses
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.exe

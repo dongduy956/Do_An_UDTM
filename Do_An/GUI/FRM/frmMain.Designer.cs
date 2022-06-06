@@ -69,6 +69,7 @@
             this.repositoryItemPictureEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::GUI.FRM.WaitForm1), true, true);
+            this.btnTopStaffCustomer = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -234,6 +235,7 @@
             this.btnStatistical.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnTurnover,
             this.btnInventory,
+            this.btnTopStaffCustomer,
             this.btnPredictNextDay});
             this.btnStatistical.Expanded = true;
             this.btnStatistical.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStatistical.ImageOptions.Image")));
@@ -462,6 +464,14 @@
             // 
             this.splashScreenManager1.ClosingDelay = 500;
             // 
+            // btnTopStaffCustomer
+            // 
+            this.btnTopStaffCustomer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement1.ImageOptions.Image")));
+            this.btnTopStaffCustomer.Name = "btnTopStaffCustomer";
+            this.btnTopStaffCustomer.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnTopStaffCustomer.Text = "Top khách hàng, nhân viên";
+            this.btnTopStaffCustomer.Click += new System.EventHandler(this.btnTopStaffCustomer_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -535,5 +545,6 @@
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnCustomerOfStaff;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnPredictNextDay;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnTopStaffCustomer;
     }
 }

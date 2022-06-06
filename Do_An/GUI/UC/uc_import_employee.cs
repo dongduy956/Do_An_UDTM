@@ -65,7 +65,7 @@ namespace GUI.UC
         //tạo 1 hoá đơn mới cho khách hàng       
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            int i = NhapKhoBUS.Instances.insert(1);
+            int i = NhapKhoBUS.Instances.insert(frm.nv.MANV);
             if (i != -1)
             {
                 XtraMessageBox.Show("Tạo phiếu nhập thành công.", "Thông báo");
