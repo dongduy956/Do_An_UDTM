@@ -55,7 +55,7 @@ namespace GUI.UC
             chartNextDay.Titles.Add(title);
             chartNextDay.Series.Add(_seri);
             foreach (DataRow dr in tbNextDay.Rows)
-                _seri.Points.Add(new SeriesPoint(dr[0].ToString(), dr[2].ToString().Equals("") ? "0" : dr[2].ToString()));
+                _seri.Points.Add(new SeriesPoint(dr[0].ToString(), dr[1].ToString().Equals("") ? "0" : dr[1].ToString()));
             foreach (Series series in chartNextDay.Series)
             {
                 series.CrosshairLabelPattern = "{A:d}: {V:N0}";
