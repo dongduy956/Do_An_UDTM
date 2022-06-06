@@ -72,7 +72,7 @@ namespace BUS
             DataTable tb = new DataTable();
             tb.Columns.Add("ten");
             tb.Columns.Add("soluong");
-            foreach(var item in db.LINHKIENs.Where(x=>x.SOLUONGCON<=5))
+            foreach(var item in db.LINHKIENs.Where(x=>x.SOLUONGCON<5))
             {
                 DataRow dr = tb.NewRow();
                 dr[0] = item.TENLINHKIEN;

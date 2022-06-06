@@ -39,8 +39,8 @@ namespace BUS
         public DataTable loadDataGC(GridControl gc)
         {
             lstRevenue = new List<ItemNoronNextMonth>();
-            DateTime month12Agos = DateTime.Now.AddMonths(-11);
-            for (DateTime date = month12Agos; date.CompareTo(DateTime.Now) <= 0; date = date.AddMonths(1))
+            DateTime months12Ago = DateTime.Now.AddMonths(-11);
+            for (DateTime date = months12Ago; date.CompareTo(DateTime.Now) <= 0; date = date.AddMonths(1))
             {
                 var total = db.HOADONs.Where(x => x.NGAYLAP.Month == date.Month && x.NGAYLAP.Year == date.Year && x.ispay == true).Sum(x => x.tongtien) ?? 0;
                 lstRevenue.Add(new ItemNoronNextMonth()
@@ -52,7 +52,7 @@ namespace BUS
             }
 
             randomWeight();
-            for(int j=0;j<10;j++)
+            for(int j=0;j<1000;j++)
             
             for (int i = 0; i < 8; i++)
             {
@@ -74,7 +74,7 @@ namespace BUS
             return Math.Round(lstRevenue.Min(x => x.Revenue) ?? 0, 6);
 
         }
-        //chuẩn hoá dữ liệu về [min,max] của lstStaticalDay
+        //chuẩn hoá dữ liệu về [0,1] của lstStaticalDay
         private double dataNormalization(double x)
         {
             double min = findMin();

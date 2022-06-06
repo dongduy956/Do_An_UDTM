@@ -27,4 +27,3 @@ E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\bin\Release\ja\De
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\bin\Release\ru\DevExpress.Pdf.v19.2.Core.resources.dll
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\obj\Release\DAO.dll
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\obj\Release\DAO.pdb
-E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\DAO\obj\Release\DAO.csprojResolveAssemblyReference.cache

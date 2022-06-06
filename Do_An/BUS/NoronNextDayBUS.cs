@@ -40,8 +40,8 @@ namespace BUS
         public DataTable loadDataGC(GridControl gc)
         {
             lstRevenue = new List<ItemNoronNextDay>();
-            DateTime date30Agos = DateTime.Now.AddDays(-29);
-            for (DateTime date = date30Agos; date.CompareTo(DateTime.Now) <= 0; date = date.AddDays(1))
+            DateTime days30Ago = DateTime.Now.AddDays(-29);
+            for (DateTime date = days30Ago; date.CompareTo(DateTime.Now) <= 0; date = date.AddDays(1))
             {
                 var total = db.HOADONs.Where(x => x.NGAYLAP.CompareTo(date) == 0 && x.ispay == true).Sum(x => x.tongtien) ?? 0;
                 lstRevenue.Add(new ItemNoronNextDay()

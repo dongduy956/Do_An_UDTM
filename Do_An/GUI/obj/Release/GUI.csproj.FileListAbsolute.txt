@@ -1,3 +1,4 @@
+E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.UC.uc_predict.resources
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Release\GUI.exe.config
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Release\GUI.exe
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\bin\Release\GUI.pdb
@@ -273,4 +274,3 @@ E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.c
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.exe.licenses
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.exe
 E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.pdb
-E:\Phát triển ứng dụng thông minh\Do_An_UDTM\Do_An\GUI\obj\Release\GUI.UC.uc_predict_day.resources
