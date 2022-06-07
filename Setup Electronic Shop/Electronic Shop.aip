@@ -69,71 +69,71 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
     <ROW Component="APPDIR" ComponentId="{4ED4ECD3-3E78-4D26-89DC-7794FF9FFDFC}" Directory_="APPDIR" Attributes="0"/>
-    <ROW Component="BUS.dll" ComponentId="{85C2A787-5162-4A0A-BDA9-D1998A8DDDD0}" Directory_="UC_Dir" Attributes="0" KeyPath="BUS.dll"/>
-    <ROW Component="DAO.dll" ComponentId="{4D71EFCD-1087-4C10-AC2D-4C4D772EFBFF}" Directory_="UC_Dir" Attributes="0" KeyPath="DAO.dll"/>
-    <ROW Component="DevExpress.BonusSkins.v19.2.dll" ComponentId="{61AE2E84-1056-4BC6-8418-393269A5E45B}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.BonusSkins.v19.2.dll"/>
-    <ROW Component="DevExpress.Charts.v19.2.Core.dll" ComponentId="{4DD7BF9B-4534-4272-9857-C534CF39C29D}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Charts.v19.2.Core.dll"/>
-    <ROW Component="DevExpress.CodeParser.v19.2.dll" ComponentId="{4996F24A-E278-48FF-B114-B876E88581D7}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.CodeParser.v19.2.dll"/>
-    <ROW Component="DevExpress.Dashboard.v19.2.Core.dll" ComponentId="{71C908D9-84DE-4A94-BE10-935AE3BF75AF}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Dashboard.v19.2.Core.dll"/>
-    <ROW Component="DevExpress.Data.v19.2.dll" ComponentId="{1344EA44-43B0-42CD-A316-FD4F71265EB5}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Data.v19.2.dll"/>
-    <ROW Component="DevExpress.DataAccess.v19.2.UI.dll" ComponentId="{B6D1BC5D-8752-425E-B75B-E9FE98DB4379}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.DataAccess.v19.2.UI.dll"/>
-    <ROW Component="DevExpress.DataAccess.v19.2.dll" ComponentId="{CF0AF941-E5E8-45BD-888D-C0D69E414E18}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.DataAccess.v19.2.dll"/>
-    <ROW Component="DevExpress.Diagram.v19.2.Core.dll" ComponentId="{23AC73A8-3541-42B6-81FA-F48687A03FC9}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Diagram.v19.2.Core.dll"/>
-    <ROW Component="DevExpress.Images.v19.2.dll" ComponentId="{EB607B7F-7EDC-40E9-9492-27FF30965893}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Images.v19.2.dll"/>
-    <ROW Component="DevExpress.Map.v19.2.Core.dll" ComponentId="{793F5948-9CE8-4E8C-BA1F-C7875C8AD782}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Map.v19.2.Core.dll"/>
-    <ROW Component="DevExpress.Office.v19.2.Core.dll" ComponentId="{C0387B19-75FA-40C1-9902-FA82E266EF10}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Office.v19.2.Core.dll"/>
-    <ROW Component="DevExpress.Pdf.v19.2.Core.dll" ComponentId="{CFD6DDCE-7798-40E5-AEC5-0D639005464E}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Pdf.v19.2.Core.dll"/>
-    <ROW Component="DevExpress.Pdf.v19.2.Drawing.dll" ComponentId="{C1D15B97-42A8-4BA4-ACA1-6019B118FCE3}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Pdf.v19.2.Drawing.dll"/>
-    <ROW Component="DevExpress.PivotGrid.v19.2.Core.dll" ComponentId="{66085A70-8A63-49F0-B6E1-6791447E0B8A}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.PivotGrid.v19.2.Core.dll"/>
-    <ROW Component="DevExpress.Printing.v19.2.Core.dll" ComponentId="{41FC9905-8390-4274-A0D6-9ECC192CC373}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Printing.v19.2.Core.dll"/>
-    <ROW Component="DevExpress.RichEdit.v19.2.Core.dll" ComponentId="{83D7A5A5-3034-421E-8B5C-6A89C4A937C0}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.RichEdit.v19.2.Core.dll"/>
-    <ROW Component="DevExpress.RichEdit.v19.2.Export.dll" ComponentId="{E5CDF923-4537-4FFA-8573-36C77A1718B7}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.RichEdit.v19.2.Export.dll"/>
-    <ROW Component="DevExpress.Sparkline.v19.2.Core.dll" ComponentId="{38D0A69B-AEA2-472B-8D77-41F00826DD57}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Sparkline.v19.2.Core.dll"/>
-    <ROW Component="DevExpress.SpellChecker.v19.2.Core.dll" ComponentId="{478CDA92-311C-48D9-AD7C-F04B4A37A8CC}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.SpellChecker.v19.2.Core.dll"/>
-    <ROW Component="DevExpress.TreeMap.v19.2.Core.dll" ComponentId="{F6FC5B9F-FFB6-4F2C-8531-37C164A9BFD2}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.TreeMap.v19.2.Core.dll"/>
-    <ROW Component="DevExpress.Utils.v19.2.UI.dll" ComponentId="{36B9CC9E-0009-41E4-9F2B-45F70C6A526C}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Utils.v19.2.UI.dll"/>
-    <ROW Component="DevExpress.Utils.v19.2.dll" ComponentId="{09020D0A-865F-4897-B989-BC24EC5463AD}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Utils.v19.2.dll"/>
-    <ROW Component="DevExpress.Xpo.v19.2.dll" ComponentId="{2DB5D793-783B-4A7A-BF8C-790B20667ED7}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Xpo.v19.2.dll"/>
-    <ROW Component="DevExpress.XtraBars.v19.2.dll" ComponentId="{0BF193F8-E6B3-46B0-BDF3-A40AF6986709}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraBars.v19.2.dll"/>
-    <ROW Component="DevExpress.XtraCharts.v19.2.Extensions.dll" ComponentId="{BBF2C55E-1A27-4049-A7F7-37A8793A4A6D}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraCharts.v19.2.Extensions.dll"/>
-    <ROW Component="DevExpress.XtraCharts.v19.2.UI.dll" ComponentId="{5EC5CC51-2F51-4751-A1DD-9BCBC2CB1E1C}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraCharts.v19.2.UI.dll"/>
-    <ROW Component="DevExpress.XtraCharts.v19.2.Wizard.dll" ComponentId="{5537C4DD-8BEB-4FBB-8B9A-D7DCA649F6A9}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraCharts.v19.2.Wizard.dll"/>
-    <ROW Component="DevExpress.XtraCharts.v19.2.dll" ComponentId="{BDC4EC32-30E8-407F-900F-C2D9BA8BA15C}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraCharts.v19.2.dll"/>
-    <ROW Component="DevExpress.XtraDiagram.v19.2.dll" ComponentId="{610FD920-C61C-4C01-B09E-872D0244D241}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraDiagram.v19.2.dll"/>
-    <ROW Component="DevExpress.XtraEditors.v19.2.dll" ComponentId="{CB12E845-914D-4E4F-8848-1137098099A9}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraEditors.v19.2.dll"/>
-    <ROW Component="DevExpress.XtraGauges.v19.2.Core.dll" ComponentId="{D9B98437-B96A-4919-B1AF-C35780C5BD1F}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraGauges.v19.2.Core.dll"/>
-    <ROW Component="DevExpress.XtraGauges.v19.2.Presets.dll" ComponentId="{2EE84377-441D-42FE-9134-DD730B415274}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraGauges.v19.2.Presets.dll"/>
-    <ROW Component="DevExpress.XtraGauges.v19.2.Win.dll" ComponentId="{45B9BC24-6155-4A0A-8C81-DB1B1D351951}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraGauges.v19.2.Win.dll"/>
-    <ROW Component="DevExpress.XtraGrid.v19.2.dll" ComponentId="{5ECA348B-2CA4-41C6-9B58-AC3A682C6C03}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraGrid.v19.2.dll"/>
-    <ROW Component="DevExpress.XtraLayout.v19.2.dll" ComponentId="{FC953BBF-0163-4111-A06B-708A2813FEB2}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraLayout.v19.2.dll"/>
-    <ROW Component="DevExpress.XtraMap.v19.2.dll" ComponentId="{6958EAC6-6BB7-4ED6-9035-E6E1E30304F5}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraMap.v19.2.dll"/>
-    <ROW Component="DevExpress.XtraNavBar.v19.2.dll" ComponentId="{7968F059-5102-4107-BC10-C228F98DF2AE}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraNavBar.v19.2.dll"/>
-    <ROW Component="DevExpress.XtraPdfViewer.v19.2.dll" ComponentId="{F6B14B31-19F2-48AD-B143-6AAE448E5E46}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraPdfViewer.v19.2.dll"/>
-    <ROW Component="DevExpress.XtraPivotGrid.v19.2.dll" ComponentId="{07925F5C-BE2E-44DF-9C43-47F69ECE6916}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraPivotGrid.v19.2.dll"/>
-    <ROW Component="DevExpress.XtraPrinting.v19.2.dll" ComponentId="{13972BC5-8381-4416-A310-3B93465FF0B5}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraPrinting.v19.2.dll"/>
-    <ROW Component="DevExpress.XtraReports.v19.2.Extensions.dll" ComponentId="{1D1965EB-7E18-44F6-9D79-D495F199F5B5}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraReports.v19.2.Extensions.dll"/>
-    <ROW Component="DevExpress.XtraReports.v19.2.dll" ComponentId="{44EAD711-FCFE-47FD-9149-BCE770F2B913}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraReports.v19.2.dll"/>
-    <ROW Component="DevExpress.XtraRichEdit.v19.2.dll" ComponentId="{0EB7337A-50BB-48E2-A77B-E605DB462DDB}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraRichEdit.v19.2.dll"/>
-    <ROW Component="DevExpress.XtraScheduler.v19.2.Core.dll" ComponentId="{4F565B2E-37E3-4587-9D2D-6F54D6C9DD0A}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraScheduler.v19.2.Core.dll"/>
-    <ROW Component="DevExpress.XtraScheduler.v19.2.dll" ComponentId="{D3041A9D-2ACD-469E-93BC-1D84CCAA5FDE}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraScheduler.v19.2.dll"/>
-    <ROW Component="DevExpress.XtraSpellChecker.v19.2.dll" ComponentId="{9F2B5B6A-2D62-43FE-B992-2A6648EB3921}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraSpellChecker.v19.2.dll"/>
-    <ROW Component="DevExpress.XtraTreeList.v19.2.dll" ComponentId="{F47E65C1-06ED-4A25-B76E-82433AAF0CFB}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraTreeList.v19.2.dll"/>
-    <ROW Component="DevExpress.XtraTreeMap.v19.2.dll" ComponentId="{E6D18980-AE42-497D-8B2C-C196803F39A0}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraTreeMap.v19.2.dll"/>
-    <ROW Component="DevExpress.XtraVerticalGrid.v19.2.dll" ComponentId="{A37841AD-10BA-4A46-91DB-5DFE08EED184}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraVerticalGrid.v19.2.dll"/>
-    <ROW Component="GUI.exe" ComponentId="{1F3A4E4D-5BFD-4C64-9929-BAD63F566EBE}" Directory_="UC_Dir" Attributes="0" KeyPath="GUI.exe"/>
-    <ROW Component="GUI.vshost.exe" ComponentId="{3EC0A3B6-1B50-45BB-8069-841F52039913}" Directory_="UC_Dir" Attributes="0" KeyPath="GUI.vshost.exe"/>
-    <ROW Component="GUI.vshost.exe.config" ComponentId="{4D2AE7A7-A722-4CEE-AF76-486A371F8C4D}" Directory_="UC_Dir" Attributes="0" KeyPath="GUI.vshost.exe.config" Type="0"/>
-    <ROW Component="Microsoft.SqlServer.ConnectionInfo.dll" ComponentId="{DA6924F4-BBAC-4E32-B9FA-C3F064A142D1}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.ConnectionInfo.dll"/>
-    <ROW Component="Microsoft.SqlServer.ConnectionInfoExtended.dll" ComponentId="{D8F22E0D-BB47-441E-BBBC-A186A9333BE3}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.ConnectionInfoExtended.dll"/>
-    <ROW Component="Microsoft.SqlServer.Dmf.dll" ComponentId="{9FDC8CFD-B14E-40F9-AA52-3324B99869E8}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.Dmf.dll"/>
-    <ROW Component="Microsoft.SqlServer.Management.Sdk.Sfc.dll" ComponentId="{1E09397A-8327-4CB9-839A-1F0D6F895B4B}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.Management.Sdk.Sfc.dll"/>
-    <ROW Component="Microsoft.SqlServer.RegSvrEnum.dll" ComponentId="{CF27481B-C21E-45A0-8B9B-6BE7B209CD9F}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.RegSvrEnum.dll"/>
-    <ROW Component="Microsoft.SqlServer.ServiceBrokerEnum.dll" ComponentId="{7538C3C7-F67C-486A-96F5-85DB5A0020E1}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.ServiceBrokerEnum.dll"/>
-    <ROW Component="Microsoft.SqlServer.Smo.dll" ComponentId="{6F6801F3-CC94-429A-A508-8376312EAA43}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.Smo.dll"/>
-    <ROW Component="Microsoft.SqlServer.SmoExtended.dll" ComponentId="{CD7DA7E2-C5DB-4836-A65D-6177284C6DDB}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.SmoExtended.dll"/>
-    <ROW Component="Microsoft.SqlServer.SqlEnum.dll" ComponentId="{82692F39-2436-479A-87E1-BD17BEA558CF}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.SqlEnum.dll"/>
+    <ROW Component="BUS.dll" ComponentId="{7DCB034F-B391-448D-837A-D35AD9B800D7}" Directory_="UC_Dir" Attributes="0" KeyPath="BUS.dll"/>
+    <ROW Component="DAO.dll" ComponentId="{9227F5C6-891C-4D4B-B031-2B5BB582DF89}" Directory_="UC_Dir" Attributes="0" KeyPath="DAO.dll"/>
+    <ROW Component="DevExpress.BonusSkins.v19.2.dll" ComponentId="{6496A0E1-4693-40CC-AAE3-3D58C8F1FBD9}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.BonusSkins.v19.2.dll"/>
+    <ROW Component="DevExpress.Charts.v19.2.Core.dll" ComponentId="{94B645E4-E980-441F-B500-41FE940D0EEB}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Charts.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.CodeParser.v19.2.dll" ComponentId="{6112B65F-43E6-47AF-87FB-595F5AE14B2A}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.CodeParser.v19.2.dll"/>
+    <ROW Component="DevExpress.Dashboard.v19.2.Core.dll" ComponentId="{3C1C6B1C-BA3E-411C-B5EC-21CF186D650E}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Dashboard.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.Data.v19.2.dll" ComponentId="{07CAB2D5-695F-47AD-A543-5B0EB23F770C}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Data.v19.2.dll"/>
+    <ROW Component="DevExpress.DataAccess.v19.2.UI.dll" ComponentId="{A4DDEC76-DED5-4919-BD6F-6FE5F5633605}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.DataAccess.v19.2.UI.dll"/>
+    <ROW Component="DevExpress.DataAccess.v19.2.dll" ComponentId="{5E1D092E-4A34-408F-B9FA-8E4017738CD9}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.DataAccess.v19.2.dll"/>
+    <ROW Component="DevExpress.Diagram.v19.2.Core.dll" ComponentId="{683044A1-C0FD-4A07-A3AB-B43CF1FBA0E4}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Diagram.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.Images.v19.2.dll" ComponentId="{E3512218-2C83-48E4-9E3E-36A3D5664FB1}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Images.v19.2.dll"/>
+    <ROW Component="DevExpress.Map.v19.2.Core.dll" ComponentId="{28BCED36-DCF7-4E39-916D-C1682CB0136E}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Map.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.Office.v19.2.Core.dll" ComponentId="{0ABA5120-C85B-4695-9BDE-4E4EBB6C6AD5}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Office.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.Pdf.v19.2.Core.dll" ComponentId="{1BD377BB-ACB3-49D5-BB7A-4E5AF560D894}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Pdf.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.Pdf.v19.2.Drawing.dll" ComponentId="{AB4B9B46-CACB-4E14-80F9-536C2512B64E}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Pdf.v19.2.Drawing.dll"/>
+    <ROW Component="DevExpress.PivotGrid.v19.2.Core.dll" ComponentId="{E109C212-C6EB-4234-8368-3D786B6469B1}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.PivotGrid.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.Printing.v19.2.Core.dll" ComponentId="{1C5F43E3-0610-43EA-8750-BFC9C7780009}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Printing.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.RichEdit.v19.2.Core.dll" ComponentId="{C6AFC787-4B5D-4D8F-BB72-C88A47C25FFB}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.RichEdit.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.RichEdit.v19.2.Export.dll" ComponentId="{207DD10D-187B-412C-B0E4-425D29D97C69}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.RichEdit.v19.2.Export.dll"/>
+    <ROW Component="DevExpress.Sparkline.v19.2.Core.dll" ComponentId="{C141D652-2299-4E18-9548-4AD1E1F7191A}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Sparkline.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.SpellChecker.v19.2.Core.dll" ComponentId="{A001AB0D-2EDF-4A2A-9225-15C2AA8E0CAA}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.SpellChecker.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.TreeMap.v19.2.Core.dll" ComponentId="{1CFB2764-2C20-4490-83D1-C2A9272D9B7A}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.TreeMap.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.Utils.v19.2.UI.dll" ComponentId="{A9BA7B4E-948F-4597-B5B3-85044A7EC0A4}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Utils.v19.2.UI.dll"/>
+    <ROW Component="DevExpress.Utils.v19.2.dll" ComponentId="{ECDE42E0-69B8-46D7-9B1B-2792578FDA1E}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Utils.v19.2.dll"/>
+    <ROW Component="DevExpress.Xpo.v19.2.dll" ComponentId="{BAD73005-F893-471B-8CB5-68B3B420D501}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.Xpo.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraBars.v19.2.dll" ComponentId="{11A68A88-1B00-4670-91FD-868843798AF5}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraBars.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraCharts.v19.2.Extensions.dll" ComponentId="{9E8032EC-4414-45FB-B8C7-16B66DE74E37}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraCharts.v19.2.Extensions.dll"/>
+    <ROW Component="DevExpress.XtraCharts.v19.2.UI.dll" ComponentId="{F3BFB33B-4125-4C2E-B162-EF10400006A0}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraCharts.v19.2.UI.dll"/>
+    <ROW Component="DevExpress.XtraCharts.v19.2.Wizard.dll" ComponentId="{BA301316-96BD-481E-9C8B-0F69BA5504E1}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraCharts.v19.2.Wizard.dll"/>
+    <ROW Component="DevExpress.XtraCharts.v19.2.dll" ComponentId="{EA0C0F93-F8D8-4DFF-B4B5-03DFC55BE767}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraCharts.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraDiagram.v19.2.dll" ComponentId="{5E8E0EE6-CB4C-416F-9373-7F557685B0EB}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraDiagram.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraEditors.v19.2.dll" ComponentId="{219F5476-EAF1-4376-88F0-121191968C2A}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraEditors.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraGauges.v19.2.Core.dll" ComponentId="{6FDE229C-0B48-4CB9-B63D-EA344DF96442}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraGauges.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.XtraGauges.v19.2.Presets.dll" ComponentId="{3F66A9A7-D145-464F-9345-EE688571234F}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraGauges.v19.2.Presets.dll"/>
+    <ROW Component="DevExpress.XtraGauges.v19.2.Win.dll" ComponentId="{226E675E-9509-4001-9725-90EB94A97E1E}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraGauges.v19.2.Win.dll"/>
+    <ROW Component="DevExpress.XtraGrid.v19.2.dll" ComponentId="{7FC17A79-B20F-4B0B-BEF2-20D0642D7F9D}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraGrid.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraLayout.v19.2.dll" ComponentId="{124A1DF3-31AC-4BBD-974A-84189F23287A}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraLayout.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraMap.v19.2.dll" ComponentId="{7E54639E-D8A2-4D85-945E-2D6B1A355647}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraMap.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraNavBar.v19.2.dll" ComponentId="{F46A3309-62E1-42FE-8AE8-2C8429A8E7A4}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraNavBar.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraPdfViewer.v19.2.dll" ComponentId="{5D201652-DB94-49BF-A352-08D5F529BB79}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraPdfViewer.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraPivotGrid.v19.2.dll" ComponentId="{4D3B2037-B861-4E5E-A15F-3BCE68DAD2E6}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraPivotGrid.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraPrinting.v19.2.dll" ComponentId="{9C43D953-D980-4232-8953-90F14C413E86}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraPrinting.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraReports.v19.2.Extensions.dll" ComponentId="{1431892B-BFBB-4B58-AF05-C5F98BCDD0F3}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraReports.v19.2.Extensions.dll"/>
+    <ROW Component="DevExpress.XtraReports.v19.2.dll" ComponentId="{0F053B54-EC55-4D9A-BD1B-B7B94E786F16}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraReports.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraRichEdit.v19.2.dll" ComponentId="{DF5B54B3-3FCC-46BE-BBFB-6E9C0B71F6C3}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraRichEdit.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraScheduler.v19.2.Core.dll" ComponentId="{9121673F-603C-4A26-A2B8-3D3FF933600E}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraScheduler.v19.2.Core.dll"/>
+    <ROW Component="DevExpress.XtraScheduler.v19.2.dll" ComponentId="{77338266-38E5-4850-BE9D-51D68DD06F78}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraScheduler.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraSpellChecker.v19.2.dll" ComponentId="{3A30AD0F-40E9-4740-A96F-0CE96457D3DC}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraSpellChecker.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraTreeList.v19.2.dll" ComponentId="{3FF7CBD6-8B61-43AE-BE7C-378403D0DFBC}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraTreeList.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraTreeMap.v19.2.dll" ComponentId="{B6F38C81-A916-49B0-A3F0-FD36238B6B0E}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraTreeMap.v19.2.dll"/>
+    <ROW Component="DevExpress.XtraVerticalGrid.v19.2.dll" ComponentId="{BF32EFA3-9E96-4727-B72F-CDBF469E89ED}" Directory_="UC_Dir" Attributes="0" KeyPath="DevExpress.XtraVerticalGrid.v19.2.dll"/>
+    <ROW Component="GUI.exe.config" ComponentId="{900389B5-A817-483B-BEA7-9434E1F5E84E}" Directory_="UC_Dir" Attributes="0" KeyPath="GUI.exe.config" Type="0"/>
+    <ROW Component="GUI.pdb" ComponentId="{24B67423-40F9-451D-8D8E-EF28A6C285F1}" Directory_="UC_Dir" Attributes="0" KeyPath="GUI.exe"/>
+    <ROW Component="GUI.vshost.exe" ComponentId="{41A28931-40C3-4E19-A9E6-BDECC19BE749}" Directory_="UC_Dir" Attributes="0" KeyPath="GUI.vshost.exe"/>
+    <ROW Component="Microsoft.SqlServer.ConnectionInfo.dll" ComponentId="{2C321910-2E4E-4467-99DE-8E936D0730D1}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.ConnectionInfo.dll"/>
+    <ROW Component="Microsoft.SqlServer.ConnectionInfoExtended.dll" ComponentId="{087C00C5-02C4-461C-AA08-3770EED2883A}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.ConnectionInfoExtended.dll"/>
+    <ROW Component="Microsoft.SqlServer.Dmf.dll" ComponentId="{6C72A797-F565-4BF3-A25D-49B9481EDD11}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.Dmf.dll"/>
+    <ROW Component="Microsoft.SqlServer.Management.Sdk.Sfc.dll" ComponentId="{7D26315D-54D4-4CC0-8601-629342CA1C84}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.Management.Sdk.Sfc.dll"/>
+    <ROW Component="Microsoft.SqlServer.RegSvrEnum.dll" ComponentId="{9355936A-FBF7-489E-93A4-FAA0547DBB1F}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.RegSvrEnum.dll"/>
+    <ROW Component="Microsoft.SqlServer.ServiceBrokerEnum.dll" ComponentId="{561CB2B3-976B-43C4-A2C3-2227C25493A3}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.ServiceBrokerEnum.dll"/>
+    <ROW Component="Microsoft.SqlServer.Smo.dll" ComponentId="{C261325F-0FF5-4A9C-A576-C398564CB890}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.Smo.dll"/>
+    <ROW Component="Microsoft.SqlServer.SmoExtended.dll" ComponentId="{2C988E4E-D7D9-45DD-834C-1F34D24B8F6A}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.SmoExtended.dll"/>
+    <ROW Component="Microsoft.SqlServer.SqlEnum.dll" ComponentId="{35C83081-4D35-4302-9CDC-5BBCBAB95A60}" Directory_="UC_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.SqlEnum.dll"/>
     <ROW Component="ProductInformation" ComponentId="{FDEEF865-8CA5-4DA9-A0AC-E161B962E452}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
-    <ROW Component="SHORTCUTDIR" ComponentId="{0CF9587D-C12B-4FBB-9685-202884475146}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{948F3E09-39D9-4E5C-A48B-61F18ADF63E4}" Directory_="SHORTCUTDIR" Attributes="0"/>
     <ROW Component="addfile.png" ComponentId="{58A38B23-8415-4A7F-9714-444EE9F81E4B}" Directory_="Images_Dir" Attributes="0" KeyPath="addfile.png" Type="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
@@ -322,8 +322,11 @@
     <ROW File="synchronize.png" Component_="addfile.png" FileName="SYNCHR~1.PNG|synchronize.png" Attributes="0" SourcePath="..\Do_An\GUI\Images\synchronize.png" SelfReg="false"/>
     <ROW File="team.png" Component_="addfile.png" FileName="team.png" Attributes="0" SourcePath="..\Do_An\GUI\Images\team.png" SelfReg="false"/>
     <ROW File="test.png" Component_="addfile.png" FileName="test.png" Attributes="0" SourcePath="..\Do_An\GUI\Images\test.png" SelfReg="false"/>
-    <ROW File="GUI.vshost.exe.config" Component_="GUI.vshost.exe.config" FileName="GUIVSH~1.CON|GUI.vshost.exe.config" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\GUI.vshost.exe.config" SelfReg="false"/>
-    <ROW File="GUI.vshost.exe.manifest" Component_="GUI.vshost.exe.config" FileName="GUIVSH~1.MAN|GUI.vshost.exe.manifest" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\GUI.vshost.exe.manifest" SelfReg="false"/>
+    <ROW File="GUI.exe.config" Component_="GUI.exe.config" FileName="GUIEXE~1.CON|GUI.exe.config" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\GUI.exe.config" SelfReg="false"/>
+    <ROW File="GUI.pdb" Component_="GUI.pdb" FileName="GUI.pdb" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\GUI.pdb" SelfReg="false"/>
+    <ROW File="GUI.vshost.exe" Component_="GUI.vshost.exe" FileName="GUIVSH~1.EXE|GUI.vshost.exe" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\GUI.vshost.exe" SelfReg="false"/>
+    <ROW File="GUI.vshost.exe.config" Component_="GUI.exe.config" FileName="GUIVSH~1.CON|GUI.vshost.exe.config" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\GUI.vshost.exe.config" SelfReg="false"/>
+    <ROW File="GUI.vshost.exe.manifest" Component_="GUI.exe.config" FileName="GUIVSH~1.MAN|GUI.vshost.exe.manifest" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\GUI.vshost.exe.manifest" SelfReg="false"/>
     <ROW File="Microsoft.SqlServer.ConnectionInfo.dll" Component_="Microsoft.SqlServer.ConnectionInfo.dll" FileName="MICROS~1.DLL|Microsoft.SqlServer.ConnectionInfo.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\Microsoft.SqlServer.ConnectionInfo.dll" SelfReg="false"/>
     <ROW File="Microsoft.SqlServer.ConnectionInfoExtended.dll" Component_="Microsoft.SqlServer.ConnectionInfoExtended.dll" FileName="MICROS~2.DLL|Microsoft.SqlServer.ConnectionInfoExtended.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\Microsoft.SqlServer.ConnectionInfoExtended.dll" SelfReg="false"/>
     <ROW File="Microsoft.SqlServer.Dmf.dll" Component_="Microsoft.SqlServer.Dmf.dll" FileName="MICROS~3.DLL|Microsoft.SqlServer.Dmf.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\Microsoft.SqlServer.Dmf.dll" SelfReg="false"/>
@@ -341,98 +344,95 @@
     <ROW File="DevExpress.Charts.v19.2.Core.dll" Component_="DevExpress.Charts.v19.2.Core.dll" FileName="DEVEXP~2.DLL|DevExpress.Charts.v19.2.Core.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Charts.v19.2.Core.dll" SelfReg="false"/>
     <ROW File="DevExpress.CodeParser.v19.2.dll" Component_="DevExpress.CodeParser.v19.2.dll" FileName="DEVEXP~3.DLL|DevExpress.CodeParser.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.CodeParser.v19.2.dll" SelfReg="false"/>
     <ROW File="DevExpress.Dashboard.v19.2.Core.dll" Component_="DevExpress.Dashboard.v19.2.Core.dll" FileName="DEVEXP~4.DLL|DevExpress.Dashboard.v19.2.Core.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Dashboard.v19.2.Core.dll" SelfReg="false"/>
-    <ROW File="DevExpress.Dashboard.v19.2.Core.xml" Component_="GUI.vshost.exe.config" FileName="DEVEXP~1.XML|DevExpress.Dashboard.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Dashboard.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Dashboard.v19.2.Core.xml" Component_="GUI.exe.config" FileName="DEVEXP~1.XML|DevExpress.Dashboard.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Dashboard.v19.2.Core.xml" SelfReg="false"/>
     <ROW File="DevExpress.Data.v19.2.dll" Component_="DevExpress.Data.v19.2.dll" FileName="DEVEXP~5.DLL|DevExpress.Data.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Data.v19.2.dll" SelfReg="false"/>
-    <ROW File="DevExpress.Data.v19.2.xml" Component_="GUI.vshost.exe.config" FileName="DEVEXP~2.XML|DevExpress.Data.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Data.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Data.v19.2.xml" Component_="GUI.exe.config" FileName="DEVEXP~2.XML|DevExpress.Data.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Data.v19.2.xml" SelfReg="false"/>
     <ROW File="DevExpress.DataAccess.v19.2.dll" Component_="DevExpress.DataAccess.v19.2.dll" FileName="DEVEXP~6.DLL|DevExpress.DataAccess.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.DataAccess.v19.2.dll" SelfReg="false"/>
     <ROW File="DevExpress.DataAccess.v19.2.UI.dll" Component_="DevExpress.DataAccess.v19.2.UI.dll" FileName="DEVEXP~7.DLL|DevExpress.DataAccess.v19.2.UI.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.DataAccess.v19.2.UI.dll" SelfReg="false"/>
-    <ROW File="DevExpress.DataAccess.v19.2.UI.xml" Component_="GUI.vshost.exe.config" FileName="DEVEXP~3.XML|DevExpress.DataAccess.v19.2.UI.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.DataAccess.v19.2.UI.xml" SelfReg="false"/>
-    <ROW File="DevExpress.DataAccess.v19.2.xml" Component_="GUI.vshost.exe.config" FileName="DEVEXP~4.XML|DevExpress.DataAccess.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.DataAccess.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.DataAccess.v19.2.UI.xml" Component_="GUI.exe.config" FileName="DEVEXP~3.XML|DevExpress.DataAccess.v19.2.UI.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.DataAccess.v19.2.UI.xml" SelfReg="false"/>
+    <ROW File="DevExpress.DataAccess.v19.2.xml" Component_="GUI.exe.config" FileName="DEVEXP~4.XML|DevExpress.DataAccess.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.DataAccess.v19.2.xml" SelfReg="false"/>
     <ROW File="DevExpress.Diagram.v19.2.Core.dll" Component_="DevExpress.Diagram.v19.2.Core.dll" FileName="DEVEXP~8.DLL|DevExpress.Diagram.v19.2.Core.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Diagram.v19.2.Core.dll" SelfReg="false"/>
-    <ROW File="DevExpress.Diagram.v19.2.Core.xml" Component_="GUI.vshost.exe.config" FileName="DEVEXP~5.XML|DevExpress.Diagram.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Diagram.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Diagram.v19.2.Core.xml" Component_="GUI.exe.config" FileName="DEVEXP~5.XML|DevExpress.Diagram.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Diagram.v19.2.Core.xml" SelfReg="false"/>
     <ROW File="DevExpress.Images.v19.2.dll" Component_="DevExpress.Images.v19.2.dll" FileName="DEVEXP~9.DLL|DevExpress.Images.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Images.v19.2.dll" SelfReg="false"/>
     <ROW File="DevExpress.Map.v19.2.Core.dll" Component_="DevExpress.Map.v19.2.Core.dll" FileName="DEVEX~10.DLL|DevExpress.Map.v19.2.Core.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Map.v19.2.Core.dll" SelfReg="false"/>
-    <ROW File="DevExpress.Map.v19.2.Core.xml" Component_="GUI.vshost.exe.config" FileName="DEVEXP~6.XML|DevExpress.Map.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Map.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Map.v19.2.Core.xml" Component_="GUI.exe.config" FileName="DEVEXP~6.XML|DevExpress.Map.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Map.v19.2.Core.xml" SelfReg="false"/>
     <ROW File="DevExpress.Office.v19.2.Core.dll" Component_="DevExpress.Office.v19.2.Core.dll" FileName="DEVEX~11.DLL|DevExpress.Office.v19.2.Core.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Office.v19.2.Core.dll" SelfReg="false"/>
-    <ROW File="DevExpress.Office.v19.2.Core.xml" Component_="GUI.vshost.exe.config" FileName="DEVEXP~7.XML|DevExpress.Office.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Office.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Office.v19.2.Core.xml" Component_="GUI.exe.config" FileName="DEVEXP~7.XML|DevExpress.Office.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Office.v19.2.Core.xml" SelfReg="false"/>
     <ROW File="DevExpress.Pdf.v19.2.Core.dll" Component_="DevExpress.Pdf.v19.2.Core.dll" FileName="DEVEX~12.DLL|DevExpress.Pdf.v19.2.Core.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Pdf.v19.2.Core.dll" SelfReg="false"/>
-    <ROW File="DevExpress.Pdf.v19.2.Core.xml" Component_="GUI.vshost.exe.config" FileName="DEVEXP~8.XML|DevExpress.Pdf.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Pdf.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Pdf.v19.2.Core.xml" Component_="GUI.exe.config" FileName="DEVEXP~8.XML|DevExpress.Pdf.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Pdf.v19.2.Core.xml" SelfReg="false"/>
     <ROW File="DevExpress.Pdf.v19.2.Drawing.dll" Component_="DevExpress.Pdf.v19.2.Drawing.dll" FileName="DEVEX~13.DLL|DevExpress.Pdf.v19.2.Drawing.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Pdf.v19.2.Drawing.dll" SelfReg="false"/>
-    <ROW File="DevExpress.Pdf.v19.2.Drawing.xml" Component_="GUI.vshost.exe.config" FileName="DEVEXP~9.XML|DevExpress.Pdf.v19.2.Drawing.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Pdf.v19.2.Drawing.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Pdf.v19.2.Drawing.xml" Component_="GUI.exe.config" FileName="DEVEXP~9.XML|DevExpress.Pdf.v19.2.Drawing.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Pdf.v19.2.Drawing.xml" SelfReg="false"/>
     <ROW File="DevExpress.PivotGrid.v19.2.Core.dll" Component_="DevExpress.PivotGrid.v19.2.Core.dll" FileName="DEVEX~14.DLL|DevExpress.PivotGrid.v19.2.Core.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.PivotGrid.v19.2.Core.dll" SelfReg="false"/>
-    <ROW File="DevExpress.PivotGrid.v19.2.Core.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~10.XML|DevExpress.PivotGrid.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.PivotGrid.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.PivotGrid.v19.2.Core.xml" Component_="GUI.exe.config" FileName="DEVEX~10.XML|DevExpress.PivotGrid.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.PivotGrid.v19.2.Core.xml" SelfReg="false"/>
     <ROW File="DevExpress.Printing.v19.2.Core.dll" Component_="DevExpress.Printing.v19.2.Core.dll" FileName="DEVEX~15.DLL|DevExpress.Printing.v19.2.Core.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Printing.v19.2.Core.dll" SelfReg="false"/>
-    <ROW File="DevExpress.Printing.v19.2.Core.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~11.XML|DevExpress.Printing.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Printing.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Printing.v19.2.Core.xml" Component_="GUI.exe.config" FileName="DEVEX~11.XML|DevExpress.Printing.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Printing.v19.2.Core.xml" SelfReg="false"/>
     <ROW File="DevExpress.RichEdit.v19.2.Core.dll" Component_="DevExpress.RichEdit.v19.2.Core.dll" FileName="DEVEX~16.DLL|DevExpress.RichEdit.v19.2.Core.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.RichEdit.v19.2.Core.dll" SelfReg="false"/>
-    <ROW File="DevExpress.RichEdit.v19.2.Core.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~12.XML|DevExpress.RichEdit.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.RichEdit.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.RichEdit.v19.2.Core.xml" Component_="GUI.exe.config" FileName="DEVEX~12.XML|DevExpress.RichEdit.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.RichEdit.v19.2.Core.xml" SelfReg="false"/>
     <ROW File="DevExpress.RichEdit.v19.2.Export.dll" Component_="DevExpress.RichEdit.v19.2.Export.dll" FileName="DEVEX~17.DLL|DevExpress.RichEdit.v19.2.Export.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.RichEdit.v19.2.Export.dll" SelfReg="false"/>
     <ROW File="DevExpress.Sparkline.v19.2.Core.dll" Component_="DevExpress.Sparkline.v19.2.Core.dll" FileName="DEVEX~18.DLL|DevExpress.Sparkline.v19.2.Core.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Sparkline.v19.2.Core.dll" SelfReg="false"/>
-    <ROW File="DevExpress.Sparkline.v19.2.Core.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~13.XML|DevExpress.Sparkline.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Sparkline.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Sparkline.v19.2.Core.xml" Component_="GUI.exe.config" FileName="DEVEX~13.XML|DevExpress.Sparkline.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Sparkline.v19.2.Core.xml" SelfReg="false"/>
     <ROW File="DevExpress.SpellChecker.v19.2.Core.dll" Component_="DevExpress.SpellChecker.v19.2.Core.dll" FileName="DEVEX~19.DLL|DevExpress.SpellChecker.v19.2.Core.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.SpellChecker.v19.2.Core.dll" SelfReg="false"/>
-    <ROW File="DevExpress.SpellChecker.v19.2.Core.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~14.XML|DevExpress.SpellChecker.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.SpellChecker.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.SpellChecker.v19.2.Core.xml" Component_="GUI.exe.config" FileName="DEVEX~14.XML|DevExpress.SpellChecker.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.SpellChecker.v19.2.Core.xml" SelfReg="false"/>
     <ROW File="DevExpress.TreeMap.v19.2.Core.dll" Component_="DevExpress.TreeMap.v19.2.Core.dll" FileName="DEVEX~20.DLL|DevExpress.TreeMap.v19.2.Core.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.TreeMap.v19.2.Core.dll" SelfReg="false"/>
-    <ROW File="DevExpress.TreeMap.v19.2.Core.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~15.XML|DevExpress.TreeMap.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.TreeMap.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.TreeMap.v19.2.Core.xml" Component_="GUI.exe.config" FileName="DEVEX~15.XML|DevExpress.TreeMap.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.TreeMap.v19.2.Core.xml" SelfReg="false"/>
     <ROW File="DevExpress.Utils.v19.2.dll" Component_="DevExpress.Utils.v19.2.dll" FileName="DEVEX~21.DLL|DevExpress.Utils.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Utils.v19.2.dll" SelfReg="false"/>
     <ROW File="DevExpress.Utils.v19.2.UI.dll" Component_="DevExpress.Utils.v19.2.UI.dll" FileName="DEVEX~22.DLL|DevExpress.Utils.v19.2.UI.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Utils.v19.2.UI.dll" SelfReg="false"/>
-    <ROW File="DevExpress.Utils.v19.2.UI.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~16.XML|DevExpress.Utils.v19.2.UI.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Utils.v19.2.UI.xml" SelfReg="false"/>
-    <ROW File="DevExpress.Utils.v19.2.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~17.XML|DevExpress.Utils.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Utils.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v19.2.UI.xml" Component_="GUI.exe.config" FileName="DEVEX~16.XML|DevExpress.Utils.v19.2.UI.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Utils.v19.2.UI.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v19.2.xml" Component_="GUI.exe.config" FileName="DEVEX~17.XML|DevExpress.Utils.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Utils.v19.2.xml" SelfReg="false"/>
     <ROW File="DevExpress.Xpo.v19.2.dll" Component_="DevExpress.Xpo.v19.2.dll" FileName="DEVEX~23.DLL|DevExpress.Xpo.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Xpo.v19.2.dll" SelfReg="false"/>
-    <ROW File="DevExpress.Xpo.v19.2.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~18.XML|DevExpress.Xpo.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Xpo.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Xpo.v19.2.xml" Component_="GUI.exe.config" FileName="DEVEX~18.XML|DevExpress.Xpo.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.Xpo.v19.2.xml" SelfReg="false"/>
     <ROW File="DevExpress.XtraBars.v19.2.dll" Component_="DevExpress.XtraBars.v19.2.dll" FileName="DEVEX~24.DLL|DevExpress.XtraBars.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraBars.v19.2.dll" SelfReg="false"/>
-    <ROW File="DevExpress.XtraBars.v19.2.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~19.XML|DevExpress.XtraBars.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraBars.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraBars.v19.2.xml" Component_="GUI.exe.config" FileName="DEVEX~19.XML|DevExpress.XtraBars.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraBars.v19.2.xml" SelfReg="false"/>
     <ROW File="DevExpress.XtraCharts.v19.2.dll" Component_="DevExpress.XtraCharts.v19.2.dll" FileName="DEVEX~25.DLL|DevExpress.XtraCharts.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraCharts.v19.2.dll" SelfReg="false"/>
     <ROW File="DevExpress.XtraCharts.v19.2.Extensions.dll" Component_="DevExpress.XtraCharts.v19.2.Extensions.dll" FileName="DEVEX~26.DLL|DevExpress.XtraCharts.v19.2.Extensions.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraCharts.v19.2.Extensions.dll" SelfReg="false"/>
     <ROW File="DevExpress.XtraCharts.v19.2.UI.dll" Component_="DevExpress.XtraCharts.v19.2.UI.dll" FileName="DEVEX~27.DLL|DevExpress.XtraCharts.v19.2.UI.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraCharts.v19.2.UI.dll" SelfReg="false"/>
-    <ROW File="DevExpress.XtraCharts.v19.2.UI.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~20.XML|DevExpress.XtraCharts.v19.2.UI.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraCharts.v19.2.UI.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v19.2.UI.xml" Component_="GUI.exe.config" FileName="DEVEX~20.XML|DevExpress.XtraCharts.v19.2.UI.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraCharts.v19.2.UI.xml" SelfReg="false"/>
     <ROW File="DevExpress.XtraCharts.v19.2.Wizard.dll" Component_="DevExpress.XtraCharts.v19.2.Wizard.dll" FileName="DEVEX~28.DLL|DevExpress.XtraCharts.v19.2.Wizard.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraCharts.v19.2.Wizard.dll" SelfReg="false"/>
-    <ROW File="DevExpress.XtraCharts.v19.2.Wizard.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~21.XML|DevExpress.XtraCharts.v19.2.Wizard.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraCharts.v19.2.Wizard.xml" SelfReg="false"/>
-    <ROW File="DevExpress.XtraCharts.v19.2.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~22.XML|DevExpress.XtraCharts.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraCharts.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v19.2.Wizard.xml" Component_="GUI.exe.config" FileName="DEVEX~21.XML|DevExpress.XtraCharts.v19.2.Wizard.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraCharts.v19.2.Wizard.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v19.2.xml" Component_="GUI.exe.config" FileName="DEVEX~22.XML|DevExpress.XtraCharts.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraCharts.v19.2.xml" SelfReg="false"/>
     <ROW File="DevExpress.XtraDiagram.v19.2.dll" Component_="DevExpress.XtraDiagram.v19.2.dll" FileName="DEVEX~29.DLL|DevExpress.XtraDiagram.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraDiagram.v19.2.dll" SelfReg="false"/>
-    <ROW File="DevExpress.XtraDiagram.v19.2.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~23.XML|DevExpress.XtraDiagram.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraDiagram.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraDiagram.v19.2.xml" Component_="GUI.exe.config" FileName="DEVEX~23.XML|DevExpress.XtraDiagram.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraDiagram.v19.2.xml" SelfReg="false"/>
     <ROW File="DevExpress.XtraEditors.v19.2.dll" Component_="DevExpress.XtraEditors.v19.2.dll" FileName="DEVEX~30.DLL|DevExpress.XtraEditors.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraEditors.v19.2.dll" SelfReg="false"/>
-    <ROW File="DevExpress.XtraEditors.v19.2.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~24.XML|DevExpress.XtraEditors.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraEditors.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraEditors.v19.2.xml" Component_="GUI.exe.config" FileName="DEVEX~24.XML|DevExpress.XtraEditors.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraEditors.v19.2.xml" SelfReg="false"/>
     <ROW File="DevExpress.XtraGauges.v19.2.Core.dll" Component_="DevExpress.XtraGauges.v19.2.Core.dll" FileName="DEVEX~31.DLL|DevExpress.XtraGauges.v19.2.Core.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraGauges.v19.2.Core.dll" SelfReg="false"/>
-    <ROW File="DevExpress.XtraGauges.v19.2.Core.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~25.XML|DevExpress.XtraGauges.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraGauges.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGauges.v19.2.Core.xml" Component_="GUI.exe.config" FileName="DEVEX~25.XML|DevExpress.XtraGauges.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraGauges.v19.2.Core.xml" SelfReg="false"/>
     <ROW File="DevExpress.XtraGauges.v19.2.Presets.dll" Component_="DevExpress.XtraGauges.v19.2.Presets.dll" FileName="DEVEX~32.DLL|DevExpress.XtraGauges.v19.2.Presets.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraGauges.v19.2.Presets.dll" SelfReg="false"/>
-    <ROW File="DevExpress.XtraGauges.v19.2.Presets.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~26.XML|DevExpress.XtraGauges.v19.2.Presets.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraGauges.v19.2.Presets.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGauges.v19.2.Presets.xml" Component_="GUI.exe.config" FileName="DEVEX~26.XML|DevExpress.XtraGauges.v19.2.Presets.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraGauges.v19.2.Presets.xml" SelfReg="false"/>
     <ROW File="DevExpress.XtraGauges.v19.2.Win.dll" Component_="DevExpress.XtraGauges.v19.2.Win.dll" FileName="DEVEX~33.DLL|DevExpress.XtraGauges.v19.2.Win.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraGauges.v19.2.Win.dll" SelfReg="false"/>
-    <ROW File="DevExpress.XtraGauges.v19.2.Win.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~27.XML|DevExpress.XtraGauges.v19.2.Win.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraGauges.v19.2.Win.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGauges.v19.2.Win.xml" Component_="GUI.exe.config" FileName="DEVEX~27.XML|DevExpress.XtraGauges.v19.2.Win.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraGauges.v19.2.Win.xml" SelfReg="false"/>
     <ROW File="DevExpress.XtraGrid.v19.2.dll" Component_="DevExpress.XtraGrid.v19.2.dll" FileName="DEVEX~34.DLL|DevExpress.XtraGrid.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraGrid.v19.2.dll" SelfReg="false"/>
-    <ROW File="DevExpress.XtraGrid.v19.2.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~28.XML|DevExpress.XtraGrid.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraGrid.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGrid.v19.2.xml" Component_="GUI.exe.config" FileName="DEVEX~28.XML|DevExpress.XtraGrid.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraGrid.v19.2.xml" SelfReg="false"/>
     <ROW File="DevExpress.XtraLayout.v19.2.dll" Component_="DevExpress.XtraLayout.v19.2.dll" FileName="DEVEX~35.DLL|DevExpress.XtraLayout.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraLayout.v19.2.dll" SelfReg="false"/>
-    <ROW File="DevExpress.XtraLayout.v19.2.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~29.XML|DevExpress.XtraLayout.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraLayout.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraLayout.v19.2.xml" Component_="GUI.exe.config" FileName="DEVEX~29.XML|DevExpress.XtraLayout.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraLayout.v19.2.xml" SelfReg="false"/>
     <ROW File="DevExpress.XtraMap.v19.2.dll" Component_="DevExpress.XtraMap.v19.2.dll" FileName="DEVEX~36.DLL|DevExpress.XtraMap.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraMap.v19.2.dll" SelfReg="false"/>
-    <ROW File="DevExpress.XtraMap.v19.2.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~30.XML|DevExpress.XtraMap.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraMap.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraMap.v19.2.xml" Component_="GUI.exe.config" FileName="DEVEX~30.XML|DevExpress.XtraMap.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraMap.v19.2.xml" SelfReg="false"/>
     <ROW File="DevExpress.XtraNavBar.v19.2.dll" Component_="DevExpress.XtraNavBar.v19.2.dll" FileName="DEVEX~37.DLL|DevExpress.XtraNavBar.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraNavBar.v19.2.dll" SelfReg="false"/>
-    <ROW File="DevExpress.XtraNavBar.v19.2.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~31.XML|DevExpress.XtraNavBar.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraNavBar.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraNavBar.v19.2.xml" Component_="GUI.exe.config" FileName="DEVEX~31.XML|DevExpress.XtraNavBar.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraNavBar.v19.2.xml" SelfReg="false"/>
     <ROW File="DevExpress.XtraPdfViewer.v19.2.dll" Component_="DevExpress.XtraPdfViewer.v19.2.dll" FileName="DEVEX~38.DLL|DevExpress.XtraPdfViewer.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraPdfViewer.v19.2.dll" SelfReg="false"/>
-    <ROW File="DevExpress.XtraPdfViewer.v19.2.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~32.XML|DevExpress.XtraPdfViewer.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraPdfViewer.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPdfViewer.v19.2.xml" Component_="GUI.exe.config" FileName="DEVEX~32.XML|DevExpress.XtraPdfViewer.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraPdfViewer.v19.2.xml" SelfReg="false"/>
     <ROW File="DevExpress.XtraPivotGrid.v19.2.dll" Component_="DevExpress.XtraPivotGrid.v19.2.dll" FileName="DEVEX~39.DLL|DevExpress.XtraPivotGrid.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraPivotGrid.v19.2.dll" SelfReg="false"/>
-    <ROW File="DevExpress.XtraPivotGrid.v19.2.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~33.XML|DevExpress.XtraPivotGrid.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraPivotGrid.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPivotGrid.v19.2.xml" Component_="GUI.exe.config" FileName="DEVEX~33.XML|DevExpress.XtraPivotGrid.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraPivotGrid.v19.2.xml" SelfReg="false"/>
     <ROW File="DevExpress.XtraPrinting.v19.2.dll" Component_="DevExpress.XtraPrinting.v19.2.dll" FileName="DEVEX~40.DLL|DevExpress.XtraPrinting.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraPrinting.v19.2.dll" SelfReg="false"/>
-    <ROW File="DevExpress.XtraPrinting.v19.2.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~34.XML|DevExpress.XtraPrinting.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraPrinting.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPrinting.v19.2.xml" Component_="GUI.exe.config" FileName="DEVEX~34.XML|DevExpress.XtraPrinting.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraPrinting.v19.2.xml" SelfReg="false"/>
     <ROW File="DevExpress.XtraReports.v19.2.dll" Component_="DevExpress.XtraReports.v19.2.dll" FileName="DEVEX~41.DLL|DevExpress.XtraReports.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraReports.v19.2.dll" SelfReg="false"/>
     <ROW File="DevExpress.XtraReports.v19.2.Extensions.dll" Component_="DevExpress.XtraReports.v19.2.Extensions.dll" FileName="DEVEX~42.DLL|DevExpress.XtraReports.v19.2.Extensions.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraReports.v19.2.Extensions.dll" SelfReg="false"/>
-    <ROW File="DevExpress.XtraReports.v19.2.Extensions.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~35.XML|DevExpress.XtraReports.v19.2.Extensions.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraReports.v19.2.Extensions.xml" SelfReg="false"/>
-    <ROW File="DevExpress.XtraReports.v19.2.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~36.XML|DevExpress.XtraReports.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraReports.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraReports.v19.2.Extensions.xml" Component_="GUI.exe.config" FileName="DEVEX~35.XML|DevExpress.XtraReports.v19.2.Extensions.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraReports.v19.2.Extensions.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraReports.v19.2.xml" Component_="GUI.exe.config" FileName="DEVEX~36.XML|DevExpress.XtraReports.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraReports.v19.2.xml" SelfReg="false"/>
     <ROW File="DevExpress.XtraRichEdit.v19.2.dll" Component_="DevExpress.XtraRichEdit.v19.2.dll" FileName="DEVEX~43.DLL|DevExpress.XtraRichEdit.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraRichEdit.v19.2.dll" SelfReg="false"/>
-    <ROW File="DevExpress.XtraRichEdit.v19.2.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~37.XML|DevExpress.XtraRichEdit.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraRichEdit.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraRichEdit.v19.2.xml" Component_="GUI.exe.config" FileName="DEVEX~37.XML|DevExpress.XtraRichEdit.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraRichEdit.v19.2.xml" SelfReg="false"/>
     <ROW File="DevExpress.XtraScheduler.v19.2.Core.dll" Component_="DevExpress.XtraScheduler.v19.2.Core.dll" FileName="DEVEX~44.DLL|DevExpress.XtraScheduler.v19.2.Core.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraScheduler.v19.2.Core.dll" SelfReg="false"/>
-    <ROW File="DevExpress.XtraScheduler.v19.2.Core.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~38.XML|DevExpress.XtraScheduler.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraScheduler.v19.2.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraScheduler.v19.2.Core.xml" Component_="GUI.exe.config" FileName="DEVEX~38.XML|DevExpress.XtraScheduler.v19.2.Core.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraScheduler.v19.2.Core.xml" SelfReg="false"/>
     <ROW File="DevExpress.XtraScheduler.v19.2.dll" Component_="DevExpress.XtraScheduler.v19.2.dll" FileName="DEVEX~45.DLL|DevExpress.XtraScheduler.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraScheduler.v19.2.dll" SelfReg="false"/>
-    <ROW File="DevExpress.XtraScheduler.v19.2.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~39.XML|DevExpress.XtraScheduler.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraScheduler.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraScheduler.v19.2.xml" Component_="GUI.exe.config" FileName="DEVEX~39.XML|DevExpress.XtraScheduler.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraScheduler.v19.2.xml" SelfReg="false"/>
     <ROW File="DevExpress.XtraSpellChecker.v19.2.dll" Component_="DevExpress.XtraSpellChecker.v19.2.dll" FileName="DEVEX~46.DLL|DevExpress.XtraSpellChecker.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraSpellChecker.v19.2.dll" SelfReg="false"/>
-    <ROW File="DevExpress.XtraSpellChecker.v19.2.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~40.XML|DevExpress.XtraSpellChecker.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraSpellChecker.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraSpellChecker.v19.2.xml" Component_="GUI.exe.config" FileName="DEVEX~40.XML|DevExpress.XtraSpellChecker.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraSpellChecker.v19.2.xml" SelfReg="false"/>
     <ROW File="DevExpress.XtraTreeList.v19.2.dll" Component_="DevExpress.XtraTreeList.v19.2.dll" FileName="DEVEX~47.DLL|DevExpress.XtraTreeList.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraTreeList.v19.2.dll" SelfReg="false"/>
-    <ROW File="DevExpress.XtraTreeList.v19.2.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~41.XML|DevExpress.XtraTreeList.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraTreeList.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraTreeList.v19.2.xml" Component_="GUI.exe.config" FileName="DEVEX~41.XML|DevExpress.XtraTreeList.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraTreeList.v19.2.xml" SelfReg="false"/>
     <ROW File="DevExpress.XtraTreeMap.v19.2.dll" Component_="DevExpress.XtraTreeMap.v19.2.dll" FileName="DEVEX~48.DLL|DevExpress.XtraTreeMap.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraTreeMap.v19.2.dll" SelfReg="false"/>
-    <ROW File="DevExpress.XtraTreeMap.v19.2.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~42.XML|DevExpress.XtraTreeMap.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraTreeMap.v19.2.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraTreeMap.v19.2.xml" Component_="GUI.exe.config" FileName="DEVEX~42.XML|DevExpress.XtraTreeMap.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraTreeMap.v19.2.xml" SelfReg="false"/>
     <ROW File="DevExpress.XtraVerticalGrid.v19.2.dll" Component_="DevExpress.XtraVerticalGrid.v19.2.dll" FileName="DEVEX~49.DLL|DevExpress.XtraVerticalGrid.v19.2.dll" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraVerticalGrid.v19.2.dll" SelfReg="false"/>
-    <ROW File="DevExpress.XtraVerticalGrid.v19.2.xml" Component_="GUI.vshost.exe.config" FileName="DEVEX~43.XML|DevExpress.XtraVerticalGrid.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraVerticalGrid.v19.2.xml" SelfReg="false"/>
-    <ROW File="GUI.exe" Component_="GUI.exe" FileName="GUI.exe" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\GUI.exe" SelfReg="false" DigSign="true"/>
-    <ROW File="GUI.exe.config" Component_="GUI.vshost.exe.config" FileName="GUIEXE~1.CON|GUI.exe.config" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\GUI.exe.config" SelfReg="false"/>
-    <ROW File="GUI.pdb" Component_="GUI.exe" FileName="GUI.pdb" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\GUI.pdb" SelfReg="false"/>
-    <ROW File="GUI.vshost.exe" Component_="GUI.vshost.exe" FileName="GUIVSH~1.EXE|GUI.vshost.exe" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\GUI.vshost.exe" SelfReg="false"/>
+    <ROW File="DevExpress.XtraVerticalGrid.v19.2.xml" Component_="GUI.exe.config" FileName="DEVEX~43.XML|DevExpress.XtraVerticalGrid.v19.2.xml" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\DevExpress.XtraVerticalGrid.v19.2.xml" SelfReg="false"/>
+    <ROW File="GUI.exe" Component_="GUI.pdb" FileName="GUI.exe" Attributes="0" SourcePath="..\Do_An\GUI\bin\Release\GUI.exe" SelfReg="false" DigSign="true"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
     <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
@@ -541,7 +541,9 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
     <ROW Feature_="MainFeature" Component_="APPDIR"/>
     <ROW Feature_="MainFeature" Component_="ProductInformation"/>
-    <ROW Feature_="MainFeature" Component_="GUI.vshost.exe.config"/>
+    <ROW Feature_="MainFeature" Component_="GUI.exe.config"/>
+    <ROW Feature_="MainFeature" Component_="GUI.pdb"/>
+    <ROW Feature_="MainFeature" Component_="GUI.vshost.exe"/>
     <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.ConnectionInfo.dll"/>
     <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.ConnectionInfoExtended.dll"/>
     <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.Dmf.dll"/>
@@ -591,20 +593,18 @@
     <ROW Feature_="MainFeature" Component_="DevExpress.XtraMap.v19.2.dll"/>
     <ROW Feature_="MainFeature" Component_="DevExpress.XtraNavBar.v19.2.dll"/>
     <ROW Feature_="MainFeature" Component_="DevExpress.XtraPdfViewer.v19.2.dll"/>
+    <ROW Feature_="MainFeature" Component_="addfile.png"/>
     <ROW Feature_="MainFeature" Component_="DevExpress.XtraPivotGrid.v19.2.dll"/>
     <ROW Feature_="MainFeature" Component_="DevExpress.XtraPrinting.v19.2.dll"/>
     <ROW Feature_="MainFeature" Component_="DevExpress.XtraReports.v19.2.dll"/>
     <ROW Feature_="MainFeature" Component_="DevExpress.XtraReports.v19.2.Extensions.dll"/>
     <ROW Feature_="MainFeature" Component_="DevExpress.XtraRichEdit.v19.2.dll"/>
-    <ROW Feature_="MainFeature" Component_="addfile.png"/>
     <ROW Feature_="MainFeature" Component_="DevExpress.XtraScheduler.v19.2.Core.dll"/>
     <ROW Feature_="MainFeature" Component_="DevExpress.XtraScheduler.v19.2.dll"/>
     <ROW Feature_="MainFeature" Component_="DevExpress.XtraSpellChecker.v19.2.dll"/>
     <ROW Feature_="MainFeature" Component_="DevExpress.XtraTreeList.v19.2.dll"/>
     <ROW Feature_="MainFeature" Component_="DevExpress.XtraTreeMap.v19.2.dll"/>
     <ROW Feature_="MainFeature" Component_="DevExpress.XtraVerticalGrid.v19.2.dll"/>
-    <ROW Feature_="MainFeature" Component_="GUI.exe"/>
-    <ROW Feature_="MainFeature" Component_="GUI.vshost.exe"/>
     <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
@@ -642,7 +642,7 @@
     <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
-    <ROW Shortcut="GUI" Directory_="SHORTCUTDIR" Name="ELECTR~1|Electronic Shop" Component_="GUI.exe" Target="[#GUI.exe]" Hotkey="0" Icon_="GUI.exe" IconIndex="0" ShowCmd="1" WkDir="UC_Dir"/>
+    <ROW Shortcut="GUI" Directory_="SHORTCUTDIR" Name="ELECTR~1|Electronic Shop" Component_="GUI.pdb" Target="[#GUI.exe]" Hotkey="0" Icon_="GUI.exe" IconIndex="0" ShowCmd="1" WkDir="UC_Dir"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
     <ATTRIBUTE name="UsedTheme" value="classic"/>

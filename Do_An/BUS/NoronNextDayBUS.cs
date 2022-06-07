@@ -20,7 +20,7 @@ namespace BUS
         //tính hiệu lỗi
         private double ng1, ng2, ng3, ng4, ng5;
         //hệ số hiệu chỉnh bias bằng 1 và hệ số nguy = 1
-        private double n = 1;
+        private const double n =1;
         private List<ItemNoronNextDay> lstRevenue;
         private static NoronNextDayBUS instances;
         public static NoronNextDayBUS Instances
